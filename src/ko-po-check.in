@@ -8,7 +8,7 @@ moduledir = "@prefix@/share/ko-po-check"
 
 try:
     options, args = getopt.getopt(sys.argv[1:], "",
-                                  ['help', 'version', 'moduledir'])
+                                  ['help', 'version', 'moduledir='])
 except getopt.GetoptError, msg:
     print "%s: %s" % (os.path.basename(sys.argv[0]), msg)
     sys.exit(1)
