@@ -1,5 +1,5 @@
 # -*-text-*-
-# test 6 - 의존명사
+# test 6 - 의존명사, etc.
 #
 msgid ""
 msgstr ""
@@ -32,3 +32,14 @@ msgstr "파일을 열수없습니다"
 #, c-format
 msgid "unknown machine mode `%s'"
 msgstr "알수 없는 머신 모드 `%s'"
+
+# E: '열 수 없습니다'
+#: test.c:6
+#, c-format
+msgid "unknown machine mode `%s'"
+msgstr "알수 없는 머신 모드 `%s'"
+
+# E: 'return할 때"
+#: test.c:6
+msgid "abort if a function returns"
+msgstr "return할때 abort"

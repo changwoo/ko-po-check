@@ -1,0 +1,33 @@
+# -*-text-*-
+# test 8 - 조사는 띄어 쓴다
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 8\n"
+"POT-Creation-Date: 2002-08-01 01:30+0900\n"
+"PO-Revision-Date: 2002-08-01 01:30+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# E: 조사는 띄어 쓴다
+#: test.c:8
+#, c-format
+msgid "section of `%s' conflicts with previous declaration"
+msgstr "`%s' 의 섹션은 이전에 선언된 것과 충돌합니다"
+
+# E: 조사는 띄어 쓴다
+#: test.c:8
+msgid "ISO C++ forbids range expressions in switch statements"
+msgstr "ISO C++ 에서 switch 표현식에서의 범위식은 금지되고 있습니다"
+
+# E: 조사는 띄어 쓴다
+#: test.c:8
+msgid "__builtin_saveregs not supported by this target"
+msgstr "__builtin_saveregs 은 이 타겟을 지원하지 않습니다"
+
+#: test.c:8
+msgid "function `%s' is initialized like a variable"
+msgstr "함수 `%s' 이(가) 변수로 초기화됐습니다"
