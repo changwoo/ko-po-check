@@ -1,8 +1,13 @@
 2004-10-06  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/convention/mnemonic.py: New module which does all the
+	mnemonic related checks.
+	* checks/convention/capital_mnemonic.py: Removed, merged into
+	mnemonic.py.
+
 	* tests/kpc-test (execfile): Run the tests in ko_KR.euckr locale.
 
-	* checks/convention/markup.py (check): New module to check markup
+	* checks/convention/markup.py: New module to check markup
 	consistency.
 
 2004-08-15  Changwoo Ryu  <cwryu@debian.org>
