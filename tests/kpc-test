@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 
-import os,sys,glob
+import os,sys,glob,tempfile
 
-execfile = "python ../src/ko-po-check --moduledir=../src"
 srcdir = os.getenv("srcdir")
-testfiles = glob.glob("%s/test-[0-9]*.po" % srcdir)
+os.chdir(srcdir)
+execfile = "python ../src/ko-po-check"
+testfiles = glob.glob("test-[0-9]*.po")
 
 testfiles.sort()
 
 for file in testfiles:
-    if (os.system(execfile + " " + file) != 0):
+    print "Checking %s..." % file
+    tfn = tempfile.mktemp()
+    if (os.system("%s --moduledir=%s/../src %s > %s" %
+                  (execfile, srcdir, file, tfn)) != 0):
         sys.exit(1)
+    if (os.system("diff -u -2 %s %s" % (file[:-3]+".out", tfn)) != 0):
+        sys.exit(1)
+    
+        
