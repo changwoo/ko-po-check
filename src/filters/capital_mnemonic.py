@@ -4,14 +4,14 @@ import re
 
 name = "mnemonic-must-be-capital"
 
-chosa_re = re.compile("(\(_[a-z]\))")
+search_re = re.compile("(\([_&][a-z]\))")
 error_string = "\"%s\": mnemonic이 소문자입니다"
 
 def check(msgid,msgstr):
     ret = 1
     errmsg = ""
     while 1:
-        mo = chosa_re.search(msgstr)
+        mo = search_re.search(msgstr)
         if mo:
             ret = 0
             if errmsg:
