@@ -55,7 +55,7 @@ if (option_help):
 if (option_version):
     e = lambda s: unicode(s,'utf-8')
     versionmsg = [e("ko-po-check %s\n" % VERSION)]
-    localeutil.outlines(versionmsg)
+    sys.stdout.writelines(versionmsg)
     sys.exit(0)
     
 import glob

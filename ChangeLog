@@ -1,3 +1,7 @@
+2003-08-06  Changwoo Ryu  <cwryu@debian.org>
+
+	* scripts/ko-po-check.in (option_version): Removed localeutil.
+
 2003-08-03  Changwoo Ryu  <cwryu@debian.org>
 
 	* Dumped the whole structures..
