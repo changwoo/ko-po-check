@@ -50,10 +50,12 @@ content_type = catalog.metadata['Content-Type']
 charset = string.lower(content_type[string.find(content_type, 'charset=')+len('charset='):])
 if charset != 'euc-kr':
     import codecs
-    for entries in catalog.entries:
-        entries.msgstr = unicode(entries.msgstr, charset).encode('euc-kr')
-        entries.translator_comment = unicode(entries.translator_comment, charset).encode('euc-kr')
-        
+    for entry in catalog.entries:
+        try:
+            entry.msgstr = unicode(entry.msgstr, charset).encode('euc-kr')
+            entry.translator_comment = unicode(entry.translator_comment, charset).encode('euc-kr')
+        except:
+            print "err:%d"%entry.msgstr_lineno
 
 filenames = glob.glob(filtersdir+"/*.py")
 filters = {}
