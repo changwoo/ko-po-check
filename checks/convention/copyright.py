@@ -4,10 +4,9 @@ name = "copyright"
 
 copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 
-import localeutil
-e = localeutil.eucstr
+e = lambda s: unicode(s,'utf-8')
 
-error_string = e("copyright notice´Â ¹ø¿ªÇÏ¸é ¾È µË´Ï´Ù")
+error_string = e("copyright noticeëŠ” ë²ˆì—­í•˜ë©´ ì•ˆ ë©ë‹ˆë‹¤")
 
 def check(msgid,msgstr):
     msgid_lines = string.split(msgid,"\n")
@@ -28,3 +27,7 @@ if __name__ == '__main__':
         print e
     else:
         print "Success"
+
+# Local Variables:
+# coding: utf-8
+# End:

@@ -1,4 +1,4 @@
-SUBDIRS = doc src tests
+SUBDIRS = doc tests KPC checks scripts
 
 MISC =							\
 	misc/get-gnome-po.sh misc/check-gnome-po.sh	\

@@ -4,7 +4,7 @@ import os,sys,glob,tempfile
 
 srcdir = os.getenv("srcdir")
 builddir = os.getcwd()
-execfile = "python %s/../src/ko-po-check" % builddir
+execfile = "%s/../scripts/ko-po-check" % builddir
 os.chdir(srcdir)
 testfiles = glob.glob("test-[0-9]*.po")
 
@@ -13,9 +13,9 @@ testfiles.sort()
 for file in testfiles:
     print "Checking %s..." % file
     tfn = tempfile.mktemp()
-    if (os.system("%s --moduledir=%s/../src %s > %s" %
-                  (execfile, srcdir, file, tfn)) != 0):
-        sys.exit(1)
+    print "%s --moduledir=%s/../KPC --checksdir=%s/../checks %s > %s" % (execfile, srcdir, srcdir, file, tfn)
+    os.system("%s --moduledir=%s/../KPC --checksdir=%s/../checks %s > %s" %
+                  (execfile, srcdir, srcdir, file, tfn))
     if (os.system("diff -u -2 %s %s" % (file[:-3]+".out", tfn)) != 0):
         sys.exit(1)
     

@@ -1,24 +1,22 @@
-#! /usr/bin/env python
+#!/usr/bin/python -S
 
-import sys,os,getopt
+import sys
+_setdefaultencoding = sys.setdefaultencoding
+import site,locale
+_setdefaultencoding(locale.getdefaultlocale()[1])
+del _setdefaultencoding
+
+import os,getopt
 
 moduledir = "@prefix@/share/ko-po-check"
+checksdir = "@prefix@/share/ko-po-check/checks"
 VERSION = "@VERSION@"
-
-import codecs
-
-# codec install check
-try:
-    codecs.lookup('euc-kr')
-except LookupError:
-    sys.stderr.write("ÇÑ±¹¾î codecÀÌ ¼³Ä¡µÇÁö ¾Ê¾Ò½À´Ï´Ù.  http://koco.sourceforge.net\n")
-    sys.exit(1)
 
 # processing the command line options
 
 try:
     options, args = getopt.getopt(sys.argv[1:], "",
-                                  ['help', 'version', 'moduledir='])
+                                  ['help', 'version', 'moduledir=', 'checksdir='])
 except getopt.GetoptError, msg:
     print "%s: %s" % (os.path.basename(sys.argv[0]), msg)
     sys.exit(1)
@@ -33,37 +31,36 @@ for (opt, val) in options:
         option_version = 1
     elif opt == '--moduledir':
         moduledir = val
+    elif opt == '--checksdir':
+        checksdir = val
     
 if not args:
     fn = '-'
 
 
-filtersdir = moduledir + "/filters"
 sys.path.append(moduledir)
-import po,poparse,localeutil
-
-localeutil.init()
+import po,poparse
 
 if (option_help):
-    e = localeutil.eucstr
+    e = lambda s: unicode(s,'utf-8')
     helpmsg = [
-        e("Usage: ko-po-check [¿É¼Ç]... [ÆÄÀÏ]...<\n"),
-        e("      --help                ÀÌ µµ¿ò¸»À» º¸¿©ÁÖ°í Á¾·áÇÕ´Ï´Ù\n"),
-        e("      --version             ¹öÀü Á¤º¸¸¦ Ç¥½ÃÇÏ°í Á¾·áÇÕ´Ï´Ù\n"),
+        e("Usage: ko-po-check [ì˜µì…˜]... [íŒŒì¼]...<\n"),
+        e("      --help                ì´ ë„ì›€ë§ì„ ë³´ì—¬ì£¼ê³  ì¢…ë£Œí•©ë‹ˆë‹¤\n"),
+        e("      --version             ë²„ì „ ì •ë³´ë¥¼ í‘œì‹œí•˜ê³  ì¢…ë£Œí•©ë‹ˆë‹¤\n"),
         e("\n"),
-        e(" ÆÄÀÏÀÌ `-'ÀÌ°Å³ª ÆÄÀÏÀÌ ÁÖ¾îÁöÁö ¾ÊÀº °æ¿ì Ç¥ÁØ ÀÔ·Â¿¡¼­ ÀÐ½À´Ï´Ù.\n")]
-    localeutil.outlines(helpmsg)
+        e(" íŒŒì¼ì´ `-'ì´ê±°ë‚˜ íŒŒì¼ì´ ì£¼ì–´ì§€ì§€ ì•Šì€ ê²½ìš° í‘œì¤€ ìž…ë ¥ì—ì„œ ì½ìŠµë‹ˆë‹¤.\n")]
+    sys.stdout.writelines(helpmsg)
     sys.exit(1)
 
 if (option_version):
-    e = localeutil.eucstr
+    e = lambda s: unicode(s,'utf-8')
     versionmsg = [e("ko-po-check %s\n" % VERSION)]
     localeutil.outlines(versionmsg)
     sys.exit(0)
     
 import glob
 
-filenames = glob.glob(filtersdir+"/*.py")
+filenames = glob.glob(checksdir+"/*/*.py")
 filters = {}
 for filename in filenames:
     f = {}
@@ -80,8 +77,8 @@ for fn in args:
     try:
         catalog = poparse.parse_file(fp)
     except poparse.ParseError, lineno:
-        e = localeutil.eucstr
-        localeutil.out(e("%s:%d: ÆÄ½Ì ¿À·ù\n"%(fn,lineno)))
+        e = lambda s: unicode(s,'utf-8')
+        sys.stdout.write(e("%s:%d: íŒŒì‹± ì˜¤ë¥˜\n"%(fn,lineno)))
         sys.exit(1)
     if fn != '-':
         fp.close()
@@ -96,6 +93,10 @@ for fn in args:
             if not t:
                 retval = 1
                 for line in string.split(e,'\n'):
-                    localeutil.out("%s:%d: %s\n"%(fn,entry.msgstr_lineno,line))
+                    sys.stdout.write(u"%s:%d: %s\n"%(fn,entry.msgstr_lineno,line))
 
 sys.exit(retval)
+
+# Local Variables:
+# coding: utf-8
+# End:

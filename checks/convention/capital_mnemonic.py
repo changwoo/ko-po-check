@@ -4,11 +4,10 @@ import re
 
 name = "mnemonic-must-be-capital"
 
-import localeutil
-e = localeutil.eucstr
+e = lambda s: unicode(s,'utf-8')
 
 search_re = re.compile("(\([_&][a-z]\))")
-error_string = e("\"%s\": mnemonicÀÌ ¼Ò¹®ÀÚÀÔ´Ï´Ù")
+error_string = e("\"%s\": mnemonicì´ ì†Œë¬¸ìì…ë‹ˆë‹¤")
 
 def check(msgid,msgstr):
     ret = 1
@@ -34,3 +33,7 @@ if __name__ == '__main__':
         print e
     else:
         print "Success"
+
+# Local Variables:
+# coding: utf-8
+# End:

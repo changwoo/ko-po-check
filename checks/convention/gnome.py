@@ -2,14 +2,13 @@
 
 name = "gnome"
 
-import string,localeutil
-e = localeutil.eucstr
+e = lambda s: unicode(s,'utf-8')
 
-error_string = e("GNOME¿¡¼­ \"translator_credits\"¿¡´Â ¹ø¿ªÀÚµéÀÇ ÀÌ¸§À» ½á¾ß ÇÕ´Ï´Ù")
+error_string = e("GNOMEì—ì„œ \"translator_credits\"ì—ëŠ” ë²ˆì—­ìë“¤ì˜ ì´ë¦„ì„ ì¨ì•¼ í•©ë‹ˆë‹¤")
 
 def check(msgid,msgstr):
     if (msgid[:18] == "translator_credits" and
-        (msgstr[:18] == "translator_credits" or msgstr[:2] == e("¹ø¿ª"))):
+        (msgstr[:18] == "translator_credits" or msgstr[:2] == e("ë²ˆì—­"))):
         return (0,error_string)
     return (1,"")
 
@@ -22,3 +21,7 @@ if __name__ == '__main__':
         print e
     else:
         print "Success"
+
+# Local Variables:
+# coding: utf-8
+# End:
