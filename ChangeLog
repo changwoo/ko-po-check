@@ -1,3 +1,7 @@
+2003-08-03  Changwoo Ryu  <cwryu@debian.org>
+
+	* Dumped the whole structures..
+
 2002-10-27  Changwoo Ryu  <cwryu@debian.org>
 
 	* src/ko-po-check.in: Returns nonzero on error
