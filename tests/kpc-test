@@ -2,9 +2,11 @@
 
 import os,sys,glob
 
-execfile = "../src/ko-po-check"
+execfile = "python ../src/ko-po-check --moduledir=../src"
 srcdir = os.getenv("srcdir")
 testfiles = glob.glob("./test-[0-9]*.po")
+
+testfiles.sort()
 
 for file in testfiles:
     if (os.system(execfile + " " + file) != 0):
