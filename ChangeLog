@@ -1,5 +1,7 @@
 2004-01-25  Changwoo Ryu  <cwryu@debian.org>
 
+	* configure.in: Release 0.5
+
 	* checks/convention/kde.py (check): Sync with the new terminology
 	check.
 
