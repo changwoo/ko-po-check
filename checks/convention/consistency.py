@@ -7,7 +7,7 @@ name = "consistency"
 e = lambda s: unicode(s,'utf-8')
 
 data = [
-    { 're': re.compile(".*\.$"),
+    { 're': re.compile(".*[^\.]\.$"),
       'error':  e("번역문이 원문과 같이 .으로 끝나야 합니다") },
     { 're': re.compile(".*:$"),
       'error':  e("번역문이 원문과 같이 :으로 끝나야 합니다") },
