@@ -58,7 +58,11 @@ except LookupError:
     sys.stderr.write("euc-kr codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
     sys.exit(1)
 
-catalog = poparse.parse_file(fp)
+try:
+    catalog = poparse.parse_file(fp)
+except poparse.ParseError:
+    sys.stderr.write("parse error on %s\n"%fn)
+    sys.exit(1)
 
 import string,re
 import glob

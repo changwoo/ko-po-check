@@ -26,8 +26,12 @@ def parse_file(file):
         (entry,lineno) = parse_entry(reader,lineno)
         if not entry:
             return catalog
-        entry.translator_comment = unicode(entry.translator_comment,charset).encode('utf-8')
-        entry.msgstr = unicode(entry.msgstr,charset).encode('utf-8')
+        try:
+            entry.translator_comment = unicode(entry.translator_comment,charset).encode('utf-8')
+            entry.msgstr = unicode(entry.msgstr,charset).encode('utf-8')
+        except:
+            print "encoding error at %d"%lineno
+            raise ParseError
         catalog.add_entry(entry)
 
 STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5
