@@ -1,0 +1,11 @@
+AC_INIT(README)
+AM_INIT_AUTOMAKE(ko-po-check,0.1)
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+tests/Makefile
+src/ko-po-check
+],[
+chmod +x src/ko-po-check
+])

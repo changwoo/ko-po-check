@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+import os,sys,glob
+
+execfile = "../src/ko-po-check"
+srcdir = os.getenv("srcdir")
+testfiles = glob.glob("./test-[0-9]*.po")
+
+for file in testfiles:
+    if (os.system(execfile + " " + file) != 0):
+        sys.exit(1)

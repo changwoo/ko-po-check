@@ -1,0 +1,4 @@
+Makefile
+Makefile.in
+ko-po-check
+*.pyc

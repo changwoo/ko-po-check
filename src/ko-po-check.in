@@ -1,0 +1,23 @@
+#! /usr/bin/env python
+
+import os,sys,po,poparse
+
+if sys.argv[1:]:
+    fn = sys.argv[1]
+    if fn == '-':
+        fp = sys.stdin
+    else:
+        fp = open(fn)
+else:
+    import StringIO
+    fp = StringIO.StringIO(test_input)
+
+catalog = poparse.parse_file(fp)
+
+import string,re
+
+small_mnemonic_re = re.compile("\(_[a-z]\)")
+for entry in catalog.entries:
+    if small_mnemonic_re.search(entry.msgstr):
+        print "small case mnemonic"
+        sys.exit(1)
