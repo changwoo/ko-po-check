@@ -18,24 +18,25 @@ def parse_file(file):
     reader = file
     lineno = 0
     catalog = po.catalog()
-    (entry,lineno) = parse_entry(reader,lineno)
+    try:
+        (entry,lineno) = parse_entry(reader,lineno)
+    except ParseError:
+        raise ParseError, lineno
     catalog.add_entry(entry)
     content_type = catalog.metadata['Content-Type']
     charset = re.compile("charset=(.+)$").search(content_type).group(1)
     while 1:
         try:
             (entry,lineno) = parse_entry(reader,lineno)
-        except ParseError:
-            print "parsing error at %d"%lineno
-            raise ParseError
+        except ParseError, l:
+            raise ParseError, l
         if not entry:
             return catalog
         try:
             entry.translator_comment = unicode(entry.translator_comment,charset).encode('utf-8')
             entry.msgstr = unicode(entry.msgstr,charset).encode('utf-8')
         except:
-            print "encoding error at %d"%lineno
-            raise ParseError
+            raise ParseError, lineno
         catalog.add_entry(entry)
 
 STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5
@@ -65,14 +66,14 @@ def parse_entry(file,lineno):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 return (None,lineno)    # no more messages -- return nothing
             elif state != STATE_MSGSTR:
-                raise ParseError        # unexpected EOF
+                raise ParseError, lineno        # unexpected EOF
             else:
                 return (new_entry,lineno)
         if emptyline_re.match(line):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 continue
             elif state != STATE_MSGSTR:
-                raise ParseError
+                raise ParseError, lineno
             else:
                 return (new_entry,lineno)
         if line[-1] == '\n':            # remove the trailing newline
@@ -109,7 +110,10 @@ def parse_entry(file,lineno):
         else:
             if line[:7] == 'msgid "':
                 state = STATE_MSGID
-                new_entry.msgid += read_string(line[6:])
+                try:
+                    new_entry.msgid += read_string(line[6:])
+                except ParseError:
+                    raise ParseError, lineno
                 new_entry.msgid_lineno = lineno
             elif line[:14] == 'msgid_plural "':
                 state = STATE_MSGID
@@ -127,10 +131,9 @@ def parse_entry(file,lineno):
                 elif state == STATE_MSGSTR:
                     new_entry.msgstr += read_string(line)
                 else:
-                    raise ParseError
+                    raise ParseError, lineno
             else:
-                print line
-                raise ParseError
+                raise ParseError, lineno
             
     #new_entry.msgid += line
     return (new_entry,lineno)

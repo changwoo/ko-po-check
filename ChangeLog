@@ -1,5 +1,8 @@
 2002-08-01  Changwoo Ryu  <cwryu@debian.org>
 
+	* src/poparse.py, src/ko-po-check.in: Display the exact line
+	number on ParseError.
+
 	* src/filters/common_misspell.py (verbs_re): Inserted missing
 	comma.
 	* tests/test-00006.po, tests/test-00006.out: Updated test for
