@@ -19,6 +19,14 @@ class entry:
         self.flag = self.flag & ~flag
     def is_fuzzy(self):
         return (self.flag & FUZZY)
+    def is_obsolete(self):
+        return (self.flag & OBSOLETE)
+    def is_untranslated(self):
+        return (self.msgstr == "")
+    def is_translated(self):
+        return (not self.is_fuzzy() and
+                not self.is_obsolete() and
+                not self.is_untranslated())
     def is_c_format(self):
         return (self.flag & C_FORMAT)
     def is_no_c_format(self):

@@ -86,7 +86,8 @@ for filename in filenames:
     filters[f['name']] = f
 
 for entry in catalog.entries:
-#    print entry.msgstr.encode('euc-kr')
+    if entry.is_untranslated():
+        continue
     for filtername in filters.keys():
         t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
         if not t:
