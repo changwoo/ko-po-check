@@ -14,7 +14,7 @@ def check(msgid,msgstr):
     msgstr_lines = string.split(msgstr,"\n")
     lineno = 0
     for line in msgid_lines:
-        if copyright_re.match(line) and line != msgstr_lines[lineno]:
+        if copyright_re.match(line) and lineno < len(msgstr_lines) and line != msgstr_lines[lineno]:
             return (0,error_string)
         lineno+=1
     return (1,"")
