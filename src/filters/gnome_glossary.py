@@ -2,17 +2,17 @@ import string
 
 name = "gnome-glossary"
 
-def euc(s):
-    return unicode(s,'euc-kr').encode('utf-8')
+import localeutil
+e = localeutil.eucstr
 
-data = [("properties", euc("등록 정보"), euc("속성")),
-        ("preferences", euc("기본 설정"), euc("설정 사항")),
-        ("preferences", euc("기본 설정"), euc("환경설정")),
-        ("about", euc("정보"), euc("대하여")),
-        ("font", euc("글꼴"), euc("폰트")),
+data = [("properties", e("등록 정보"), e("속성")),
+        ("preferences", e("기본 설정"), e("설정 사항")),
+        ("preferences", e("기본 설정"), e("환경설정")),
+        ("about", e("정보"), e("대하여")),
+        ("font", e("글꼴"), e("폰트")),
         ]
 
-error_string = euc("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
+error_string = e("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
 
 def check(msgid,msgstr):
     ret = 1

@@ -4,10 +4,10 @@ name = "copyright"
 
 copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 
-def euc(s):
-    return unicode(s,'euc-kr').encode('utf-8')
+import localeutil
+e = localeutil.eucstr
 
-error_string = euc("copyright notice는 번역하면 안 됩니다")
+error_string = e("copyright notice는 번역하면 안 됩니다")
 
 def check(msgid,msgstr):
     msgid_lines = string.split(msgid,"\n")

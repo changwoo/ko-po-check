@@ -10,11 +10,6 @@
 
 * 관용어 번역: mnemonic이 섞인 경우 영어 단어 구별 방법
 
-* 출력 메세지가 해당 locale에 맞게
-- glib의 g_print와 같은 locale dependent한 출력 기능 만들기
-- 문제점: C의 nl_langinfo에 대응하는 locale.nl_langinfo()가 python
-  2.2에서부터 지원된다
-
 * 각 애러의 severity level을 결정해 출력하기
 - KPCError(s) exception class 만들기
 
