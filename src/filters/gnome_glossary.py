@@ -7,9 +7,16 @@ e = localeutil.eucstr
 
 data = [("properties", e("등록 정보"), e("속성")),
         ("preferences", e("기본 설정"), e("설정 사항")),
+        ("preferences", e("기본 설정"), e("선택 사항")),
         ("preferences", e("기본 설정"), e("환경설정")),
         ("about", e("정보"), e("대하여")),
         ("font", e("글꼴"), e("폰트")),
+        ("button", e("단추"), e("버튼")),
+        ("delete", e("지우기"), e("삭제")),
+        ("find", e("찾기"), e("검색")),
+        ("search", e("찾기"), e("검색")),
+        ("create", e("만들기"), e("생성")),
+        ("application", e("프로그램"), e("어플리케이션")),
         ]
 
 error_string = e("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
@@ -17,9 +24,10 @@ error_string = e("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
 def check(msgid,msgstr):
     ret = 1
     errmsg = ""
+    msgid_l = string.lower(string.replace(string.replace(msgid,'_',''),'&',''))
     for (id, right, wrong) in data:
         if ((string.find(msgstr, wrong) >= 0) and
-            (string.find(string.lower(msgid), id) >= 0) and
+            (string.find(msgid_l, id) >= 0) and
             (string.find(msgstr, right) < 0)):
             ret = 0
             if errmsg:

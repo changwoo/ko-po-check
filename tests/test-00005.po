@@ -52,3 +52,33 @@ msgstr "창 폰트"
 msgid "Window font"
 msgstr "창 글꼴"
 
+# E: _ 포함
+#: test.c:5
+msgid "Pref_erences"
+msgstr "선택 사항(_E)"
+
+# E: & 포함
+#: test.c:5
+msgid "Proper&ties"
+msgstr "속성(&T)"
+
+# E: 단추
+#: test.c:5
+msgid "button"
+msgstr "버튼"
+
+# E: 단추
+#: test.c:5
+msgid "_Delete"
+msgstr "삭제(_D)"
+
+# E: 찾기
+#: test.c:5
+msgid "_Find"
+msgstr "검색(_F)"
+
+# E: 찾기
+#: test.c:5
+msgid "_Search"
+msgstr "검색(_S)"
+
