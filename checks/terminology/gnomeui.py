@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # terminology/gnomeui
 
 # UI 나타나는 전형적인 단어들의 전형적인 번역 확인.  지정한 번역이

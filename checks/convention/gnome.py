@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # GNOME specific rule
 
 name = "gnome"

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Parse GNU gettext compliant PO (Portable Object) file.
 
 """
