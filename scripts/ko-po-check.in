@@ -38,7 +38,7 @@ if not args:
     fn = '-'
 
 
-sys.path.append(moduledir)
+sys.path.append(moduledir + '/KPC')
 import po,poparse
 
 if (option_help):

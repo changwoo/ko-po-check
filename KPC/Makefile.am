@@ -1,3 +1,5 @@
 MODULES = po.py poparse.py
 
-pkgdata_PYTHON = $(MODULES)
+moduledir = $(pkgdatadir)/KPC
+
+module_PYTHON = $(MODULES)
