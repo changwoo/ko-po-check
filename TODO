@@ -4,6 +4,7 @@
 ==========
 
 * PO parser 개선
+- encoding error 처리
 
 * 조사 구별: 올바른 조사 사용법 suggestion
 
