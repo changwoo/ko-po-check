@@ -2,6 +2,11 @@
 
 import os,sys,po,poparse
 
+moduledir = "@prefix@/share/ko-po-check"
+filtersdir = moduledir + "/msgfilters"
+
+sys.path.append(moduledir)
+
 if sys.argv[1:]:
     fn = sys.argv[1]
     if fn == '-':

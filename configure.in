@@ -4,6 +4,7 @@ AM_INIT_AUTOMAKE(ko-po-check,0.1)
 AC_OUTPUT([
 Makefile
 src/Makefile
+src/filters/Makefile
 tests/Makefile
 src/ko-po-check
 ],[
