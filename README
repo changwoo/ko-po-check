@@ -3,10 +3,18 @@ ko-po-check - 한국어 PO 파일 검사툴
 이 프로그램은 한국어 메세지 번역 파일(PO 파일)에서 흔히 범하는
 실수들을 찾아내는 프로그램입니다.
 
+KPC는 python 2.0 혹은 그 이상의 버전과 python 유니코드 한국어 코덱이
+필요합니다.  한국어 코덱은 여러가지가 나와 있지만 잘 동작하고 활발하게
+개발이 이루어지는 버전은 다음을 참고하십시오.
+
+http://sourceforge.net/projects/koco
+
+
+
 
 이 프로그램 개발에 관한 정보는 다음 KLDP.net 페이지에 있습니다:
 
-https://kldp.net/projects/ko-po-check
+http://kldp.net/projects/ko-po-check
 
 
 ko-po-check에 대한 제안 사항이나 문제점을 다음 메일링 리스트 주소로
