@@ -37,3 +37,8 @@ msgstr "함수 `%s' 이(가) 변수로 초기화됐습니다"
 #: test.c:8
 msgid "I am Changwoo.  This is my wife."
 msgstr "저는 창우입니다.  이 사람은 제 아내입니다."
+
+# 조사가 아닌 경우
+#: test.c:8
+msgid "  -h, --help                display this help and exit\n"
+msgstr "  -h, --help                이 도움말을 보여주고 끝납니다\n"
