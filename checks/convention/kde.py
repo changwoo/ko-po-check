@@ -14,10 +14,12 @@ def check(msgid,msgstr):
     if (msgstr[:3] == "_: "):
         return (0,error0_string)
     if (msgid[:22] == "_: NAME OF TRANSLATORS" and
-        (msgstr[:3] == "_: " or string.find(msgstr,e("번역")) >= 0)):
+        (msgstr[:3] == "_: " or string.find(msgstr,e("번역")) >= 0 or
+         string.find(msgstr,e("옮긴이")) >= 0)):
         return (0,error1_string)
     if (msgid[:23] == "_: EMAIL OF TRANSLATORS" and
-        (msgstr[:3] == "_: " or string.find(msgstr,e("번역")) >= 0)):
+        (msgstr[:3] == "_: " or string.find(msgstr,e("번역")) >= 0 or
+         string.find(msgstr,e("옮긴이")) >= 0)):
         return (0,error2_string)
     return (1,"")
 

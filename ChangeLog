@@ -1,5 +1,8 @@
 2004-01-25  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/convention/kde.py (check): Sync with the new terminology
+	check.
+
 	* checks/convention/consistency.py: New check.
 	* checks/convention/Makefile.am (MODULES): Added consistency.py
 
