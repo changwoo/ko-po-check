@@ -1,5 +1,7 @@
 2002-08-04  Changwoo Ryu  <cwryu@debian.org>
 
+	* src/filters/common_misspell.py: `~¤¶À½' Ã£±â.
+
 	* src/poparse.py, src/localeutil.py: Internal string is now python
 	Unicode string.
 

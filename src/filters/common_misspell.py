@@ -4,8 +4,7 @@ import string,re
 
 name = "common-misspell"
 
-import localeutil
-e = localeutil.eucstr
+e = lambda s: unicode(s,'euc-kr')
 
 # 의존명사를 위한 -할 형태의 동사 모음
 verbs_re = "("+string.join([
@@ -55,12 +54,22 @@ chosa_re = "("+string.join([
     '의', '도', '에', '에서', '만', '부터',
     ], '|')+")"
 
+def test_noun_suffix(str):
+    if (str[-1] != e('슴')):
+        return 1
+    elif ((ord(str[-2]) - 0xac00) % 28 == 20):
+        return 0
+    else:
+        return 1
+    
+
 misspell_data = [
     { 're':    re.compile(e("(않\s*(한|함|합니다|된|됨|됩니다))")),
       'error': e("\"%s\": 짧은 부정문에서는 '않'이 아니라 '안'을 씁니다") },
     { 're':    re.compile(e("(읍니다)")),
       'error': e("\"%s\": '읍니다'가 아니라 '습니다'입니다") },
-    { 're':    re.compile(e("((없|있|남았)슴)")),
+    { 're':    re.compile(e("([^\s]+슴)(\s+|$)")),
+      'func':  test_noun_suffix,
       'error': e("\"%s\": '슴'이 아니라 '음'입니다") },
     { 're':    re.compile(e("("+verbs_re+"수(가|도|는)?\s"+")")),
       'error': e("\"%s\": 의존 명사는 띄어 써야 합니다") },
@@ -82,10 +91,13 @@ def check(msgid,msgstr):
         while 1:
             mo = misspell_re.search(str)
             if mo:
+                if (data.has_key('func') and data['func'](mo.group(1))):
+                    str = str[mo.end():]
+                    continue
                 ret = 0
                 if errmsg:
                     errmsg += '\n'
-                errmsg += misspell_error % str[mo.start(1):mo.end(1)]
+                errmsg += misspell_error % mo.group(1)
                 str = str[mo.end():]
             else:
                 break;
@@ -93,10 +105,10 @@ def check(msgid,msgstr):
 
 if __name__ == '__main__':
     import sys
-    msgid = sys.stdin.readline()
-    msgstr = sys.stdin.readline()
+    msgid = unicode(sys.stdin.readline(),'euckr')
+    msgstr = unicode(sys.stdin.readline(),'euckr')
     t,e = check(msgid,msgstr)
     if not t:
-        print e
+        print e.encode('euckr')
     else:
         print "Success"
