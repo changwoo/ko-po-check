@@ -1,12 +1,10 @@
 #!/bin/sh
 
-URL_HEAD=ftp://ftp.kde.or.kr/KDE/distributions/kde-i18n-ko.tar.bz2
-URL_3_0=ftp://ftp.kde.or.kr/KDE/distributions/kde-i18n-ko-3.0-branch.tar.bz2
-URL_2_2=ftp://ftp.kde.or.kr/KDE/distributions/kde-i18n-ko-2.2-branch.tar.bz2
+URL_3_1=ftp://ftp.kde.org/pub/kde/unstable/latest/kde-i18n/kde-i18n-ko-3.1.0.tar.bz2
 OUTFILE=temp.tar.bz2
 
 DIR=po-kde
-URL=$URL_3_0
+URL=$URL_3_1
 
 if [ $# -gt 1 ]; then
     if [ $1 = 'HEAD' ]; then
