@@ -6,8 +6,8 @@ import string,localeutil
 e = localeutil.eucstr
 
 error0_string = e("KDE에서 \"_:\"부터 첫 번째 \\n까지는 본디말에 대한 설명이므로 번역하면 안 됩니다.")
-error1_string = e("번역자 이름을 써야 합니다.  \"_:\"로 시작하는 문장은 번역하면 안 됩니다.")
-error2_string = e("번역자 이메일을 써야 합니다  \"_:\"로 시작하는 문장은 번역하면 안 됩니다.")
+error1_string = e("번역자 이름을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.")
+error2_string = e("번역자 이메일을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.")
 
 def check(msgid,msgstr):
     if (msgstr[:3] == "_: "):
