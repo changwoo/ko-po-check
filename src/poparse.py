@@ -23,7 +23,11 @@ def parse_file(file):
     content_type = catalog.metadata['Content-Type']
     charset = re.compile("charset=(.+)$").search(content_type).group(1)
     while 1:
-        (entry,lineno) = parse_entry(reader,lineno)
+        try:
+            (entry,lineno) = parse_entry(reader,lineno)
+        except ParseError:
+            print "parsing error at %d"%lineno
+            raise ParseError
         if not entry:
             return catalog
         try:
@@ -35,7 +39,7 @@ def parse_file(file):
         catalog.add_entry(entry)
 
 STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5
-emptyline_re = re.compile(r"^\w*$")
+emptyline_re = re.compile(r"^\s*$")
 translator_comment_re = re.compile(r"^\#( (.*))?$")
 automatic_comment_re = re.compile(r"^\#. (.*)$")
 reference_re = re.compile(r"^\#: (.*)$")

@@ -76,7 +76,8 @@ for fn in args:
     try:
         catalog = poparse.parse_file(fp)
     except poparse.ParseError:
-        localeutil.out("%s 파일에서 파싱 오류\n"%fn)
+        e = localeutil.eucstr
+        localeutil.out(e("%s 파일에서 파싱 오류\n"%fn))
         sys.exit(1)
     if fn != '-':
         fp.close()
