@@ -5,6 +5,9 @@
 	* checks/convention/mnemonic.py (re_mnemonic): Fix for KDE
 	mnemonic.
 
+	* tests/test-00001.out, tests/test-00011.out: Updated according to
+	the new mnemonic checks.
+
 2004-10-19  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/language/typoincomplete.py: New module which checks
