@@ -3,8 +3,9 @@
 import os,sys,glob,tempfile
 
 srcdir = os.getenv("srcdir")
+builddir = os.getcwd()
+execfile = "python %s/../src/ko-po-check" % builddir
 os.chdir(srcdir)
-execfile = "python ../src/ko-po-check"
 testfiles = glob.glob("test-[0-9]*.po")
 
 testfiles.sort()
