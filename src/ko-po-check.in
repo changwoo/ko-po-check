@@ -66,4 +66,5 @@ for entry in catalog.entries:
     for filtername in filters.keys():
         t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
         if not t:
-            print "%s:%d: %s" % (fn,entry.msgstr_lineno,e)
+            for line in string.split(e,'\n'):
+                print "%s:%d: %s" % (fn,entry.msgstr_lineno,line)
