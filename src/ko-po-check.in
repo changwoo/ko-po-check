@@ -59,7 +59,7 @@ import codecs
 
 # codec install check
 try:
-    codecs.lookup('eucckr')
+    codecs.lookup('euc-kr')
 except LookupError:
     sys.stderr.write("euc-kr codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
     sys.exit(1)
