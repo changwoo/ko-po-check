@@ -3,6 +3,20 @@
 import sys,os,getopt
 
 moduledir = "@prefix@/share/ko-po-check"
+VERSION = "@VERSION@"
+
+def help():
+    helpmsg = ["Usage: ko-po-check [옵션]... [파일]...<\n" % sys.argv[0],
+               "      --help                이 도움말을 보여주고 종료합니다\n",
+               "      --version             버전 정보를 표시하고 종료합니다\n"]
+    sys.stdout.writelines(helpmsg)
+    sys.exit(1)
+
+def version():
+    versionmsg = ["ko-po-check %s\n" % VERSION]
+    sys.stdout.writelines(versionmsg)
+    sys.exit(0)
+    
 
 # processing the command line options
 
@@ -15,11 +29,9 @@ except getopt.GetoptError, msg:
 
 for (opt, val) in options:
     if opt == '--help':
-        print 'no help :p'
-        sys.exit(1)
+        help()
     elif opt == '--version':
-        print 'no version :p'
-        sys.exit(1)
+        version()
     elif opt == '--moduledir':
         moduledir = val
     
@@ -43,6 +55,14 @@ catalog = poparse.parse_file(fp)
 
 import string,re
 import glob
+import codecs
+
+# codec install check
+try:
+    codecs.lookup('eucckr')
+except LookupError:
+    sys.stderr.write("euc-kr codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
+    sys.exit(1)
 
 # FIXME -- 일단 EUC-KR로 전부 바꾼다
 
@@ -56,6 +76,8 @@ if charset != 'euc-kr':
             entry.translator_comment = unicode(entry.translator_comment, charset).encode('euc-kr')
         except:
             print "err:%d"%entry.msgstr_lineno
+
+#
 
 filenames = glob.glob(filtersdir+"/*.py")
 filters = {}
