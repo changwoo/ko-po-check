@@ -1,14 +1,14 @@
 # -*-text-*-
 # test 1 - 줄임쇠(mnemonic,short cut) 검사
-# 
+#
 # * 줄임쇠는 대문자 이어야 한다.
 # * 번역문에 괄호 안에 한 글자의 줄임쇠가 들어 있으면 줄임쇠 번역으로 본다.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: test 1\n"
-"POT-Creation-Date: 2002-07-14 21:52+0900\n"
-"PO-Revision-Date: 2002-07-14 21:53+0900\n"
+"POT-Creation-Date: 2002-07-24 22:09+0900\n"
+"PO-Revision-Date: 2002-07-24 22:09+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
