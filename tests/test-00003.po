@@ -22,6 +22,11 @@ msgstr "번역 않함"
 msgid "Not Translated"
 msgstr "번역 않 함"
 
+# E: "안 됩니다"가 맞음
+#: test.c:3
+msgid "Default resolution must not be zero."
+msgstr "해상도 초기값은 0이 되어서는 않됩니다."
+
 # E: "습니다"가 맞음
 #: test.c:3
 msgid "No such file or directory"
@@ -34,5 +39,5 @@ msgstr "숟가락이 없슴"
 
 # E: "~음"이 맞음
 #: test.c:3
-msgid "Ther is spoon"
+msgid "There is spoon"
 msgstr "숟가락이 있슴"

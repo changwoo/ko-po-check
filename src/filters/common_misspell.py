@@ -8,11 +8,11 @@ def euc(s):
     return unicode(s,'euc-kr').encode('utf-8')
 
 misspell_data = [
-    { 're':    re.compile(euc("(않\s*함)")),
-      'error': euc("\"%s\": '않'이 아니라 '안'입니다") },
+    { 're':    re.compile(euc("(않\s*(한|함|합니다|된|됨|됩니다))")),
+      'error': euc("\"%s\": 짧은 부정문에서는 '않'이 아니라 '안'을 씁니다") },
     { 're':    re.compile(euc("(읍니다)")),
       'error': euc("\"%s\": '읍니다'가 아니라 '습니다'입니다") },
-    { 're':    re.compile("((없|있)슴)"),
+    { 're':    re.compile("((없|있|남았)슴)"),
       'error': euc("\"%s\": '슴'이 아니라 '음'입니다") }
 ]
 
