@@ -1,0 +1,15 @@
+ko-po-check - 한국어 PO 파일 검사툴
+
+이 프로그램은 한국어 메세지 번역 파일(PO 파일)에서 흔히 범하는
+실수들을 찾아내는 프로그램입니다.
+
+
+이 프로그램 개발에 관한 정보는 다음 KLDP.net 페이지에 있습니다:
+
+https://kldp.net/projects/ko-po-check
+
+
+ko-po-check에 대한 제안 사항이나 문제점을 다음 메일링 리스트 주소로
+알려 주십시오:
+
+ko-po-check-discuss@lists.kldp.net
