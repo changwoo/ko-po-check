@@ -4,11 +4,15 @@
 ==========
 
 * PO parser 개선
-** 다른 encoding 지원
+** 다른 encoding 지원 
+- 지금은 임시로 읽어들인 다음 EUC-KR로 전부 바꾼다.  앞으로
+  StreamReader를 이용해 유니코드로 통일 (공부 필요)
 
 * 출력 메세지의 UTF-8 locale 지원
 
 * 각 애러의 severity level 결정
+
+* 테스트 자동화
 
 
 중기적 할일
