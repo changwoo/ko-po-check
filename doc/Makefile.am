@@ -6,10 +6,10 @@ EXTRA_DIST = $(xml) $(entities)
 
 CLEANFILES = $(doc) $(doc).junk
 
-all: html
-html: $(doc).xml $(entities)
-	db2html -o ./$(doc) $(srcdir)/$(doc).xml
+# all: 
+# html: $(doc).xml $(entities)
+# 	db2html -o ./$(doc) $(srcdir)/$(doc).xml
 
-distclean:
-	rm -rf docbook2html-dir
-	rm -rf ./$(doc) $(doc).junk
+# distclean:
+# 	rm -rf docbook2html-dir
+# 	rm -rf ./$(doc) $(doc).junk
