@@ -21,28 +21,28 @@ msgid "Properties : attribute"
 msgstr "등록 정보: 속성"
 
 #: test.c:5
-msgid "Preferences"
-msgstr "설정 사항"
+msgid "Dummy Preferences"
+msgstr "어쩌구 설정 사항"
 
 #: test.c:5
-msgid "Preferences"
-msgstr "환경설정"
+msgid "Dummy Preferences"
+msgstr "저쩌구 환경설정"
 
 #: test.c:5
-msgid "Preferences"
-msgstr "기본 설정"
+msgid "Dummy Preferences"
+msgstr "어쩌구 기본 설정"
 
 #: test.c:5
-msgid "About..."
-msgstr "...에 대하여"
+msgid "About Dummy..."
+msgstr "어쩌구에 대하여..."
 
 #: test.c:5
-msgid "About..."
-msgstr "정보..."
+msgid "About Dummy..."
+msgstr "어쩌구 정보..."
 
 #: test.c:5
-msgid "_About"
-msgstr "대하여(_A)"
+msgid "_About 어쩌구"
+msgstr "어쩌구에 대하여(_A)"
 
 #: test.c:5
 msgid "Window font"
@@ -54,13 +54,13 @@ msgstr "창 글꼴"
 
 # E: _ 포함
 #: test.c:5
-msgid "Pref_erences"
-msgstr "선택 사항(_E)"
+msgid "Dummy Pref_erences"
+msgstr "더미 선택 사항(_E)"
 
 # E: & 포함
 #: test.c:5
-msgid "Proper&ties"
-msgstr "속성(&T)"
+msgid "Dummy Proper&ties"
+msgstr "어쩌구 속성(&T)"
 
 # E: 단추
 #: test.c:5
@@ -69,16 +69,16 @@ msgstr "버튼"
 
 # E: 단추
 #: test.c:5
-msgid "_Delete"
-msgstr "삭제(_D)"
+msgid "_Delete A"
+msgstr "A 삭제(_D)"
 
 # E: 찾기
 #: test.c:5
-msgid "_Find"
-msgstr "검색(_F)"
+msgid "_Find A"
+msgstr "A 검색(_F)"
 
 # E: 찾기
 #: test.c:5
-msgid "_Search"
-msgstr "검색(_S)"
+msgid "_Search A"
+msgstr "A 검색(_S)"
 

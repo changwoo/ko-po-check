@@ -1,6 +1,6 @@
 import string
 
-name = "gnome-glossary"
+name = "gnomeguide"
 
 e = lambda s: unicode(s,'utf-8')
 

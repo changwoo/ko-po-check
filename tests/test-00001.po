@@ -28,7 +28,7 @@ msgstr "툴(_o)"
 # 올바른 그놈 줄임쇠
 #: test.c:1
 msgid "Save _as..."
-msgstr "다른 이름으로 저장(_A)"
+msgstr "다른 이름으로 저장(_A)..."
 
 # 대문자 KDE 줄임쇠
 #: test.c:1
