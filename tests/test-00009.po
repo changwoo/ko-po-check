@@ -43,3 +43,12 @@ msgid ""
 "Your email"
 msgstr "번역자의 이메일"
 "cwryu@debian.org"
+
+# E: 번역자 메일 써야 함
+#: test.c:9
+msgid ""
+"_: Low Contrast\n"
+"Low"
+msgstr ""
+"_: 저채도\n"
+"낮음"
