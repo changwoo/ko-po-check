@@ -22,16 +22,7 @@
 - 화일 => 파일
 
 * 맞춤법, 띄어쓰기
-- '~할 때'에서 띄어 쓰지 않은 경우: '~할 수'와는 달리 뒤에 동사를 띄어
-  쓰지 않은 경우는 보기 힘듬, "("+verbs + "\s+때)"정도로?
-
-* GNOME에서 "translator_credits" 번역 (NEW)
-- if (msgid == "translator_credits" && (msgstr == "translator_credits"
-  || msgstr이 "번역자어쩌구"인 경우)) 틀렸어!
-
-* KDE에서 _로 시작하는 msgid (NEW)
-- "_: EMAIL OF TRANSLATORS\nYour emails",
-- "_: NAME OF TRANSLATORS\nYour names"
+- 단위를 나타내는 명사 띄어 쓰기 (한 개, 한 번, ...)
 
 * 2벌식 오타 (NEW)
 - example?
