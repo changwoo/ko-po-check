@@ -1,0 +1,8 @@
+2002-07-28  Changwoo Ryu  <cwryu@debian.org>
+
+	* src/filters/common_misspell.py (verbs_re): Added more verbs.
+
+2002-07-28  Changwoo Ryu  <cwryu@debian.org>
+
+	* Release 0.1.
+
