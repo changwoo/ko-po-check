@@ -4,7 +4,7 @@ import os,sys,glob,tempfile
 
 srcdir = os.getenv("srcdir")
 builddir = os.getcwd()
-execfile = "python -S %s/../scripts/ko-po-check" % builddir
+execfile = "env LANG=ko_KR.euckr python -S %s/../scripts/ko-po-check" % builddir
 os.chdir(srcdir)
 testfiles = glob.glob("test-[0-9]*.po")
 
