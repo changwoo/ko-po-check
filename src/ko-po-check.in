@@ -6,7 +6,7 @@ moduledir = "@prefix@/share/ko-po-check"
 VERSION = "@VERSION@"
 
 def help():
-    helpmsg = ["Usage: ko-po-check [옵션]... [파일]...<\n" % sys.argv[0],
+    helpmsg = ["Usage: ko-po-check [옵션]... [파일]...<\n",
                "      --help                이 도움말을 보여주고 종료합니다\n",
                "      --version             버전 정보를 표시하고 종료합니다\n"]
     sys.stdout.writelines(helpmsg)
