@@ -1,5 +1,8 @@
 2002-08-04  Changwoo Ryu  <cwryu@debian.org>
 
+	* src/poparse.py, src/localeutil.py: Internal string is now python
+	Unicode string.
+
 	* src/filters/kde.py: Applied the KDE patch from KIM KyungHeon.
 
 2002-08-03  Changwoo Ryu  <cwryu@debian.org>

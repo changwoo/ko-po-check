@@ -33,8 +33,8 @@ def parse_file(file):
         if not entry:
             return catalog
         try:
-            entry.translator_comment = unicode(entry.translator_comment,charset).encode('utf-8')
-            entry.msgstr = unicode(entry.msgstr,charset).encode('utf-8')
+            entry.translator_comment = unicode(entry.translator_comment,charset)
+            entry.msgstr = unicode(entry.msgstr,charset)
         except:
             raise ParseError, lineno
         catalog.add_entry(entry)

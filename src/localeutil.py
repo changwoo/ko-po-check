@@ -24,19 +24,19 @@ def init():
     errorstream = streamwriter(sys.stderr)
 
 def out(str):
-    outstream.write(unicode(str,'utf-8'))
+    outstream.write(str)
 
 def error(str):
-    errorstream.write(unicode(str,'utf-8'))
+    errorstream.write(str)
 
 def outlines(lines):
-    outstream.writelines(map(lambda s: unicode(s,'utf-8'), lines))
+    outstream.writelines(lines)
 
 def errorlines(lines):
-    errorstream.writelines(map(lambda s: unicode(s,'utf-8'), lines))
+    errorstream.writelines(lines)
 
 def eucstr(str):
-    return unicode(str,'euc-kr').encode('utf-8')
+    return unicode(str,'euc-kr')
 
 if __name__ == '__main__':
     init()
