@@ -40,6 +40,8 @@ data = [("properties", e("등록 정보")),
         ("zoom out", e("축소")),
         ("browse", e("찾아보기")),
         ("go", e("이동")),
+        ("name", e("이름")),
+        ("display", e("표시")),
         ]
 
 error_string = e("%s: 다음과 같이 번역해야 합니다: \"%s\"")
