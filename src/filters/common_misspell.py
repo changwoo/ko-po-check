@@ -8,7 +8,9 @@ misspell_data = [
     { 're':    re.compile("(않\s*함)"),
       'error': "\"%s\": '않'이 아니라 '안'입니다" },
     { 're':    re.compile("(읍니다)"),
-      'error': "\"%s\": '읍니다'가 아니라 '습니다'입니다" }
+      'error': "\"%s\": '읍니다'가 아니라 '습니다'입니다" },
+    { 're':    re.compile("((없|있)슴)"),
+      'error': "\"%s\": '슴'이 아니라 '음'입니다" }
 ]
 
 def check(msgid,msgstr):
