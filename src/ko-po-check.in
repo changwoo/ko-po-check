@@ -24,6 +24,17 @@ catalog = poparse.parse_file(fp)
 import string,re
 import glob
 
+# FIXME -- 일단 EUC-KR로 전부 바꾼다
+
+content_type = catalog.metadata['Content-Type']
+charset = string.lower(content_type[string.find(content_type, 'charset=')+len('charset='):])
+if charset != 'euc-kr':
+    import codecs
+    for entries in catalog.entries:
+        entries.msgstr = unicode(entries.msgstr, charset).encode('euc-kr')
+        entries.translator_comment = unicode(entries.translator_comment, charset).encode('euc-kr')
+        
+
 filenames = glob.glob(filtersdir+"/*.py")
 filters = {}
 for filename in filenames:
