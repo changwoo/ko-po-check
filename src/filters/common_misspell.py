@@ -19,7 +19,6 @@ def check(msgid,msgstr):
         misspell_error = data['error']
         str = msgstr
         while 1:
-            print str
             mo = misspell_re.search(str)
             if mo:
                 ret = 0
