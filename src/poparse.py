@@ -29,6 +29,14 @@ translator_comment_re = re.compile(r"^\#( (.*))?$")
 automatic_comment_re = re.compile(r"^\#. (.*)$")
 reference_re = re.compile(r"^\#: (.*)$")
 flag_re = re.compile(r"^\#, (.*)$")
+string_re = re.compile(r"^\"(.*)\"\w*")
+
+def read_string(fmt):
+    try:
+        str = string_re.match(fmt).group(1)
+    except:
+        raise ParseError
+    return c2rawstring(str)
 
 def parse_entry(file,lineno):
     state = STATE_FIRST
@@ -84,37 +92,23 @@ def parse_entry(file,lineno):
         else:
             if line[:7] == 'msgid "':
                 state = STATE_MSGID
-                if line[-1] != '"':
-                    raise ParseError
-                else:
-                    new_entry.msgid += c2rawstring(line[7:-1])
-                    new_entry.msgid_lineno = lineno
+                new_entry.msgid += read_string(line[6:])
+                new_entry.msgid_lineno = lineno
             elif line[:14] == 'msgid_plural "':
                 state = STATE_MSGID
-                if line[-1] != '"':
-                    raise ParseError
-                else:
-                    new_entry.msgid_plural += c2rawstring(line[14:-1])
+                new_entry.msgid_plural += read_string(line[13:])
             elif line[:8] == 'msgstr "':
                 state = STATE_MSGSTR
-                if line[-1] != '"':
-                    raise ParseError
-                else:
-                    new_entry.msgstr += c2rawstring(line[8:-1])
-                    new_entry.msgstr_lineno = lineno
+                new_entry.msgstr += read_string(line[7:])
+                new_entry.msgstr_lineno = lineno
             elif line[:7] == 'msgstr[':
                 state = STATE_MSGSTR
-                if line[-1] != '"':
-                    raise ParseError
-                else:
-                    new_entry.msgstr += c2rawstring(line[11:-1])
+                new_entry.msgstr += read_string(line[10:])
             elif line[0] == '"':
-                if line[-1] != '"':
-                    raise ParseError
-                elif state == STATE_MSGID:
-                    new_entry.msgid += c2rawstring(line[1:-1])
+                if state == STATE_MSGID:
+                    new_entry.msgid += read_string(line)
                 elif state == STATE_MSGSTR:
-                    new_entry.msgstr += c2rawstring(line[1:-1])
+                    new_entry.msgstr += read_string(line)
                 else:
                     raise ParseError
             else:
