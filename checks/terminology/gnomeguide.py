@@ -23,11 +23,13 @@ data = [("properties", e("등록 정보"), e("속성")),
         ("background", e("바탕색"), e("배경")),
         ("foreground", e("글자색"), e("전경")),
         ("application", e("프로그램"), e("어플리케이션")),
+        ("application", e("프로그램"), e("애플리케이션")),
         ("key", e("키"), e("글쇠")),
         ("translator", e("옮긴이"), e("번역자")),
         ("password", e("열쇠글"), e("비밀 번호")),
         ("password", e("열쇠글"), e("비밀번호")),
         ("password", e("열쇠글"), e("암호")),
+        ("focus", e("포커스"), e("초점")),
         ]
 
 error_string = e("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
