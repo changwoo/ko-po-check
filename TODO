@@ -16,6 +16,12 @@
 "지울 수\s"
 "만들 수\s"
 
+* 관용어 번역: mnemonic이 섞인 경우 영어 단어 구별 방법
+
+* copyright notice는 번역하면 안 됨
+- "^Copyright \(C\) 어쩌구", "^\([cC]\) 어쩌구" 
+- (1) 번역에서 몇번째(N) 줄이 위 정규식에 맞는 지 검사  (2) 원문에서
+  N번째 줄이 번역의 N번째 줄과 다르면 애러
 
 * 출력 메세지가 해당 locale에 맞게
 - glib의 g_print와 같은 locale dependent한 출력 기능 만들기
@@ -23,8 +29,11 @@
 * 각 애러의 severity level을 결정해 출력하기
 - KPCError(s) exception class 만들기
 
+* 테스트 정리
 
-중기적 할일 ==========
+
+중기적 할일 
+==========
 
 * kpc overriding flag 지원
 - kpc는 완벽할 수 없다.  경우에 따라 kpc가 detect할 수밖에 없지만
