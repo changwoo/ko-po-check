@@ -4,14 +4,14 @@ import re
 
 name = "should-have-chosa-alternative"
 
-chosa_re = re.compile("(%[cdfs](이|가|을|를|로|으로|로서|으로서|로써|으로써))[^A-Za-z0-9\xb0-\xfe]")
+chosa_re = re.compile("(%[cdfs](이|가|을|를|로서|로써|로|으로서|으로써|으로|로써))")
 error_string = "\"%s\": 조사에 따른 받침 구별이 없습니다" 
 def check(msgid,msgstr):
     ret = 1
     errmsg = ""
     while 1:
         mo = chosa_re.search(msgstr)
-        if mo:
+        if mo and (mo.end() >= len(msgstr) or msgstr[mo.end()] != '('):
             ret = 0
             if errmsg:
                 errmsg += '\n'
