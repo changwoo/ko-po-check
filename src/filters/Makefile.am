@@ -4,4 +4,5 @@ filters_PYTHON =				\
 	chosa_alternative.py			\
 	common_misspell.py			\
 	copyright.py				\
+	gnome.py				\
 	gnome_glossary.py
