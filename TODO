@@ -10,17 +10,29 @@
 
 * 조사 구별: 올바른 조사 사용법 suggestion
 
-* 의존 명사: "할수(\w|$)" => "할 수"
+* 의존 명사 띄어쓰기
 
-* 출력 메세지의 UTF-8 locale 지원
+"\w할 수\s"
+"지울 수\s"
+"만들 수\s"
 
-* 각 애러의 severity level 결정
+
+* 출력 메세지가 해당 locale에 맞게
+- glib의 g_print와 같은 locale dependent한 출력 기능 만들기
+
+* 각 애러의 severity level을 결정해 출력하기
+- KPCError(s) exception class 만들기
 
 
-중기적 할일
-==========
+중기적 할일 ==========
+
+* kpc overriding flag 지원
+- kpc는 완벽할 수 없다.  경우에 따라 kpc가 detect할 수밖에 없지만
+  올바른 번역일 수도 있다.  이 경우 번역자 주석문에 표시를 해 줌으로써
+  kpc가 그 애러를 무시하도록 할 수 있을 것이다.
 
 * detect하는 사항에 대해 설명하는 문서 작성
+- docbook 사용
 
 
 장기적 할일
