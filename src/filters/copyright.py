@@ -2,7 +2,7 @@ import re, string
 
 name = "copyright"
 
-copyright_re = re.compile(r"^[Cc]opyright \([Cc]\)")
+copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 
 def euc(s):
     return unicode(s,'euc-kr').encode('utf-8')
