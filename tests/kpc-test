@@ -4,7 +4,7 @@ import os,sys,glob
 
 execfile = "python ../src/ko-po-check --moduledir=../src"
 srcdir = os.getenv("srcdir")
-testfiles = glob.glob("./test-[0-9]*.po")
+testfiles = glob.glob("%s/test-[0-9]*.po" % srcdir)
 
 testfiles.sort()
 
