@@ -32,7 +32,7 @@ for filename in filenames:
     filters[f['name']] = f
 
 for entry in catalog.entries:
-    for fn in filters.keys():
-        t,e = filters[fn]['check'](entry.msgid, entry.msgstr)
+    for filtername in filters.keys():
+        t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
         if not t:
             print "%s:%d: %s" % (fn,entry.msgstr_lineno,e)
