@@ -8,7 +8,9 @@ VERSION = "@VERSION@"
 def help():
     helpmsg = ["Usage: ko-po-check [옵션]... [파일]...<\n",
                "      --help                이 도움말을 보여주고 종료합니다\n",
-               "      --version             버전 정보를 표시하고 종료합니다\n"]
+               "      --version             버전 정보를 표시하고 종료합니다\n"
+               "\n"
+               " 파일이 `-'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n"]
     sys.stdout.writelines(helpmsg)
     sys.exit(1)
 
@@ -41,16 +43,6 @@ sys.path.append(moduledir)
 
 import po,poparse,codecs
 
-if args:
-    fn = args[0]
-else:
-    fn = '-'
-
-if fn == '-':
-    fp = sys.stdin
-else:
-    fp = open(fn)
-
 # codec install check
 try:
     codecs.lookup('euc-kr')
@@ -58,29 +50,11 @@ except LookupError:
     sys.stderr.write("euc-kr codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
     sys.exit(1)
 
-try:
-    catalog = poparse.parse_file(fp)
-except poparse.ParseError:
-    sys.stderr.write("parse error on %s\n"%fn)
-    sys.exit(1)
 
-import string,re
+if not args:
+    fn = '-'
+
 import glob
-
-# FIXME -- 일단 EUC-KR로 전부 바꾼다
-
-# content_type = catalog.metadata['Content-Type']
-# charset = string.lower(content_type[string.find(content_type, 'charset=')+len('charset='):])
-# if charset != 'euc-kr':
-#     import codecs
-#     for entry in catalog.entries:
-#         try:
-#             entry.msgstr = unicode(entry.msgstr, charset).encode('euc-kr')
-#             entry.translator_comment = unicode(entry.translator_comment, charset).encode('euc-kr')
-#         except:
-#             print "err:%d"%entry.msgstr_lineno
-
-#
 
 filenames = glob.glob(filtersdir+"/*.py")
 filters = {}
@@ -89,11 +63,27 @@ for filename in filenames:
     execfile(filename, f)
     filters[f['name']] = f
 
-for entry in catalog.entries:
-    if (not entry.is_translated()):
-        continue
-    for filtername in filters.keys():
-        t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
-        if not t:
-            for line in string.split(e,'\n'):
-                print "%s:%d: %s" % (fn,entry.msgstr_lineno,unicode(line, 'utf-8').encode('euc-kr'))
+for fn in args:
+    if fn == '-':
+        fp = sys.stdin
+    else:
+        fp = open(fn)
+
+    try:
+        catalog = poparse.parse_file(fp)
+    except poparse.ParseError:
+        sys.stderr.write("parse error on %s\n"%fn)
+        sys.exit(1)
+    if fn != '-':
+        fp.close()
+
+    import string,re
+
+    for entry in catalog.entries:
+        if (not entry.is_translated()):
+            continue
+        for filtername in filters.keys():
+            t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
+            if not t:
+                for line in string.split(e,'\n'):
+                    print "%s:%d: %s" % (fn,entry.msgstr_lineno,unicode(line, 'utf-8').encode('euc-kr'))
