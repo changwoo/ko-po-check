@@ -15,7 +15,7 @@ msgstr ""
 # E: Copyright notice 번역
 #: test.c:4
 msgid "Copyright (C) Free Software Foundation, Inc."
-msgstr "Copyright (C) 자유소프트웨어 재단"
+msgstr "Copyright (C) 자유소프트웨어 재단."
 
 # E: Copyright notice 번역
 #: test.c:4
