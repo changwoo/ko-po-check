@@ -3,6 +3,7 @@ AM_INIT_AUTOMAKE(ko-po-check,0.1)
 
 AC_OUTPUT([
 Makefile
+doc/Makefile
 src/Makefile
 src/filters/Makefile
 tests/Makefile
