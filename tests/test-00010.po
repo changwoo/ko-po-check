@@ -1,0 +1,29 @@
+# -*-text-*-
+# test 10 - 2 bul typo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 9\n"
+"POT-Creation-Date: 2002-08-01 01:30+0900\n"
+"PO-Revision-Date: 2002-08-01 01:30+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: test.c:1
+msgid "There is an error"
+msgstr "오류가 발생했스빈다"
+
+#: test.c:2
+msgid "Sorry"
+msgstr "밍나합니다"
+
+#: test.c:3
+msgid "There is no such thing"
+msgstr "그런 거싱 없습니다"
+
+# test.c:4
+msgid "People"
+msgstr "살마들"
