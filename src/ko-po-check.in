@@ -39,7 +39,7 @@ filtersdir = moduledir + "/filters"
 
 sys.path.append(moduledir)
 
-import po,poparse
+import po,poparse,codecs
 
 if args:
     fn = args[0]
@@ -51,12 +51,6 @@ if fn == '-':
 else:
     fp = open(fn)
 
-catalog = poparse.parse_file(fp)
-
-import string,re
-import glob
-import codecs
-
 # codec install check
 try:
     codecs.lookup('euc-kr')
@@ -64,18 +58,23 @@ except LookupError:
     sys.stderr.write("euc-kr codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
     sys.exit(1)
 
+catalog = poparse.parse_file(fp)
+
+import string,re
+import glob
+
 # FIXME -- 일단 EUC-KR로 전부 바꾼다
 
-content_type = catalog.metadata['Content-Type']
-charset = string.lower(content_type[string.find(content_type, 'charset=')+len('charset='):])
-if charset != 'euc-kr':
-    import codecs
-    for entry in catalog.entries:
-        try:
-            entry.msgstr = unicode(entry.msgstr, charset).encode('euc-kr')
-            entry.translator_comment = unicode(entry.translator_comment, charset).encode('euc-kr')
-        except:
-            print "err:%d"%entry.msgstr_lineno
+# content_type = catalog.metadata['Content-Type']
+# charset = string.lower(content_type[string.find(content_type, 'charset=')+len('charset='):])
+# if charset != 'euc-kr':
+#     import codecs
+#     for entry in catalog.entries:
+#         try:
+#             entry.msgstr = unicode(entry.msgstr, charset).encode('euc-kr')
+#             entry.translator_comment = unicode(entry.translator_comment, charset).encode('euc-kr')
+#         except:
+#             print "err:%d"%entry.msgstr_lineno
 
 #
 
@@ -87,8 +86,9 @@ for filename in filenames:
     filters[f['name']] = f
 
 for entry in catalog.entries:
+#    print entry.msgstr.encode('euc-kr')
     for filtername in filters.keys():
         t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
         if not t:
             for line in string.split(e,'\n'):
-                print "%s:%d: %s" % (fn,entry.msgstr_lineno,line)
+                print "%s:%d: %s" % (fn,entry.msgstr_lineno,unicode(line, 'utf-8').encode('euc-kr'))

@@ -4,8 +4,11 @@ import re
 
 name = "mnemonic-must-be-capital"
 
+def euc(s):
+    return unicode(s,'euc-kr').encode('utf-8')
+
 search_re = re.compile("(\([_&][a-z]\))")
-error_string = "\"%s\": mnemonic이 소문자입니다"
+error_string = euc("\"%s\": mnemonic이 소문자입니다")
 
 def check(msgid,msgstr):
     ret = 1
