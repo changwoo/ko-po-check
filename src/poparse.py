@@ -109,7 +109,9 @@ def parse_entry(file,lineno):
                 else:
                     new_entry.msgstr += c2rawstring(line[11:-1])
             elif line[0] == '"':
-                if state == STATE_MSGID:
+                if line[-1] != '"':
+                    raise ParseError
+                elif state == STATE_MSGID:
                     new_entry.msgid += c2rawstring(line[1:-1])
                 elif state == STATE_MSGSTR:
                     new_entry.msgstr += c2rawstring(line[1:-1])
