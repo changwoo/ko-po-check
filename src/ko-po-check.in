@@ -20,9 +20,13 @@ else:
 catalog = poparse.parse_file(fp)
 
 import string,re
+import glob
 
-small_mnemonic_re = re.compile("\(_[a-z]\)")
-for entry in catalog.entries:
-    if small_mnemonic_re.search(entry.msgstr):
-        print "small case mnemonic"
-        sys.exit(1)
+filters = glob.glob(filtersdir + "/*.py")
+for filter in filters:
+    f = {}
+    execfile(filter, f)
+    for entry in catalog.entries:
+        t,e = f['check'](entry.msgid, entry.msgstr)
+        if not t:
+            print e
