@@ -1,3 +1,13 @@
+2002-08-01  Changwoo Ryu  <cwryu@debian.org>
+
+	* src/filters/common_misspell.py (verbs_re): Inserted missing
+	comma.
+	* tests/test-00006.po, tests/test-00006.out: Updated test for
+	this fix.
+
+	* src/poparse.py: Fixed parsing bug on empty lines
+	* src/ko-po-check.in: Display line no. on ParseError
+
 2002-07-31  Changwoo Ryu  <cwryu@debian.org>
 
 	* src/localeutil.py: Addded LC_CTYPE dependent message out module
