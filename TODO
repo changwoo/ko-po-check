@@ -12,9 +12,6 @@
 각 모듈에서
 ----------
 
-* 조사 구별
-- 올바른 조사 사용법 suggestion
-
 * 관용어 번역
 - mnemonic이 섞인 경우 영어 단어 구별 방법?  
   msgid = string.replace(msgid, '_', '')
