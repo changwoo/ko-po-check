@@ -79,7 +79,7 @@ misspell_data = [
       'error': e("\"%s\": 의존 명사는 띄어 써야 합니다") },
     { 're':    re.compile(e("("+verbs_re+"때(가|도|는)?\s"+")")),
       'error': e("\"%s\": `~할 때'라고 띄어 써야 합니다") },
-    { 're':    re.compile(e("([0-9A-Za-z-+`'\"()%_]+\s"+chosa_re+")\s+")),
+    { 're':    re.compile(e("([0-9A-Za-z-+`'\"()%_]+ "+chosa_re+")\s+")),
       'error': e("\"%s\": 조사는 체언에 붙여 써야 합니다") },
 ]
 
