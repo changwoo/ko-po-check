@@ -24,7 +24,7 @@ catalog = poparse.parse_file(fp)
 import string,re
 import glob
 
-filenames = glob.glob(filtersdir + "/*.pyc")
+filenames = glob.glob(filtersdir+"/*.py")
 filters = {}
 for filename in filenames:
     f = {}
