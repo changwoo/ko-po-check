@@ -5,9 +5,10 @@ import re
 name = "should-have-chosa-alternative"
 
 format = "%([1-9][0-9]*\$)?[-+ #'0]*([1-9][0-9]*)?(\.[0-9]+)?((hh|h|j|l|L|ll|q|t|z|Z)?[dioufeEgGaAcCspnmhjlLqtzZ1-9]|hh|ll)"
-chosa = "(이라는|라는|이|가|을|를|은|는|로서|로써|로|으로서|으로써|으로|로써)"
+chosa = "(이|가|을|를|은|는|로|으로|로서|으로서|로써|으로써|라는|이라는)"
+eow = "[\W$]"
 
-chosa_re = re.compile("("+format+chosa+")")
+chosa_re = re.compile("("+format+chosa+")"++eow)
 error_string = "\"%s\": 받침에 따른 조사 구별(예: %%s을(를))이 없습니다" 
 def check(msgid,msgstr):
     ret = 1
