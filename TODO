@@ -3,6 +3,8 @@
 단기적 할일
 ==========
 
+* 애러가 있을 경우 exit(nonzero)
+
 * PO parser 개선
 - encoding error 처리
 
