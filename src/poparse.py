@@ -15,9 +15,10 @@ def c2rawstring(str):
 FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,NO_WRAP = 1,2,4,8,16
 
 def parse_file(file):
+    lineno = 0
     catalog = po.catalog()
     while 1:
-        entry = parse_entry(file)
+        (entry,lineno) = parse_entry(file,lineno)
         if not entry:
             return catalog
         catalog.add_entry(entry)
@@ -29,25 +30,26 @@ automatic_comment_re = re.compile(r"^\#. (.*)$")
 reference_re = re.compile(r"^\#: (.*)$")
 flag_re = re.compile(r"^\#, (.*)$")
 
-def parse_entry(file):
+def parse_entry(file,lineno):
     state = STATE_FIRST
     new_entry = po.entry()
     while 1:
+        lineno += 1
         line = file.readline()
         if not line:                    # EOF
             if state == STATE_FIRST or state == STATE_COMMENT:
-                return            	# no more messages -- return nothing
+                return (None,lineno)    # no more messages -- return nothing
             elif state != STATE_MSGSTR:
                 raise ParseError        # unexpected EOF
             else:
-                return new_entry
+                return (new_entry,lineno)
         if emptyline_re.match(line):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 continue
             elif state != STATE_MSGSTR:
                 raise ParseError
             else:
-                return new_entry
+                return (new_entry,lineno)
         if line[-1] == '\n':            # remove the trailing newline
             line = line[:-1]
         if line[:3] == '#~ ':
@@ -86,6 +88,7 @@ def parse_entry(file):
                     raise ParseError
                 else:
                     new_entry.msgid += c2rawstring(line[7:-1])
+                    new_entry.msgid_lineno = lineno
             elif line[:14] == 'msgid_plural "':
                 state = STATE_MSGID
                 if line[-1] != '"':
@@ -98,6 +101,7 @@ def parse_entry(file):
                     raise ParseError
                 else:
                     new_entry.msgstr += c2rawstring(line[8:-1])
+                    new_entry.msgstr_lineno = lineno
             elif line[:7] == 'msgstr[':
                 state = STATE_MSGSTR
                 if line[-1] != '"':
@@ -116,7 +120,7 @@ def parse_entry(file):
                 raise ParseError
             
     #new_entry.msgid += line
-    return new_entry
+    return (new_entry,lineno)
         
         
 def test():
