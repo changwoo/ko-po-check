@@ -1,3 +1,10 @@
+2004-10-20  Changwoo Ryu  <cwryu@debian.org>
+
+	* configure.in: Release 0.6
+
+	* checks/convention/mnemonic.py (re_mnemonic): Fix for KDE
+	mnemonic.
+
 2004-10-19  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/language/typoincomplete.py: New module which checks

@@ -6,7 +6,7 @@ name = "mnemonic"
 
 e = lambda s: unicode(s,'utf-8')
 
-re_mnemonic = re.compile("^[^_]*_([0-9A-Za-z])[^_]*$")
+re_mnemonic = re.compile("^[^_]*[_&]([0-9A-Za-z])[^_]*$")
 re_mnemonic_unlikely = re.compile("(^[^_]*[a-zA-Z]_[A-Z][^_]*$|^translator_credits.*|.*%[ds].*)")
 group_mnemonic = 1
 error_string_no_mnemonic = e("번역문에 mnemonic이 없거나 두 개 이상입니다")
