@@ -37,6 +37,8 @@ data = [("properties", e("등록 정보")),
         ("statusbar", e("상태 표시줄")),
         ("zoom in", e("확대")),
         ("zoom out", e("축소")),
+        ("browse", e("찾아보기")),
+        ("go", e("이동")),
         ]
 
 error_string = e("%s: 다음과 같이 번역해야 합니다: \"%s\"")
