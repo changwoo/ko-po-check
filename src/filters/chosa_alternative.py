@@ -10,7 +10,7 @@ def euc(s):
 format = "%([1-9][0-9]*\$)?[-+ #'0]*([1-9][0-9]*)?(\.[0-9]+)?((hh|h|j|l|L|ll|q|t|z|Z)?[dioufeEgGaAcCspnmhjlLqtxXzZ1-9]|hh|ll)"
 chosa = "(이|가|을|를|은|는|로|으로|로서|으로서|로써|으로써|라는|이라는)"
 
-chosa_re = re.compile(euc("("+format+"['\"]? ?"+chosa+")([^(\w]|$)"))
+chosa_re = re.compile(euc("("+format+"['\"]? ?"+chosa+")(\s|$)"))
 error_string = euc("\"%s\": 받침에 따른 조사 구별(예: %%s을(를))이 없습니다")
 def check(msgid,msgstr):
     ret = 1

@@ -73,3 +73,9 @@ msgstr "%4ld는, %8ls는, %lc는, %hf는"
 #: test.c:2
 msgid "%s silver medal"
 msgstr "%s 은메달"
+
+# 조사가 아니다
+#: test.c:2
+msgid "it is not %s"
+msgstr "%s은\n"
+"아닙니다"
