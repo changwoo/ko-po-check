@@ -1,3 +1,8 @@
+2004-01-25  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/convention/consistency.py: New check.
+	* checks/convention/Makefile.am (MODULES): Added consistency.py
+
 2003-08-06  Changwoo Ryu  <cwryu@debian.org>
 
 	* scripts/ko-po-check.in (option_version): Removed localeutil.
