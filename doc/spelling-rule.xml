@@ -1,0 +1,2858 @@
+<!--
+     한글 맞춤법 (문교부 고시 제 88-1호)
+
+     원문: http://www.hangeul.or.kr/21.htm (한글학회)
+-->
+
+  <appendix id="hangul-spelling-rule">
+    <title>한글 맞춤법 (문교부 고시 제88-1호)</title>
+
+    <para>
+▼[한글 맞춤법(문교부 고시 제88-1호)]
+
+※1988년 1월 19일 문교부가 새로 개정 고시하여 1989년 3월 1일부터 시행하도록
+한 우리 나라 현행 어문 규정이다.
+  주요 개정 내용으로는, 한자어에서는 사이시옷을 붙이지 않음을 원칙으로 하였
+고(다만 두 음절로 된 6개 한자어만 예외로 사이시옷을 붙이기로 함), "가정란/
+가정난" 등으로 혼용되어 쓰이던 것을 두음법칙 규정을 구체화하면서 "가정란"으
+로 적도록 하였다. 띄어쓰기 규정에서 보조 용언은 띄어 씀을 원칙으로 하되, 붙
+여 씀도 허용하였고, 성과 이름은 붙여 쓰도록 하였다. 수의 표기에 있어서도 십
+진법에 따라 띄어 쓰던 것을 만 단위로 띄어 쓰도록 한 것 등이다.
+    </para>
+
+  <sect1>
+    <title>총칙</title>
+
+    <para>제 1 항  한글 맞춤법은 표준어를 소리대로 적되, 어법에 맞도록 함을
+	  원칙으로 한다.</para>
+    <para>제 2 항  문장의 각 단어는 띄어 씀을 원칙으로 한다.</para>
+    <para>제 3 항  외래어는 '외래어 표기법'에 따라 적는다.</para>
+  </sect1>
+
+  <sect1>
+    <title>자모</title>
+    
+    <para>
+제 4 항  한글 자모의 수는 스물넉 자로 하고, 그 순서와 이름은 다음과 같이
+        정한다.
+    </para>
+    <informalexample><literallayout>
+      ㄱ(기역)   ㄴ(니은)   ㄷ(디귿)    ㄹ(리을)
+      ㅁ(미음)   ㅂ(비읍)   ㅅ(시옷)    ㅇ(이응)
+      ㅈ(지읒)   ㅊ(치읓)   ㅋ(키읔)    ㅌ(티읕)
+      ㅍ(피읖)   ㅎ(히읗)
+      ㅏ(아)     ㅑ(야)     ㅓ(어)      ㅕ(여)
+      ㅗ(오)     ㅛ(요)     ㅜ(우)      ㅠ(유)
+      ㅡ(으)     ㅣ(이)
+    </literallayout></informalexample>
+    <para>
+   [붙임 1]  위의 자모로써 적을 수 없는 소리는 두 개 이상의 자모를 어울러
+           서 적되, 그 순서와 이름은 다음과 같이 정한다.
+    </para>
+    <informalexample><literallayout>
+      ㄲ(쌍기역) ㄸ(쌍디귿) ㅃ(쌍비읍) ㅆ(쌍시옷)
+      ㅉ(쌍지읒) ㅐ(애)     ㅒ(얘)      ㅔ(에) 
+      ㅖ(예)     ㅘ(와)     ㅙ(왜)      ㅚ(외)
+      ㅝ(워)     ㅞ(웨)     ㅟ(위)      ㅢ(의)
+    </literallayout></informalexample>
+    <para>
+   [붙임 2]  사전에 올릴 적의 자모 순서는 다음과 같이 정한다.
+    </para>
+    <informalexample>
+    <literallayout>
+      자음 ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ
+      모음 ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ
+    </literallayout>
+    </informalexample>
+  </sect1>
+
+  <sect1>
+    <title>소리에 관한 것</title>
+
+    <sect2>
+      <title>된소리</title>
+
+      <para>
+제 5 항  한 단어 안에서 뚜렷한 까닭 없이 나는 된소리는 다음 음절의 첫소리
+        를 된소리로 적는다.
+  1. 두 모음 사이에서 나는 된소리
+    </para>
+    <informalexample><literallayout>
+      소쩍새     어깨     오빠     으뜸      아끼다      기쁘다
+      깨끗하다   어떠하다   해쓱하다    거꾸로
+      부썩       어찌       이따금
+    </literallayout></informalexample>
+    <para>
+  2. 'ㄴ,ㄹ,ㅁ,ㅇ'받침 뒤에서 나는 된소리
+    </para>
+    <informalexample><literallayout>
+      산뜻하다   잔뜩       살짝        훨씬       담뿍       움찔
+      몽땅       엉뚱하다
+    </literallayout></informalexample>
+    <para>
+   다만, 'ㄱ, ㅂ' 받침 뒤에서 나는 된소리는, 같은 음절이나 비슷한 음절이
+   겹쳐 나는 경우가 아니면 된소리로 적지 아니한다.
+    </para>
+    <informalexample><literallayout>
+      국수       깍두기     딱지        색시       싹둑(∼싹둑)
+      법석       갑자기     몹시
+    </literallayout></informalexample>
+      </sect2>
+    <sect2>
+      <title>구개음화</title>
+
+      <para>
+제 6 항  'ㄷ,ㅌ'받침 뒤에 종속적 관계를 가진 '-이(-)'나 '-히-'가 올 적에
+        는 그 'ㄷ,ㅌ'이 'ㅈ,ㅊ'으로 소리나더라도 'ㄷ,ㅌ'으로 적는다. (ㄱ을
+        취하고, ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>맏이</entry><entry>마지</entry>
+	      <entry>핥이다</entry><entry>할치다</entry>
+	    </row>
+	    <row>
+	      <entry>해돋이</entry><entry>해도지</entry>
+	      <entry>걷히다</entry><entry>거치다</entry>
+	    </row>
+	    <row>
+	      <entry>굳이</entry><entry>구지</entry>
+	      <entry>닫히다</entry><entry>다치다</entry>
+	    </row>
+	    <row>
+	      <entry>같이</entry><entry>가치</entry>
+	      <entry>묻히다</entry><entry>무치다</entry>
+	    </row>
+	    <row>
+	      <entry>끝이</entry><entry>끄치</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+      </sect2>
+    <sect2>
+      <title>'ㄷ' 소리 받침</title>
+
+      <para>
+제 7 항  'ㄷ' 소리로 나는 받침 중에서 'ㄷ'으로 적을 근거가 없는 것은 'ㅅ'
+        으로 적는다.
+    </para>
+    <informalexample><literallayout>
+      덧저고리   돗자리     엇셈        웃어른     핫옷       무릇
+      사뭇  얼핏   자칫하면   뭇[衆]   옛          첫         헛
+    </literallayout></informalexample>
+    </sect2>
+    <sect2>
+      <title>모 음</title>
+
+      <para>
+제 8 항  '계, 례, 몌, 폐, 혜'의 'ㅖ'는 'ㅔ'로 소리나는 경우가 있더라도
+        'ㅖ'로 적는다. (ㄱ을 취하고, ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>계수(桂樹)</entry><entry>게수</entry>
+	      <entry>혜택(惠澤)</entry><entry>헤택</entry>
+	    </row>
+	    <row>
+	      <entry>사례(謝禮)</entry><entry>사레</entry>
+	      <entry>계집</entry><entry>게집</entry>
+	    </row>
+	    <row>
+	      <entry>연몌(連袂)</entry><entry>연메</entry>
+	      <entry>핑계</entry><entry>핑게</entry>
+	    </row>
+	    <row>
+	      <entry>폐품(廢品)</entry><entry>페품</entry>
+	      <entry>계시다</entry><entry>게시다</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   다만, 다음 말은 본음대로 적는다.
+    </para>
+    <informalexample><literallayout>
+      게송(偈頌) 게시판(揭示板)         휴게실(休憩室)
+    </literallayout></informalexample>
+    <para>
+제 9 항  '의'나, 자음을 첫소리로 가지고 있는 음절의 'ㅢ'는 'ㅣ'로 소리나
+        는 경우가 있더라도 'ㅢ'로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>의의(意義)</entry><entry>의이</entry>
+	      <entry>늬ㅇ큼*</entry><entry>닝큼</entry>
+	    </row>
+	    <row>
+	      <entry>본의(本義)</entry><entry>본이</entry>
+	      <entry>띄어쓰기</entry><entry>띠어쓰기</entry>
+	    </row>
+	    <row>
+	      <entry>무늬[紋]</entry><entry>무니</entry>
+	      <entry>씌어</entry><entry>씨어</entry>
+	    </row>
+	    <row>
+	      <entry>보늬</entry><entry>보니</entry>
+	      <entry>틔어</entry><entry>티어</entry>
+	    </row>
+	    <row>
+	      <entry>오늬</entry><entry>오니</entry>
+	      <entry>희망(希望)</entry><entry>히망</entry>
+	    </row>
+	    <row>
+	      <entry>하늬바람</entry><entry>하니바람</entry>
+	      <entry>희다</entry><entry>히다</entry>
+	    </row>
+	    <row>
+	      <entry>늴리리</entry><entry>닐리리</entry>
+	      <entry>유희(遊戱)</entry><entry>유희</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+※ 위의 제9항에서 *로 표시된 '늬ㅇ큼'은 완성형 한글 코드에 없는 글자이므로
+표기가 잘못 되었습니다. '늬' 아래에 'ㅇ' 받침이 있는 글자입니다.
+    </para>
+    </sect2>
+    <sect2>
+      <title>두음 법칙</title>
+
+      <para>
+제10항  한자음 '녀, 뇨, 뉴, 니'가 단어 첫머리에 올 적에는 두음 법칙에 따
+       라 '여, 요, 유, 이'로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>여자(女子)</entry><entry>녀자</entry>
+	      <entry>유대(紐帶)</entry><entry>뉴대</entry>
+	    </row>
+	    <row>
+	      <entry>연세(年歲)</entry><entry>년세</entry>
+	      <entry>이토(泥土)</entry><entry>니토</entry>
+	    </row>
+	    <row>
+	      <entry>요소(尿素)</entry><entry>뇨소</entry>
+	      <entry>익명(匿名)</entry><entry>닉명</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   다만, 다음과 같은 의존 명사에서는 '냐, 녀' 음을 인정한다.
+    </para>
+    <informalexample><literallayout>
+      냥(兩)     냥쭝(兩-)  년(年)(몇 년)
+    </literallayout></informalexample>
+    <para>
+   [붙임 1] 단어의 첫머리 이외의 경우에는 본음대로 적는다.
+    </para>
+    <informalexample><literallayout>
+      남녀(男女) 당뇨(糖尿) 결뉴(結紐) 은닉(隱匿)
+    </literallayout></informalexample>
+    <para>
+   [붙임 2] 접두사처럼 쓰이는 한자가 붙어서 된 말이나 합성어에서, 뒷말의
+           첫소리가 'ㄴ'소리로 나더라도 두음 법칙에 따라 적는다.
+    </para>
+    <informalexample><literallayout>
+      신여성(新女性)   공염불(空念佛)   남존여비(男尊女卑)
+    </literallayout></informalexample>
+    <para>
+   [붙임 3] 둘 이상의 단어로 이루어진 고유 명사를 붙여 쓰는 경우에도 붙임
+           2에 준하여 적는다.
+    </para>
+    <informalexample><literallayout>
+      한국여자대학          대한요소비료회사
+    </literallayout></informalexample>
+    <para>
+제11항  한자음 '랴, 려, 례, 료, 류, 리'가 단어의 첫머리에 올 적에는 두음
+       법칙에 따라 '야, 여, 예,요, 유, 이'로 적는다. (ㄱ을 취하고 ㄴ을 버
+       림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>양심(良心)</entry><entry>량심</entry>
+	      <entry>용궁(龍宮)</entry><entry>룡궁</entry>
+	    </row>
+	    <row>
+	      <entry>역사(歷史)</entry><entry>력사</entry>
+	      <entry>유행(流行)</entry><entry>류행</entry>
+	    </row>
+	    <row>
+	      <entry>예의(禮儀)</entry><entry>례의</entry>
+	      <entry>이발(理髮)</entry><entry>리발</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   다만, 다음과 같은 의존 명사는 본음대로 적는다.
+    </para>
+    <informalexample><literallayout>
+      리(里) : 몇 리냐?
+      리(理) : 그럴 리가 없다.
+    </literallayout></informalexample>
+    <para>
+   [붙임 1] 단어의 첫머리 이외의 경우에는 본음대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      개량(改良) 선량(善良) 수력(水力) 협력(協力)
+      사례(謝禮) 혼례(婚禮) 와룡(臥龍) 쌍룡(雙龍)
+      하류(下流) 급류(急流) 도리(道理) 진리(眞理)
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, 모음이나 'ㄴ' 받침 뒤에 이어지는 '렬', '률'은 '열', '율'로 적는
+   다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>나열(羅列)</entry><entry>나렬</entry>
+	      <entry>분열(分裂)</entry><entry>분렬</entry>
+	    </row>
+	    <row>
+	      <entry>치열(齒列)</entry><entry>치렬</entry>
+	      <entry>선열(先烈)</entry><entry>선렬</entry>
+	    </row>
+	    <row>
+	      <entry>비열(卑劣)</entry><entry>비렬</entry>
+	      <entry>진열(陳列)</entry><entry>진렬</entry>
+	    </row>
+	    <row>
+	      <entry>규율(規律)</entry><entry>규률</entry>
+	      <entry>선율(旋律)</entry><entry>선률</entry>
+	    </row>
+	    <row>
+	      <entry>비율(比率)</entry><entry>비률</entry>
+	      <entry>전율(戰慄)</entry><entry>전률</entry>
+	    </row>
+	    <row>
+	      <entry>실패율(失敗率)</entry><entry>실패률</entry>
+	      <entry>백분율(百分率)</entry><entry>백분률</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 2] 외자로 된 이름을 성에 붙여 쓸 경우에도 본음대로 적을 수 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      신립(申砬) 최린(崔麟) 채륜(蔡倫) 하륜(河崙)
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 3] 준말에서 본음으로 소리나는 것은 본음대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      국련(국제연합)        대한교련(대한교육연합회)
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 4] 접두사처럼 쓰이한 한자가 붙어서 된 말이나 합성어에서 뒷말의
+           첫소리가 'ㄴ' 또는 'ㄹ' 소리가 나더라도 두음 법칙에 따라 적는
+           다.
+    </para>
+    <informalexample>
+      <literallayout>
+      역이용(逆利用)        연이율(年利率)         열역학(熱力學)
+      해외여행(海外旅行)
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 5] 둘 이상의 단어로 이루어진 고유 명사를 붙여 쓰는 경우나 십진
+           법에 따라 쓰는 수(數)도 붙임 4에 준하여 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      서울여관   신흥이발관 육천육백육십육(六千六白六十六)
+      </literallayout>
+    </informalexample>
+    <para>
+제12항  한자음 '라, 래, 로, 뢰, 루, 르'가 단어의 첫머리에 올 적에는 두음
+       법칙에 따라 '나, 내, 노, 뇌, 누, 느'로  적는다. (ㄱ을 취하고 ㄴ을
+       버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>낙원(樂園)</entry><entry>락원</entry>
+	    </row>
+	    <row>
+	      <entry>내일(來日)</entry><entry>래일</entry>
+	    </row>
+	    <row>
+	      <entry>노인(老人)</entry><entry>로인</entry>
+	    </row>
+	    <row>
+	      <entry>뇌성(雷聲)</entry><entry>뢰성</entry>
+	    </row>
+	    <row>
+	      <entry>누각(樓閣)</entry><entry>루각</entry>
+	    </row>
+	    <row>
+	      <entry>능묘(陵墓)</entry><entry>릉묘</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 1] 단어의 첫머리 이외의 경우는 본음대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      쾌락(快樂) 극락(極樂)             거래(去來) 왕래(往來)
+      부로(父老) 연로(年老)             지뢰(地雷) 낙뢰(落雷)
+      고루(高樓) 광한루(廣寒樓) 동구릉(東九陵) 가정란(家庭欄)
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 2] 접두사처럼 쓰이는 한자가 붙어서 된 단어는 뒷말을 두음 법칙에
+           따라 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+     내내월(來來月) 상노인(上老人) 중노동(重勞動) 비논리적(非論理的)
+      </literallayout>
+    </informalexample>
+    </sect2>
+
+    <sect2>
+      <title>겹쳐 나는 소리</title>
+      
+    <para>
+제13항  한 단어 안에서 같은 음절이나 비슷한 음절이 겹쳐 나는 부분은 같은
+       글자로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>딱딱</entry><entry>딱닥</entry>
+	      <entry>꼿꼿하다</entry><entry>꼿곳하다</entry>
+	    </row>
+	    <row>
+	      <entry>쌕쌕</entry><entry>쌕색</entry>
+	      <entry>놀놀하다</entry><entry>놀롤하다</entry>
+	    </row>
+	    <row>
+	      <entry>씩씩</entry><entry>씩식</entry>
+	      <entry>눅눅하다</entry><entry>눙눅하다</entry>
+	    </row>
+	    <row>
+	      <entry>똑딱똑딱</entry><entry>똑닥똑닥</entry>
+	      <entry>밋밋하다</entry><entry>민밋하다</entry>
+	    </row>
+	    <row>
+	      <entry>쓱싹쓱싹</entry><entry>쓱삭쓱삭</entry>
+	      <entry>싹싹하다</entry><entry>싹삭하다</entry>
+	    </row>
+	    <row>
+	      <entry>연연불망(戀戀不忘)</entry><entry>연련불망</entry>
+	      <entry>쌉쌀하다</entry><entry>쌉살하다</entry>
+	    </row>
+	    <row>
+	      <entry>유유상종(類類相從)</entry><entry>유류상종</entry>
+	      <entry>씁쓸하다</entry><entry>씁슬하다</entry>
+	    </row>
+	    <row>
+	      <entry>누누이(屢屢-)</entry><entry>누루이</entry>
+	      <entry>짭짤하다</entry><entry>짭잘하다</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>형태에 관한 것</title>
+
+    <sect2>
+      <title>체언과 조사</title>
+
+      <para>
+제14항  체언은 조사와 구별하여 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      떡이       떡을       떡에        떡도       떡만
+      손이       손을       손에        손도       손만
+      팔이       팔을       팔에        팔도       팔만
+      밤이       밤을       밤에        밤도       밤만
+      집이       집을       집에        집도       집만
+      옷이       옷을       옷에        옷도       옷만
+      콩이       콩을       콩에        콩도       콩만
+      낮이       낮을       낮에        낮도       낮만
+      꽃이       꽃을       꽃에        꽃도       꽃만
+      밭이       밭을       밭에        밭도       밭만
+      앞이       앞을       앞에        앞도       앞만
+      밖이       밖을       밖에        밖도       밖만
+      넋이       넋을       넋에        넋도       넋만
+      흙이       흙을       흙에        흙도       흙만
+      삶이       삶을       삶에        삶도       삶만
+      여덟이     여덟을     여덟에      여덟도     여덟만
+      곬이       곬을       곬에        곬도       곬만
+      값이       값을       값에        값도       값만
+      </literallayout>
+    </informalexample>
+      </sect2>
+
+    <sect2>
+      <title>어간과 어미</title>
+
+      <para>
+제15항  용언의 어간과 어미는 구별하여 적는다.
+    </para>
+
+    <informalexample>
+      <literallayout>
+      먹다       먹고       먹어        먹으니
+      신다       신고       신어        신으니
+      믿다       믿고       믿어        믿으니
+      울다       울고       울어        (우니)
+      넘다       넘고       넘어        넘으니
+      입다       입고       입어        입으니
+      웃다       웃고       웃어        웃으니
+      찾다       찾고       찾아        찾으니
+      좇다       좇고       좆아        좇으니
+      같다       같고       같아        같으니
+      높다       높고       높아        높으니
+      좋다       좋고       좋아        좋으니
+      깎다       깎곳       깎아        깎으니
+      앉다       앉고       앉아        앉으니
+      많다       많고       많아        많으니
+      늙다       늙고       늙어        늙으니
+      젊다       젊고       젊어        젊으니
+      넓다       넓고       넓어        넓으니
+      훑다       훑고       훑어        훑으니
+      읊다       읊고       읊어        읊으니
+      옳다       옳고       옳아        옳으니
+      없다       없고       없어        없으니
+      있다       있고       있어        있으니
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 1] 두 개의 용언이 어울려  한 개의 용언이 될 적에, 앞말의 본뜻이
+           유지되고 있는 것은 그 원형을 밝히어 적고, 그 본뜻에서 멀어진 
+           것은 밝히어 적지 아니한다.
+          (1) 앞말의 본뜻이 유지되고 있는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      넘어지다   늘어나다   늘어지다    돌아가다   되짚어가다
+      들어가다   떨어지다   벌어지다    엎어지다   접어들다
+      틀어지다   흩어지다
+      </literallayout>
+    </informalexample>
+    <para>
+          (2) 본뜻에서 멀어진 것
+      드러나다   사라지다   쓰러지다
+   [붙임 2] 종결형에서 사용되는 어미 '-오'는 '요'로 소리나는 경우가 있더
+           라도 그 원형을  밝혀 '오'로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>이것은 책이오.</entry><entry>이것은 책이요.</entry>
+	    </row>
+	    <row>
+	      <entry>이리로 오시오.</entry><entry>이리로 오시요.</entry>
+	    </row>
+	    <row>
+	      <entry>이것은 책이 아니오.</entry><entry>이것은 책이
+	      아니요.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 3] 연결형에서 사용되는 '이요'는 '이요'로 적는다. (ㄱ을 취하고 
+           ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>이것은 책이요, 저것은 붓이요,</entry>
+	      <entry>이것은 책이오, 저것은 붓이오,</entry>
+	    </row>
+	    <row>
+	      <entry>또 저것은 먹이다.</entry>
+	      <entry>또 저것은 먹이다.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+
+    <para>
+제16항  어간의 끝음절 모음이 'ㅏ, ㅗ'일 때에는 어미를 '-아'로 적고, 그
+       밖의 모음일 때에는 '-어'로 적는다.
+  1. '-아'로 적는 경우
+    </para>
+    <informalexample>
+      <literallayout>
+      나아       나아도     나아서
+      막아       막아도     막아서
+      얇아       얇아도     얇아서
+      돌아       돌아도     돌아서
+      보아       보아도     보아서
+      </literallayout>
+    </informalexample>
+    <para>
+  2. '-어'로 적는 경우
+    </para>
+    <informalexample>
+      <literallayout>
+      개어       개어도     개어서
+      겪어       겪어도     겪어서
+      되어       되어도     되어서
+      베어       베어도     베어서
+      쉬어       쉬어도     쉬어서
+      저어       저어도     저어서
+      주어       주어도     주어서
+      피어       피어도     피어서
+      희어       희어도     희어서
+      </literallayout>
+    </informalexample>
+    <para>
+제17항  어미 뒤에 덧붙는 조사 '-요'는 '-요'로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      읽어       읽어요
+      참으리     참으리요
+      좋지       좋지요
+      </literallayout>
+    </informalexample>
+    <para>
+제18항  다음과 같은 용언들은 어미가 바뀔 경우, 그 어간이나 어미가 원칙
+       에 벗어나면 벗어나는 대로 적는다.
+  1. 어간의 ㄱ 'ㄹ'이 줄어질 적
+      </para>
+    <informalexample>
+      <literallayout>
+      갈다:      가니       간          갑니다     가시다     가오
+      놀다:      노니       논          놉니다     노시다     노오
+      불다:      부니       분          붑니다     부시다     부오
+      둥글다:    둥그니     둥근        둥급니다   둥그시다   둥그오
+      어질다:    어지니     어진        어집니다   어지시다   어지오
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] 다음과 같은 말에서도 'ㄹ'이 준 대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      마지못하다 마지않다   (하)다마다 (하)자마자
+      </literallayout>
+    </informalexample>
+    <para>
+  2. 어간의 끌 'ㅅ'이 줄어질 적
+    </para>
+    <informalexample>
+      <literallayout>
+      긋다:      그어       그으니      그었다
+      낫다:      나아       나으니      나았다
+      잇다:      이어       이으니      이었다
+      짓다:      지어       지으니      지었다.
+      (하)지마라 (하)지 마(아)
+      </literallayout>
+    </informalexample>
+    <para>
+  3. 어간의 끝 'ㅎ'이 줄어질 적
+    </para>
+    <informalexample>
+      <literallayout>
+      그렇다:    그러니     그럴        그러면     그럽니다   그러오
+      까맣다:    까맣다     까말        까마면     까맙니다   까마오
+      동그랗다:  동그랄     동그라면    동그랍니다 동그랍니다 동그라오
+      퍼렇다:    퍼러니     퍼럴        퍼러면     퍼럽니다   퍼러오
+      하얗다:    하야니     하얄        하야면     하얍니다   하야오
+      </literallayout>
+    </informalexample>
+    <para>
+  4. 어간의 끝 'ㅜ, ㅡ'가 줄어질 적
+    </para>
+    <informalexample>
+      <literallayout>
+      푸다:      퍼         펐다                   
+      끄다:      꺼         껐다
+      담그다:    담가       담갔다
+      따르다:    따라       따랐다
+      뜨다:      떠         떴다
+      크다:      커         컸다
+      고프다:    고파       고팠다
+      바쁘다:    바빠       바빴다
+      </literallayout>
+    </informalexample>
+    <para>
+  5. 어간의 끝 'ㄷ'이 'ㄹ'로 바뀔 적
+    </para>
+    <informalexample>
+      <literallayout>
+      걷다[步)]: 걸어       걸으니      걸었다
+      듣다[聽]:  들어       들으니      들었다
+      묻다[問]:  물어       물으니      물었다
+      싣다[載]:  실어       실으니      실었다
+      </literallayout>
+    </informalexample>
+    <para>
+  6. 어간의 끝 'ㅂ'이 'ㅜ'로 바뀔 적
+    </para>
+    <informalexample>
+      <literallayout>
+      깁다:      기워       기우니      기웠다
+      굽다[炙]:  구워       구우니      구웠다
+      괴롭다:    괴로워     괴로우니    괴로웠다
+      맵다:      매워       매우니      매웠다
+      무겁다:    무거워     무거우니    무거웠다
+      밉다:      미워       미우니      미웠다
+      쉽다:      쉬워       쉬우니      쉬웠다
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, '돕-, 곱-'과 같은 단음절 어간에 어미 '아-'가 결합되어 '와'로 소
+   리나는 것은 '-와'로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      돕다[助]:  도와       도와서      도와도     도왔다
+      곱다[麗]:  고와       고와서      고와도     고왔다
+      </literallayout>
+    </informalexample>
+    <para>
+  7. '하다'의 어미 활용에서 어미 '-아'가 '-여'로 바뀔 적
+    </para>
+    <informalexample>
+      <literallayout>
+      하다:   하여   하여서      하여도     하여라
+             하였다
+      </literallayout>
+    </informalexample>
+    <para>
+  8. 어간의 끝음절 '르' 뒤에 오는 어미 '-어'가 '-러'로 바뀔 적
+    </para>
+    <informalexample>
+      <literallayout>
+      이르다[至]: 이르러    이르렀다
+      노르다:    노르러     노르렀다
+      누르다:    누르러     누르렀다
+      푸르다:    푸르러     푸르렀다
+      </literallayout>
+    </informalexample>
+    <para>
+  9. 어간의 끝음절 '르'의 'ㅡ'가  줄고, 그 위에 오는 어미 '-아/-어'가 
+'-라/-러'로 바뀔 적
+    </para>
+    <informalexample>
+      <literallayout>
+      가르다:    갈라       갈랐다
+      거르다:    걸러       걸렀다
+      구르다:    굴러       굴렀다
+      벼르다:    별러       별렀다
+      부르다:    불러       불렀다
+      오르다:    올라       올랐다
+      이르다:    일러       일렀다
+      지르다:    질러       질렀다
+      </literallayout>
+    </informalexample>
+      </sect2>
+    <sect2>
+      <title>접미사가 붙어서 된 말</title>
+
+    <para>
+제19항  어간에 '-이'나 '-음/-ㅁ'이 붙어서 명사로 된  것과 '-이'나 '-히'가
+       붙어서 부사로 된 것은 그 어간의 원형을 밝히어 적는다.
+    </para>
+    <para>
+  1. '-이'가 붙어서 명사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      길이       깊이       높이        다듬이     땀받이     달맞이
+      먹이       미닫이     벌이        벼ㅎ이     살림살이   쇠붙이
+      </literallayout>
+    </informalexample>
+    <para>
+  2. '-음/-ㅁ'이 붙어서 명사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      걸음       묶음       믿음        얼음       엮음       울음
+      웃음       졸음
+      죽음       앎         만듦
+      </literallayout>
+    </informalexample>
+    <para>
+  3. '-이'가 붙어서 부사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      갈이   굳이   길이   높이   많이   실없이
+      좋이   짓궂이
+      </literallayout>
+    </informalexample>
+    <para>
+  4. '-히'가 붙어서 부사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      밝히       익히       작히
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, 어간에 '-이'나 '-음'이 붙어서 명사로 바뀐 것이라도 그 어간의 뜻
+   과 멀어진 것은 그 원형을 밝히어 적지 아니한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      굽도리     다리[笙]   목거리(목병)           무녀리
+      코끼리     거름[비료] 고름[膿]               노름(도박)
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] 어간에 '-이'나 '음'이외의 모음으로 시작된 접미사가 붙어서 다른
+         품사로 바뀐 것은 그 어간의 원형을 밝히어 적지 아니한다.
+    (1) 명사로 바뀐 것
+    </para>
+    <informalexample>
+      <literallayout>
+      귀머거리   까마귀     너머        뜨더귀     마감       마개
+      마중       무덤       비렁뱅이    쓰레기     올가미     주검
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 부사로 바뀐 것
+    </para>
+    <informalexample>
+      <literallayout>
+      거뭇거뭇   너무       도로        뜨덤뜨덤   바투
+      불긋불긋   비로소     오긋오긋    자주       차마
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 조사로 바뀌어 뜻이 달라진 것
+    </para>
+    <informalexample>
+      <literallayout>
+      나마       부터       조차
+      </literallayout>
+    </informalexample>
+    <para>
+제20항  명사 뒤에 '-이'가 붙어서 된 말은 그  명사의 원형을 밝히어 적는다.
+  1. 부사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      곳곳이   낱낱이   몫몫이      샅샅이     앞앞이  집집이
+      </literallayout>
+    </informalexample>
+    <para>
+  2. 명사로 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      곰배팔이   바둑이     삼발이      애꾸눈이   육손이           
+      절뚝발이/절름발이
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] '-이' 이외의 모음으로 시작된 접미사가 붙어서 된 말은 그 명사의
+         원형을 밝히어 적지 아니한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      꼬락서니   끄트머리   모가치  바가치  바깥   사타구니
+      싸라기     이파리     지붕        지푸라기   짜개
+      </literallayout>
+    </informalexample>
+    <para>
+제21항  명사나 혹은 용언의 어간 뒤에 자음으로 시작된 접미사가 붙어서 된
+       말은 그 명사나 어간의 원형을 밝히어 적는다.
+  1. 명사 뒤에 자음으로 시작된 접미사가 붙어서 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      값지다     흩지다     넋두리      빛깔       옆댕이     잎사귀
+      </literallayout>
+    </informalexample>
+    <para>
+  2. 어간 뒤에 자음으로 시작된 접미사가 붙어서 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      낚시       늙정이     덮개        뜨게질     갉작갉작하다
+      갉작거리다 뜯적거리다 뜯적뜯적하다 굵다랗다  굵직하다
+      깊숙하다   넓적하다   높다랗다 늙수그레하다 얽죽얽죽하다
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, 다음과 같은 말은 소리대로 적는다.
+    (1) 겹받침의 끝소리가 드러나지 아니하는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      할짝거리다 널따랗다   널찍하다    말끔하다   말쑥하다   말짱하다
+      실쭉하다   실큼하다   얄따랗다    얄팍하다   짤따랗다   짤막하다
+      실컷
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 어원이 분명하지 아니하거나 본뜻에서 멀어진 것
+    </para>
+    <informalexample>
+      <literallayout>
+      넙치       올무       골막하다    납작하다
+      </literallayout>
+    </informalexample>
+    <para>
+제22항  용언의 어간에 다음과 같은 접미사들이 붙어서 이루어진 말들은 그 어
+       간을 밝히어 적는다.
+   1. '-기-, -리-, -이-, -히-, -구-, -우-, -추-, -으키-, -이키-, -애-'가
+     붙는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      맡기다     옮기다     웃기다      쫓기다     뚫리다     울리다
+      낚이다     쌓이다     핥이다      굳히다     굽히다     넓히다
+      앉히다     얽히다     잡히다      돋구다     솟구다     돋우다
+      갖추다     곧추다     맞추다      일으키다   돌이키다   없애다
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, '-이-, -히-, -우-'가 붙어서 된 말이라도 본뜻에서 멀어진 것은 소
+   리대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      도리다(칼로 ∼)  드리다(용돈을 ∼)  고치다  바치다(세금을 ∼)
+      부치다(편지를 ∼)     거두다      미루닿     이루다
+      </literallayout>
+    </informalexample>
+    <para>
+  2. '-치-, -뜨리-, -트리-'가 붙는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      놓치다     덮치다     떠받치다    받치다  밭치다  부딪치다
+      뻗치다     엎치다     부딪뜨리다/부딪트리다 쏟뜨리다/쏟트리다
+      젖뜨리다/젖트리다     찢뜨리다/찢트리다      흩뜨리다/흩트리다
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] '-업-, -읍-, -브-'가 붙어서 된 말은 소리대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      미덥다     우습다     미쁘다
+      </literallayout>
+    </informalexample>
+    <para>
+제23항  '-하다'나 '-거리다'가 붙는 어근에 '-이'가 붙어서 명사가 된 것은
+       그 원형을 밝히어 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>깔쭉이</entry><entry>깔쭈기</entry></row>
+	    <row><entry>꿀꿀이</entry><entry>꿀구리</entry></row>
+	    <row><entry>눈깜짝이</entry><entry>눈깜짜기</entry></row>
+	    <row><entry>더펄이</entry><entry>더퍼리</entry></row>
+	    <row><entry>배불뚝이</entry><entry>배불뚜기</entry></row>
+	    <row><entry>삐죽이</entry><entry>삐주기</entry></row>
+	    <row><entry>살살이</entry><entry>살사리</entry></row>
+	    <row><entry>쌕쌕이</entry><entry>쌕쌔기</entry></row>
+	    <row><entry>오뚝이</entry><entry>오뚜기</entry></row>
+	    <row><entry>코납작이</entry><entry>코납자기</entry></row>
+	    <row><entry>푸석이</entry><entry>푸서기</entry></row>
+	    <row><entry>홀쭉이</entry><entry>홀쭈기</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임] '-하다'나 '-거리다'가 붙을 수 없는 어근에 '-이'나 또는 다른 모
+          음으로 시작되는 접미사가 붙어서 명사가 된 것은 그 원형을 밝히어
+          적지 아니한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      개구리     귀뚜라미   기러기      깎두기     괭과리     날라리
+      누더기     동그라미   두드러기    딱따구리   매미       부스러기
+      뻐꾸기     얼루기     칼싹두기
+      </literallayout>
+    </informalexample>
+    <para>
+제24항  '-거리다'가 붙을 수 있는 시늉말 어근에 '-이다'가 붙어서 된 용언은
+       그 어근을 밝히어 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>깜짝이다</entry><entry>깜짜기다</entry></row>
+	    <row><entry>꾸벅이다</entry><entry>꾸버기다</entry></row>
+	    <row><entry>끄덕이다</entry><entry>끄더기다</entry></row>
+	    <row><entry>뒤척이다</entry><entry>뒤처기다</entry></row>
+	    <row><entry>들먹이다</entry><entry>들머기다</entry></row>
+	    <row><entry>망설이다</entry><entry>망서리다</entry></row>
+	    <row><entry>번득이다</entry><entry>번드기다</entry></row>
+	    <row><entry>번쩍이다</entry><entry>번쩌기다</entry></row>
+	    <row><entry>속삭이다</entry><entry>속사기다</entry></row>
+	    <row><entry>숙덕이다</entry><entry>숙더기다</entry></row>
+	    <row><entry>울먹이다</entry><entry>울머기다</entry></row>
+	    <row><entry>움직이다</entry><entry>움지기다</entry></row>
+	    <row><entry>지껄이다</entry><entry>지꺼리다</entry></row>
+	    <row><entry>퍼덕이다</entry><entry>퍼더기다</entry></row>
+	    <row><entry>허덕이다</entry><entry>허더기다</entry></row>
+	    <row><entry>헐떡이다</entry><entry>헐떠기다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제25항  '-하다'가 붙는 어근에 '-히'나 '-이'가 붙어서 부사가 되거나, 부사
+       에 '-이'가 붙어서 뜻을 더하는 경우에는 그 어근이나 부사의 원형을
+       밝히어 적는다.
+  1. '-하다'가 붙는 어근에 '-히'나 '-이'가 붙는 경우
+    </para>
+    <informalexample>
+      <literallayout>
+      급히  꾸준히  도저히  딱히  어렴풋이  깨끗이
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] '-하다'가 붙지 않는 경우에는 반드시 소리대로 적는다
+    </para>
+    <informalexample>
+      <literallayout>
+      갑자기     반드시(꼭)             슬며시
+      </literallayout>
+    </informalexample>
+    <para>
+  2 부사에 '-이'가 붙어서 역시 부사가 되는 경우
+    </para>
+    <informalexample>
+      <literallayout>
+      곰곰이  더욱  생긋이  오뚝이  일찍이  해죽이
+      </literallayout>
+    </informalexample>
+    <para>
+제26항  '-하다'나 '- 없다'가 붙어서 된 용언은 그 '-하다'나 '없다'를 밝히
+       어 적는다.
+  1. '-하다'가 붙어서 용언이 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      딱하다     숱하다     착하다      텁텁하다   푹하다
+      </literallayout>
+    </informalexample>
+    <para>
+  2. '-없다'가 붙어서 용언이 된 것
+    </para>
+    <informalexample>
+      <literallayout>
+      부질없다   상없다     시름없다    열없다     하염없다
+      </literallayout>
+    </informalexample>
+    </sect2>
+
+    <sect2>
+      <title>합성어 및 접두사가 붙은 말</title>
+
+      <para>
+제27항  둘 이상의 단어가 어울리거나 접두사가 붙어서 이루어진 말은 각각 그
+       원형을 밝히어 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      국말이     꺾꽂이     꽂잎        끝장       물난리
+      밑천       부엌일     싫증        옷안       웃옷
+      젖몸살     첫아들     칼날        팥알       헛웃음
+      홀아비     홀맘       흙내
+      값없다     겉늙다     굵주리다    낮잡다     맞먹다
+      받내다     벋놓다     빗나가다    빛나다     새파랗다
+      샛노랗다   시꺼멓다   싯누렇다    엇나가다   엎누르다
+      엿듣다     옻오르다   짓이기다    헛되다
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 1] 어원은 분명하나 소리만 특이하게 변한 것은 변한 대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      할아버지   할아범
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 2] 어원이 분명하지 아니한 것은 원형을 밝히어 적지 아니한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      골병       골탕       끌탕        며칠       아재비      오라비
+      업신여기다 부리나케
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 3] '이[齒,  ]'가 합성어나 이에 준하는 말에서 '니' 또는 '리'로 
+      소리날 때에는 '니'로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      간니       덧니       사랑니      송곳니     앞니       어금니
+      윗니       젖니       톱니        틀니       가랑니     머릿니
+      </literallayout>
+    </informalexample>
+    <para>
+제28항  끝소리가 'ㄹ'인 말과 딴 말이 어울릴 적에 'ㄹ' 소리가 나지 아니하
+       는 것은 아니 나는 대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      다달이(달-달-이)      따님(딸-님)            마되(말-되)
+      마소(말-소)           무자위(물-자위)        바느질(바늘-질)
+      부나비(불-나비)       부삽(불-삽)            부손(불-손)
+      소나무(솔-나무)       싸전(쌀-전)             여닫이(열-닫이)
+      우짖다(울-짖다)       화살(활-살)
+      </literallayout>
+    </informalexample>
+    <para>
+제29항  끝소리가 'ㄹ'인 말과 딴 말이 어울릴 적에 'ㄹ' 소리가 'ㄷ' 소리로
+       나는 것은 'ㄷ'으로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+   반짇고리(바느질∼)  사흗날(사흘∼)    삼짇날(삼질∼)    섣달(설∼)
+   숟가락(술∼)        이튿날(이틀∼)    잔주름(잘∼)      푿소(풀∼)
+   섣부르다(설∼)      잗다듬다(잘∼)    잗다랗다(잘∼)
+      </literallayout>
+    </informalexample>
+    <para>
+제30항  사이시옷은 다음과 갈은 경우에 받치어 찍는다.
+  1. 순 우리말로 된 합성어로서 앞말이 모음으로 끝난 경우
+    (1) 뒷말의 첫소리가 된소리로 나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      고랫재     귓밥      나룻배       나뭇가지 냇가        댓가지
+      뒷갈망     맷돌      머릿기름     모깃불    못자리     바닷가
+      뱃길       볏가리    부싯돌       선짓국    쇳조각     아랫집
+      우렁잇속   잇자국    잿더미       조갯살    찻집       쳇바퀴
+      킷값       핏대      햇볕         혓바늘
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 뒷말의 첫소리 'ㄴ, ㅁ' 앞에서 'ㄴ' 소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      멧나물     아랫니     텃마당      아랫마을   뒷머리
+      잇몸       깻묵       냇물        빗물
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 뒷말의 첫소리 모음 앞에서 'ㄴㄴ'소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      도래깻열   뒷윷       두렛일      뒷일       뒷입맛
+      베갯잇     욧잇       깻잎        나뭇잎     댓잎
+      </literallayout>
+    </informalexample>
+    <para>
+  2. 순 우리말과 한자어로 된 합성어로서 앞말이 모음으로 끝난 경우
+    (1) 뒷말의 첫소리가 된소리로 나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      귓병       머릿방     뱃병        봇둑       사잣밥
+      샛강       아랫방     자릿세      전셋집     찻잔
+      찻종       촛국       콧병        탯줄       텃세
+      핏기       햇수       횟가루      횟배
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 뒷말의 첫소리 'ㄴ, ㅁ' 앞에서 'ㄴ' 소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      곗날       제삿날     훗날        툇마루     양칫물
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 뒷말의 첫소리 모음 앞에서 'ㄴㄴ'소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      가욋일     사삿일     예삿일      훗일
+      </literallayout>
+    </informalexample>
+    <para>
+  3. 두 음절로 된 다음 한자어
+    </para>
+    <informalexample>
+      <literallayout>
+      곳간(庫間) 셋방(貰房) 숫자(數字) 찻간(車間) 툇간(退間) 횟수(回數)
+      </literallayout>
+    </informalexample>
+    <para>
+제31항  두 말이 어울릴 적에 'ㅂ' 소리나 'ㅎ' 소리가 덧나는 것은 소리대로
+       적는다.
+  1. 'ㅂ' 소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      댑싸리(대ㅂ싸리)      멥쌀(메ㅂ쌀)           볍씨(벼ㅂ씨)
+      입때(이ㅂ때)          입쌀(이ㅂ쌀)           접때(저ㅂ때)
+      좁쌀(조ㅂ쌀)          햅쌀(해ㅂ쌀)
+      </literallayout>
+    </informalexample>
+    <para>
+  2. 'ㅎ' 소리가 덧나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      머리카락(머리ㅎ가락)  살코기(살ㅎ고기)       수캐(수ㅎ개)
+      수컷(수ㅎ것)          수탉(수ㅎ닭)           안팎(안ㅎ밖)
+      암캐(암ㅎ개)          암컷(암ㅎ것)           암탉(암ㅎ닭)
+      </literallayout>
+    </informalexample>
+      </sect2>
+    <sect2>
+      <title>준 말</title>
+
+      <para>
+제32항  단어의 끝모음이 줄어지고 자음만 남은 것은 그 앞의 음절에 받침으로
+       적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>기러기야</entry><entry>기럭아</entry></row>
+	    <row><entry>어제그저께</entry><entry>엊그저께</entry></row>
+	    <row><entry>어제저녁</entry><entry>엊저녁</entry></row>
+	    <row><entry>온가지</entry><entry>온갖</entry></row>
+	    <row><entry>가지고, 가지지</entry><entry>갖고, 갖지</entry></row>
+	    <row><entry>디디고, 디디지</entry><entry>딛고, 딛지</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제33항  체언과 조사가 어울려 줄어지는 경우에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>그것은</entry><entry>그건</entry></row>
+	    <row><entry>그것이</entry><entry>그게</entry></row>
+	    <row><entry>그것으로</entry><entry>그걸로</entry></row>
+	    <row><entry>나는</entry><entry>난</entry></row>
+	    <row><entry>나를</entry><entry>날</entry></row>
+	    <row><entry>너는</entry><entry>넌</entry></row>
+	    <row><entry>너를</entry><entry>널</entry></row>
+	    <row><entry>무엇을</entry><entry>무얼/뭘</entry></row>
+	    <row><entry>무엇이</entry><entry>뭣이/무에</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제34항  모음 'ㅏ, ㅓ'로 끝난 어간에 '-아/-어, -았-/-었-'이 어울릴 적에는
+       는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>가아</entry><entry>가</entry><entry>가았다</entry><entry>갔다</entry></row>
+	    <row><entry>나아</entry><entry>나</entry><entry>나았다</entry><entry>났다</entry></row>
+	    <row><entry>타아</entry><entry>타</entry><entry>타았다</entry><entry>탔다</entry></row>
+	    <row><entry>서어</entry><entry>서</entry><entry>서었다</entry><entry>섰다</entry></row>
+	    <row><entry>켜어</entry><entry>켜</entry><entry>켜었다</entry><entry>켰다</entry></row>
+	    <row><entry>펴어</entry><entry>펴</entry><entry>펴었다</entry><entry>폈다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 1] 'ㅐ, ㅔ' 뒤에 '-어, -었-'이 어울려 줄 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>개어</entry><entry>개</entry><entry>개었다</entry><entry>갰다</entry></row>
+	    <row><entry>내어</entry><entry>내</entry><entry>내었다</entry><entry>냈다</entry></row>
+	    <row><entry>베어</entry><entry>베</entry><entry>베었다</entry><entry>벴다</entry></row>
+	    <row><entry>세어</entry><entry>세</entry><entry>세었다</entry><entry>셌다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 2] '하여'가 한 음절로 줄어서 '해'로 될 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>하여</entry><entry>해</entry><entry>하였다</entry><entry>했다</entry></row>
+	    <row><entry>더하여</entry><entry>더해</entry><entry>더하였다</entry><entry>더했다</entry></row>
+	    <row><entry>흔하여</entry><entry>흔해</entry><entry>흔하였다</entry><entry>흔했다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제35항  모음 'ㅗ, ㅜ'로 끝난 어간에 '-아/-어, -았-/-었-'이 어울려 'ㅘ/ㅝ,
+       ㅘ/ㅝ'으로 될 때에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>꼬아</entry><entry>꽈</entry><entry>꼬았다</entry><entry>꽜다</entry></row>
+	    <row><entry>보아</entry><entry>봐</entry><entry>보았다</entry><entry>봤다</entry></row>
+	    <row><entry>쏘아</entry><entry>쏴</entry><entry>쏘았다</entry><entry>쐈다</entry></row>
+	    <row><entry>두어</entry><entry>둬</entry><entry>두었다</entry><entry>뒀다</entry></row>
+	    <row><entry>쑤어</entry><entry>쒀</entry><entry>쑤었다</entry><entry>쒔다</entry></row>
+	    <row><entry>주어</entry><entry>줘</entry><entry>주었다</entry><entry>줬다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 1] '놓아'가 '놔'로 줄 적에는 준 대로 적는다.
+   [붙임 2] 'ㅚ' 뒤에 '-어, -었-'이 어울려 'ㅙ, ㅙ'으로 될 적에도 준 대
+           로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>괴어</entry><entry>괘</entry><entry>괴었다</entry><entry>괬다</entry></row>
+	    <row><entry>되어</entry><entry>돼</entry><entry>되었다</entry><entry>됐다</entry></row>
+	    <row><entry>뵈어</entry><entry>봬</entry><entry>뵈었다</entry><entry>뵀다</entry></row>
+	    <row><entry>쇠어</entry><entry>쇄</entry><entry>쇠었다</entry><entry>쇘다</entry></row>
+	    <row><entry>쐬어</entry><entry>쐐</entry><entry>쐬었다</entry><entry>쐤다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제36항  'ㅣ' 뒤에 '-어'가 와서 'ㅕ'로 줄 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="4" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>가지어</entry><entry>가져</entry><entry>가지었다</entry><entry>가졌다</entry></row>
+	    <row><entry>견디어</entry><entry>견뎌</entry><entry>견디었다</entry><entry>견뎠다</entry></row>
+	    <row><entry>다니어</entry><entry>다녀</entry><entry>다니었다</entry><entry>다녔다</entry></row>
+	    <row><entry>막히어</entry><entry>막혀</entry><entry>막히었다</entry><entry>막혔다</entry></row>
+	    <row><entry>버티어</entry><entry>버텨</entry><entry>버티었다</entry><entry>버텼다</entry></row>
+	    <row><entry>치이어</entry><entry>치여</entry><entry>치이었다</entry><entry>치였다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제37항  'ㅏ, ㅕ, ㅗ, ㅜ, ㅡ'로 끝난 어간에 '-이-'가 와서 각각 'ㅐ, ㅖ, 
+       ㅚ, ㅟ, ㅢ'로 줄 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>싸이다</entry><entry>쌔다</entry></row>
+	    <row><entry>펴이다</entry><entry>폐다</entry></row>
+	    <row><entry>보이다</entry><entry>뵈다</entry></row>
+	    <row><entry>누이다</entry><entry>뉘다</entry></row>
+	    <row><entry>뜨이다</entry><entry>띄다</entry></row>
+	    <row><entry>쓰이다</entry><entry>씌다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제38항  'ㅏ, ㅗ, ㅜ, ㅡ' 뒤에 '-이어'가 어울려 줄어질 적에는 준 대로 적는
+        다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>싸이어</entry><entry>쌔여  싸여</entry></row>
+	    <row><entry>보이어</entry><entry>뵈어  보여</entry></row>
+	    <row><entry>쏘이어</entry><entry>쐬어  쏘여</entry></row>
+	    <row><entry>누이어</entry><entry>뉘어  누여</entry></row>
+	    <row><entry>뜨이어</entry><entry>띄어</entry></row>
+	    <row><entry>쓰이어</entry><entry>씌어  쓰여</entry></row>
+	    <row><entry>트이어</entry><entry>틔어  트여</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제39항  이미 '-지' 뒤에 '않-'이 어울려 '-잖-'이 될 적과 '-하지' 뒤에 '않-'
+       이 어울려 '찮-'이 될 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>그렇지 않은</entry><entry>그렇잖은</entry></row>
+	    <row><entry>적지 않은</entry><entry>적잖은</entry></row>
+	    <row><entry>만만하지 않다</entry><entry>만만찮다</entry></row>
+	    <row><entry>변변하지 않다</entry><entry>변변찮다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제40항  어간의 끝음절 '하'의 'ㅏ'가 줄고 'ㅎ'이 다음 음절의 첫소리와 어울
+       려 거센소리로 될 적에는 거센소리로 적는다.
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>간편하게</entry><entry>간편케</entry></row>
+	    <row><entry>연구하도록</entry><entry>연구토록</entry></row>
+	    <row><entry>가하다</entry><entry>가타</entry></row>
+	    <row><entry>다정하다</entry><entry>다정타</entry></row>
+	    <row><entry>정결하다</entry><entry>정결타</entry></row>
+	    <row><entry>흔하다</entry><entry>흔타</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   [붙임 1] 'ㅎ'이 어간의 끝소리로 굳어진 것은 받침으로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      않다       않고       않지        않든지
+      그렇다     그렇고     그렇지      그렇든지
+      아무렇다   아무렇고   아무렇지    아무렇든지
+      어떻다     어떻고     어떻지      어떻든지
+      이렇다     이렇고     이렇지      어렇든지
+      저렇다     저렇고     저렇지      저렇든지
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 2] 어간의 끝음절 '하'가 아주 줄 적에는 준 대로 적는다.
+    </para>
+    <informalexample>
+    <informaltable>
+      <tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>(본말)</entry><entry>(준말)</entry>
+	    </row>
+	  </thead>
+	<tbody>
+	  <row><entry>거북하지</entry><entry>거북지</entry></row>
+	    <row><entry>생각하건대</entry><entry>생각건대</entry></row>
+	    <row><entry>생각하다 못해</entry><entry>생각다 못해</entry></row>
+	    <row><entry>깨끗하지 않다</entry><entry>깨끗지 않다</entry></row>
+	    <row><entry>개넉넉하지 않다</entry><entry>넉넉지 않다</entry></row>
+	    <row><entry>못하지 않다</entry><entry>못지않다</entry></row>
+	    <row><entry>섭섭하지 않다</entry><entry>섭섭지 않다</entry></row>
+	    <row><entry>익숙하지 않다</entry><entry>익숙지 않다</entry></row>
+	</tbody>
+      </tgroup>
+    </informaltable>
+    </informalexample>
+    <para>
+   [붙임 3] 다음과 같은 부사는 소리대로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      결단코     결코       기필코      무심코   하여튼      요컨대
+      정녕코     필연코     하마터면    하여튼   한사코
+      </literallayout>
+    </informalexample>
+    </sect2>
+    </sect1>
+
+  <sect1>
+    <title>띄어쓰기</title>
+
+    <sect2>
+      <title>조사</title>
+
+      <para>
+제41항  조사는 그 앞말에 붙여 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      꽃이       꽃마저     꽃밖에      꽃에서부터 꽃으로만
+      꽃이나마   꽃이다     꽃입니다    꽃처럼     어디까지나
+      거기도     멀리는     웃고만
+      </literallayout>
+    </informalexample>
+    </sect2>
+
+    <sect2>
+      <title>의존 명사, 단위를 나타내는명사 및 열거하는 말 등</title>
+
+      <para>
+제42항  의존 명사는 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      아는 것이 힘이다.                 나도 할 수 있다.
+      먹을 만큼 먹어라.                 아는 이를 만났다.
+      네가 뜻한 바를 알겠다.            그가 떠난 지가 오래다.
+      </literallayout>
+    </informalexample>
+    <para>
+제43항  단위를 나타내는 명사는 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      한 개                 차 한 대               금 서 돈
+      소 한 마리            옷 한 벌               열 살
+      조기 한 손            연필 한 자루           버선 한 죽
+      집 한 채              신 두 켤레             북어 한 쾌
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, 순서를 나타내는 경우나 숫자와 어울리어 쓰이는 경우에는 붙여 쓸
+   수 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      두시 삼십분 오초      제일과      삼학년     육층
+      1446년 10월 9일       2대대       16동 502호 제 1 실습실
+      </literallayout>
+    </informalexample>
+    <para>
+제44항  수를 적을 적에는 '만(萬)' 단위로 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      십이억 삼천사백오십육만 칠천팔백구십팔
+      12억 3456만 7898
+      </literallayout>
+    </informalexample>
+    <para>
+제45항  두 말을 이어 주거나 열거할 적에 쓰이는 다음의 말들은 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      국장 겸 과장          열 내지 스물
+      청군 대 백군          책상, 걸상 등이 있다.
+      이사장 및 이사들      사과, 배, 귤 등등
+      사과, 배 등속         부산, 광주 등지
+      </literallayout>
+    </informalexample>
+    <para>
+제46항  단음절로 된 단어가 연이어 나타날 적에는 붙여 쓸 수 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      그때 그곳    좀더 큰 것     이말 저말        한잎 두잎
+      </literallayout>
+    </informalexample>
+    </sect2>
+
+    <sect2>
+      <title>보조 용언</title>
+
+      <para>
+제47항  보조 용언은 띄어 씀을 원칙으로 하되, 경우에 따라 붙여 씀도 허용
+       한다. (ㄱ을 원칙으로 하고, ㄴ을 허용함.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>불이 꺼져 간다.</entry><entry>불이 꺼져간다.</entry></row>
+	    <row><entry>내 힘으로 막아 낸다.</entry><entry>내 힘으로 막아낸다.</entry></row>
+	    <row><entry>어머니를 도와 드린다.</entry><entry>어머니를 도와드린다.</entry></row>
+	    <row><entry>그릇을 깨뜨려 버렸다.</entry><entry>그릇을 깨뜨려버렸다.</entry></row>
+	    <row><entry>비가 올 듯하다.</entry><entry>비가 올듯하다.</entry></row>
+	    <row><entry>그 일은 할 만하다.</entry><entry>그 일은 할만하다.</entry></row>
+	    <row><entry>일이 될 법하다.</entry><entry>일이 될법하다.</entry></row>
+	    <row><entry>비가 올 성싶다.</entry><entry>비가 올성싶다.</entry></row>
+	    <row><entry>잘 아는 척한다.</entry><entry>잘 아는척한다.</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   다만, 앞말에 조사가 붙거나 앞말이 합성 동사인 경우, 그리고 중간에 조사
+   가 들어갈 적에는 그 뒤에 오는 보조 용언은 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      잘도 놀아만 나는구나! 책을 읽어도 보고…
+      네가 덤벼들어 보아라. 강물에 떠내려가 버렸다.           
+      그가 올 듯도 하다.    잘난 체를 한다.
+      </literallayout>
+    </informalexample>
+      </sect2>
+
+    <sect2>
+      <title>고유 명사 및 전문 용어</title>
+
+      <para>
+제48항  성과 이름, 성과 호 등은 붙여 쓰고, 이에 덧붙는 호칭어, 관직명 등
+       은 띄어 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      김양수(金良洙)    서화담(徐花潭)    채영신 씨
+      최치원 선생       박동식 박사        충무공 이순신 장군
+      </literallayout>
+    </informalexample>
+    <para>
+   다만, 성과 이름, 성과 호를 분명히 구분할 필요가 있을 경우에는 띄어 쓸
+   수 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      남궁억/남궁 억        독고준/독고 준
+      황보지봉(皇甫芝峰)/황보 지봉
+      </literallayout>
+    </informalexample>
+    <para>
+제49항  성명 이외의 고유 명사는 단어별로 띄어 씀을 원칙으로 하되, 단위별로
+   띄어 쓸 수 있다.(ㄱ을 원칙으로 하고, ㄴ을 허용함.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>대한 중학교</entry><entry>대한중학교</entry></row>
+	    <row><entry>한국 대학교 사범 대학</entry><entry>한국대학교 사범대학</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제50항  전문 용어는 단어별로 띄어 씀을 원칙으로 하되, 붙여 쓸 수 있다.
+     (ㄱ을 원칙으로 하고, ㄴ을 허용함.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>만성 골수성 백혈병</entry><entry>만성골수성백혈병</entry></row>
+	    <row><entry>중거리 탄도 유도탄</entry><entry>중거리탄도유도탄</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    </sect2>
+    </sect1>
+
+  <sect1>
+    <title>그 밖의 것</title>
+
+    <para>
+제51항  부사의 끝음절이 분명히 '이'로만 나는 것은 '-이'로 적고, '히'로만
+       나거나 '이'나 '히'로 나는 것은 '히-'로 적는다.
+  1. '이'로만 나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      가붓이     깨끗이     나붓이      느긋이     둥긋이
+      따뜻잇     반듯이     버젓이      산뜻이     의젓이
+      가까이     고이       날카로이    대수로이   번거로이
+      많이       적이       헛되이
+      겹겹이     번번이     일일이      집집이     틈틈이
+      </literallayout>
+    </informalexample>
+    <para>
+  2. '히'로만 나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      극히       급히       딱히        속히       작히       족히
+      특히       엄격히     정확히
+      </literallayout>
+    </informalexample>
+    <para>
+  3. '이, 히'로 나는 것
+    </para>
+    <informalexample>
+      <literallayout>
+      솔직히    가만히    간편히     나른히     무단히
+      각별히    소홀히    슬슬히     정결히
+      과감히    꼼꼼히    심히       열심히
+      급급히    답답히    섭섭히
+      공평히    능히      당당히     분명히     상당히    조용히
+      간소히    고요히    도저히
+      </literallayout>
+    </informalexample>
+    <para>
+제52항  한자어에서 본음으로도 나고 속음으로도 나는 것은 각각 그 소리에
+       따라 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      (본음으로 나는 것)               (속음으로 나는 것)
+      승낙(承諾)                       수락(受諾), 쾌락(快諾), 허락(許諾)
+      만난(萬難)                       곤란(困難), 논란(論難)
+      안녕(安寧)                       의령(宜寧), 회령(會寧)
+      분노(忿怒)                       대로(大怒), 희로애락(喜怒哀樂)
+      토론(討論)                       의논(議論)
+      오륙십(五六十)                   오뉴월, 유월(六月)
+      목재(木材)                       모과(木瓜)
+      십일(十日)                       시방정토(十方淨土), 시왕(十王),
+                                       시월(十月)
+      팔일(八日)                        초파일(初八日)
+      </literallayout>
+    </informalexample>
+    <para>
+제53항  다음과 같은 어미는 예사소리로 적는다. (ㄱ을 취하고, ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>-(으)ㄹ거나</entry><entry>-(으)ㄹ꺼나</entry></row>
+	    <row><entry>-(으)ㄹ걸</entry><entry>-(으)ㄹ껄</entry></row>
+	    <row><entry>-(으)ㄹ게</entry><entry>-(으)ㄹ께</entry></row>
+	    <row><entry>-(으)ㄹ세</entry><entry>-(으)ㄹ쎄</entry></row>
+	    <row><entry>-(으)ㄹ세라</entry><entry>-(으)ㄹ쎄라</entry></row>
+	    <row><entry>-(으)ㄹ수록</entry><entry>-(으)ㄹ쑤록</entry></row>
+	    <row><entry>-(으)ㄹ시</entry><entry>-(으)ㄹ씨</entry></row>
+	    <row><entry>-(으)ㄹ지</entry><entry>-(으)ㄹ찌</entry></row>
+	    <row><entry>-(으)ㄹ지니라</entry><entry>-(으)ㄹ찌니라</entry></row>
+	    <row><entry>-(으)ㄹ지라도</entry><entry>-(으)ㄹ찌라도</entry></row>
+	    <row><entry>-(으)ㄹ지어다</entry><entry>-(으)ㄹ찌어다</entry></row>
+	    <row><entry>-(으)ㄹ지언정</entry><entry>-(으)ㄹ찌언정</entry></row>
+	    <row><entry>-(으)ㄹ진대</entry><entry>-(으)ㄹ찐대</entry></row>
+	    <row><entry>-(으)ㄹ진저</entry><entry>-(으)ㄹ찐저</entry></row>
+	    <row><entry>-올시다</entry><entry>올씨다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+   다만, 의문을 나타내는 다음 어미들은 된소리로 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      -(으)ㄹ까?     -(으)ㄹ꼬?     -(스)ㅂ니까?     -(으)리까?
+      -(으)ㄹ쏘냐?
+      </literallayout>
+    </informalexample>
+    <para>
+제54항  다음과 같은 접미사는 된소리로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>심부름꾼</entry><entry>심부름군</entry></row>
+	    <row><entry>익살꾼</entry><entry>익살군</entry></row>
+	    <row><entry>일꾼</entry><entry>일군</entry></row>
+	    <row><entry>장난꾼</entry><entry>장난군</entry></row>
+	    <row><entry>지게꾼</entry><entry>지겟군</entry></row>
+	    <row><entry>때깔</entry><entry>땟갈</entry></row>
+	    <row><entry>빛깔</entry><entry>빛갈</entry></row>
+	    <row><entry>성깔</entry><entry>성갈</entry></row>
+	    <row><entry>귀때기</entry><entry>귓대기</entry></row>
+	    <row><entry>볼때기</entry><entry>볼대기</entry></row>
+	    <row><entry>판자때기</entry><entry>판잣대기</entry></row>
+	    <row><entry>뒤꿈치</entry><entry>뒷굼치</entry></row>
+	    <row><entry>팔꿈치</entry><entry>팔굼치</entry></row>
+	    <row><entry>이마빼기</entry><entry>이맛배기</entry></row>
+	    <row><entry>코빼기</entry><entry>콧배기</entry></row>
+	    <row><entry>객쩍닷</entry><entry>객적다</entry></row>
+	    <row><entry>겸연쩍다</entry><entry>겸연적다.</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제55항  두 가지로 구별하여 적던 다음 말들은 한 가지로 적는다. (ㄱ을 취하
+       고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row><entry>맞추다(입을 맞춘다. 양복을 맞춘다)</entry><entry>마추다</entry></row>
+	    <row><entry>뻗치다(다리를 뻗친다. 멀리 뻗친다)</entry><entry>뻐치다</entry></row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제56항  '-더라, -던'과 '-든지'는 다음과 같이 적는다.
+  1. 지난 일을 나타내는 어미는 '-더라, -던'으로 적는다. (ㄱ을 취하고 ㄴ을
+    버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>지난 겨울은 몹시 춥더라.</entry>
+	      <entry>지난 겨울은 몹시 춥드라.</entry>
+	    </row>
+	    <row>
+	      <entry>깊던 물이 얕아졌다.</entry>
+	      <entry>깊든 물이 얕아졌다.</entry>
+	    </row>
+	    <row>
+	      <entry>그렇게 좋던가?</entry>
+	      <entry>그렇게 좋든가?</entry>
+	    </row>
+	    <row>
+	      <entry>그 사람 말 잘하던데!</entry>
+	      <entry>그 사람 말 잘하든데!</entry>
+	    </row>
+	    <row>
+	      <entry>얼마나 놀랐던지 몰라.</entry>
+	      <entry>얼마나 놀랐든지 몰라.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+  2. 물건이나 일의 내용을 가리지 아니하는 뜻을 나타내는 조사와 어미는
+    '(-)든지'로 적는다. (ㄱ을 취하고 ㄴ을 버림.)
+    </para>
+    <informalexample>
+      <informaltable>
+	<tgroup cols="2" align="left">
+	  <thead>
+	    <row>
+	      <entry>ㄱ</entry><entry>ㄴ</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>배든지 사과든지 마음대로 먹어라.</entry>
+	      <entry>배던지 사과던지 마음대로 먹어라.</entry>
+	    </row>
+	    <row>
+	      <entry>가든지 오든지 마음대로 해라.</entry>
+	      <entry>가던지 오던지 마음대로 해라.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </informalexample>
+    <para>
+제57항  다음 말들은 각각 구별하여 적는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      가름                  둘로 가름
+      갈음                  새 책상으로 갈음하였다.
+      거름                  풀을 썩인 거름
+      걸음                  빠른 걸음
+      거치다                영월을 거쳐 왔다.
+      걷히다                외상값이 잘 걷힌다.
+      걷잡다                걷잡을 수 억는 상태
+      그러므로(그러니까)    그는 부지런하다. 그러므로 잘 산다.
+      그럼으로(써)          그는 열심히 공부한다. 그럼으로(써) 은혜에 
+    (그렇게 하는 것으로)    보답한다.
+      노름                  노름판이 벌어졌다.
+      놀음(놀이)            즐거운 놀음
+      느리다                진도가 너무 느리다.
+      늘이다                고무줄을 늘인다.
+      늘리다                수출량을 더 늘린다.
+      다리다                옷을 다린다.
+      달이다                약을 달인다.
+      다치다                부주의로 손을 다쳤다.
+      닫히다                문이 저절로 닫혔다.
+      닫치다                문을 힘껏 닫쳤다.
+      마치다                벌써 일을 마쳤다.
+      맞히다                여러 문제를 더 맞혔다.
+      목거리                목거리가 덧났다.
+      목걸이                금 목걸이, 은 목걸이
+      바치다                나라를 위해 목숨을 바쳤다.
+      받치다                우산을 받치고 간다.
+      받히다                쇠뿔에 받혔다.
+      밭치다                술을 체에 밭친다.
+      반드시                약속은 반드시 지켜라.
+      반듯이                고개를 반듯이 들어라.
+      부딪치다              차와 차가 마주 부딪쳤다.
+      부딪히다              마차가 화물차에 부딪혔다.
+      부치다                힘이 부치는 일이다.
+                            편지를 부치다.
+                            논밭을 부친다.
+                            빈대떡을 부친다.
+                            식목일에 부치는 글
+                            회의에 부치는 안건
+                            인쇄에 부치는 원고
+                            삼촌 집에 숙식을 부친다.
+      붙이다                우표를 붙이다.
+                            책상을 벽에 붙였다.
+                            흥정을 붙인다.
+                            불을 붙인다.
+                            감시원을 붙인다.
+                            조건을 붙인다.
+                            취미를 붙인다.
+                            별명을 붙인다.
+      시키다                일을 시킨다.
+      식히다                끓인 물을 식히다.
+      아름                  세 아름 되는 둘레
+      알음                  전부터 알음이 있는 사이
+      앎                    앎이 힘이다.
+      안치다                밥을 안친다.
+      앉히다                윗자리에 앉힌다.
+      어름                  두 물건의 어름에서 일어난 현상
+      얼음                  얼음이 얼었다.
+      이따가                이따가 오너라.
+      있다가                돈은 있다가도 없다.
+      저리다                다친 다리가 저린다.
+      절이다                김장 배추를 절인다.
+      조리다                생선을 조린다. 통조림, 병조림
+      졸이다                마음을 졸인다.
+      주리다                여러 날을 주렸다.
+      줄이다                비용을 줄인다.
+      하노라고              하노라고 한 것이 이 모양이다.
+      하느라고              공부하느라고 밤을 새웠다.
+      -느니보다(어미)       나를 찾아 오느니보다 집에 있거라
+      -는 이보다(의존 명사) 오는 이가 가는 이보다 많다.
+      -(으)리만큼(어미)     나를 미워하리만큼 그에게 잘못한 일이 없다.
+      -(으)ㄹ 이만큼(의존 명사)  찬성할 이도 반대할 이만큼이나 많을 것이다.
+      -(으)러(목적)         공부하러 간다.
+      -(으)려(의도)         서울 가려 한다.
+      -(으)로서(자격)       사람으로서 그럴 수는 없다.
+      -(으)로써(수단)       닭으로써 꿩을 대신했다.
+      -(으)므로(어미)       그가 나를 믿으므로 나도 그를 믿는다.
+       (-ㅁ, -음)으로(써)(조사)    그는 믿음으로(써) 산 보람을 느꼈다.
+      </literallayout>
+    </informalexample>
+  </sect1>
+
+  <sect1>
+    <title>문장 부호</title>
+
+    <sect2>
+      <title>마침표[終止符]</title>
+
+      <sect3>
+	<title>온점(.), 고리점(。 )</title>
+
+	<para>
+      가로쓰기에는 온점, 세로쓰기에는 고리점을 쓴다.
+    (1) 서술, 명령, 청유 등을 나타내는 문장의 끝에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      젊은이는 나라의 기둥이다.
+      황금 보기를 돌같이 하라.
+      집으로 돌아가자.
+      </literallayout>
+    </informalexample>
+    <para>
+      다만, 표제어나 표어에는 쓰지 않는다.
+    </para>
+    <informalexample>
+      <literallayout>
+      압록강은 흐른다(표제어)
+      꺼진 불도 다시 보자(표어)
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 아라비아 숫자만으로 연월일을 표시할 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      1919. 3. 1. (1919년 3월 1일)
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 표시 문자 다음에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      1. 마침표             ㄱ. 물음표             가. 인명
+      </literallayout>
+    </informalexample>
+    <para>
+    (4) 준말을 나타내는 데 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      서. 1987. 3. 5.(서기)
+      </literallayout>
+    </informalexample>
+	</sect3>
+
+    <sect3>
+      <title>물음표(?)</title>
+
+      <para>
+      의심이나 물음을 나타낸다.
+    (1) 직접 질문할 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      이제 가면 언제 돌아오니?
+      이름이 뭐지?
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 반어나 수사 의문(修辭疑問)을 나타낼 때 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      제가 감히 거역할 리가 있습니까?
+      이게 은혜에 대한 보답이냐?
+      남북 통일이 되면 얼마나 좋을까?
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 특정한 어구 또는 그 내용에 대하여 의심이나 빈정거림, 비웃음 등을
+       표시할 때, 또는 적절한 말을 쓰기 어려운 경우에 소괄호 안에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      그것 참 훌륭한(?) 태도야.
+      우리 집 고양이가 가출(?)을 했어요.
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 1] 한 문자에서 몇 개의 선택적인 물음이 겹쳤을 때에는 맨 끝의 물
+           음에만 쓰지만, 각각 독립된 물음인 경우에는 물음마다 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      너는 한국인이냐, 중국인이냐?
+      너는 언제 왔니? 어디서 왔니? 무엇하러?
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임 2] 의문형 어미로 끝나는 문장이라도 의문의 정도가 약할 때에는 물
+           음표 대신 온점(또는 고리점)을 쓸 수도 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      이 일을 도대체 어쩐단 말이냐.
+      아무도 그 일에 찬성하지 않을 거야. 혹 미친 사람이면 모를까.
+      </literallayout>
+    </informalexample>
+    </sect3>
+
+    <sect3>
+      <title>느낌표(!)</title>
+
+      <para>
+      감탄이나 놀람, 부르짖음, 명령 등 강한 느낌을 나타낸다.
+    (1) 느낌을 힘차게 나타내기 위해 감탄사나 감탄형 종결어미 다음에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      앗!
+      아, 달이 밝구나!
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 강한 명령문 또는 청유문에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      지금 즉시 대답해!
+      부디 몸조심하도록!
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 감정을 넣어 다른 사람을 부르거나 대답할 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      춘향아!
+      예, 도련님!
+      </literallayout>
+    </informalexample>
+    <para>
+    (4) 물음의 말로써 놀람이나 항의의 뜻을 나타내는 경우에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      이게 누구야!
+      내가 왜 나빠!
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] 감탄형 어미로 끝나는 문장이라도 감탄의 정도가 약할 때에는 느낌
+         표 대신 온점(또는 고리점)을 쓸 수도 있다.
+    </para>
+    <informalexample>
+      <literallayout>
+      개구리가 나온 것을 보니, 봄이 오긴 왔구나.
+      </literallayout>
+    </informalexample>
+      </sect3>
+    </sect2>
+
+    <sect2>
+      <title>쉼표[休止符]</title>
+
+      <sect3>
+	<title>반점(,), 모점(、 )</title>
+
+	<para>
+      가로쓰기에는 반점, 세로쓰기에는 모점을 쓴다.
+      문장 안에서 짧은 휴지를 나타낸다.
+    (1) 같은 자격의 어구가 열거될 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      근면, 검호, 협동은 우리 겨레의 미덕이다.
+      충청도의 계룡산, 전라도의 내장산, 강원도의 설악산은 모두 국립 공원 이다.
+      다만, 조사로 연결될 적에는 쓰지 않는다.
+      매화와 난초와 국화와 대나무를 사군자라고 한다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 짝을 지어 구별할 필요가 있을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      닭과 지네, 개와 고양이는 상극이다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 바로 다음의 말을 꾸미지 않을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      슬픈 사연을 간직한, 경주 불국사의 무영탑
+      성질 급한, 철수의 누이동생이 화를 내었다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (4) 대등하거나 종속적인 절이 이어질 때에 절 사이에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      콩 심으면 콩 나고, 팥 심으면 팥 난다.
+      흰 눈이 내리니, 경치가 더욱 아름답다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (5) 부르는 말이나 대답하는 말 뒤에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      애야, 이리 오너라.
+      예, 지금 가겠습니다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (6) 제시어 다음에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      빵, 이것이 인생의 전부이더냐?
+      용기, 이것이야말로 무엇과도 바꿀 수 없는 젊은이의 자산이다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (7) 도치된 문장에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      이리 오세요, 어머님.
+      다시 보자, 한강수야.
+      </literallayout>
+    </informalexample>
+    <para>
+    (8) 가벼운 감탄을 나타내는 말 뒤에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      아, 깜빡 잊었구나.
+      </literallayout>
+    </informalexample>
+    <para>
+    (9) 문장 첫머리의 접속이나 연결을 나타내는 말 다음에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      첫째, 몸이 튼튼해야 된다.
+      아무튼, 나는 집에 돌아가겠다.
+      다만, 일반적으로 쓰이는 접속어(그러나, 그러므로, 그리고, 그런데 등)
+      뒤에는 쓰지 않음을 원칙으로 한다.
+      그러나 너는 실망할 필요가 없다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (10) 문장 중간에 끼어든 구절 앞뒤에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      나는 솔직히 말하면, 그 말이 별로 탐탐하지 않소.
+      철수는 미소를 띠고, 속으로는 화가 치밀었지만, 그들을 맞았다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (11) 되풀이를 피하기 위하여 한 부분을 줄일 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      여름에는 바다에서, 겨울에는 산에서 휴가를 즐겼다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (12) 문맥상 끊어 읽어야 할 곳에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      깝돌이가 울면서, 떠나는 갑순이를 배웅했다.
+      철수가, 내가 제일 좋아하는 친구이다.
+      남을 괴롭히는 사람들은, 만약 그들이 다른 사람에게 괴롭힘을 당해 본
+      다면, 남을 괴롭히는 일이 얼마나 나쁜 일인지 깨달을 것이다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (13) 숫자를 나열할 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      1, 2, 3, 4
+      </literallayout>
+    </informalexample>
+    <para>
+    (14) 수의 폭이나 개략의 수를 나타낼 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      5, 6 세기             6, 7 개
+      </literallayout>
+    </informalexample>
+    <para>
+    (15) 수의 자릿점을 나타낼 때에 쓴다.
+	</para>
+      </sect3>
+      <sect3>
+	<title>가운뎃점(·)</title>
+
+	<para>
+      열거된 여러 단위가 대등하거나 밀접한 관계임을 나타낸다.
+    (1) 쉼표로 열거된 어구가 다시 여러 단위로 나누어질 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      철수·영이, 영수·순이가 서로 짝이 되어 윷놀이를 하였다.
+      공주·논산, 천안·아산·천원 등 각 지역구에서 2 명씩 국회 의원을 뽑
+      는다.
+      시장에 가서 사과·배·복숭아, 고추·마늘·파, 조기·명태·고등어를
+      샀다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 특정한 의미를 가지는 날을 나타내는 숫자에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      3·1 운동   8·15 광복
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 같은 계열의 단어 사이에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      경북 방언의 조사·연구
+      충북·충남 두 도를 합하여 충청도라고 한다.
+      동사·형용사를 합하여 용언이라고 한다.
+      </literallayout>
+    </informalexample>
+	</sect3>
+      <sect3>
+	<title>쌍점( : )</title>
+	<para>
+    (1) 내포되는 종류를 들 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      문장 부호 : 마침표, 쉼표, 따옴표, 묶음표 등
+      문방사우 : 붓, 먹, 벼루, 종이
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 소표제 뒤에 간단한 설명이 붙을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      일시 : 1984년 10월 15일 10시
+      마침표 : 문장이 끝남을 나타낸다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 저자명 다음에 저서명을 적을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      정약용 : 목민심서, 경세유표
+      주시경 : 국어 문법, 서울 박문서관, 1910.
+      </literallayout>
+    </informalexample>
+    <para>
+    (4) 시(時)와 분(分), 장(章)과 절(節) 따위를 구별할 때나, 둘 이상을
+       대비할 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      오전 10 : 20 (오전 10시 20분)
+      요한 3 : 16 (요한복음 3장 16절)
+      대비 65 : 60 (65대 60)
+      </literallayout>
+    </informalexample>
+      </sect3>
+      <sect3>
+	<title>빗금( / )</title>
+	<para>
+    (1) 대응, 대립되거나 대등한 것을 함께 보이는 단어와 구, 절 사이에
+       쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      남궁만/남궁 만                    백이십오 원/125원
+      착한 사람/악한 사람               맞닥뜨리다/맞닥트리다
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 분수를 나타낼때에 쓰기도 한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      3/4 분기              3/20
+      </literallayout>
+    </informalexample>
+      </sect3>
+    </sect2>
+    <sect2>
+      <title>따옴표[引用符]</title>
+
+      <sect3>
+	<title>큰따옴표(" "), 겹낫표(『 』)</title>
+
+	<para>
+      가로쓰기에는 큰따옴표, 세로쓰기에는 겹낫표를 쓴다.
+      대화, 인용, 특별 어구 따위를 나타낸다.
+    (1) 글 가운데서 직접 대화를 표시할 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      "전기가 없었을 때는 어떻게 책을 보았을까?"
+      "그야 등잔불을 켜고 보았겠지."
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 남의 말을 인용할 경우에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      예로부터 "민심은 천심이다."라고 하였다.
+      "사람은 사회적 동물이다."라고 말한 학자가 있다.
+      </literallayout>
+    </informalexample>
+	</sect3>
+      <sect3>
+	<title>작은 따옴표(' '), 낫표 (「 」)</title>
+
+	<para>
+      가로쓰기에는 작은따옴표, 세로쓰기에는 낫표를 쓴다.
+    (1) 따온 말 가운데 다시 따온 말이 들어 있을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      "여러분! 침착해야 합니다. '하늘이 무너져도 솟아날 구멍이 있다.'고
+      합니다."
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 마음 속으로 한 말을 적을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      '만약 내가 이런 모습으로 돌아간다면 모두들 깜짝 놀라겠지.'
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] 문장에서 중요한 부분을 두드러지게 하기 위해 드러냄표 대신에 쓰
+         기도 한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      지금 필요한 것은 '지식'이 아니라 '실천'입니다.
+      '배부른 돼지'보다는 '배고픈 소크라테스'가 되겠다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+    </sect2>
+    <sect2>
+      <title>묶음표[括弧符]</title>
+
+      <sect3>
+	<title>소괄호( ( ) )</title>
+
+      <para>
+    (1) 언어, 연대, 주석, 설명 등을 넣을 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      커피(coffee)는 기호 식품이다.
+      3.1 운동(1919) 당시 나는 중학생이었다.
+      '무정(無情)'은 춘원(6.25때 납북)의 작품이다.
+      니체(독일의 철학자)는 이렇게 말했다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 특히 기호 또는 기호적인 구실을 하는 문자, 단어, 구에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+           (1)  주어        (ㄱ) 명사    (라) 소리에 관한 것
+      </literallayout>
+    </informalexample>
+    <para>
+    (3) 빈 자리임을 나타낼 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      우리 나라의 수도는 (  )이다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+    <sect3>
+      <title>중괄호( { } )</title>
+
+      <para>
+      여러 단위를 동등하게 묶어서 보일 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      주격 조사  { 이
+                   가
+      국가의 3 요소  국토
+      국가의 3 요소 {국민
+                     주권
+      </literallayout>
+    </informalexample>
+      </sect3>
+    <sect3>
+      <title>대괄호(〔 〕)</title>
+
+      <para>
+    (1) 묶음표 안의 말이 바깥 말과 음이 다를 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      나이[年歲] 낱말[單語] 手足[손발]
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 묶음표 안에 또 묶음표가 있을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      명령에 있어서의 불확실[단호(斷乎)하지 못함]은 복종에 있어서의 불확
+      실[모호(模糊)함]을 낳는다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+    </sect2>
+
+    <sect2>
+      <title>이음표[連結符]</title>
+
+      <sect3>
+	<title>줄표( ― )</title>
+
+	<para>
+      이미 말한 내용을 다른 말로 부연하거나 보충함을 나타낸다.
+    (1) 문장 중간에 앞의 내용에 대해 부연하는 말이 끼여들 때 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      그 신동은 네 살에―보통 아이 같으면 천자문도 모를 나이에―벌써 시를
+      지었다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 앞의 말을 정정 또는 변명하는 말이 이어질 때 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      어머님께 말했다가―아니 말씀드렸다가―꾸중만 들었다.
+      이건 내 것이니까―아니, 내가 처음 발견한 것이니까―절대로 양보할 수
+      가 없다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+      <sect3>
+	<title>붙임표(-)</title>
+
+	<para>
+    (1) 사전, 논문 등에서 합성어를 나타낼 적에, 또는 접사나 어미임을 나타
+       낼 적에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      겨울-나그네           불-구경                손-발
+      휘-날리다             슬기-롭다              -(으)ㄹ걸
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 외래어와 고유어 또는 한자어가 결합되는 경우에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      나일론-실             디-장조                빛-에너지   
+      염화-칼륨
+      </literallayout>
+    </informalexample>
+      </sect3>
+      <sect3>
+	<title>물결표( ∼ )</title>
+
+	<para>
+    (1) '내지'라는 뜻에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      9월 15일 ∼ 9월 25일
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 어떤 말의 앞이나 뒤에 들어갈 말 대신 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      새마을 :   ∼ 운동    ∼ 노래
+      -가(家) :  음악∼     미술∼
+      </literallayout>
+    </informalexample>
+      </sect3>
+      </sect2>
+      <sect2>
+	<title>드러냄표[顯在符]</title>
+
+      <sect3>
+	<title>드러냄표(˚, ˙)</title>
+
+	<para>
+    ˙이나 ˚을 가로쓰기에는 글자 위에, 세로쓰기에는 글자 오른쪽에 쓴다.
+    문장 내용 중에서 주의가 미쳐야 할 곳이나 중요한 부분을 특별히 드러내
+    보일 때 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+                       ˙˙˙˙
+      한글의 본 이름은 훈민정음이다.
+                  ˚ ˚˚˚          ˚˚˚ ˚˚˚
+      중요한 것은 왜 사느냐가 아니라 어떻게 사느냐 하는 문제이다.
+      </literallayout>
+    </informalexample>
+    <para>
+   [붙임] 가로쓰기에서는 밑줄(    ,~~~~)을 치기도 한다.
+    </para>
+    <informalexample>
+      <literallayout>
+      다음 보기에서 명사가 아닌 것은?
+      </literallayout>
+    </informalexample>
+	</sect3>
+      </sect2>
+
+    <sect2>
+      <title>안드러냄표[潛在符]</title>
+
+      <sect3>
+	<title>숨김표(××, ㅇ ㅇ )</title>
+
+	<para>
+      알면서도 고의로 드러내지 않음을 나타낸다.
+    (1) 금기어나 공공연히 쓰기 어려운 비속어의 경우, 그 글자의 수효만큼
+       쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      배운 사람 입에서 어찌 ㅇㅇㅇ란 말이 나올 수 있느냐?
+      그 말을 듣는 순간 ××란 말이 목구멍까지 치밀었다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 비밀을 유지할 사항일 경우, 그 글자의 수효만큼 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      육군 ㅇㅇ부대 ㅇㅇㅇ이 작전에 참가하였다.
+      그 모임의 참석자는 김××씨, 정××씨 등 5명이었다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+      <sect3>
+	<title>빠짐표(□)</title>
+	<para>
+      글자의 자리를 비워 둠을 나타낸다.
+    (1) 옛 비문이나 서적 등에서 글자가 분명하지 않을 때에 그 글자의 수효
+       만큼 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      大師爲法主□□賴之大□薦(옛 비문)
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 글자가 들어가야 할 자리를 나타낼 때 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      훈민정음의 초성 중에서 아음(牙音)은 □□□의 석 자다.
+      </literallayout>
+    </informalexample>
+      </sect3>
+      <sect3>
+	<title>줄임표(……)</title>
+
+	<para>
+    (1) 할 말을 줄였을 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      "어디 나하고 한 번……."
+      하고 철수가 나섰다.
+      </literallayout>
+    </informalexample>
+    <para>
+    (2) 말이 없음을 나타낼 때에 쓴다.
+    </para>
+    <informalexample>
+      <literallayout>
+      "빨리 말해!"
+      "……."
+	</literallayout>
+      </informalexample>
+      <para>
+  </para>
+	</sect3>
+      </sect2>
+    </sect1>
+</appendix>
+
+<!--
+Local Variables:
+mode: xml
+fill-column: 78
+End:
+-->

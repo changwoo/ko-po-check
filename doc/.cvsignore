@@ -1,2 +1,4 @@
 Makefile
 Makefile.in
+ko-po-check
+ko-po-check.junk

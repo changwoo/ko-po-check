@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY spellingrule         SYSTEM "spelling-rule.xml">
+]>
+
+<book id="index" lang='ko'>
+  <bookinfo>
+    <title>한국어 PO 파일 검사툴 사용 설명서</title>
+
+    <authorgroup>
+      <author>
+	<surname>류</surname>
+	<firstname>창우</firstname>
+	<authorblurb>
+	  <simpara><email>cwryu@debian.org</email></simpara>
+	</authorblurb>
+      </author>
+    </authorgroup>
+
+    <copyright>
+      <year>2002</year>
+      <holder>Changwoo Ryu</holder>
+    </copyright>
+  </bookinfo>
+    
+  <toc></toc>
+
+  &spellingrule;
+  
+</book>
+
+<!--
+Local Variables:
+mode: xml
+fill-column: 78
+End:
+-->
