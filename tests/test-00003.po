@@ -41,3 +41,8 @@ msgstr "숟가락이 없슴"
 #: test.c:3
 msgid "There is spoon"
 msgstr "숟가락이 있슴"
+
+# E: "~음"이 맞음
+#: test.c:3
+msgid "She's gone out of my life.  I was wrong, I'm to blame.  I was so untrue"
+msgstr "그녀가 내 삶에서 떠나갔슴.  내가 잘못했슴.  모든 게 내 탓이었슴. 내가 너무 거짓되었슴"

@@ -59,6 +59,8 @@ def test_noun_suffix(str):
         return 1
     elif ((ord(str[-2]) - 0xac00) % 28 == 20):
         return 0
+    elif (str[-2] == e('없')):
+        return 0
     else:
         return 1
     
@@ -68,7 +70,7 @@ misspell_data = [
       'error': e("\"%s\": 짧은 부정문에서는 '않'이 아니라 '안'을 씁니다") },
     { 're':    re.compile(e("(읍니다)")),
       'error': e("\"%s\": '읍니다'가 아니라 '습니다'입니다") },
-    { 're':    re.compile(e("([^\s]+슴)(\s+|$)")),
+    { 're':    re.compile(e("([^\s]+슴)([\s\.\,\?]|$)")),
       'func':  test_noun_suffix,
       'error': e("\"%s\": '슴'이 아니라 '음'입니다") },
     { 're':    re.compile(e("("+verbs_re+"수(가|도|는)?\s"+")")),
