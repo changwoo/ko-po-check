@@ -14,23 +14,6 @@ except LookupError:
     sys.stderr.write("한국어 codec이 설치되지 않았습니다.  http://koco.sourceforge.net\n")
     sys.exit(1)
 
-def help():
-    e = localeutil.eucstr
-    helpmsg = [
-        e("Usage: ko-po-check [옵션]... [파일]...<\n"),
-        e("      --help                이 도움말을 보여주고 종료합니다\n"),
-        e("      --version             버전 정보를 표시하고 종료합니다\n"),
-        e("\n"),
-        e(" 파일이 `-'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n")]
-    localeutil.outlines(helpmsg)
-    sys.exit(1)
-
-def version():
-    versionmsg = [e("ko-po-check %s\n" % VERSION)]
-    localeutil.outlines(versionmsg)
-    sys.exit(0)
-    
-
 # processing the command line options
 
 try:
@@ -40,11 +23,14 @@ except getopt.GetoptError, msg:
     print "%s: %s" % (os.path.basename(sys.argv[0]), msg)
     sys.exit(1)
 
+option_help = 0
+option_version = 0
+
 for (opt, val) in options:
     if opt == '--help':
-        help()
+        option_help = 1
     elif opt == '--version':
-        version()
+        option_version = 1
     elif opt == '--moduledir':
         moduledir = val
     
@@ -58,6 +44,23 @@ import po,poparse,localeutil
 
 localeutil.init()
 
+if (option_help):
+    e = localeutil.eucstr
+    helpmsg = [
+        e("Usage: ko-po-check [옵션]... [파일]...<\n"),
+        e("      --help                이 도움말을 보여주고 종료합니다\n"),
+        e("      --version             버전 정보를 표시하고 종료합니다\n"),
+        e("\n"),
+        e(" 파일이 `-'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n")]
+    localeutil.outlines(helpmsg)
+    sys.exit(1)
+
+if (option_version):
+    e = localeutil.eucstr
+    versionmsg = [e("ko-po-check %s\n" % VERSION)]
+    localeutil.outlines(versionmsg)
+    sys.exit(0)
+    
 import glob
 
 filenames = glob.glob(filtersdir+"/*.py")
@@ -67,6 +70,7 @@ for filename in filenames:
     execfile(filename, f)
     filters[f['name']] = f
 
+retval = 0
 for fn in args:
     if fn == '-':
         fp = sys.stdin
@@ -90,5 +94,8 @@ for fn in args:
         for filtername in filters.keys():
             t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
             if not t:
+                retval = 1
                 for line in string.split(e,'\n'):
                     localeutil.out("%s:%d: %s\n"%(fn,entry.msgstr_lineno,line))
+
+sys.exit(retval)
