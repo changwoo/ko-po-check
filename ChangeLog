@@ -1,5 +1,7 @@
 2002-08-01  Changwoo Ryu  <cwryu@debian.org>
 
+	* configure.in: Used AM_PATH_PYTHON.
+
 	* src/filters/kde.py: New file.  Checks KDE "_: ..." translation.
 
 	* src/filters/common_misspell.py: More checks.
