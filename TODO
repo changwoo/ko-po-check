@@ -4,9 +4,6 @@
 ==========
 
 * PO parser 개선
-** 다른 encoding 지원 
-- 지금은 임시로 읽어들인 다음 EUC-KR로 전부 바꾼다.  앞으로
-  StreamReader를 이용해 유니코드로 통일 (공부 필요)
 
 * 조사 구별: 올바른 조사 사용법 suggestion
 
@@ -18,13 +15,10 @@
 
 * 관용어 번역: mnemonic이 섞인 경우 영어 단어 구별 방법
 
-* copyright notice는 번역하면 안 됨
-- "^Copyright \(C\) 어쩌구", "^\([cC]\) 어쩌구" 
-- (1) 번역에서 몇번째(N) 줄이 위 정규식에 맞는 지 검사  (2) 원문에서
-  N번째 줄이 번역의 N번째 줄과 다르면 애러
-
 * 출력 메세지가 해당 locale에 맞게
 - glib의 g_print와 같은 locale dependent한 출력 기능 만들기
+- 문제점: C의 nl_langinfo에 대응하는 locale.nl_langinfo()가 python
+  2.2에서부터 지원된다
 
 * 각 애러의 severity level을 결정해 출력하기
 - KPCError(s) exception class 만들기
