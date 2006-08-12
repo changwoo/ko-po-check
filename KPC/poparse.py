@@ -126,6 +126,7 @@ def parse_entry(file,lineno):
             elif line[:7] == 'msgstr[':
                 state = STATE_MSGSTR
                 new_entry.msgstr += read_string(line[10:])
+                new_entry.msgstr_lineno = lineno
             elif line[0] == '"':
                 if state == STATE_MSGID:
                     new_entry.msgid += read_string(line)
