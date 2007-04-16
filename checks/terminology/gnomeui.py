@@ -6,45 +6,43 @@
 
 import string
 
-name = "terminology/gnomeui"
+name = 'terminology/gnomeui'
 
-e = lambda s: unicode(s,'utf-8')
-
-data = [("properties", e("등록 정보")),
-        ("preferences", e("기본 설정")),
-        ("about", e("정보")),
-        ("find", e("찾기")),
-        ("search", e("찾기")),
-        ("create", e("만들기")),
-        ("add", e("더하기")),
-        ("edit", e("편집")),
-        ("view", e("보기")),
-        ("change", e("바꾸기")),
-        ("remove", e("지우기")),
-        ("exit", e("끝내기")),
-        ("log in", e("로그인")),
-        ("log out", e("로그아웃")),
-        ("run", e("실행")),
-        ("open", e("열기")),
-        ("save", e("저장")),
-        ("save as", e("다른 이름으로 저장")),
-        ("always on top", e("항상 위")),
-        ("previous", e("이전")),
-        ("next", e("다음")),
-        ("copy", e("복사")),
-        ("cut", e("잘라내기")),
-        ("paste", e("붙여 넣기")),
-        ("location", e("위치")),
-        ("statusbar", e("상태 표시줄")),
-        ("zoom in", e("확대")),
-        ("zoom out", e("축소")),
-        ("browse", e("찾아보기")),
-        ("go", e("이동")),
-        ("name", e("이름")),
-        ("display", e("표시")),
+data = [('properties', u'속성'),
+        ('preferences', u'기본 설정'),
+        ('about', u'정보'),
+        ('find', u'찾기'),
+        ('search', u'찾기'),
+        ('create', u'만들기'),
+        ('add', u'더하기'),
+        ('edit', u'편집'),
+        ('view', u'보기'),
+        ('change', u'바꾸기'),
+        ('remove', u'지우기'),
+        ('exit', u'끝내기'),
+        ('log in', u'로그인'),
+        ('log out', u'로그아웃'),
+        ('run', u'실행'),
+        ('open', u'열기'),
+        ('save', u'저장'),
+        ('save as', u'다른 이름으로 저장'),
+        ('always on top', u'항상 위'),
+        ('previous', u'이전'),
+        ('next', u'다음'),
+        ('copy', u'복사'),
+        ('cut', u'잘라내기'),
+        ('paste', u'붙여 넣기'),
+        ('location', u'위치'),
+        ('statusbar', u'상태 표시줄'),
+        ('zoom in', u'확대'),
+        ('zoom out', u'축소'),
+        ('browse', u'찾아보기'),
+        ('go', u'이동'),
+        ('name', u'이름'),
+        ('display', u'표시'),
         ]
 
-error_string = e("%s: 다음과 같이 번역해야 합니다: \"%s\"")
+error_string = u'%s: 다음과 같이 번역해야 합니다: \"%s\"'
 
 
 def normalize_msgid(msgid):
@@ -69,7 +67,7 @@ def find_mnemonic(msgid):
     
 def check(msgid,msgstr):
     ret = 1
-    errmsg = ""
+    errmsg = ''
     msgid_n = normalize_msgid(msgid)
     msgid_m = find_mnemonic(msgid)
     msgid_d = (msgid[-3:] == '...')
@@ -91,7 +89,7 @@ if __name__ == '__main__':
     if not t:
         print e
     else:
-        print "Success"
+        print 'Success'
 
 # Local Variables:
 # coding: utf-8

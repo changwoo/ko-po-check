@@ -1,8 +1,8 @@
 # -*-text-*-
-# test 2 - Á¶»ç ±¸º°
+# test 2 - ì¡°ì‚¬ êµ¬ë³„
 #
-# * printf()·ù ÇÔ¼öÀÇ format string¿¡¼­ format ´ÙÀ½¿¡ ¿À´Â Á¶»ç´Â
-# ¹ŞÄ§ÀÌ ÀÖ´Â °æ¿ì¿Í ¾ø´Â °æ¿ì ¸ğµÎ¸¦ »ı°¢ÇØ¾ß ÇÑ´Ù.
+# * printf()ë¥˜ í•¨ìˆ˜ì˜ format stringì—ì„œ format ë‹¤ìŒì— ì˜¤ëŠ” ì¡°ì‚¬ëŠ”
+# ë°›ì¹¨ì´ ìˆëŠ” ê²½ìš°ì™€ ì—†ëŠ” ê²½ìš° ëª¨ë‘ë¥¼ ìƒê°í•´ì•¼ í•œë‹¤.
 #
 msgid ""
 msgstr ""
@@ -12,70 +12,71 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# E:Á¶»ç ±¸º°ÇÏÁö ¾ÊÀº °æ¿ì
+# E:ì¡°ì‚¬ êµ¬ë³„í•˜ì§€ ì•Šì€ ê²½ìš°
 #: test.c:2
 msgid "%s is ..."
-msgstr "%s´Â ..."
+msgstr "%sëŠ” ..."
 
-# E:Á¶»ç ±¸º°ÇÏÁö ¾ÊÀº °æ¿ì
-# - µû¿ÈÇ¥¿Í °°ÀÌ ¾´ °æ¿ì
+# E:ì¡°ì‚¬ êµ¬ë³„í•˜ì§€ ì•Šì€ ê²½ìš°
+# - ë”°ì˜´í‘œì™€ ê°™ì´ ì“´ ê²½ìš°
 #: test.c:2
 msgid "'%s' is ..."
-msgstr "'%s'´Â ..."
+msgstr "'%s'ëŠ” ..."
 
-# E:Á¶»ç ±¸º°ÇÏÁö ¾ÊÀº °æ¿ì
-# - ¶ç¾î ¾´ °æ¿ì
+# E:ì¡°ì‚¬ êµ¬ë³„í•˜ì§€ ì•Šì€ ê²½ìš°
+# - ë„ì–´ ì“´ ê²½ìš°
 #: test.c:2
 msgid "Making %s..."
-msgstr "%s À» ¸¸µé°í ÀÖ½À´Ï´Ù..."
+msgstr "%s ì„ ë§Œë“¤ê³  ìˆìŠµë‹ˆë‹¤..."
 
-# E:Á¶»ç ±¸º°ÇÏÁö ¾ÊÀº °æ¿ì
-# - µû¿ÈÇ¥ + ¶ç¾î ¾´ °æ¿ì
+# E:ì¡°ì‚¬ êµ¬ë³„í•˜ì§€ ì•Šì€ ê²½ìš°
+# - ë”°ì˜´í‘œ + ë„ì–´ ì“´ ê²½ìš°
 #: test.c:2
 msgid "Making '%s'..."
-msgstr "'%s' ¸¦ ¸¸µé°í ÀÖ½À´Ï´Ù..."
+msgstr "'%s' ë¥¼ ë§Œë“¤ê³  ìˆìŠµë‹ˆë‹¤..."
 
-# ¿Ã¹Ù¸¥ Á¶»ç ±¸º°
+# ì˜¬ë°”ë¥¸ ì¡°ì‚¬ êµ¬ë³„
 #: test.c:2
 msgid "What is %s"
-msgstr "%sÀÌ(°¡) ¹«¾ùÀÏ±î"
+msgstr "%sì´(ê°€) ë¬´ì—‡ì¼ê¹Œ"
 
-# E: °¢Á¾ format type
+# E: ê°ì¢… format type
 #: test.c:2
 msgid ""
 "%d is, %i is, %o is, %u is, %f is, %e is, %E is, %g is, %G is, %a is,\n"
 "%A is, %c is, %C is, %s is, %p is, %n is, %m is, %h is, %j is, %l is,\n"
 "%L is, %q is, %t is, %x is, %X is, %z is, %Z is"
 msgstr ""
-"%d´Â, %i´Â, %o´Â, %u´Â, %f´Â, %e´Â, %E´Â, %g´Â, %G´Â, %a´Â,\n"
-"%A´Â, %c´Â, %C´Â, %s´Â, %p´Â, %nÀº, %mÀº, %h´Â, %j´Â, %lÀº,\n"
-"%LÀº, %q´Â, %t´Â, %x´Â, %X´Â, %z´Â, %Z´Â"
+"%dëŠ”, %iëŠ”, %oëŠ”, %uëŠ”, %fëŠ”, %eëŠ”, %EëŠ”, %gëŠ”, %GëŠ”, %aëŠ”,\n"
+"%AëŠ”, %cëŠ”, %CëŠ”, %sëŠ”, %pëŠ”, %nì€, %mì€, %hëŠ”, %jëŠ”, %lì€,\n"
+"%Lì€, %qëŠ”, %tëŠ”, %xëŠ”, %XëŠ”, %zëŠ”, %ZëŠ”"
 
 # E: parameter number
 #: test.c:2
 msgid "%s is %s"
-msgstr "%2$s´Â %1$sÀÔ´Ï´Ù"
+msgstr "%2$sëŠ” %1$sì…ë‹ˆë‹¤"
 
 # E: integer modifier
 #: test.c:2
 msgid "%04d is, %+8d is, %-8d is, %-08d is, %+08d is, %8.3d is, %-8.3d is, %#x is"
-msgstr "%04d´Â, %+8d´Â, %-8d´Â, %-08d´Â, %+08d´Â, %8.3d´Â, %-8.3d´Â, %#x´Â"
+msgstr "%04dëŠ”, %+8dëŠ”, %-8dëŠ”, %-08dëŠ”, %+08dëŠ”, %8.3dëŠ”, %-8.3dëŠ”, %#xëŠ”"
 
 # E: l,h, modifier
 #: test.c:2
 msgid "%4ld is, %8ls is, %lc is, %hf is"
-msgstr "%4ld´Â, %8ls´Â, %lc´Â, %hf´Â"
+msgstr "%4ldëŠ”, %8lsëŠ”, %lcëŠ”, %hfëŠ”"
 
-# Á¶»ç°¡ ¾Æ´Ï´Ù
+# ì¡°ì‚¬ê°€ ì•„ë‹ˆë‹¤
 #: test.c:2
 msgid "%s silver medal"
-msgstr "%s Àº¸Ş´Ş"
+msgstr "%s ì€ë©”ë‹¬"
 
-# Á¶»ç°¡ ¾Æ´Ï´Ù
+# ì¡°ì‚¬ê°€ ì•„ë‹ˆë‹¤
 #: test.c:2
 msgid "it is not %s"
-msgstr "%sÀº\n"
-"¾Æ´Õ´Ï´Ù"
+msgstr ""
+"%sì€\n"
+"ì•„ë‹™ë‹ˆë‹¤"

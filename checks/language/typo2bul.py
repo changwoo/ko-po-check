@@ -2,23 +2,21 @@
 
 import string,re
 
-name = "typo2bul"
+name = 'typo2bul'
 
-e = lambda s: unicode(s,'utf-8')
+typo = '('+string.join([
+    '밍나합니다',
+    '거싱',
+    '살마',
+    '[가-힝]빈다'
+    ], '|')+')'
 
-typo = "("+string.join([
-    "밍나합니다",
-    "거싱",
-    "살마",
-    "[가-힝]빈다"
-    ], '|')+")"
-
-typo_re = re.compile(e(typo))
-typo_error = e("\"%s\": 두벌식 오타로 보입니다")
+typo_re = re.compile(typo.decode('utf-8'))
+typo_error = u'\"%s\": 두벌식 오타로 보입니다'
 
 def check(msgid,msgstr):
     ret = 1
-    errmsg = ""
+    errmsg = ''
     str = msgstr
     while 1:
         mo = typo_re.search(str)
@@ -40,7 +38,7 @@ if __name__ == '__main__':
     if not t:
         print e
     else:
-        print "Success"
+        print 'Success'
 
 # Local Variables:
 # coding: utf-8

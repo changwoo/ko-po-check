@@ -1,8 +1,8 @@
 # -*-text-*-
-# test 1 - ÁÙÀÓ¼è(mnemonic,short cut) °Ë»ç
+# test 1 - ì¤„ì„ì‡ (mnemonic,short cut) ê²€ì‚¬
 #
-# * ÁÙÀÓ¼è´Â ´ë¹®ÀÚ ÀÌ¾î¾ß ÇÑ´Ù.
-# * ¹ø¿ª¹®¿¡ °ıÈ£ ¾È¿¡ ÇÑ ±ÛÀÚÀÇ ÁÙÀÓ¼è°¡ µé¾î ÀÖÀ¸¸é ÁÙÀÓ¼è ¹ø¿ªÀ¸·Î º»´Ù.
+# * ì¤„ì„ì‡ ëŠ” ëŒ€ë¬¸ì ì´ì–´ì•¼ í•œë‹¤.
+# * ë²ˆì—­ë¬¸ì— ê´„í˜¸ ì•ˆì— í•œ ê¸€ìì˜ ì¤„ì„ì‡ ê°€ ë“¤ì–´ ìˆìœ¼ë©´ ì¤„ì„ì‡  ë²ˆì—­ìœ¼ë¡œ ë³¸ë‹¤.
 #
 msgid ""
 msgstr ""
@@ -12,50 +12,50 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# ´ë¹®ÀÚ ±×³ğ ÁÙÀÓ¼è
+# ëŒ€ë¬¸ì ê·¸ë†ˆ ì¤„ì„ì‡ 
 #: test.c:1
 msgid "_File"
-msgstr "ÆÄÀÏ(_F)"
+msgstr "íŒŒì¼(_F)"
 
-# E: ¼Ò¹®ÀÚ·Î Àß¸ø ¹ø¿ªÇÑ ±×³ğ ÁÙÀÓ¼è
+# E: ì†Œë¬¸ìë¡œ ì˜ëª» ë²ˆì—­í•œ ê·¸ë†ˆ ì¤„ì„ì‡ 
 #: test.c:1
 msgid "T_ool"
-msgstr "Åø(_o)"
+msgstr "íˆ´(_o)"
 
-# ¿Ã¹Ù¸¥ ±×³ğ ÁÙÀÓ¼è
+# ì˜¬ë°”ë¥¸ ê·¸ë†ˆ ì¤„ì„ì‡ 
 #: test.c:1
 msgid "Save _as..."
-msgstr "´Ù¸¥ ÀÌ¸§À¸·Î ÀúÀå(_A)..."
+msgstr "ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ì €ì¥(_A)..."
 
-# ´ë¹®ÀÚ KDE ÁÙÀÓ¼è
+# ëŒ€ë¬¸ì KDE ì¤„ì„ì‡ 
 #: test.c:1
 msgid "&Edit"
-msgstr "ÆíÁı(&E)"
+msgstr "í¸ì§‘(&E)"
 
-# E: ¼Ò¹®ÀÚ·Î Àß¸ø ¹ø¿ªÇÑ KDE ÁÙÀÓ¼è
+# E: ì†Œë¬¸ìë¡œ ì˜ëª» ë²ˆì—­í•œ KDE ì¤„ì„ì‡ 
 #: test.c:1
 msgid "C&ut"
-msgstr "Àß¶ó³»±â(&u)"
+msgstr "ì˜ë¼ë‚´ê¸°(&u)"
 
-# ¿Ã¹Ù¸¥ KDE ÁÙÀÓ¼è
+# ì˜¬ë°”ë¥¸ KDE ì¤„ì„ì‡ 
 #: test.c:1
 msgid "Pre&vious"
-msgstr "ÀÌÀü(&V)"
+msgstr "ì´ì „(&V)"
 
-# ÁÙÀÓ¼è°¡ ¾Æ´Ô
+# ì¤„ì„ì‡ ê°€ ì•„ë‹˜
 #: test.c:1
 msgid "_filename"
-msgstr "(_ÆÄÀÏÀÌ¸§)"
+msgstr "(_íŒŒì¼ì´ë¦„)"
 
-# ÁÙÀÓ¼è°¡ ¾Æ´Ô 2
+# ì¤„ì„ì‡ ê°€ ì•„ë‹˜ 2
 #: test.c:1
 msgid "(test_N)"
-msgstr "(Å×½ºÆ®_N)"
+msgstr "(í…ŒìŠ¤íŠ¸_N)"
 
-# ÁÙÀÓ¼è°¡ ¾Æ´Ô 3
+# ì¤„ì„ì‡ ê°€ ì•„ë‹˜ 3
 #: test.c:1
 msgid "pre-ANSI style (K&R)"
-msgstr "ANSI ÀÌÀü ½ºÅ¸ÀÏ (K&R)"
+msgstr "ANSI ì´ì „ ìŠ¤íƒ€ì¼ (K&R)"

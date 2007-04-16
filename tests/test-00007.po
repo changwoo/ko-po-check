@@ -9,24 +9,24 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# E: ¹ø¿ªÀÚ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ì¨ì•¼ í•¨
 #: test.c:7
 msgid "translator_credits"
 msgstr "translator_credits"
 
-# E: ¹ø¿ªÀÚ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ì¨ì•¼ í•¨
 #: test.c:7
 msgid "translator_credits"
-msgstr "¹ø¿ªÇÑ_ºĞµé"
+msgstr "ë²ˆì—­í•œ_ë¶„ë“¤"
 
 #: test.c:7
 msgid "translator_credits"
-msgstr "·ùÃ¢¿ì <cwryu@debian.org>"
+msgstr "ë¥˜ì°½ìš° <cwryu@debian.org>"
 
-# E: ¹ø¿ªÀÚ ½á¾ß ÇÔ, ÀÌ·¸°Ô ¹ø¿ªÇÏ¸é ÁøÂ¥ ¹Ùº¸
+# E: ë²ˆì—­ì ì¨ì•¼ í•¨, ì´ë ‡ê²Œ ë²ˆì—­í•˜ë©´ ì§„ì§œ ë°”ë³´
 #: test.c:7
 msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-msgstr "¹ø¿ªÇÑ_ºĞµé-¿©±â¿¡_ÀÚ±âÀÚ½ÅÀ»_Ãß°¡"
+msgstr "ë²ˆì—­í•œ_ë¶„ë“¤-ì—¬ê¸°ì—_ìê¸°ìì‹ ì„_ì¶”ê°€"

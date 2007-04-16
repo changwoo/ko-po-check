@@ -5,80 +5,79 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test 5\n"
 "POT-Creation-Date: 2002-07-25 01:30+0900\n"
-"PO-Revision-Date: 2002-07-25 01:30+0900\n"
+"PO-Revision-Date: 2007-04-17 02:17+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: test.c:5
 msgid "Some Properties"
-msgstr "¾îÂ¼±¸ ¼Ó¼º"
+msgstr "ì–´ì©Œêµ¬ ë“±ë¡ ì •ë³´"
 
 #: test.c:5
 msgid "Properties : attribute"
-msgstr "µî·Ï Á¤º¸: ¼Ó¼º"
+msgstr "ì†ì„±: ì†ì„±"
 
 #: test.c:5
 msgid "Dummy Preferences"
-msgstr "¾îÂ¼±¸ ¼³Á¤ »çÇ×"
+msgstr "ì–´ì©Œêµ¬ ì„¤ì • ì‚¬í•­"
 
 #: test.c:5
-msgid "Dummy Preferences"
-msgstr "ÀúÂ¼±¸ È¯°æ¼³Á¤"
+msgid "Dummy2 Preferences"
+msgstr "ì €ì©Œêµ¬ í™˜ê²½ì„¤ì •"
 
 #: test.c:5
-msgid "Dummy Preferences"
-msgstr "¾îÂ¼±¸ ±âº» ¼³Á¤"
+msgid "Dummy3 Preferences"
+msgstr "ì–´ì©Œêµ¬ ê¸°ë³¸ ì„¤ì •"
 
 #: test.c:5
 msgid "About Dummy..."
-msgstr "¾îÂ¼±¸¿¡ ´ëÇÏ¿©..."
+msgstr "ì–´ì©Œêµ¬ì— ëŒ€í•˜ì—¬..."
 
 #: test.c:5
-msgid "About Dummy..."
-msgstr "¾îÂ¼±¸ Á¤º¸..."
+msgid "About Dummy2..."
+msgstr "ì–´ì©Œêµ¬ ì •ë³´..."
 
 #: test.c:5
-msgid "_About ¾îÂ¼±¸"
-msgstr "¾îÂ¼±¸¿¡ ´ëÇÏ¿©(_A)"
-
-#: test.c:5
-msgid "Window font"
-msgstr "Ã¢ ÆùÆ®"
+msgid "_About ì–´ì©Œêµ¬"
+msgstr "ì–´ì©Œêµ¬ì— ëŒ€í•˜ì—¬(_A)"
 
 #: test.c:5
 msgid "Window font"
-msgstr "Ã¢ ±Û²Ã"
+msgstr "ì°½ í°íŠ¸"
 
-# E: _ Æ÷ÇÔ
+#: test.c:5
+msgid "window font"
+msgstr "ì°½ ê¸€ê¼´"
+
+# E: _ í¬í•¨
 #: test.c:5
 msgid "Dummy Pref_erences"
-msgstr "´õ¹Ì ¼±ÅÃ »çÇ×(_E)"
+msgstr "ë”ë¯¸ ì„ íƒ ì‚¬í•­(_E)"
 
-# E: & Æ÷ÇÔ
+# E: & í¬í•¨
 #: test.c:5
 msgid "Dummy Proper&ties"
-msgstr "¾îÂ¼±¸ ¼Ó¼º(&T)"
+msgstr "ì–´ì©Œêµ¬ ì†ì„±(&T)"
 
-# E: ´ÜÃß
+# E: ë‹¨ì¶”
 #: test.c:5
 msgid "button"
-msgstr "¹öÆ°"
+msgstr "ë²„íŠ¼"
 
-# E: ´ÜÃß
+# E: ë‹¨ì¶”
 #: test.c:5
 msgid "_Delete A"
-msgstr "A »èÁ¦(_D)"
+msgstr "A ì‚­ì œ(_D)"
 
-# E: Ã£±â
+# E: ì°¾ê¸°
 #: test.c:5
 msgid "_Find A"
-msgstr "A °Ë»ö(_F)"
+msgstr "A ê²€ìƒ‰(_F)"
 
-# E: Ã£±â
+# E: ì°¾ê¸°
 #: test.c:5
 msgid "_Search A"
-msgstr "A °Ë»ö(_S)"
-
+msgstr "A ê²€ìƒ‰(_S)"

@@ -1,3 +1,10 @@
+2007-04-17  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/terminology/gnomeguide.py: New GNOME terms.
+	* checks/terminology/gnomeui.py: New GNOME terms.
+	* checks/*/*.py: Use u'string' syntax for unicode strings.
+	* tests/*: UTF-8 migration + New GNOME terms.
+
 2006-08-12  Changwoo Ryu  <cwryu@debian.org>
 
 	* KPC/poparse.py (parse_entry): Missing line number parsing on

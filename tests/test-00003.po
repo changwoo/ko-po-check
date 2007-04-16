@@ -1,5 +1,5 @@
 # -*-text-*-
-# test 3 - ÀÚÁÖ ¹üÇÏ´Â Àß¸øµÈ ±¹¾î »ç¿ë
+# test 3 - ìì£¼ ë²”í•˜ëŠ” ì˜ëª»ëœ êµ­ì–´ ì‚¬ìš©
 #
 msgid ""
 msgstr ""
@@ -9,40 +9,42 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# E: "¾È ÇÔ"ÀÌ ¸ÂÀ½
+# E: "ì•ˆ í•¨"ì´ ë§ìŒ
 #: test.c:3
 msgid "Not translated"
-msgstr "¹ø¿ª ¾ÊÇÔ"
+msgstr "ë²ˆì—­ ì•Ší•¨"
 
-# E: "¾È ÇÔ"ÀÌ ¸ÂÀ½
+# E: "ì•ˆ í•¨"ì´ ë§ìŒ
 #: test.c:3
 msgid "Not Translated"
-msgstr "¹ø¿ª ¾Ê ÇÔ"
+msgstr "ë²ˆì—­ ì•Š í•¨"
 
-# E: "¾È µË´Ï´Ù"°¡ ¸ÂÀ½
+# E: "ì•ˆ ë©ë‹ˆë‹¤"ê°€ ë§ìŒ
 #: test.c:3
 msgid "Default resolution must not be zero."
-msgstr "ÇØ»óµµ ÃÊ±â°ªÀº 0ÀÌ µÇ¾î¼­´Â ¾ÊµË´Ï´Ù."
+msgstr "í•´ìƒë„ ì´ˆê¸°ê°’ì€ 0ì´ ë˜ì–´ì„œëŠ” ì•Šë©ë‹ˆë‹¤."
 
-# E: "½À´Ï´Ù"°¡ ¸ÂÀ½
+# E: "ìŠµë‹ˆë‹¤"ê°€ ë§ìŒ
 #: test.c:3
 msgid "No such file or directory"
-msgstr "±×·± ÆÄÀÏÀÌ³ª µğ·ºÅä¸®°¡ ¾øÀ¾´Ï´Ù"
+msgstr "ê·¸ëŸ° íŒŒì¼ì´ë‚˜ ë””ë ‰í† ë¦¬ê°€ ì—†ìë‹ˆë‹¤"
 
-# E: "~À½"ÀÌ ¸ÂÀ½
+# E: "~ìŒ"ì´ ë§ìŒ
 #: test.c:3
 msgid "There is no spoon"
-msgstr "¼ù°¡¶ôÀÌ ¾ø½¿"
+msgstr "ìˆŸê°€ë½ì´ ì—†ìŠ´"
 
-# E: "~À½"ÀÌ ¸ÂÀ½
+# E: "~ìŒ"ì´ ë§ìŒ
 #: test.c:3
 msgid "There is spoon"
-msgstr "¼ù°¡¶ôÀÌ ÀÖ½¿"
+msgstr "ìˆŸê°€ë½ì´ ìˆìŠ´"
 
-# E: "~À½"ÀÌ ¸ÂÀ½
+# E: "~ìŒ"ì´ ë§ìŒ
 #: test.c:3
 msgid "She's gone out of my life.  I was wrong, I'm to blame.  I was so untrue"
-msgstr "±×³à°¡ ³» »î¿¡¼­ ¶°³ª°¬½¿.  ³»°¡ Àß¸øÇß½¿.  ¸ğµç °Ô ³» Å¿ÀÌ¾ú½¿. ³»°¡ ³Ê¹« °ÅÁşµÇ¾ú½¿"
+msgstr ""
+"ê·¸ë…€ê°€ ë‚´ ì‚¶ì—ì„œ ë– ë‚˜ê°”ìŠ´.  ë‚´ê°€ ì˜ëª»í–ˆìŠ´.  ëª¨ë“  ê²Œ ë‚´ íƒ“ì´ì—ˆìŠ´. ë‚´ê°€ ë„ˆë¬´ ê±°"
+"ì§“ë˜ì—ˆìŠ´"

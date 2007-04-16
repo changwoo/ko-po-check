@@ -1,5 +1,5 @@
 TESTS = $(srcdir)/kpc-test
-TESTS_ENVIRONMENT = LANG=ko_KR.euckr
+TESTS_ENVIRONMENT =
 
 dist-hook:
 	for X in $(srcdir)/test-*.po $(srcdir)/test-*.out; do \

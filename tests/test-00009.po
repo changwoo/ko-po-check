@@ -9,46 +9,46 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# E: ¹ø¿ªÀÚ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ì¨ì•¼ í•¨
 #: test.c:9
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "_: ¿Å±äÀÌÀÇ ÀÌ¸§"
-"·ùÃ¢¿ì"
+msgstr "_: ì˜®ê¸´ì´ì˜ ì´ë¦„"
+"ë¥˜ì°½ìš°"
 
-# E: ¹ø¿ªÀÚ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ì¨ì•¼ í•¨
 #: test.c:9
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "¿Å±äÀÌÀÇ ÀÌ¸§"
-"·ùÃ¢¿ì"
+msgstr "ì˜®ê¸´ì´ì˜ ì´ë¦„"
+"ë¥˜ì°½ìš°"
 
-# E: ¹ø¿ªÀÚ ¸ŞÀÏ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ë©”ì¼ ì¨ì•¼ í•¨
 #: test.c:9
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your email"
-msgstr "_: ¹ø¿ªÇÑ »ç¶÷ ÀÌ¸ŞÀÏ"
+msgstr "_: ë²ˆì—­í•œ ì‚¬ëŒ ì´ë©”ì¼"
 "cwryu@debian.org"
 
-# E: ¹ø¿ªÀÚ ¸ŞÀÏ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ë©”ì¼ ì¨ì•¼ í•¨
 #: test.c:9
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your email"
-msgstr "¿Å±äÀÌÀÇ ÀÌ¸ŞÀÏ"
+msgstr "ì˜®ê¸´ì´ì˜ ì´ë©”ì¼"
 "cwryu@debian.org"
 
-# E: ¹ø¿ªÀÚ ¸ŞÀÏ ½á¾ß ÇÔ
+# E: ë²ˆì—­ì ë©”ì¼ ì¨ì•¼ í•¨
 #: test.c:9
 msgid ""
 "_: Low Contrast\n"
 "Low"
 msgstr ""
-"_: ÀúÃ¤µµ\n"
-"³·À½"
+"_: ì €ì±„ë„\n"
+"ë‚®ìŒ"

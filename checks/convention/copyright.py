@@ -5,9 +5,7 @@ name = "copyright"
 
 copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 
-e = lambda s: unicode(s,'utf-8')
-
-error_string = e("copyright notice는 번역하면 안 됩니다")
+error_string = u'copyright notice는 번역하면 안 됩니다'
 
 def check(msgid,msgstr):
     msgid_lines = string.split(msgid,"\n")
@@ -17,7 +15,7 @@ def check(msgid,msgstr):
         if copyright_re.match(line) and lineno < len(msgstr_lines) and line != msgstr_lines[lineno]:
             return (0,error_string)
         lineno+=1
-    return (1,"")
+    return (1,'')
 
 if __name__ == '__main__':
     import sys
@@ -27,7 +25,7 @@ if __name__ == '__main__':
     if not t:
         print e
     else:
-        print "Success"
+        print 'Success'
 
 # Local Variables:
 # coding: utf-8

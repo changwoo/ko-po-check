@@ -9,20 +9,19 @@ msgstr ""
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: test.c:1
 msgid "Pre_ferences..."
-msgstr "¼³Á¤(_F)..."
+msgstr "ì„¤ì •(_F)..."
 
-# "..." ºüÁü
+# "..." ë¹ ì§
 #: test.c:2
 msgid "Open..."
-msgstr "¿­±â"
+msgstr "ì—´ê¸°"
 
-# mnemonic Æ²¸²
+# mnemonic í‹€ë¦¼
 #: test.c:2
 msgid "S_earch"
-msgstr "Ã£±â(_S)"
-
+msgstr "ì°¾ê¸°(_S)"

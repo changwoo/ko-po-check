@@ -1,44 +1,50 @@
 # -*- coding: utf-8 -*-
 import string
 
-name = "gnomeguide"
+name = 'terminology/gnomeguide'
 
-e = lambda s: unicode(s,'utf-8')
-
-data = [("properties", e("등록 정보"), e("속성")),
-        ("preferences", e("기본 설정"), e("설정 사항")),
-        ("preferences", e("기본 설정"), e("선택 사항")),
-        ("preferences", e("기본 설정"), e("환경설정")),
-        ("about", e("정보"), e("대하여")),
-        ("font", e("글꼴"), e("폰트")),
-        ("button", e("단추"), e("버튼")),
-        ("delete", e("지우기"), e("삭제")),
-        ("find", e("찾기"), e("검색")),
-        ("search", e("찾기"), e("검색")),
-        ("create", e("만들기"), e("생성")),
-        ("add", e("더하기"), e("추가")),
-        ("change", e("바꾸기"), e("변경")),
-        ("remove", e("지우기"), e("제거")),
-        ("exit", e("끝내기/마침"), e("종료")),
-        ("background", e("바탕색"), e("배경")),
-        ("foreground", e("글자색"), e("전경")),
-        ("application", e("프로그램"), e("어플리케이션")),
-        ("application", e("프로그램"), e("애플리케이션")),
-        ("key", e("키"), e("글쇠")),
-        ("translator", e("옮긴이"), e("번역자")),
-        ("password", e("열쇠글"), e("비밀 번호")),
-        ("password", e("열쇠글"), e("비밀번호")),
-        ("password", e("열쇠글"), e("암호")),
-        ("focus", e("포커스"), e("초점")),
-        ("restart", e("다시 시작"), e("재시작")),
-        ("screensaver", e("화면 보호기"), e("화면보호기")),
+data = [('properties', u'속성', u'등록 정보'),
+        ('preferences', u'기본 설정', u'설정 사항'),
+        ('preferences', u'기본 설정', u'선택 사항'),
+        ('preferences', u'기본 설정', u'환경설정'),
+        ('preferences', u'기본 설정', u'기본설정'),
+        ('about', u'정보', u'대하여'),
+        ('font', u'글꼴', u'폰트'),
+        ('button', u'단추', u'버튼'),
+        ('delete', u'지우기', u'삭제'),
+        ('find', u'찾기', u'검색'),
+        ('search', u'찾기', u'검색'),
+        ('create', u'만들기', u'생성'),
+        ('add', u'더하기', u'추가'),
+        ('change', u'바꾸기', u'변경'),
+        ('remove', u'지우기', u'제거'),
+        ('exit', u'끝내기/마침', u'종료'),
+        ('background', u'바탕색', u'배경'),
+        ('foreground', u'글자색', u'전경'),
+        ('application', u'프로그램', u'어플리케이션'),
+        ('application', u'프로그램', u'애플리케이션'),
+        ('key', u'키', u'글쇠'),
+        ('translator', u'옮긴이', u'번역자'),
+        ('password', u'암호', u'열쇠글'),
+        ('password', u'암호', u'비밀번호'),
+        ('password', u'암호', u'비밀 번호'),
+        ('paste', u'붙여 넣기', u'붙여넣기'),
+        ('focus', u'포커스', u'초점'),
+        ('restart', u'다시 시작', u'재시작'),
+        ('screensaver', u'화면 보호기', u'화면보호기'),
+        ('link', u'링크', u'바로 가기'),
+        ('link', u'링크', u'바로가기'),
+        ('graphics', u'그래픽', u'그림'),
+        ('graphics', u'그래픽', u'그래픽스'),
+        ('shortcut', u'바로 가기', u'바로가기'),
+        ('shortcut', u'바로 가기', u'단축키'),
         ]
 
-error_string = e("%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역")
+error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
 
 def check(msgid,msgstr):
     ret = 1
-    errmsg = ""
+    errmsg = ''
     msgid_l = string.lower(string.replace(string.replace(msgid,'_',''),'&',''))
     for (id, right, wrong) in data:
         if ((string.find(msgstr, wrong) >= 0) and
@@ -58,7 +64,7 @@ if __name__ == '__main__':
     if not t:
         print e
     else:
-        print "Success"
+        print 'Success'
 
 # Local Variables:
 # coding: utf-8

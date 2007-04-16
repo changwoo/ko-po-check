@@ -4,14 +4,12 @@ import string,re
 
 name = "typoincomplete"
 
-e = lambda s: unicode(s,'utf-8')
-
-typo_re = re.compile(u"([\u3131-\u318E]+)")
-typo_error = e("\"%s\": 음절이 불완전합니다.  오타로 보입니다")
+typo_re = re.compile(u'([\u3131-\u318E]+)')
+typo_error = u'\"%s\": 음절이 불완전합니다.  오타로 보입니다'
 
 def check(msgid,msgstr):
     ret = 1
-    errmsg = ""
+    errmsg = ''
     str = msgstr
     while 1:
         mo = typo_re.search(str)
@@ -27,13 +25,13 @@ def check(msgid,msgstr):
 
 if __name__ == '__main__':
     import sys
-    msgid = unicode(sys.stdin.readline(),"utf-8")
-    msgstr = unicode(sys.stdin.readline(),"utf-8")
+    msgid = unicode(sys.stdin.readline(),'utf-8')
+    msgstr = unicode(sys.stdin.readline(),'utf-8')
     t,e = check(msgid,msgstr)
     if not t:
         print e
     else:
-        print "Success"
+        print 'Success'
 
 # Local Variables:
 # coding: utf-8
