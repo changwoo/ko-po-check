@@ -1,3 +1,7 @@
+2007-04-20  Changwoo Ryu  <cwryu@debian.org>
+
+	* scripts/ko-po-check.in: Use u'string' syntax.
+
 2007-04-17  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/terminology/gnomeguide.py: New GNOME terms.

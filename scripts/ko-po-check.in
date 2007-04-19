@@ -43,19 +43,17 @@ sys.path.append(moduledir + '/KPC')
 import po,poparse
 
 if (option_help):
-    e = lambda s: unicode(s,'utf-8')
     helpmsg = [
-        e("Usage: ko-po-check [옵션]... [파일]...<\n"),
-        e("      --help                이 도움말을 보여주고 종료합니다\n"),
-        e("      --version             버전 정보를 표시하고 종료합니다\n"),
-        e("\n"),
-        e(" 파일이 `-'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n")]
+        u'Usage: ko-po-check [옵션]... [파일]...<\n',
+        u'      --help                이 도움말을 보여주고 종료합니다\n',
+        u'      --version             버전 정보를 표시하고 종료합니다\n',
+        u'\n',
+        u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n' ]
     sys.stdout.writelines(helpmsg)
     sys.exit(1)
 
 if (option_version):
-    e = lambda s: unicode(s,'utf-8')
-    versionmsg = [e("ko-po-check %s\n" % VERSION)]
+    versionmsg = [u'ko-po-check %s\n' % VERSION]
     sys.stdout.writelines(versionmsg)
     sys.exit(0)
     
@@ -78,8 +76,7 @@ for fn in args:
     try:
         catalog = poparse.parse_file(fp)
     except poparse.ParseError, lineno:
-        e = lambda s: unicode(s,'utf-8')
-        sys.stdout.write(e("%s:%d: 파싱 오류\n"%(fn,lineno)))
+        sys.stdout.write(u'%s:%d: 파싱 오류\n'%(fn,lineno))
         sys.exit(1)
     if fn != '-':
         fp.close()
@@ -94,7 +91,7 @@ for fn in args:
             if not t:
                 retval = 1
                 for line in string.split(e,'\n'):
-                    sys.stdout.write(u"%s:%d: %s\n"%(fn,entry.msgstr_lineno,line))
+                    sys.stdout.write(u'%s:%d: %s\n'%(fn,entry.msgstr_lineno,line))
 
 sys.exit(retval)
 
