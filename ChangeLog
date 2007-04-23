@@ -1,5 +1,7 @@
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
+	* misc/get-gnome-po.sh: Updated for GNOME 2.20.
+
 	* checks/terminology/gnomeguide.py (data): More GNOME terms
 	update.
 	* tests/*: Updated for the GNOME terms.
