@@ -1,5 +1,9 @@
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/terminology/gnomeguide.py (data): More GNOME terms
+	update.
+	* tests/*: Updated for the GNOME terms.
+
 	* checks/language/typoincomplete.py: gdm exception.
 
 	* Makefile.am (SUBDIRS): Exclude doc subdir.

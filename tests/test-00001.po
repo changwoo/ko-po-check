@@ -48,7 +48,7 @@ msgstr "이전(&V)"
 # 줄임쇠가 아님
 #: test.c:1
 msgid "_filename"
-msgstr "(_파일이름)"
+msgstr "(_파일 이름)"
 
 # 줄임쇠가 아님 2
 #: test.c:1

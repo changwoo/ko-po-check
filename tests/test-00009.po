@@ -17,7 +17,7 @@ msgstr ""
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "_: 옮긴이의 이름"
+msgstr "_: 번역자의 이름"
 "류창우"
 
 # E: 번역자 써야 함
@@ -25,7 +25,7 @@ msgstr "_: 옮긴이의 이름"
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "옮긴이의 이름"
+msgstr "번역자의 이름"
 "류창우"
 
 # E: 번역자 메일 써야 함
@@ -41,7 +41,7 @@ msgstr "_: 번역한 사람 이메일"
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your email"
-msgstr "옮긴이의 이메일"
+msgstr "번역자의 이메일"
 "cwryu@debian.org"
 
 # E: 번역자 메일 써야 함
