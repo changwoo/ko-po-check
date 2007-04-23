@@ -1,43 +1,43 @@
 -*-outline-*-
 
-´Ü±âÀû ÇÒÀÏ
+ë‹¨ê¸°ì  í• ì¼
 ==========
 
-* tag¸¦ Á¦°ÅÇÑ »óÅÂ¿¡¼­ °Ë»çÇÏ´Â °øÅë ÄÚµå ÀÛ¼º
-- ¾ð¾îÀûÀÎ ¹®Á¦¸¸ °Ë»çÇÏ´Â °æ¿ì
+* tagë¥¼ ì œê±°í•œ ìƒíƒœì—ì„œ ê²€ì‚¬í•˜ëŠ” ê³µí†µ ì½”ë“œ ìž‘ì„±
+- ì–¸ì–´ì ì¸ ë¬¸ì œë§Œ ê²€ì‚¬í•˜ëŠ” ê²½ìš°
 
-* PO parser °³¼±
-- encoding error Ã³¸®
+* PO parser ê°œì„ 
+- encoding error ì²˜ë¦¬
 
-* °¢ ¾Ö·¯ÀÇ severity levelÀ» °áÁ¤ÇØ Ãâ·ÂÇÏ±â
-- KPCError(s) exception class ¸¸µé±â
+* ê° ì• ëŸ¬ì˜ severity levelì„ ê²°ì •í•´ ì¶œë ¥í•˜ê¸°
+- KPCError(s) exception class ë§Œë“¤ê¸°
 
-°¢ ¸ðµâ¿¡¼­
+ê° ëª¨ë“ˆì—ì„œ
 ----------
 
-* °ü¿ë¾î ¹ø¿ª
-- ¸¹ÀÌ ³ªÅ¸³ª´Â ´Ü¾î ¹ø¿ªµé
-- ¿ë¾îÁý Áö¿ø?
+* ê´€ìš©ì–´ ë²ˆì—­
+- ë§Žì´ ë‚˜íƒ€ë‚˜ëŠ” ë‹¨ì–´ ë²ˆì—­ë“¤
+- ìš©ì–´ì§‘ ì§€ì›?
 
-* ¿Ü·¡¾î Ç¥±â¹ý (NEW)
-- È­ÀÏ => ÆÄÀÏ
+* ì™¸ëž˜ì–´ í‘œê¸°ë²• (NEW)
+- í™”ì¼ => íŒŒì¼
 
-* ¸ÂÃã¹ý, ¶ç¾î¾²±â
-- ´ÜÀ§¸¦ ³ªÅ¸³»´Â ¸í»ç ¶ç¾î ¾²±â (ÇÑ °³, ÇÑ ¹ø, ...)
+* ë§žì¶¤ë²•, ë„ì–´ì“°ê¸°
+- ë‹¨ìœ„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ëª…ì‚¬ ë„ì–´ ì“°ê¸° (í•œ ê°œ, í•œ ë²ˆ, ...)
 
-Áß±âÀû ÇÒÀÏ 
+ì¤‘ê¸°ì  í• ì¼ 
 ==========
 
-* kpc overriding flag Áö¿ø
-- kpc´Â ¿Ïº®ÇÒ ¼ö ¾ø´Ù.  °æ¿ì¿¡ µû¶ó kpc°¡ detectÇÒ ¼ö¹Û¿¡ ¾øÁö¸¸
-  ¿Ã¹Ù¸¥ ¹ø¿ªÀÏ ¼öµµ ÀÖ´Ù.  ÀÌ °æ¿ì ¹ø¿ªÀÚ ÁÖ¼®¹®¿¡ Ç¥½Ã¸¦ ÇØ ÁÜÀ¸·Î½á
-  kpc°¡ ±× ¾Ö·¯¸¦ ¹«½ÃÇÏµµ·Ï ÇÒ ¼ö ÀÖÀ» °ÍÀÌ´Ù.
+* kpc overriding flag ì§€ì›
+- kpcëŠ” ì™„ë²½í•  ìˆ˜ ì—†ë‹¤.  ê²½ìš°ì— ë”°ë¼ kpcê°€ detectí•  ìˆ˜ë°–ì— ì—†ì§€ë§Œ
+  ì˜¬ë°”ë¥¸ ë²ˆì—­ì¼ ìˆ˜ë„ ìžˆë‹¤.  ì´ ê²½ìš° ë²ˆì—­ìž ì£¼ì„ë¬¸ì— í‘œì‹œë¥¼ í•´ ì¤Œìœ¼ë¡œì¨
+  kpcê°€ ê·¸ ì• ëŸ¬ë¥¼ ë¬´ì‹œí•˜ë„ë¡ í•  ìˆ˜ ìžˆì„ ê²ƒì´ë‹¤.
 
-* detectÇÏ´Â »çÇ×¿¡ ´ëÇØ ¼³¸íÇÏ´Â ¹®¼­ ÀÛ¼º
-- docbook »ç¿ë
+* detectí•˜ëŠ” ì‚¬í•­ì— ëŒ€í•´ ì„¤ëª…í•˜ëŠ” ë¬¸ì„œ ìž‘ì„±
+- docbook ì‚¬ìš©
 
 
-¸Õ ¹Ì·¡
+ë¨¼ ë¯¸ëž˜
 =======
 
-* ¸Õ ¹Ì·¡¿¡ ÇÒ ÀÏÀÌ ¾È »ý±âµµ·Ï ÇÑ´Ù.  :p
+* ë¨¼ ë¯¸ëž˜ì— í•  ì¼ì´ ì•ˆ ìƒê¸°ë„ë¡ í•œë‹¤.  :p
