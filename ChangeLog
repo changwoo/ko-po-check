@@ -1,5 +1,7 @@
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
+	* configure.in: 0.8 release
+
 	* ChangeLog, NEWS, README, THANKS, TODO: converted to UTF-8.
 
 	* misc/get-gnome-po.sh: Updated for GNOME 2.20.
