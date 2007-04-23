@@ -5,6 +5,7 @@ import string,re
 name = "typoincomplete"
 
 typo_re = re.compile(u'([\u3131-\u318E]+)')
+typo_exception_re = re.compile(u'^[\u3131-\u318E]-[\u3131-\u318E]') # gdm
 typo_error = u'\"%s\": 음절이 불완전합니다.  오타로 보입니다'
 
 def check(msgid,msgstr):
@@ -13,7 +14,7 @@ def check(msgid,msgstr):
     str = msgstr
     while 1:
         mo = typo_re.search(str)
-        if mo:
+        if mo and not typo_exception_re.match(str):
             ret = 0
             if errmsg:
                 errmsg += '\n'

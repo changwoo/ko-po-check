@@ -1,5 +1,7 @@
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/language/typoincomplete.py: gdm exception.
+
 	* Makefile.am (SUBDIRS): Exclude doc subdir.
 
 2007-04-20  Changwoo Ryu  <cwryu@debian.org>
