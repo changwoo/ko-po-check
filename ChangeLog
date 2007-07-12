@@ -1,3 +1,8 @@
+2007-07-12  Changwoo Ryu  <cwryu@debian.org>
+
+	* scripts/ko-po-check.in: More standard way of overriding
+	sys.setdefaultencoding().
+
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
 	* configure.in: 0.8 release

@@ -1,11 +1,10 @@
-#!@PYTHON@ -S
+#!@PYTHON@
 # -*- coding: utf-8 -*-
 
 import sys
-_setdefaultencoding = sys.setdefaultencoding
-import site,locale
-_setdefaultencoding(locale.getdefaultlocale()[1])
-del _setdefaultencoding
+reload(sys)
+import locale
+sys.setdefaultencoding(locale.getpreferredencoding())
 
 import os,getopt
 
@@ -44,17 +43,17 @@ import po,poparse
 
 if (option_help):
     helpmsg = [
-        u'Usage: ko-po-check [옵션]... [파일]...<\n',
-        u'      --help                이 도움말을 보여주고 종료합니다\n',
-        u'      --version             버전 정보를 표시하고 종료합니다\n',
-        u'\n',
-        u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.\n' ]
-    sys.stdout.writelines(helpmsg)
+        u'Usage: ko-po-check [옵션]... [파일]...<',
+        u'      --help                이 도움말을 보여주고 종료합니다',
+        u'      --version             버전 정보를 표시하고 종료합니다',
+        u'',
+        u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
+    for l in helpmsg:
+        print l
     sys.exit(1)
 
 if (option_version):
-    versionmsg = [u'ko-po-check %s\n' % VERSION]
-    sys.stdout.writelines(versionmsg)
+    print (u'ko-po-check %s' % VERSION)
     sys.exit(0)
     
 import glob
@@ -76,7 +75,7 @@ for fn in args:
     try:
         catalog = poparse.parse_file(fp)
     except poparse.ParseError, lineno:
-        sys.stdout.write(u'%s:%d: 파싱 오류\n'%(fn,lineno))
+        print (u'%s:%d: 파싱 오류'%(fn,lineno))
         sys.exit(1)
     if fn != '-':
         fp.close()
@@ -91,7 +90,7 @@ for fn in args:
             if not t:
                 retval = 1
                 for line in string.split(e,'\n'):
-                    sys.stdout.write(u'%s:%d: %s\n'%(fn,entry.msgstr_lineno,line))
+                    print (u'%s:%d: %s'%(fn,entry.msgstr_lineno,line))
 
 sys.exit(retval)
 
