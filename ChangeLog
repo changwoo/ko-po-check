@@ -1,5 +1,8 @@
 2007-07-12  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/terminology/gnomeguide.py (data): More GNOME terms
+	update.
+
 	* scripts/ko-po-check.in: More standard way of overriding
 	sys.setdefaultencoding().
 	* tests/kpc-test: No more -S option.
