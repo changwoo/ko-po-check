@@ -2,6 +2,7 @@
 
 	* scripts/ko-po-check.in: More standard way of overriding
 	sys.setdefaultencoding().
+	* tests/kpc-test: No more -S option.
 
 2007-04-24  Changwoo Ryu  <cwryu@debian.org>
 
