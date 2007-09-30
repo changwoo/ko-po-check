@@ -48,6 +48,8 @@ data = [('properties', u'속성', u'등록 정보'),
         ('filename', u'파일 이름', u'파일명'),
         ('launcher', u'실행 아이콘', u'실행기'),
         ('filter', u'필터', u'거르개'),
+        ('version', u'판번호', u'버전'),
+        ('version', u'버젼', u'버전'),
         ]
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'

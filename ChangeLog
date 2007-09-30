@@ -1,3 +1,7 @@
+2007-10-01  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/terminology/gnomeguide.py (data): Added 'version'.
+
 2007-07-12  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/terminology/gnomeguide.py (data): More GNOME terms
