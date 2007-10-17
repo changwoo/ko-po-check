@@ -1,3 +1,8 @@
+2007-10-18  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/terminology/gnomeguide.py (data): Fixed wrong 'version'.
+	Added more 'filter'. Added 'locale'.
+
 2007-10-01  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/terminology/gnomeguide.py (data): Added 'version'.
