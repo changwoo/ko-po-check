@@ -8,6 +8,7 @@ class entry:
         self.msgid = ""
         self.msgid_plural = ""
         self.msgstr = ""
+        self.msgctxt = ""
         self.translator_comment = ""
         self.automatic_comment = ""
         self.references = []

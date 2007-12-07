@@ -40,7 +40,7 @@ def parse_file(file):
             raise ParseError, lineno
         catalog.add_entry(entry)
 
-STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5
+STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGCTXT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5,6
 emptyline_re = re.compile(r"^\s*$")
 translator_comment_re = re.compile(r"^\#( (.*))?$")
 automatic_comment_re = re.compile(r"^\#. (.*)$")
@@ -109,7 +109,13 @@ def parse_entry(file,lineno):
                 state = STATE_ECOMMENT
                 pass
         else:
-            if line[:7] == 'msgid "':
+            if line[:9] == 'msgctxt "':
+                state = STATE_MSGCTXT
+                try:
+                    new_entry.msgctxt += read_string(line[8:])
+                except ParseError:
+                    raise ParseError, lineno
+            elif line[:7] == 'msgid "':
                 state = STATE_MSGID
                 try:
                     new_entry.msgid += read_string(line[6:])
