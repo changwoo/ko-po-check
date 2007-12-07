@@ -2,6 +2,8 @@
 
 	* configure.in: 0.9 release.
 
+	* tests/kpc-test: Corrected diff option in the test script.
+
 	* KPC/poparse.py (parse_entry): 
 	* KPC/po.py (entry.__init__): msgctxt parsing.
 

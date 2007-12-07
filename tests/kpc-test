@@ -17,7 +17,7 @@ for file in testfiles:
     print "%s --moduledir=%s/.. --checksdir=%s/../checks %s > %s" % (execfile, srcdir, srcdir, file, tfn)
     os.system("%s --moduledir=%s/.. --checksdir=%s/../checks %s | sort > %s" %
                   (execfile, srcdir, srcdir, file, tfn))
-    if (os.system("diff -u -2 %s %s" % (file[:-3]+".out", tfn)) != 0):
+    if (os.system("diff -u %s %s" % (file[:-3]+".out", tfn)) != 0):
         os.unlink(tfn)
 	ret = 1
     else:
