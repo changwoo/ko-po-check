@@ -1,3 +1,7 @@
+2007-12-07  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/terminology/gnomeguide.py: Fixed a syntax err.
+
 2007-12-03  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/terminology/gnomeguide.py: Added 'separator', 'update'.

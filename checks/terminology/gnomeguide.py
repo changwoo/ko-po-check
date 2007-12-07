@@ -52,8 +52,8 @@ data = [('properties', u'속성', u'등록 정보'),
         ('version', u'버전', u'판번호'),
         ('version', u'버전', u'버젼'),
         ('locale', u'로캘', u'로케일'),
-        {'separator', u'구분선', u'구분자'},
-        {'update', u'업데이트', u'갱신'},
+        ('separator', u'구분선', u'구분자'),
+        ('update', u'업데이트', u'갱신'),
         ]
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
