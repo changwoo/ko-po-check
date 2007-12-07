@@ -1,5 +1,7 @@
 2007-12-07  Changwoo Ryu  <cwryu@debian.org>
 
+	* configure.in: 0.9 release.
+
 	* KPC/poparse.py (parse_entry): 
 	* KPC/po.py (entry.__init__): msgctxt parsing.
 
