@@ -54,6 +54,9 @@ data = [('properties', u'속성', u'등록 정보'),
         ('locale', u'로캘', u'로케일'),
         ('separator', u'구분선', u'구분자'),
         ('update', u'업데이트', u'갱신'),
+        ('hostname', u'호스트 이름', u'호스트명'),
+        ('username', u'사용자 이름', u'사용자명'),
+        ('non-free', u'독점', u'비자유'),
         ]
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
