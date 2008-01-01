@@ -6,17 +6,18 @@ reload(sys)
 import locale
 sys.setdefaultencoding(locale.getpreferredencoding())
 
-import os,getopt
+import os,getopt,string
 
 moduledir = "@prefix@/share/ko-po-check"
 checksdir = "@prefix@/share/ko-po-check/checks"
+filterenable = {}
 VERSION = "@VERSION@"
 
 # processing the command line options
 
 try:
     options, args = getopt.getopt(sys.argv[1:], "",
-                                  ['help', 'version', 'moduledir=', 'checksdir='])
+                                  ['help', 'version', 'moduledir=', 'checksdir=', 'filters='])
 except getopt.GetoptError, msg:
     print "%s: %s" % (os.path.basename(sys.argv[0]), msg)
     sys.exit(1)
@@ -33,6 +34,9 @@ for (opt, val) in options:
         moduledir = val
     elif opt == '--checksdir':
         checksdir = val
+    elif opt == '--filters':
+        for m in string.split(val, ','):
+            filterenable[m] = 1
     
 if not args:
     fn = '-'
@@ -46,6 +50,9 @@ if (option_help):
         u'Usage: ko-po-check [옵션]... [파일]...<',
         u'      --help                이 도움말을 보여주고 종료합니다',
         u'      --version             버전 정보를 표시하고 종료합니다',
+        u'      --moduledir=..        python 모듈 경로 설정 (디버깅용)',
+        u'      --checksdir=..        검사 모듈 경로 설정 (디버깅용)',
+        u'      --filters=..          필터 직접 지정 (디버깅용)',
         u'',
         u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
     for l in helpmsg:
@@ -63,7 +70,11 @@ filters = {}
 for filename in filenames:
     f = {}
     execfile(filename, f)
-    filters[f['name']] = f
+    if filterenable:
+        if filterenable.has_key(f['name']):
+            filters[f['name']] = f
+    else:
+        filters[f['name']] = f
 
 retval = 0
 for fn in args:
@@ -80,7 +91,7 @@ for fn in args:
     if fn != '-':
         fp.close()
 
-    import string,re
+    import re
 
     for entry in catalog.entries:
         if (not entry.is_translated()):
