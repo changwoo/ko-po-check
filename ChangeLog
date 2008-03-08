@@ -1,5 +1,8 @@
 2008-03-08  Changwoo Ryu  <cwryu@debian.org>
 
+	* checks/convention/markup-pango.py: Renamed markup.py to
+	markup-pango.py.
+
 	* misc/get-gnome-po.sh (URLLIST): Fixed download URL.
 
 2008-01-02  Changwoo Ryu  <cwryu@debian.org>
