@@ -83,7 +83,7 @@ def parse_entry(file,lineno):
             new_entry.set_flag(OBSOLETE)
             line = line[3:]
         # comments
-        if line[0] == '#' and (len(line) == 1 or line[1] != '~'):
+        if line[0] == '#':
             if state == STATE_FIRST:
                 state = STATE_COMMENT
             if len(line) == 1:
@@ -138,6 +138,8 @@ def parse_entry(file,lineno):
                     new_entry.msgid += read_string(line)
                 elif state == STATE_MSGSTR:
                     new_entry.msgstr += read_string(line)
+                elif state == STATE_MSGCTXT:
+                    new_entry.msgctxt += read_string(line)
                 else:
                     raise ParseError, lineno
             else:
