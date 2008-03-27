@@ -1,5 +1,7 @@
 2008-03-28  Changwoo Ryu  <cwryu@debian.org>
 
+	* configure.in: 0.10 release.
+
 	* tests/*: Corrected test cases.
 	* checks/convention/copyright.py: 
 	* checks/convention/markup-pango.py:
