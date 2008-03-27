@@ -1,3 +1,11 @@
+2008-03-28  Changwoo Ryu  <cwryu@debian.org>
+
+	* tests/*: Corrected test cases.
+	* checks/convention/copyright.py: 
+	* checks/convention/markup-pango.py:
+	* checks/language/chosaalternative.py:
+	* checks/language/typo2bul.py: Corrected check names.
+
 2008-03-25  Changwoo Ryu  <cwryu@debian.org>
 
 	* KPC/poparse.py (parse_entry): Corrected multiline msgctxt

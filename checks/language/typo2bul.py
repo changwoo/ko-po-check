@@ -2,7 +2,7 @@
 
 import string,re
 
-name = 'typo2bul'
+name = 'language/typo2bul'
 
 typo = '('+string.join([
     '밍나합니다',

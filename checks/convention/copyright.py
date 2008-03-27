@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re, string
 
-name = "copyright"
+name = "convention/copyright"
 
 copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 

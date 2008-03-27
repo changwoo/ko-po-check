@@ -2,7 +2,7 @@
 
 import re,string
 
-name = "should-have-chosa-alternative"
+name = "language/chosa-alternative"
 
 chosa_data = [(u'가',u'이',u'이(가)'),
               (u'를',u'을',u'을(를)'),

@@ -2,7 +2,7 @@
 # markup translation
 # Ref: http://developer.gnome.org/doc/API/2.0/pango/PangoMarkupFormat.html
 
-name = 'markup-pango'
+name = 'convention/markup-pango'
 
 import re, string
 
