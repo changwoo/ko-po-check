@@ -1,5 +1,10 @@
 2008-03-28  Changwoo Ryu  <cwryu@debian.org>
 
+	* README:
+	* COPYING: Move to GPL version 3.
+	
+2008-03-28  Changwoo Ryu  <cwryu@debian.org>
+
 	* configure.in: 0.10 release.
 
 	* tests/*: Corrected test cases.
