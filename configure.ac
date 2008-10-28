@@ -1,5 +1,5 @@
 AC_INIT(README)
-AM_INIT_AUTOMAKE(ko-po-check,0.10)
+AM_INIT_AUTOMAKE(ko-po-check,0.11)
 
 AM_PATH_PYTHON(2.0)
 
