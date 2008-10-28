@@ -1,3 +1,8 @@
+2008-10-29  Changwoo Ryu  <cwryu@debian.org>
+
+	* checks/terminology/gnomeui.py: 
+	* checks/terminology/gnomeguide.py: Changed terms.
+
 2008-10-28  Changwoo Ryu  <cwryu@debian.org>
 
 	* autogen.sh:
