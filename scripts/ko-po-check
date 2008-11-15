@@ -1,4 +1,4 @@
-#!@PYTHON@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import sys
@@ -8,18 +8,18 @@ sys.setdefaultencoding(locale.getpreferredencoding())
 
 import os,getopt,string
 
-moduledir = "@prefix@/share/ko-po-check"
-checksdir = "@prefix@/share/ko-po-check/checks"
 filterenable = {}
-VERSION = "@VERSION@"
+VERSION = "0.11"
+
+SHORT_OPTIONS = ""
+LONG_OPTIONS = ['help', 'version', 'filters=']
 
 # processing the command line options
 
 try:
-    options, args = getopt.getopt(sys.argv[1:], "",
-                                  ['help', 'version', 'moduledir=', 'checksdir=', 'filters='])
+    options, args = getopt.getopt(sys.argv[1:], SHORT_OPTIONS, LONG_OPTIONS)
 except getopt.GetoptError, msg:
-    print "%s: %s" % (os.path.basename(sys.argv[0]), msg)
+    print "%s: %s" % (sys.argv[0], msg)
     sys.exit(1)
 
 option_help = 0
@@ -30,10 +30,6 @@ for (opt, val) in options:
         option_help = 1
     elif opt == '--version':
         option_version = 1
-    elif opt == '--moduledir':
-        moduledir = val
-    elif opt == '--checksdir':
-        checksdir = val
     elif opt == '--filters':
         for m in string.split(val, ','):
             filterenable[m] = 1
@@ -41,17 +37,13 @@ for (opt, val) in options:
 if not args:
     fn = '-'
 
-
-sys.path.append(moduledir + '/KPC')
-import po,poparse
+from KPC import po,poparse,checks
 
 if (option_help):
     helpmsg = [
         u'Usage: ko-po-check [옵션]... [파일]...<',
-        u'      --help                이 도움말을 보여주고 종료합니다',
-        u'      --version             버전 정보를 표시하고 종료합니다',
-        u'      --moduledir=..        python 모듈 경로 설정 (디버깅용)',
-        u'      --checksdir=..        검사 모듈 경로 설정 (디버깅용)',
+        u'      --help                이 도움말을 표시하고 끝납니다',
+        u'      --version             버전 정보를 표시하고 끝납니다',
         u'      --filters=..          필터 직접 지정 (디버깅용)',
         u'',
         u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
@@ -65,16 +57,17 @@ if (option_version):
     
 import glob
 
-filenames = glob.glob(checksdir+"/*/*.py")
+filenames = glob.glob(os.sep.join(checks.__path__ + ["*/*.py"]))
 filters = {}
 for filename in filenames:
-    f = {}
-    execfile(filename, f)
-    if filterenable:
-        if filterenable.has_key(f['name']):
+    if not filename.split(os.sep)[-1].startswith('_'):
+        f = {}
+        execfile(filename, f)
+        if filterenable:
+            if filterenable.has_key(f['name']):
+                filters[f['name']] = f
+        else:
             filters[f['name']] = f
-    else:
-        filters[f['name']] = f
 
 retval = 0
 for fn in args:
@@ -104,7 +97,3 @@ for fn in args:
                     print (u'%s:%d: %s'%(fn,entry.msgstr_lineno,line))
 
 sys.exit(retval)
-
-# Local Variables:
-# coding: utf-8
-# End:

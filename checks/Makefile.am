@@ -1,1 +1,0 @@
-SUBDIRS = convention language terminology
