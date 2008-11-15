@@ -1,3 +1,12 @@
+2008-11-16  Changwoo Ryu  <cwryu@debian.org>
+
+	distutils migration.
+	* checks: Move to KPC/checks.
+	* Makefile.am, configure.ac, autogen.sh: Removed autotools files
+	* setup.sh: New file for distutils
+	* scripts/ko-po-check: Use module path to search available checks, 
+	removed --moduledir and --checksdir options.
+
 2008-10-29  Changwoo Ryu  <cwryu@debian.org>
 
 	* checks/terminology/gnomeui.py: 
