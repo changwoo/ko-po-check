@@ -1,0 +1,3 @@
+include AUTHORS COPYING ChangeLog NEWS THANKS TODO
+include tests/test*
+include misc/*
