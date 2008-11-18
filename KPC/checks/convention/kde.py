@@ -2,6 +2,7 @@
 # GNOME specific rule
 
 name = 'convention/kde'
+description = "KDE 프로젝트에서 사용하는 관행에 맞는지 검사합니다"
 
 error0_string = u'KDE에서 \"_:\"부터 첫 번째 \\n까지는 본디말에 대한 설명이므로 번역하면 안 됩니다.'
 error1_string = u'번역자 이름을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.'

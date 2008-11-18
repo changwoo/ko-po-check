@@ -12,7 +12,7 @@ filterenable = {}
 VERSION = "0.11"
 
 SHORT_OPTIONS = ""
-LONG_OPTIONS = ['help', 'version', 'filters=']
+LONG_OPTIONS = ['help', 'version', 'filters=', 'list']
 
 # processing the command line options
 
@@ -24,6 +24,7 @@ except getopt.GetoptError, msg:
 
 option_help = 0
 option_version = 0
+option_list = 0
 
 for (opt, val) in options:
     if opt == '--help':
@@ -33,6 +34,8 @@ for (opt, val) in options:
     elif opt == '--filters':
         for m in string.split(val, ','):
             filterenable[m] = 1
+    elif opt == '--list':
+        option_list = 1
     
 if not args:
     fn = '-'
@@ -45,6 +48,7 @@ if (option_help):
         u'      --help                이 도움말을 표시하고 끝납니다',
         u'      --version             버전 정보를 표시하고 끝납니다',
         u'      --filters=..          필터 직접 지정 (디버깅용)',
+        u'      --list                필터 목록을 표시합니다 (디버깅용)',
         u'',
         u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
     for l in helpmsg:
@@ -69,6 +73,14 @@ for filename in filenames:
         else:
             filters[f['name']] = f
 
+if option_list:
+    for name in sorted(filters.keys()):
+        try:
+            print "%s: %s" % (name, filters[name]['description'])
+        except:
+            print 'name is %s' % name
+    sys.exit(0)
+
 retval = 0
 for fn in args:
     if fn == '-':
@@ -89,7 +101,7 @@ for fn in args:
     for entry in catalog.entries:
         if (not entry.is_translated()):
             continue
-        for filtername in filters.keys():
+        for filtername in sorted(filters.keys()):
             t,e = filters[filtername]['check'](entry.msgid, entry.msgstr)
             if not t:
                 retval = 1

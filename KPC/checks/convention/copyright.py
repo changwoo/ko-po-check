@@ -2,6 +2,7 @@
 import re, string
 
 name = "convention/copyright"
+description = "저작권 표시에 대한 번역문을 검사합니다"
 
 copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 

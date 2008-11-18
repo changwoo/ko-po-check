@@ -3,6 +3,7 @@
 import string,re
 
 name = 'language/typo2bul'
+description = '두벌식 키보드를 사용할 때 발생할 수 있는 오타를 찾아냅니다'
 
 typo = '('+string.join([
     '밍나합니다',

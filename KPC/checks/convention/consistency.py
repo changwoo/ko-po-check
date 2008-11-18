@@ -2,7 +2,8 @@
 
 import re
 
-name = "consistency"
+name = "convention/consistency"
+description = "번역문이 원문과 비슷한 문장 부호로 끝나도록 합니다"
 
 data = [
     { 're': re.compile(".*[^\.]\.$"),

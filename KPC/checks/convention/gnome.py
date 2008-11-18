@@ -2,6 +2,7 @@
 # GNOME specific rule
 
 name = 'convention/gnome'
+description = "그놈 프로젝트에서 사용하는 관행에 맞는지 검사합니다"
 
 error_string = u'GNOME에서 \"translator_credits\"에는 번역자들의 이름을 써야 합니다'
 

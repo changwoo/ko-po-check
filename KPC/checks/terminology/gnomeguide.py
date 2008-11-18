@@ -2,6 +2,7 @@
 import string
 
 name = 'terminology/gnomeguide'
+description = "잘못 번역된 그놈 데스크탑 용어를 검사합니다"
 
 data = [('properties', u'속성', u'등록 정보'),
         ('preferences', u'기본 설정', u'설정 사항'),

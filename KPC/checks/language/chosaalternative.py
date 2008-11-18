@@ -3,6 +3,7 @@
 import re,string
 
 name = "language/chosa-alternative"
+description = "조사 구분을 했는지 검사합니다"
 
 chosa_data = [(u'가',u'이',u'이(가)'),
               (u'를',u'을',u'을(를)'),

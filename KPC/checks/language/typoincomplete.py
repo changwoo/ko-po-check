@@ -2,7 +2,8 @@
 
 import string,re
 
-name = "typoincomplete"
+name = "language/typoincomplete"
+description = "오타로 보이는 불완전한 음절을 찾아냅니다"
 
 typo_re = re.compile(u'([\u3131-\u318E]+)')
 typo_exception_re = re.compile(u'^[\u3131-\u318E]-[\u3131-\u318E]') # gdm

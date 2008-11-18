@@ -7,6 +7,7 @@
 import string
 
 name = 'terminology/gnomeui'
+description = "지정한 그놈 데스크탑 용어로 번역했는지 검사합니다"
 
 data = [('properties', u'속성'),
         ('preferences', u'기본 설정'),

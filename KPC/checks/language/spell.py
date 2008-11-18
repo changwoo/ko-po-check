@@ -3,6 +3,7 @@
 import string,re
 
 name = "language/spell"
+description = '흔히 하는 맞춤법 오류를 찾아냅니다'
 
 # 의존명사를 위한 -할 형태의 동사 모음
 verbs_re = u'('+string.join([

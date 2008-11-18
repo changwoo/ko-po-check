@@ -3,6 +3,7 @@
 # Ref: http://developer.gnome.org/doc/API/2.0/pango/PangoMarkupFormat.html
 
 name = 'convention/markup-pango'
+description = "판고 마크업의 짝이 맞는지 검사합니다"
 
 import re, string
 

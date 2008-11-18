@@ -3,6 +3,7 @@
 import re, string
 
 name = 'convention/mnemonic'
+description = "접근키를 올바로 번역했는지 검사합니다"
 
 re_mnemonic = re.compile('^[^_]*[_&]([0-9A-Za-z])[^_]*$')
 re_mnemonic_unlikely = re.compile('(^[^_]*[a-zA-Z]_[A-Z][^_]*$|^translator_credits.*|.*%[ds].*)')
