@@ -3,19 +3,17 @@ ko-po-check - 한국어 PO 파일 검사툴
 이 프로그램은 한국어 메세지 번역 파일(PO 파일)에서 흔히 범하는
 실수들을 찾아내는 프로그램입니다.
 
+이 프로그램은 파이썬 2.4 이상의 버전이 필요합니다. 일반적인 파이썬
+모듈과 마찬가지 방법으로 (python setup.py install) 설치할 수 있습니다.
+(http://docs.python.org/inst/inst.html 참고.)
 
-KPC는 python 2.0 혹은 그 이상의 버전과 python 유니코드 한국어 코덱이
-필요합니다. python 2.4 이상 버전에는 한국어 코덱이 포함되어 있습니다.
+이 프로그램은 GNU General Public License version 3 혹은 그 이후
+버전으로 배포합니다. 정확한 라이센스는 COPYING 파일에서 볼 수
+있습니다.
 
+도와 주신 분들은 소스 코드의 THANKS 파일에 들어 있습니다.
 
-이 프로그램은 GNU General Public License version 3으로 (혹은 이후
-버전) 배포합니다. 정확한 라이센스는 COPYING 파일에서 볼 수 있습니다.
-
-도와 주신 분들은 소스트리의 THANKS 파일에 들어 있습니다.
-
-이 프로그램 개발에 관한 정보는 다음 KLDP.net 페이지에 있습니다:
-<http://kldp.net/projects/ko-po-check>
-
-ko-po-check에 대한 제안 사항이나 문제점을 다음 메일링 리스트 주소로
-알려 주십시오:
-<ko-po-check-discuss@lists.kldp.net>
+이 프로그램 개발에 관한 정보는 다음 KLDP.net의 ko-po-check 프로젝트
+페이지에 있습니다. (http://kldp.net/projects/ko-po-check 참고.) 제안
+사항이나 문제점은 프로젝트 페이지 혹은 메일링 리스트로 알려 주십시오.
+(ko-po-check-discuss@lists.kldp.net)
