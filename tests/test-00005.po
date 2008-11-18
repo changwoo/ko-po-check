@@ -70,7 +70,7 @@ msgstr "버튼"
 # E: 단추
 #: test.c:5
 msgid "_Delete A"
-msgstr "A 삭제(_D)"
+msgstr "A 지우기(_D)"
 
 # E: 찾기
 #: test.c:5
