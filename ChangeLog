@@ -1,5 +1,9 @@
 2008-11-18  Changwoo Ryu  <cwryu@debian.org>
 
+	* scripts/ko-po-check: Use os.sep instead of '/'.
+
+2008-11-18  Changwoo Ryu  <cwryu@debian.org>
+
 	* KPC/checks/*/*py, scripts/ko-po-check: Added --list option.
 	* KPC/checks/mnemonic.py: mnemonic -> 접근키
 

@@ -61,7 +61,7 @@ if (option_version):
     
 import glob
 
-filenames = glob.glob(os.sep.join(checks.__path__ + ["*/*.py"]))
+filenames = glob.glob(os.sep.join(checks.__path__ + ['*', '*.py']))
 filters = {}
 for filename in filenames:
     if not filename.split(os.sep)[-1].startswith('_'):
