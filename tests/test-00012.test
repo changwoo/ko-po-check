@@ -8,10 +8,9 @@ BUILDDIR=`pwd`
 POFILE=$NAME.po
 OUTFILE=$NAME.out
 
-cd $srcdir
-
 TFM=`mktemp`
-python $BUILDDIR/../scripts/ko-po-check --moduledir=$srcdir/.. --checksdir=$srcdir/../checks --filters="${FILTERS}" $POFILE > $TFM
+export PYTHONPATH=..
+python $BUILDDIR/../scripts/ko-po-check --filters="${FILTERS}" $POFILE > $TFM
 diff -u $TFM $OUTFILE
 RESULT=$?
 rm -f $TFM
