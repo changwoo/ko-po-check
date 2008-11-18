@@ -7,8 +7,8 @@ name = 'convention/mnemonic'
 re_mnemonic = re.compile('^[^_]*[_&]([0-9A-Za-z])[^_]*$')
 re_mnemonic_unlikely = re.compile('(^[^_]*[a-zA-Z]_[A-Z][^_]*$|^translator_credits.*|.*%[ds].*)')
 group_mnemonic = 1
-error_string_no_mnemonic = u'번역문에 mnemonic이 없거나 두 개 이상입니다'
-error_string_wrong = u'\'%s\' vs \'%s\': 원문과 번역문의 mnemonic이 다릅니다'
+error_string_no_mnemonic = u'번역문에 접근키가 없거나 두 개 이상입니다'
+error_string_wrong = u'\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
 
 re_lowercase_mnemonic = re.compile('(\([_&][a-z]\))')
 error_string_lowercase = u'\"%s\": mnemonic이 소문자입니다'
