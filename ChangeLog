@@ -1,3 +1,8 @@
+2008-11-20  Changwoo Ryu  <cwryu@debian.org>
+
+	* KPC/checks/terminology/gnomeui.py: Made "paste" term consistent
+	with gnomeguide.py.
+
 2008-11-18  Changwoo Ryu  <cwryu@debian.org>
 
 	* scripts/ko-po-check: Use os.sep instead of '/'.
