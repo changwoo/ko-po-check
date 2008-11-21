@@ -61,6 +61,11 @@ data = [('properties', u'속성', u'등록 정보'),
         ('non-free', u'독점', u'비자유'),
         ('clear', u'지우기', u'삭제'),
         ('clear', u'지우기', u'비우기'),
+        ('modify', u'수정', u'고치'),
+        ('modify', u'수정', u'바꾸'),
+        ('replace', u'바꾸기', u'고치'),
+        ('replace', u'바꾸기', u'치환'),
+        ('replace', u'바꾸기', u'대체'),
         ]
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'

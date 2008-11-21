@@ -1,5 +1,8 @@
 2008-11-21  Changwoo Ryu  <cwryu@debian.org>
 
+	* KPC/checks/terminology/gnomeguide.py:
+	* KPC/checks/terminology/gnomeui.py: Added "modify" and "replace".
+
 	* KPC/checks/terminology/gnomeui.py: Do not warn on all capital
 	words.
 
