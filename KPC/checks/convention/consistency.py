@@ -14,7 +14,9 @@ data = [
       'error':  u'번역문이 원문과 같이 ...으로 끝나야 합니다' },
     ]
     
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ""
     for d in data:
@@ -36,8 +38,3 @@ if __name__ == '__main__':
         print e.encode('utf8')
     else:
         print 'Success'
-
-
-# Local Variables:
-# coding: utf-8
-# End:

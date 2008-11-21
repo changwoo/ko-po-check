@@ -15,7 +15,9 @@ typo = '('+string.join([
 typo_re = re.compile(typo.decode('utf-8'))
 typo_error = u'\"%s\": 두벌식 오타로 보입니다'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ''
     str = msgstr
@@ -40,7 +42,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

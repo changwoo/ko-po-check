@@ -9,7 +9,9 @@ typo_re = re.compile(u'([\u3131-\u318E]+)')
 typo_exception_re = re.compile(u'^[\u3131-\u318E]-[\u3131-\u318E]') # gdm
 typo_error = u'\"%s\": 음절이 불완전합니다.  오타로 보입니다'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ''
     str = msgstr
@@ -34,7 +36,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

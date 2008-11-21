@@ -34,7 +34,12 @@ def start_element(name,attr):
 def end_element(name):
     check_db_tags(name)
 
-def check(msgid,msgstr):
+def check(entry):
+    if not entry.references or entry.references[0].find('.xml:') < 0:
+        # not from an XML file
+        return (1,'')
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     if msgid == 'translator-credits': # gnome-doc-utils magic
         return (1,'')
     parser = ParserCreate()

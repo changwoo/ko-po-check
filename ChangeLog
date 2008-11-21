@@ -10,6 +10,9 @@
 	* tests/tests-00013.*: New check for DocBook XML based (through
 	gnome-doc-utils or poxml) PO files.
 
+	* KPC/checks/*/*.py:
+	* scripts/ko-po-check: Clean up.
+
 2008-11-20  Changwoo Ryu  <cwryu@debian.org>
 
 	* KPC/checks/terminology/gnomeui.py: Made "paste" term consistent

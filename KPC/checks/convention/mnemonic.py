@@ -14,7 +14,9 @@ error_string_wrong = u'\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다
 re_lowercase_mnemonic = re.compile('(\([_&][a-z]\))')
 error_string_lowercase = u'\"%s\": 접근키가 소문자입니다'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     mo = re_mnemonic.match(msgid)
     if mo:
         # doubts if the string really contains a mnemonic
@@ -48,7 +50,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

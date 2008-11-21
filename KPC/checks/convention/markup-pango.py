@@ -17,7 +17,9 @@ group_closetagname = 3
 
 error_string = u'<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     mo = re_markup.match(msgid)
     if mo and mo.group(group_opentagname) == mo.group(group_closetagname):
         tagname = mo.group(group_opentagname)
@@ -36,7 +38,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

@@ -8,7 +8,9 @@ copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
 
 error_string = u'copyright notice는 번역하면 안 됩니다'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     msgid_lines = string.split(msgid,"\n")
     msgstr_lines = string.split(msgstr,"\n")
     lineno = 0
@@ -27,7 +29,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

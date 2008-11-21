@@ -26,7 +26,9 @@ chosa = '(' + string.join(map(lambda p: p[0]+'|'+p[1], chosa_data),'|') + ')'
 chosa_re = re.compile('(('+format+'[\'\"]?) ?'+chosa+')(\s|$)')
 error_string = u'\"%s\": 받침에 따른 조사 구별이 없습니다. \'%s\''
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ''
     while 1:
@@ -51,8 +53,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:
-

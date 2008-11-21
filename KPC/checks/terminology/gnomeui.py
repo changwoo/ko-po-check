@@ -70,7 +70,9 @@ def find_mnemonic(msgid):
     except:
         return None
     
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ''
     msgid_n = normalize_msgid(msgid)
@@ -96,7 +98,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

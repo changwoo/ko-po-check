@@ -82,7 +82,9 @@ misspell_data = [
       'error': u'\"%s\": 조사는 체언에 붙여 써야 합니다' },
 ]
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ""
     for data in misspell_data:
@@ -113,7 +115,3 @@ if __name__ == '__main__':
         print e.encode('euckr')
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

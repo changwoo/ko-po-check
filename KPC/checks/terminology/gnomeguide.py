@@ -70,7 +70,9 @@ data = [('properties', u'속성', u'등록 정보'),
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     ret = 1
     errmsg = ''
     msgid_l = string.lower(string.replace(string.replace(msgid,'_',''),'&',''))
@@ -93,7 +95,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:

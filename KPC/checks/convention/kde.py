@@ -8,7 +8,9 @@ error0_string = u'KDE에서 \"_:\"부터 첫 번째 \\n까지는 본디말에 �
 error1_string = u'번역자 이름을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.'
 error2_string = u'번역자 이메일을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.'
 
-def check(msgid,msgstr):
+def check(entry):
+    msgid = entry.msgid
+    msgstr = entry.msgstr
     import string
     if (msgstr[:3] == '_: '):
         return (0,error0_string)
@@ -31,7 +33,3 @@ if __name__ == '__main__':
         print e
     else:
         print 'Success'
-
-# Local Variables:
-# coding: utf-8
-# End:
