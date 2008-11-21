@@ -3,7 +3,7 @@ LISTHTML=list.html
 LIST=list.txt
 DIR=po-gnome
 
-URLLIST="http://l10n.gnome.org/languages/ko/gnome-2-22"
+URLLIST="http://l10n.gnome.org/languages/ko/gnome-2-26"
 URLBASE="http://l10n.gnome.org/"
 
 rm -r $DIR
