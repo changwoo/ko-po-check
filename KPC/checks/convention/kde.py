@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# GNOME specific rule
+# KDE specific rule
 
 name = 'convention/kde'
 description = "KDE 프로젝트에서 사용하는 관행에 맞는지 검사합니다"
