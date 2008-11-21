@@ -52,7 +52,7 @@ def normalize_msgid(msgid):
     msgid = string.replace(msgid, '_', '')
     if msgid[-3:] == '...':
         msgid = msgid[:-3]
-    return string.lower(msgid)
+    return msgid
 
 def make_msgstr(msgstr,mnemonic,dots):
     if mnemonic:
@@ -75,7 +75,8 @@ def check(msgid,msgstr):
     msgid_m = find_mnemonic(msgid)
     msgid_d = (msgid[-3:] == '...')
     for (orig, trans) in data:
-        if msgid_n == orig:
+        # 모두 대문자로 된 단어는 option argument 따위로 쓰이므로 넘어간다
+        if msgid_n.lower() == orig and not msgid_n.isupper():
             good_msgstr = make_msgstr(trans, msgid_m, msgid_d)
             if good_msgstr != msgstr:
                 ret = 0
