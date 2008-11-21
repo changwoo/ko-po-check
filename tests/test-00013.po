@@ -1,0 +1,47 @@
+# -*-text-*-
+# XML
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 13\n"
+"POT-Creation-Date: 2008-11-21 12:16+0900\n"
+"PO-Revision-Date: 2008-11-21 12:16+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: para
+#: boot-installer.xml:81
+#, no-c-format
+msgid ""
+"Conversely, SRM is <emphasis>incompatible</emphasis><footnote> <para> "
+"Specifically, the bootsector format required by the Console Subsystem "
+"Specification conflicts with the placement of the DOS partition table. </"
+"para> </footnote> with MS-DOS partition tables. Since Tru64 Unix uses the "
+"BSD disklabel format, this is the <quote>native</quote> partition format for "
+"SRM installations."
+msgstr ""
+"그 반대로, SRM은 MS-DOS 파티션 테이블과 <emphasis>호환되지 않습니다</"
+"emphasis>. <footnote><para>특히, Console Subsystem Specification에서 필요한 "
+"부트섹터 형식이 DOS 파티션 테이블의 위치와 충돌합니다</footnote> "
+"Tru64 Unix는 BSD 디스크레이블 형식을 사용하기 때문에, BSD 디스크레이블이 SRM "
+"설치의 경우 <quote>네이티브</quote> 파티션 형식입니다."
+
+#. Tag: para
+#: boot-installer.xml:81
+#, no-c-format
+msgid ""
+"Conversely, SRM is <emphases>incompatible</emphases><footnote> <para> "
+"Specifically, the bootsector format required by the Console Subsystem "
+"Specification conflicts with the placement of the DOS partition table. </"
+"para> </footnote> with MS-DOS partition tables. Since Tru64 Unix uses the "
+"BSD disklabel format, this is the <quote>native</quote> partition format for "
+"SRM installations."
+msgstr ""
+"그 반대로, SRM은 MS-DOS 파티션 테이블과 <emphasis>호환되지 않습니다</"
+"emphasis>. <footnot><para>특히, Console Subsystem Specification에서 필요한 "
+"부트섹터 형식이 DOS 파티션 테이블의 위치와 충돌합니다</para></footnot> "
+"Tru64 Unix는 BSD 디스크레이블 형식을 사용하기 때문에, BSD 디스크레이블이 SRM "
+"설치의 경우 <quote>네이티브</quote> 파티션 형식입니다."
