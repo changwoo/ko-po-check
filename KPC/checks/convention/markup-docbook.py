@@ -9,9 +9,8 @@ from xml.parsers.expat import ExpatError
 
 # 메세지에 대해 XML 파서를 돌려 well formed인지 검사하고, 태그가 알려진
 # DocBook 태그인지 검사한다.
-# FIXME: comment에서 XML 파일인지 여부를 받아서 XML이 아니면 검사를 하지 않는다.
 
-known_db_tags = set(['acronym', 'anchor', 'application', 'citerefentry', 'citetitle', 'classname', 'command', 'computeroutput', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
+known_db_tags = set(['acronym', 'address', 'anchor', 'application', 'citerefentry', 'citetitle', 'city', 'classname', 'command', 'computeroutput', 'country', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'postcode', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'state', 'street', 'subscript', 'superscript', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
 
 tag_error_string = u'XML 태그의 짝이 맞지 않습니다'
 notdb_error_string = u'<%s>: 알려진 DocBook 태그가 아닙니다'
@@ -20,7 +19,7 @@ class NotDocBook(Exception):
     pass
 
 def check_db_tags(name):
-    if name == 'DummyTag':
+    if name == 'KPC_DummyTag':
         pass
     elif name[:12] == 'placeholder-':
         # gnome-doc-utils magic
@@ -47,7 +46,7 @@ def check(entry):
     parser.EndElementHandler = end_element
     parser.UseForeignDTD(True)
     try:
-        parser.Parse('<DummyTag>' + msgstr + '</DummyTag>')
+        parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
     except ExpatError, e:
         return (0, tag_error_string)
     except NotDocBook, e:
