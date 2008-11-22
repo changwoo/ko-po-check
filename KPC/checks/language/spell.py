@@ -114,6 +114,6 @@ if __name__ == '__main__':
     entry.msgstr = sys.stdin.readline()
     t,e = check(entry)
     if not t:
-        print e.encode('euckr')
+        print e
     else:
         print 'Success'
