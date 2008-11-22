@@ -29,9 +29,11 @@ def check(entry):
 
 if __name__ == '__main__':
     import sys
-    msgid = unicode(sys.stdin.readline(),'utf-8')
-    msgstr = unicode(sys.stdin.readline(),'utf-8')
-    t,e = check(msgid,msgstr)
+    class entry:
+        pass
+    entry.msgid = sys.stdin.readline()
+    entry.msgstr = sys.stdin.readline()
+    t,e = check(entry)
     if not t:
         print e
     else:
