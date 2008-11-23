@@ -9,11 +9,11 @@ import re, string
 
 tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]
 tags_res = '(' + string.join(tags, '|') + ')'
-re_markup = re.compile('<(' + tags_res + '[^>]*)>[^<]+</' + tags_res + '>')
+re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>[^<]+</' + tags_res + '>')
 group_opentag = 1
 group_opentagname = 2
-group_closetag = 3
-group_closetagname = 3
+group_closetag = 4
+group_closetagname = 4
 
 error_string = u'<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 
