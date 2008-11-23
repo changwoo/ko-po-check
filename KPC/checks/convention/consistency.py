@@ -2,15 +2,17 @@
 
 import re
 
-name = "convention/consistency"
-description = "번역문이 원문과 비슷한 문장 부호로 끝나도록 합니다"
+name = 'convention/consistency'
+description = '번역문이 원문과 비슷한 문장 부호로 끝나도록 합니다'
 
 data = [
-    { 're': re.compile(".*[^\.]\.$"),
+    { 're': re.compile('.*[^\.]\.$'),
+      'except': re.compile('.*(\)|etc|No|a\.m|p\.m)\.$'),
       'error':  u'번역문이 원문과 같이 .으로 끝나야 합니다' },
-    { 're': re.compile(".*:$"),
+    { 're': re.compile('.*:$'),
       'error':  u'번역문이 원문과 같이 :으로 끝나야 합니다' },
-    { 're': re.compile(".*\.\.\.$"),
+    { 're': re.compile('.*[^\s]\.\.\.$'),
+      'except': re.compile('.*(etc)\.\.\.$'),
       'error':  u'번역문이 원문과 같이 ...으로 끝나야 합니다' },
     ]
     
@@ -22,7 +24,9 @@ def check(entry):
     for d in data:
         re = d['re']
         error = d['error']
-        if re.match(msgid) and not re.match(msgstr):
+        if (re.match(msgid) and
+            (not d.has_key('except') or not d['except'].match(msgid)) and
+            not re.match(msgstr)):
             ret = 0
             if errmsg:
                 errmsg += '\n'
