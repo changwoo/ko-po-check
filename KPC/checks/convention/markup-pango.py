@@ -21,12 +21,14 @@ def check(entry):
     msgid = entry.msgid
     msgstr = entry.msgstr
     mo = re_markup.search(msgid)
-    if mo and mo.group(group_opentagname) == mo.group(group_closetagname):
+    while mo:
         tagname = mo.group(group_opentagname)
         opentag = mo.group(group_opentag)
         mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr, re.M)
         if not mo:
             return (0, error_string % opentag)
+        msgid = msgid[mo.start(0) + 1:]
+        mo = re_markup.search(msgid)
     return (1,'')
 
 if __name__ == '__main__':
