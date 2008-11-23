@@ -9,7 +9,7 @@ import re, string
 
 tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]
 tags_res = '(' + string.join(tags, '|') + ')'
-re_markup = re.compile('[^<]*<(' + tags_res + '[^>]*)>[^<]+</' + tags_res + '>')
+re_markup = re.compile('<(' + tags_res + '[^>]*)>[^<]+</' + tags_res + '>')
 group_opentag = 1
 group_opentagname = 2
 group_closetag = 3
@@ -20,12 +20,12 @@ error_string = u'<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 def check(entry):
     msgid = entry.msgid
     msgstr = entry.msgstr
-    mo = re_markup.match(msgid)
+    mo = re_markup.search(msgid)
     if mo and mo.group(group_opentagname) == mo.group(group_closetagname):
         tagname = mo.group(group_opentagname)
         opentag = mo.group(group_opentag)
-        mo = re_markup.match(msgstr)
-        if not mo or mo.group(group_opentagname) != tagname or mo.group(group_closetagname) != tagname or mo.group(group_opentag) != opentag:
+        mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr, re.M)
+        if not mo:
             return (0, error_string % opentag)
     return (1,'')
 
