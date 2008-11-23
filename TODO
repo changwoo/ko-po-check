@@ -1,4 +1,4 @@
-* docbook markup 테스트 (markup-pango와 같은 방식)
+* KDE의 번역자 정보 및 FD.org desktop의 새로운 번역 방식 (msgctxt 이용하는) 지원
 
 * 테스트 부분 개선 - python unittest 사용
 

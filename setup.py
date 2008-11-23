@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name='ko-po-check',
-      version='0.90.0',
+      version='0.90.1',
       description='Korean PO checker',
       author='Changwoo Ryu',
       author_email='cwryu@debian.org',
