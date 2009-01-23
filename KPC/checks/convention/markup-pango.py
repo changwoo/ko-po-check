@@ -12,8 +12,6 @@ tags_res = '(' + string.join(tags, '|') + ')'
 re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>')
 group_opentag = 1
 group_opentagname = 2
-group_closetag = 4
-group_closetagname = 4
 
 error_string = u'<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 
@@ -24,7 +22,7 @@ def check(entry):
     while mo:
         tagname = mo.group(group_opentagname)
         opentag = mo.group(group_opentag)
-        mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr, re.M)
+        mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr, re.M | re.S)
         if not mo:
             return (0, error_string % opentag)
         msgid = msgid[mo.start(0) + 1:]
