@@ -9,7 +9,7 @@ import re, string
 
 tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]
 tags_res = '(' + string.join(tags, '|') + ')'
-re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>[^<]+</' + tags_res + '>')
+re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>')
 group_opentag = 1
 group_opentagname = 2
 group_closetag = 4
