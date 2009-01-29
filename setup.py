@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 from distutils.core import setup
+from KPC.config import VERSION
 
 setup(name='ko-po-check',
-      version='0.90.1',
+      version=VERSION,
       description='Korean PO checker',
       author='Changwoo Ryu',
       author_email='cwryu@debian.org',

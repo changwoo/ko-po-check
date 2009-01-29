@@ -9,7 +9,6 @@ sys.setdefaultencoding(locale.getpreferredencoding())
 import os,getopt,string
 
 filterenable = {}
-VERSION = "0.11"
 
 SHORT_OPTIONS = ""
 LONG_OPTIONS = ['help', 'version', 'filters=', 'list']
@@ -56,6 +55,7 @@ if (option_help):
     sys.exit(1)
 
 if (option_version):
+    from KPC.config import VERSION
     print (u'ko-po-check %s' % VERSION)
     sys.exit(0)
     
