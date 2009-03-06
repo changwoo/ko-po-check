@@ -68,6 +68,7 @@ data = [('properties', u'속성', u'등록 정보'),
         ('message', u'메시지', u'메세지'),
         ('data', u'데이터', u'데이타'),
         ('directory', u'디렉터리', u'디렉토리'),
+        ('license', u'라이선스', u'라이센스'),
         ]
 
 error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
