@@ -2,36 +2,23 @@
 # KDE specific rule
 
 name = 'convention/kde'
-description = "KDE 프로젝트에서 사용하는 관행에 맞는지 검사합니다"
+description = 'KDE 프로젝트에서 사용하는 관행에 맞는지 검사합니다'
 
-error0_string = u'KDE에서 \"_:\"부터 첫 번째 \\n까지는 본디말에 대한 설명이므로 번역하면 안 됩니다.'
-error1_string = u'번역자 이름을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.'
-error2_string = u'번역자 이메일을 써야 합니다. \"_:\"로 시작하는 문장은 번역하면 안 됩니다.'
+name_error_str = u'KDE 번역 규칙에 따라 번역자 이름을 써야 합니다.'
+email_error_str = u'KDE 번역 규칙에 따라 번역자 메일 주소를 써야 합니다.'
+
+import string
 
 def check(entry):
     msgid = entry.msgid
     msgstr = entry.msgstr
-    import string
-    if (msgstr[:3] == '_: '):
-        return (0,error0_string)
-    if (msgid[:22] == '_: NAME OF TRANSLATORS' and
-        (msgstr[:3] == '_: ' or string.find(msgstr,u'번역') >= 0 or
-         string.find(msgstr,u'옮긴이') >= 0)):
-        return (0,error1_string)
-    if (msgid[:23] == '_: EMAIL OF TRANSLATORS' and
-        (msgstr[:3] == '_: ' or string.find(msgstr,u'번역') >= 0 or
-         string.find(msgstr,u'옮긴이') >= 0)):
-        return (0,error2_string)
+    msgctxt = entry.msgctxt
+    if msgctxt == "NAME OF TRANSLATORS":
+        # msgid "Your names"
+        if (msgstr.find(u'이름') >= 0 or msgstr.find(u'성함') >= 0):
+            return (0, name_error_str)
+    elif msgctxt == "EMAIL OF TRANSLATORS":
+        # msgid "Your emails"
+        if (msgstr.find(u'메일') >= 0 or msgstr.find(u'편지') >= 0):
+            return (0, email_error_str)
     return (1,'')
-
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'

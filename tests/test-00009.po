@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: test 9\n"
-"POT-Creation-Date: 2002-08-01 01:30+0900\n"
-"PO-Revision-Date: 2002-08-01 01:30+0900\n"
+"POT-Creation-Date: 2009-04-13 01:30+0900\n"
+"PO-Revision-Date: 2009-04-13 01:30+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,41 +14,25 @@ msgstr ""
 
 # E: 번역자 써야 함
 #: test.c:9
-msgid ""
-"_: NAME OF TRANSLATORS\n"
-"Your names"
-msgstr "_: 번역자의 이름"
-"류창우"
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "귀하의 이름"
 
 # E: 번역자 써야 함
 #: test.c:9
-msgid ""
-"_: NAME OF TRANSLATORS\n"
-"Your names"
-msgstr "번역자의 이름"
-"류창우"
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "당신의 성함"
 
 # E: 번역자 메일 써야 함
 #: test.c:9
-msgid ""
-"_: EMAIL OF TRANSLATORS\n"
-"Your email"
-msgstr "_: 번역한 사람 이메일"
-"cwryu@debian.org"
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "이메일"
+
 
 # E: 번역자 메일 써야 함
 #: test.c:9
-msgid ""
-"_: EMAIL OF TRANSLATORS\n"
-"Your email"
-msgstr "번역자의 이메일"
-"cwryu@debian.org"
-
-# E: 번역자 메일 써야 함
-#: test.c:9
-msgid ""
-"_: Low Contrast\n"
-"Low"
-msgstr ""
-"_: 저채도\n"
-"낮음"
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "편지 주소"
