@@ -45,6 +45,7 @@ data = [('properties', u'속성'),
         ('clear', u'지우기'),
         ('modify', u'수정'),
         ('replace', u'바꾸기'),
+        ('template', u'서식'),
         ]
 
 error_string = u'%s: 다음과 같이 번역해야 합니다: \"%s\"'
