@@ -5,12 +5,12 @@ FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,NO_WRAP = 1,2,4,8,16
 
 class entry:
     def __init__(self):
-        self.msgid = ""
-        self.msgid_plural = ""
-        self.msgstr = ""
-        self.msgctxt = ""
-        self.translator_comment = ""
-        self.automatic_comment = ""
+        self.msgid = ''
+        self.msgid_plural = ''
+        self.msgstr = ''
+        self.msgctxt = ''
+        self.translator_comment = ''
+        self.automatic_comment = ''
         self.references = []
         self.flag = 0
 
@@ -24,7 +24,7 @@ class entry:
     def is_obsolete(self):
         return (self.flag & OBSOLETE)
     def is_untranslated(self):
-        return (self.msgstr == "")
+        return (self.msgstr == '')
     def is_translated(self):
         return (not self.is_fuzzy() and
                 not self.is_obsolete() and
@@ -36,7 +36,7 @@ class entry:
     def is_no_wrap(self):
         return (self.flag & NO_WRAP)
     def __repr__(self):
-        return repr(self.msgid) + ":::" + repr(self.msgstr)
+        return repr(self.msgid) + ':::' + repr(self.msgstr)
 
 class catalog:
     def __init__(self):
@@ -46,13 +46,12 @@ class catalog:
         self.language = 'ko'
     def add_entry(self,entry):
         if (entry.msgid == ''):         # header entry
-            a = string.split(entry.msgstr,"\n")
+            a = string.split(entry.msgstr, '\n')
             for l in a:
                 if len(l) == 0:
                     continue
-                k = string.split(l, ": ")
-                self.metadata[k[0]] = k[1]
-        else:
-            self.entries.append(entry)
+                k, v = l.split(': ', 1)
+                self.metadata[k] = v
+        self.entries.append(entry)
     def settextdomain(self, d):
         self.textdomain = d

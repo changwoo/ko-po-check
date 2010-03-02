@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Parse GNU gettext compliant PO (Portable Object) file.
+'''Parse GNU gettext compliant PO (Portable Object) file.
 
-"""
+'''
 
-__all__ = ["parse_file", "parse_entry", "ParseError",
-           "FUZZY", "OBSOLETE", "C_FORMAT", "NO_C_FORMAT", "NO_WRAP"]
+__all__ = ['parse_file', 'parse_entry', 'ParseError',
+           'FUZZY', 'OBSOLETE', 'C_FORMAT', 'NO_C_FORMAT', 'NO_WRAP']
 
 import po,re,string
 
@@ -25,7 +25,7 @@ def parse_file(file):
         raise ParseError, lineno
     catalog.add_entry(entry)
     content_type = catalog.metadata['Content-Type']
-    charset = re.compile("charset=(.+)$").search(content_type).group(1)
+    charset = re.compile('charset=(.+)$').search(content_type).group(1)
     while 1:
         try:
             (entry,lineno) = parse_entry(reader,lineno)
@@ -41,12 +41,12 @@ def parse_file(file):
         catalog.add_entry(entry)
 
 STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGCTXT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5,6
-emptyline_re = re.compile(r"^\s*$")
-translator_comment_re = re.compile(r"^\#( (.*))?$")
-automatic_comment_re = re.compile(r"^\#. (.*)$")
-reference_re = re.compile(r"^\#: (.*)$")
-flag_re = re.compile(r"^\#, (.*)$")
-string_re = re.compile(r"^\"(.*)\"\w*")
+emptyline_re = re.compile(r'^\s*$')
+translator_comment_re = re.compile(r'^\#( (.*))?$')
+automatic_comment_re = re.compile(r'^\#. (.*)$')
+reference_re = re.compile(r'^\#: (.*)$')
+flag_re = re.compile(r'^\#, (.*)$')
+string_re = re.compile(r'^\"(.*)\"\w*')
 
 def read_string(fmt):
     try:
