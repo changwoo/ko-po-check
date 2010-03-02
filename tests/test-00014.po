@@ -1,0 +1,12 @@
+# -*-text-*-
+# obsolete Korean L10N team address
+msgid ""
+msgstr ""
+"Project-Id-Version: test 14\n"
+"POT-Creation-Date: 2010-03-03 00:16+0900\n"
+"PO-Revision-Date: 2010-03-03 00:16+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
