@@ -1,5 +1,19 @@
 -*-outline-*-
 
+버전 0.90.4
+-----------
+
+* 개선
+
+** terminology/gnomeui, terminology/gnomeguide: 용어 업데이트
+
+** convention/kde: msgctx를 사용하는 최근의 KDE 형식을 처리
+
+* 새로운 검사 규칙:
+
+** convention/gnome-team: 헤더의 Language-Team 필드에 없어진 KLDP.net의 메일링 리스트가 있으면 새 리스트 주소 안내
+
+
 버전 0.90.3
 -----------
 
