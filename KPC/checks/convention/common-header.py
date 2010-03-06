@@ -41,12 +41,4 @@ class CommonHeaderCheck(HeaderCheck):
 
 name = 'convention/common-header'
 description = '헤더 메시지가 올바른지 검사합니다'
-
-def check(entry):
-    # FIXME: drop this legacy wrapper
-    errors = CommonHeaderCheck().check(entry)
-    if errors:
-        return (0, string.join([e.message for e in errors], '\n'))
-    else:
-        return (1, 0)
-
+checker = CommonHeaderCheck()

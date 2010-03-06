@@ -8,16 +8,13 @@ class GnomeHeaderCheck(HeaderCheck):
     error = Error('새 번역팀 주소를 사용하십시오: <gnome-kr@googlegroups.com>')
 
     def check_fields(self, fields):
-        if 'gnome-kr-hackers@lists.kldp.net' in fields['Language-Team']:
-            return [self.error]
+        try:
+            if 'gnome-kr-hackers@lists.kldp.net' in fields['Language-Team']:
+                return [self.error]
+        except KeyError:
+            pass
+        return []
 
 name = 'convention/gnome-team'
-
-def check(entry):
-    # FIXME: drop this legacy wrapper
-    errors = GnomeHeaderCheck().check(entry)
-    if errors:
-        return (0, string.join([e.message for e in errors]))
-    else:
-        return (1, 0)
-
+description = '그놈 한국어 번역팀 관련 사항을 검사합니다'
+checker = GnomeHeaderCheck()

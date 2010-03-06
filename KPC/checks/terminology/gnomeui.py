@@ -5,9 +5,7 @@
 # 아니면 애러를 리턴한다.  번역 일관성 유지를 위한 검사.
 
 import string
-
-name = 'terminology/gnomeui'
-description = "지정한 그놈 데스크탑 용어로 번역했는지 검사합니다"
+from KPC.classes import Error, BaseCheck
 
 data = [('properties', u'속성'),
         ('preferences', u'기본 설정'),
@@ -48,9 +46,6 @@ data = [('properties', u'속성'),
         ('template', u'서식'),
         ]
 
-error_string = u'%s: 다음과 같이 번역해야 합니다: \"%s\"'
-
-
 def normalize_msgid(msgid):
     msgid = string.replace(msgid, '_', '')
     if msgid[-3:] == '...':
@@ -71,33 +66,24 @@ def find_mnemonic(msgid):
     except:
         return None
     
-def check(entry):
-    msgid = entry.msgid
-    msgstr = entry.msgstr
-    ret = 1
-    errmsg = ''
-    msgid_n = normalize_msgid(msgid)
-    msgid_m = find_mnemonic(msgid)
-    msgid_d = (msgid[-3:] == '...')
-    for (orig, trans) in data:
-        # 모두 대문자로 된 단어는 option argument 따위로 쓰이므로 넘어간다
-        if msgid_n.lower() == orig and not msgid_n.isupper():
-            good_msgstr = make_msgstr(trans, msgid_m, msgid_d)
-            if good_msgstr != msgstr:
-                ret = 0
-                if errmsg:
-                    errmsg += '\n'
-                errmsg += error_string % (msgstr, good_msgstr)
-    return (ret, errmsg)    
+class GnomeUICheck(BaseCheck):
+    errstr = '%s: 다음과 같이 번역해야 합니다: \"%s\"'
 
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'
+    def check(self, entry):
+        msgid = entry.msgid
+        msgstr = entry.msgstr
+        errors = []
+        msgid_n = normalize_msgid(msgid)
+        msgid_m = find_mnemonic(msgid)
+        msgid_d = (msgid[-3:] == '...')
+        for (orig, trans) in data:
+            # 모두 대문자로 된 단어는 option argument 따위로 쓰이므로 넘어간다
+            if msgid_n.lower() == orig and not msgid_n.isupper():
+                good_msgstr = make_msgstr(trans, msgid_m, msgid_d)
+                if good_msgstr != msgstr:
+                    errors.append(Error(self.errstr % (msgstr, good_msgstr)))
+        return errors
+
+name = 'terminology/gnomeui'
+description = '지정한 그놈 데스크탑 용어로 번역했는지 검사합니다'
+checker = GnomeUICheck()

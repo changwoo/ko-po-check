@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import string
 
-name = 'terminology/gnomeguide'
-description = "잘못 번역된 그놈 데스크탑 용어를 검사합니다"
+import string
+from KPC.classes import Error, BaseCheck
 
 data = [('properties', u'속성', u'등록 정보'),
         ('preferences', u'기본 설정', u'설정 사항'),
@@ -73,32 +72,20 @@ data = [('properties', u'속성', u'등록 정보'),
         ('template', u'서식', u'템플리트'),
         ]
 
-error_string = u'%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
+class GnomeGuideCheck(BaseCheck):
+    errstr = '%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
+    def check(self, entry):
+        msgid = entry.msgid
+        msgstr = entry.msgstr
+        errors = []
+        msgid_l = msgid.replace('_','').replace('&','').lower()
+        for (id, right, wrong) in data:
+            if ((string.find(msgstr, wrong) >= 0) and
+                (string.find(msgid_l, id) >= 0) and
+                (string.find(msgstr, right) < 0)):
+                errors.append(Error(self.errstr % (wrong, id, right)))
+        return errors
 
-def check(entry):
-    msgid = entry.msgid
-    msgstr = entry.msgstr
-    ret = 1
-    errmsg = ''
-    msgid_l = string.lower(string.replace(string.replace(msgid,'_',''),'&',''))
-    for (id, right, wrong) in data:
-        if ((string.find(msgstr, wrong) >= 0) and
-            (string.find(msgid_l, id) >= 0) and
-            (string.find(msgstr, right) < 0)):
-            ret = 0
-            if errmsg:
-                errmsg += '\n'
-            errmsg += error_string % (wrong, id, right)
-    return (ret, errmsg)    
-
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'
+name = 'terminology/gnomeguide'
+description = '잘못 번역된 그놈 데스크탑 용어를 검사합니다'
+checker = GnomeGuideCheck()

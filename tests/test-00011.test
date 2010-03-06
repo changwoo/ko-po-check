@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="convention/mnemonic"
+FILTERS="convention/accesskey"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"

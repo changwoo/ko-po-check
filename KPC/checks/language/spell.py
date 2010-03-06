@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import string,re
-
-name = "language/spell"
-description = '흔히 하는 맞춤법 오류를 찾아냅니다'
+from KPC.classes import Error, BaseCheck
 
 # 의존명사를 위한 -할 형태의 동사 모음
 verbs_re = u'('+string.join([
@@ -82,38 +80,28 @@ misspell_data = [
       'error': u'\"%s\": 조사는 체언에 붙여 써야 합니다' },
 ]
 
-def check(entry):
-    msgid = entry.msgid
-    msgstr = entry.msgstr
-    ret = 1
-    errmsg = ""
-    for data in misspell_data:
-        misspell_re = data['re']
-        misspell_error = data['error']
-        str = msgstr
-        while 1:
-            mo = misspell_re.search(str)
-            if mo:
-                if (data.has_key('func') and data['func'](mo.group(1))):
-                    str = str[mo.end():]
-                    continue
-                ret = 0
-                if errmsg:
-                    errmsg += '\n'
-                errmsg += misspell_error % mo.group(1)
-                str = str[mo.end():]
-            else:
-                break;
-    return (ret, errmsg)    
+class SpellCheck(BaseCheck):
+    def check(self, entry):
+        msgid = entry.msgid
+        msgstr = entry.msgstr
+        errors = []
+        for data in misspell_data:
+            misspell_re = data['re']
+            misspell_error = data['error']
+            s = msgstr
+            while 1:
+                mo = misspell_re.search(s)
+                if mo:
+                    if (data.has_key('func') and data['func'](mo.group(1))):
+                        s = s[mo.end():]
+                        continue
+                    ret = 0
+                    errors.append(Error(misspell_error % mo.group(1)))
+                    s = s[mo.end():]
+                else:
+                    break;
+        return errors
 
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'
+name = "language/spell"
+description = '흔히 하는 맞춤법 오류를 찾아냅니다'
+checker = SpellCheck()

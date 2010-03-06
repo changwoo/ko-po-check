@@ -21,7 +21,7 @@ msgstr "설정(_F)..."
 msgid "Open..."
 msgstr "열기"
 
-# mnemonic 틀림
+# 접근키 틀림
 #: test.c:2
 msgid "S_earch"
 msgstr "찾기(_S)"

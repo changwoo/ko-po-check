@@ -1,33 +1,19 @@
 # -*- coding: utf-8 -*-
-import re, string
 
-name = "convention/copyright"
-description = "저작권 표시에 대한 번역문을 검사합니다"
+import string, re
+from KPC.classes import Error, BaseCheck
 
-copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
+class CopyrightCheck(BaseCheck):
+    copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
+    error = Error('copyright notice는 번역하면 안 됩니다')
+    def check(self, entry):
+        msgid_lines = string.split(entry.msgid,"\n")
+        msgstr_lines = string.split(entry.msgstr,"\n")
+        for (msgid, msgstr) in zip(msgid_lines, msgstr_lines):
+            if self.copyright_re.match(msgid) and msgid != msgstr:
+                return [self.error]
+        return []
 
-error_string = u'copyright notice는 번역하면 안 됩니다'
-
-def check(entry):
-    msgid = entry.msgid
-    msgstr = entry.msgstr
-    msgid_lines = string.split(msgid,"\n")
-    msgstr_lines = string.split(msgstr,"\n")
-    lineno = 0
-    for line in msgid_lines:
-        if copyright_re.match(line) and lineno < len(msgstr_lines) and line != msgstr_lines[lineno]:
-            return (0,error_string)
-        lineno+=1
-    return (1,'')
-
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'
+name = 'convention/copyright'
+description = '저작권 표시에 대한 번역문을 검사합니다'
+checker = CopyrightCheck()

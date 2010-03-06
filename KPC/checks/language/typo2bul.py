@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import string,re
-
-name = 'language/typo2bul'
-description = '두벌식 키보드를 사용할 때 발생할 수 있는 오타를 찾아냅니다'
+import string, re
+from KPC.classes import Error, BaseCheck
 
 typo = '('+string.join([
     '밍나합니다',
@@ -15,32 +13,21 @@ typo = '('+string.join([
 typo_re = re.compile(typo.decode('utf-8'))
 typo_error = u'\"%s\": 두벌식 오타로 보입니다'
 
-def check(entry):
-    msgid = entry.msgid
-    msgstr = entry.msgstr
-    ret = 1
-    errmsg = ''
-    str = msgstr
-    while 1:
-        mo = typo_re.search(str)
-        if mo:
-            ret = 0
-            if errmsg:
-                errmsg += '\n'
-            errmsg += typo_error % mo.group(1)
-            str = str[mo.end():]
-        else:
-            break;
-    return (ret, errmsg)
+class Typo2BulCheck(BaseCheck):
+    def check(self, entry):
+        msgid = entry.msgid
+        msgstr = entry.msgstr
+        errors = []
+        s = msgstr
+        while 1:
+            mo = typo_re.search(s)
+            if mo:
+                errors.append(Error(typo_error % mo.group(1)))
+                s = s[mo.end():]
+            else:
+                break;
+        return errors
 
-if __name__ == '__main__':
-    import sys
-    class entry:
-        pass
-    entry.msgid = sys.stdin.readline()
-    entry.msgstr = sys.stdin.readline()
-    t,e = check(entry)
-    if not t:
-        print e
-    else:
-        print 'Success'
+name = 'language/typo2bul'
+description = '두벌식 키보드를 사용할 때 발생할 수 있는 오타를 찾아냅니다'
+checker = Typo2BulCheck()

@@ -78,7 +78,7 @@ if option_list:
         try:
             print "%s: %s" % (name, filters[name]['description'])
         except:
-            print 'name is %s' % name
+            print 'BUG: "%s"에 description 필드가 없습니다' % name
     sys.exit(0)
 
 retval = 0
@@ -102,10 +102,12 @@ for fn in args:
         if (not entry.is_translated()):
             continue
         for filtername in sorted(filters.keys()):
-            t,e = filters[filtername]['check'](entry)
-            if not t:
-                retval = 1
-                for line in string.split(e,'\n'):
-                    print (u'%s:%d: %s'%(fn,entry.msgstr_lineno,line))
+            try:
+                checker = filters[filtername]['checker']
+                errors = checker.check(entry)
+                for e in errors:
+                    print (u'%s:%d: %s'%(fn,entry.msgstr_lineno,e.message))
+            except KeyError:
+                print 'BUG: "%s"에 checker 필드가 없습니다' % filtername
 
 sys.exit(retval)
