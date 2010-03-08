@@ -1,5 +1,26 @@
 -*-outline-*-
 
+버전 0.91.0
+-----------
+
+(0.90.4에서 배포할 파일이 잘못 만들어져 새 파일들이 누락되었습니다.)
+
+* 개선
+
+** language/consistency: 문장 부호로 ... 대신 유니코드 U+2026 사용했을 경우 처리
+
+* 새로운 검사 규칙:
+
+** convention/common-header: 헤더에 쓰는 여러가지 사항이 올바른지 검사
+** terminology/libegg: (그놈 프로젝트 다수에서 사용하는) libegg에서 가져온 코드에 대해 통일된 번역인지 검사 
+
+* 기타
+
+** 내부 구조 변화: 검사 규칙 인터페이스로 KPC.classes의 클래스 사용
+** convention/accesskey: convention/mnemonic에서 이름 변경
+** language/consistency: convention/consistency에서 이름 변경
+
+
 버전 0.90.4
 -----------
 
