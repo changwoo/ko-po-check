@@ -12,6 +12,8 @@ data = [
     { 're': re.compile('.*[^\s]\.\.\.$'),
       'except': re.compile('.*(etc)\.\.\.$'),
       'error':  Error('번역문이 원문과 같이 ...으로 끝나야 합니다') },
+    { 're': re.compile('.*…$'),
+      'error':  Error('번역문이 원문과 같이 …으로 끝나야 합니다') },
     ]
     
 class ConsistencyCheck(BaseCheck):
