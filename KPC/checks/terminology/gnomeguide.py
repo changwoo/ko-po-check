@@ -70,6 +70,7 @@ data = [('properties', u'속성', u'등록 정보'),
         ('license', u'라이선스', u'라이센스'),
         ('template', u'서식', u'템플릿'),
         ('template', u'서식', u'템플리트'),
+        ('desktop', u'데스크톱', u'데스크탑'),
         ]
 
 class GnomeGuideCheck(BaseCheck):

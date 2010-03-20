@@ -64,11 +64,11 @@ data = [
 
     {'ref': 'egg-editable-toolbar.c',
      'msgid': "Show “_%s”",
-     'msgstr': "“%s” 보이기"},
+     'msgstr': "“_%s” 보이기"},
 
     {'ref': 'egg-editable-toolbar.c',
      'msgid': "_Move on Toolbar",
-     'msgstr': "도구 모음 옮기기(_M)"},
+     'msgstr': "도구 모음에서 옮기기(_M)"},
 
     {'ref': 'egg-editable-toolbar.c',
      'msgid': "Move the selected item on the toolbar",
