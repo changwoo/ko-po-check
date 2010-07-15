@@ -1,299 +1,2986 @@
-2009-04-08  Changwoo Ryu  <cwryu@debian.org>
+commit 8a32f2cdef449a38bb32a7e68a4a25ee97a5efe2
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 16 02:30:00 2010 +0900
 
-	* KPC/checks/terminology/gnomeui.py:
-	Fix the inconsistent terminologies for 'search'
+    strftime() 시간/날짜 형식을 한국어 관습에 맞게 번역했는지 검사
+
+ KPC/checks/convention/datetime.py |   53 +++++++++++++++++++++++++++++++++++++
+ 1 files changed, 53 insertions(+), 0 deletions(-)
+
+commit 708406daa71362a2a6aecf37d01bfba0e5a4db06
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 16 02:23:48 2010 +0900
+
+    Use Unicode string for msgid
+
+ KPC/checks/language/consistency.py |   12 ++++++------
+ KPC/poparse.py                     |    1 +
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+commit 26ee1db5b74b9ffc550bf7a2baa88105a3e16ae7
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 12 11:28:50 2010 +0900
+
+    mnemonic -> access key
+
+ KPC/checks/convention/accesskey.py |   30 +++++++++++++++---------------
+ 1 files changed, 15 insertions(+), 15 deletions(-)
+
+commit 87ab79ab91fb6971e4781e0654af747f696ba047
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 20 19:30:05 2010 +0900
+
+    Language-Team: GNOME Korea 이면서 메일이 틀린 경우 검사
+
+ KPC/checks/convention/gnome-team.py |    9 +++++++--
+ 1 files changed, 7 insertions(+), 2 deletions(-)
+
+commit 64a3bdce4b3180665798d2375c5f3ad2de93443e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 20 19:28:44 2010 +0900
+
+    Update terminologies
+
+ KPC/checks/terminology/gnomeguide.py |    1 +
+ KPC/checks/terminology/libegg.py     |    4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit f9e333dbd6ed3188f7df06c47056ddc7c0ff045d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Mar 9 00:56:50 2010 +0900
+
+    0.91.0
 
-	* KPC/checks/convention/markup-docbook.py:
-	Add <interfacename> Docbook tag
+ KPC/config.py |    2 +-
+ NEWS          |   21 +++++++++++++++++++++
+ 2 files changed, 22 insertions(+), 1 deletions(-)
 
-2009-03-06  Changwoo Ryu  <cwryu@debian.org>
+commit 4f7723caec3821b56b0df654758c01c5049512e1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Mar 9 00:55:42 2010 +0900
 
-	* README: Typo
+    terminology/libegg: 새 규칙, libegg에서 가져온 코드에 대해 번역 통일
 
-	* KPC/checks/terminology/gnomeguide.py:
-	license - "라이센스" => "라이선스"
+ KPC/checks/terminology/libegg.py |  111 ++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 111 insertions(+), 0 deletions(-)
 
-	* KPC/checks/terminology/gnomeguide.py: search - '찾기' => '검색'
+commit 4622a068e97567a5c229fec5dbb7e142e9cd18b1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Mar 9 00:54:58 2010 +0900
 
-2009-01-29  Changwoo Ryu  <cwryu@debian.org>
+    language/consistency: 문장 부호로 ... 대신 유니코드 U+2026 사용했을 경우 처리
 
-	* scripts/ko-po-check:
-	* setup.py: Corrected version string.
+ KPC/checks/language/consistency.py |    2 ++
+ tests/test-00016.out               |    7 ++++---
+ tests/test-00016.po                |   16 ++++------------
+ 3 files changed, 10 insertions(+), 15 deletions(-)
 
-2008-11-23  Changwoo Ryu  <cwryu@debian.org>
+commit 7ebb22a9b484f9173042bf4682ef83ee638de886
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 6 13:06:29 2010 +0900
 
-	* KPC/checks/convention/markup-pango.py: Corrected RE to detect
-	Pango markup in the middle of the strings.
+    New checker interface with classes
 
-2008-11-21  Changwoo Ryu  <cwryu@debian.org>
+ KPC/checks/convention/accesskey.py      |   57 +++++++++++++++++++++++++++
+ KPC/checks/convention/common-header.py  |   10 +----
+ KPC/checks/convention/copyright.py      |   44 +++++++--------------
+ KPC/checks/convention/gnome-team.py     |   19 ++++-----
+ KPC/checks/convention/gnome.py          |   37 +++++++-----------
+ KPC/checks/convention/kde.py            |   38 +++++++++--------
+ KPC/checks/convention/markup-docbook.py |   58 +++++++++++----------------
+ KPC/checks/convention/markup-pango.py   |   43 ++++++++------------
+ KPC/checks/convention/mnemonic.py       |   65 -------------------------------
+ KPC/checks/language/chosaalternative.py |   61 +++++++++++------------------
+ KPC/checks/language/consistency.py      |   53 +++++++++----------------
+ KPC/checks/language/spell.py            |   62 ++++++++++++-----------------
+ KPC/checks/language/typo2bul.py         |   51 +++++++++---------------
+ KPC/checks/language/typoincomplete.py   |   49 ++++++++---------------
+ KPC/checks/terminology/gnomeguide.py    |   49 ++++++++---------------
+ KPC/checks/terminology/gnomeui.py       |   56 ++++++++++----------------
+ scripts/ko-po-check                     |   14 ++++---
+ tests/test-00001.po                     |   24 ++++++------
+ tests/test-00001.test                   |    2 +-
+ tests/test-00009.out                    |    8 ++--
+ tests/test-00011.po                     |    2 +-
+ tests/test-00011.test                   |    2 +-
+ tests/test-00016.out                    |    3 +
+ tests/test-00016.po                     |   36 +++++++++++++++++
+ tests/test-00016.test                   |   17 ++++++++
+ tests/test-00017.out                    |    2 +
+ tests/test-00017.po                     |   19 +++++++++
+ tests/test-00017.test                   |   17 ++++++++
+ 28 files changed, 421 insertions(+), 477 deletions(-)
 
-	* KPC/checks/terminology/gnomeguide.py:
-	* KPC/checks/terminology/gnomeui.py: Added "modify" and "replace".
+commit db9b2257a1ee48ff8d3b500ba03b421faf6dc7ec
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 6 09:40:46 2010 +0900
 
-	* KPC/checks/terminology/gnomeui.py: Do not warn on all capital
-	words.
+    convention/common-header: checks header fields
 
-	* KPC/checks/convention/markup-docbook.py:
-	* tests/tests-00013.*: New check for DocBook XML based (through
-	gnome-doc-utils or poxml) PO files.
+ KPC/checks/convention/common-header.py |   52 ++++++++++++++++++++++++++++++++
+ tests/test-00015.out                   |    6 ++++
+ tests/test-00015.po                    |   37 ++++++++++++++++++++++
+ tests/test-00015.test                  |   17 ++++++++++
+ 4 files changed, 112 insertions(+), 0 deletions(-)
 
-	* KPC/checks/*/*.py:
-	* scripts/ko-po-check: Clean up.
+commit 0ec11b21075bca83905a29be0c0709958cac3245
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 6 09:10:17 2010 +0900
 
-2008-11-20  Changwoo Ryu  <cwryu@debian.org>
+    Move convention/consistency to language/consistency
 
-	* KPC/checks/terminology/gnomeui.py: Made "paste" term consistent
-	with gnomeguide.py.
+ KPC/checks/convention/consistency.py |   46 ----------------------------------
+ KPC/checks/language/consistency.py   |   46 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 46 insertions(+), 46 deletions(-)
 
-2008-11-18  Changwoo Ryu  <cwryu@debian.org>
+commit bc326d0f61cc36cfd09e0ee06c963017c169c8f3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Mar 5 01:08:48 2010 +0900
 
-	* scripts/ko-po-check: Use os.sep instead of '/'.
+    0.90.4
 
-2008-11-18  Changwoo Ryu  <cwryu@debian.org>
+ KPC/config.py |    2 +-
+ NEWS          |   14 ++++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletions(-)
 
-	* KPC/checks/*/*py, scripts/ko-po-check: Added --list option.
-	* KPC/checks/mnemonic.py: mnemonic -> 접근키
+commit f42e205c29f646c375b57b24d612dbe97df0466b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Mar 3 03:08:09 2010 +0900
 
-2008-11-16  Changwoo Ryu  <cwryu@debian.org>
+    Test for convention/gnome-team
 
-	distutils migration.
-	* checks: Move to KPC/checks.
-	* Makefile.am, configure.ac, autogen.sh: Removed autotools files
-	* setup.sh: New file for distutils
-	* scripts/ko-po-check: Use module path to search available checks, 
-	removed --moduledir and --checksdir options.
+ tests/test-00014.out  |    1 +
+ tests/test-00014.po   |   12 ++++++++++++
+ tests/test-00014.test |   17 +++++++++++++++++
+ 3 files changed, 30 insertions(+), 0 deletions(-)
 
-2008-10-29  Changwoo Ryu  <cwryu@debian.org>
+commit 613fd9d75f3a971c25174a7e4b32047dbf141175
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Mar 3 02:43:26 2010 +0900
 
-	* checks/terminology/gnomeui.py: 
-	* checks/terminology/gnomeguide.py: Changed terms.
+    Checks the obsolete GNOME Korea mailing list
 
-2008-10-28  Changwoo Ryu  <cwryu@debian.org>
+ KPC/checks/convention/gnome-team.py |   23 +++++++++++++++++++++++
+ 1 files changed, 23 insertions(+), 0 deletions(-)
 
-	* autogen.sh:
-	* configure.ac: Renamed from configure.in
+commit 0eb4aa5e5f211fbe16fea7fd6b2f4a65b98a0470
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Mar 3 02:42:08 2010 +0900
 
-2008-03-28  Changwoo Ryu  <cwryu@debian.org>
+    Base classes for next-generation KPC
 
-	* README:
-	* COPYING: Move to GPL version 3.
-	
-2008-03-28  Changwoo Ryu  <cwryu@debian.org>
+ KPC/classes.py |   64 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 64 insertions(+), 0 deletions(-)
 
-	* configure.in: 0.10 release.
+commit 55631d7194be03330aac604038a9076215ba802e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Mar 3 02:41:20 2010 +0900
 
-	* tests/*: Corrected test cases.
-	* checks/convention/copyright.py: 
-	* checks/convention/markup-pango.py:
-	* checks/language/chosaalternative.py:
-	* checks/language/typo2bul.py: Corrected check names.
+    Clean up
 
-2008-03-25  Changwoo Ryu  <cwryu@debian.org>
+ KPC/po.py      |   25 ++++++++++++-------------
+ KPC/poparse.py |   22 +++++++++++-----------
+ 2 files changed, 23 insertions(+), 24 deletions(-)
 
-	* KPC/poparse.py (parse_entry): Corrected multiline msgctxt
-	parsing.
+commit e273c6014bee23e53679915a923ba87c1350756f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Mar 2 04:29:58 2010 +0900
 
-2008-03-08  Changwoo Ryu  <cwryu@debian.org>
+    more words
 
-	* checks/convention/markup-pango.py: Renamed markup.py to
-	markup-pango.py.
+ KPC/checks/terminology/gnomeguide.py |    2 ++
+ KPC/checks/terminology/gnomeui.py    |    1 +
+ 2 files changed, 3 insertions(+), 0 deletions(-)
 
-	* misc/get-gnome-po.sh (URLLIST): Fixed download URL.
+commit 646d68003882cec9ded574c7f751dc3606125f9b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Apr 18 07:04:59 2009 +0900
 
-2008-01-02  Changwoo Ryu  <cwryu@debian.org>
+    Remove the obsolete .cvsignore
 
-	* scripts/ko-po-check.in: --filters= option for debug.
+ .cvsignore |    3 ---
+ 1 files changed, 0 insertions(+), 3 deletions(-)
 
-2008-01-01  Changwoo Ryu  <cwryu@debian.org>
+commit 1641e75793422450a072ba154e21e23354137555
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 13 03:04:44 2009 +0900
 
-	* checks/terminology/gnomeguide.py: More words.
+    Add ignored file patterns
 
-2007-12-07  Changwoo Ryu  <cwryu@debian.org>
+ .gitignore |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
 
-	* configure.in: 0.9 release.
+commit e33f1d05293b12ad15170c1b4482b25fbd5d047f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 13 03:02:48 2009 +0900
 
-	* tests/kpc-test: Corrected diff option in the test script.
+    그놈 번역 규칙, 오류 메시지 변경
 
-	* KPC/poparse.py (parse_entry): 
-	* KPC/po.py (entry.__init__): msgctxt parsing.
+ KPC/checks/convention/gnome.py |    2 +-
+ tests/test-00007.out           |    6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
-	* checks/terminology/gnomeguide.py: Fixed a syntax err.
+commit 15916a15264811d4bf8cc3b64e04583b4be069af
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 13 02:59:36 2009 +0900
 
-2007-12-03  Changwoo Ryu  <cwryu@debian.org>
+    KDE 번역 규칙, 최근의 msgctxt를 이용하는 형식에 맞춤
+    
+    msgctxt "NAME OF TRANSLATORS" 혹은 msgctxt "EMAIL OF TRANSLATORS"
+    식으로 msgctxt가 들어간 번역.
 
-	* checks/terminology/gnomeguide.py: Added 'separator', 'update'.
+ KPC/checks/convention/kde.py |   41 +++++++++++++-------------------------
+ tests/test-00009.out         |    9 +++----
+ tests/test-00009.po          |   44 +++++++++++++----------------------------
+ 3 files changed, 32 insertions(+), 62 deletions(-)
 
-2007-10-18  Changwoo Ryu  <cwryu@debian.org>
+commit ba479edc45c67a78c81bc41f3c77c0fbcda3d43a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Apr 8 05:26:59 2009 +0000
 
-	* checks/terminology/gnomeguide.py (data): Fixed wrong 'version'.
-	Added more 'filter'. Added 'locale'.
+    'search' 변경으로 테스트 업데이트
 
-2007-10-01  Changwoo Ryu  <cwryu@debian.org>
+ tests/test-00005.out |    2 +-
+ tests/test-00005.po  |    6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
-	* checks/terminology/gnomeguide.py (data): Added 'version'.
+commit 0ff7eb299525c826537c4403bfbaed9414b1ae96
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Apr 8 05:24:45 2009 +0000
 
-2007-07-12  Changwoo Ryu  <cwryu@debian.org>
+    0.90.3
 
-	* checks/terminology/gnomeguide.py (data): More GNOME terms
-	update.
+ ChangeLog     |   17 +++++++++++++++++
+ KPC/config.py |    2 +-
+ NEWS          |   10 ++++++++++
+ 3 files changed, 28 insertions(+), 1 deletions(-)
 
-	* scripts/ko-po-check.in: More standard way of overriding
-	sys.setdefaultencoding().
-	* tests/kpc-test: No more -S option.
+commit 9133cce7416e7e7d709a4d59509c1c632d6f591f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Apr 8 05:20:53 2009 +0000
 
-2007-04-24  Changwoo Ryu  <cwryu@debian.org>
+    Fix the inconsistent terminologies for 'search'
 
-	* configure.in: 0.8 release
+ KPC/checks/terminology/gnomeui.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-	* ChangeLog, NEWS, README, THANKS, TODO: converted to UTF-8.
+commit 68b52f9edabb51b40299952cbd20a78a013177e6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Apr 8 05:20:06 2009 +0000
 
-	* misc/get-gnome-po.sh: Updated for GNOME 2.20.
+    Add <interfacename> Docbook tag
 
-	* checks/terminology/gnomeguide.py (data): More GNOME terms
-	update.
-	* tests/*: Updated for the GNOME terms.
+ KPC/checks/convention/markup-docbook.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-	* checks/language/typoincomplete.py: gdm exception.
+commit d5bee73817617313d9dcf82a30763fd42cd6ebf7
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Mar 6 06:59:58 2009 +0000
 
-	* Makefile.am (SUBDIRS): Exclude doc subdir.
+    Typo
 
-2007-04-20  Changwoo Ryu  <cwryu@debian.org>
+ README |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-	* scripts/ko-po-check.in: Use u'string' syntax.
+commit 1d430fffe957be4fe817510de583fa3a693986ad
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Mar 6 06:59:39 2009 +0000
 
-2007-04-17  Changwoo Ryu  <cwryu@debian.org>
+    license - "라이센스" => "라이선스"
 
-	* checks/terminology/gnomeguide.py: New GNOME terms.
-	* checks/terminology/gnomeui.py: New GNOME terms.
-	* checks/*/*.py: Use u'string' syntax for unicode strings.
-	* tests/*: UTF-8 migration + New GNOME terms.
+ KPC/checks/terminology/gnomeguide.py |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
 
-2006-08-12  Changwoo Ryu  <cwryu@debian.org>
+commit faf961dbef8198d0ece48a78fbd96e1089410b0e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Mar 6 06:58:07 2009 +0000
 
-	* KPC/poparse.py (parse_entry): Missing line number parsing on
-	pluarl msgstr.
+    search - '찾기' => '검색'
 
-2006-07-19  Changwoo Ryu  <cwryu@debian.org>
+ KPC/checks/terminology/gnomeguide.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-	* checks/terminology/gnomeguide.py (data): Added a terminology.
+commit 97d917560c9d4f122a0f15123fbb3f0c7583a342
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Mar 5 06:54:20 2009 +0000
 
-2006-07-09  Changwoo Ryu  <cwryu@debian.org>
+    0.90.2 changes
 
-	* checks/terminology/gnomeguide.py (data): Added terminologies.
+ NEWS |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
 
-2004-10-20  Changwoo Ryu  <cwryu@debian.org>
+commit 29649665a93d6195e0a9612e837cdd57a0bb14a3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jan 29 07:48:03 2009 +0000
 
-	* configure.in: Release 0.6
+    New file
 
-	* checks/convention/mnemonic.py (re_mnemonic): Fix for KDE
-	mnemonic.
+ KPC/config.py |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
 
-	* tests/test-00001.out, tests/test-00011.out: Updated according to
-	the new mnemonic checks.
+commit 8124b8edbe125d58c3d893ed93be4aa8ecc23863
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jan 29 06:53:05 2009 +0000
 
-2004-10-19  Changwoo Ryu  <cwryu@debian.org>
+    Corrected version string
 
-	* checks/language/typoincomplete.py: New module which checks
-	incomplete Hangul syllables.
-	* checks/language/Makefile.am (MODULES): Added typoincomplete.py
+ ChangeLog           |    5 +++++
+ scripts/ko-po-check |    2 +-
+ setup.py            |    3 ++-
+ 3 files changed, 8 insertions(+), 2 deletions(-)
 
-2004-10-06  Changwoo Ryu  <cwryu@debian.org>
+commit a9de2277114a879644f23d85b7667ade414858dc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jan 23 17:37:26 2009 +0000
 
-	* checks/convention/mnemonic.py: New module which does all the
-	mnemonic related checks.
-	* checks/convention/capital_mnemonic.py: Removed, merged into
-	mnemonic.py.
+    Fixed error on multi-lined pango tag (confirmed)
 
-	* tests/kpc-test (execfile): Run the tests in ko_KR.euckr locale.
+ KPC/checks/convention/markup-pango.py |    4 +---
+ 1 files changed, 1 insertions(+), 3 deletions(-)
 
-	* checks/convention/markup.py: New module to check markup
-	consistency.
+commit c964f12deca79ed5c659933b643e13cc6190c096
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jan 23 17:34:05 2009 +0000
 
-2004-08-15  Changwoo Ryu  <cwryu@debian.org>
+    Corrected error on multilined pango tag
 
-	* checks/terminology/gnomeguide.py (data): Added more words.
+ KPC/checks/convention/markup-pango.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-2004-01-25  Changwoo Ryu  <cwryu@debian.org>
+commit da9b458af9a333b8bf1de3e525e9be25bea4e8eb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jan 23 08:53:29 2009 +0000
 
-	* configure.in: Release 0.5
+    more words
 
-	* checks/convention/kde.py (check): Sync with the new terminology
-	check.
+ KPC/checks/terminology/gnomeguide.py |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
 
-	* checks/convention/consistency.py: New check.
-	* checks/convention/Makefile.am (MODULES): Added consistency.py
+commit eccb7f5fed7f3590f0e5ddd247e2e6cbca3bd56f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jan 4 04:16:34 2009 +0000
 
-2003-08-06  Changwoo Ryu  <cwryu@debian.org>
+    more words
 
-	* scripts/ko-po-check.in (option_version): Removed localeutil.
+ KPC/checks/terminology/gnomeguide.py |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
 
-2003-08-03  Changwoo Ryu  <cwryu@debian.org>
+commit 31a7999ed9d2dfb3b977ebfd16593c375fbedbbc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jan 4 04:15:54 2009 +0000
 
-	* Dumped the whole structures..
+    fixed the encoding tag
 
-2002-10-27  Changwoo Ryu  <cwryu@debian.org>
+ KPC/checks/language/spell.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-	* src/ko-po-check.in: Returns nonzero on error
-	* src/ko-po-check.in: Fixed encoding error on --help, --version
+commit 7676e28ad26a143b6ec193d3e46dfa1846d5fb81
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 05:25:16 2008 +0000
 
-2002-09-23  Changwoo Ryu  <cwryu@debian.org>
+    Prepare 0.90.1 release
 
-	* Release 0.3.
+ NEWS     |   26 ++++++++++++++++++++++++++
+ README   |    3 ++-
+ THANKS   |    1 +
+ TODO     |    2 +-
+ setup.py |    2 +-
+ 5 files changed, 31 insertions(+), 3 deletions(-)
 
-	* configure.in, doc/Makefile.am, tests/*.out: Made them `make
-	distcheck' clean.
+commit 0247ccf069fd83f40f4feede6ebf4524986a2ae5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 05:15:01 2008 +0000
 
-2002-08-18  Changwoo Ryu  <cwryu@debian.org>
+    Added exception
 
-	* src/filters/gnome_glossary.py (data): More words.
+ KPC/checks/convention/consistency.py |   16 ++++++++++------
+ 1 files changed, 10 insertions(+), 6 deletions(-)
 
-2002-08-04  Changwoo Ryu  <cwryu@debian.org>
+commit 15c6b446922c084baf53c7f93a8ccabc0cafde02
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 05:14:49 2008 +0000
 
-	* src/filters/common_misspell.py: `~ㅆ음' 찾기.
+    Corrected ambiguous match (for example, <s> and <small>)
 
-	* src/poparse.py, src/localeutil.py: Internal string is now python
-	Unicode string.
+ KPC/checks/convention/markup-pango.py |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
 
-	* src/filters/kde.py: Applied the KDE patch from KIM KyungHeon.
+commit b3a07883ef0b9375367ba33bbacd072383c81dc3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 02:58:17 2008 +0000
 
-2002-08-03  Changwoo Ryu  <cwryu@debian.org>
+    Checks for multiple Pango markups
 
-	* Release 0.2.
+ KPC/checks/convention/markup-pango.py |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
 
-2002-08-01  Changwoo Ryu  <cwryu@debian.org>
+commit 67380d5fff83a7680696e48bc1bd9e27430283f4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 02:33:04 2008 +0000
 
-	* configure.in: Used AM_PATH_PYTHON.
+    Corrected markup check for the multilined strings
 
-	* src/filters/kde.py: New file.  Checks KDE "_: ..." translation.
+ KPC/checks/convention/markup-pango.py |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
 
-	* src/filters/common_misspell.py: More checks.
-	* test/test-*.*: More tests.
+commit 278531a74d5ba81569ca7fd50b1a60703d400ebc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Nov 23 01:56:44 2008 +0000
 
-	* src/filters/gnome.py: New file.  Checks "translator_credits"
-	translation.
+    Corrected RE to detect Pango markup in the middle of the strings.
 
-	* src/poparse.py, src/ko-po-check.in: Display the exact line
-	number on ParseError.
+ ChangeLog                             |    5 +++++
+ KPC/checks/convention/markup-pango.py |    2 +-
+ 2 files changed, 6 insertions(+), 1 deletions(-)
 
-	* src/filters/common_misspell.py (verbs_re): Inserted missing
-	comma.
-	* tests/test-00006.po, tests/test-00006.out: Updated test for
-	this fix.
+commit 438f2d65425806c4d5e6d62504cbd90f8fc7951e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 22 11:31:10 2008 +0000
 
-	* src/poparse.py: Fixed parsing bug on empty lines
-	* src/ko-po-check.in: Display line no. on ParseError
+    Clean up
 
-2002-07-31  Changwoo Ryu  <cwryu@debian.org>
+ KPC/checks/convention/consistency.py |    2 +-
+ KPC/checks/language/spell.py         |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
-	* src/localeutil.py: Addded LC_CTYPE dependent message out module
-	* Makefile.am: Likewise.
-	* src/ko-po-check.in, src/filters/*.py: Used localeutil module
+commit dad2647fe456e32223e6ecdfaa7b0537a75bb81b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 22 06:19:28 2008 +0000
 
-2002-07-28  Changwoo Ryu  <cwryu@debian.org>
+    Corrected standalone test code for each check
 
-	* src/filters/common_misspell.py (verbs_re): Added more verbs.
+ KPC/checks/convention/consistency.py    |    8 +++++---
+ KPC/checks/convention/copyright.py      |    8 +++++---
+ KPC/checks/convention/gnome.py          |    8 +++++---
+ KPC/checks/convention/kde.py            |    8 +++++---
+ KPC/checks/convention/markup-docbook.py |    9 ++++++---
+ KPC/checks/convention/markup-pango.py   |    8 +++++---
+ KPC/checks/language/chosaalternative.py |    8 +++++---
+ KPC/checks/language/spell.py            |    8 +++++---
+ KPC/checks/language/typo2bul.py         |    8 +++++---
+ KPC/checks/language/typoincomplete.py   |    8 +++++---
+ KPC/checks/terminology/gnomeguide.py    |    8 +++++---
+ KPC/checks/terminology/gnomeui.py       |    8 +++++---
+ 12 files changed, 61 insertions(+), 36 deletions(-)
 
-2002-07-28  Changwoo Ryu  <cwryu@debian.org>
+commit 9a6d53eabd881c89db117b4b6f1a1dc42d7d0c60
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 22 06:17:45 2008 +0000
 
-	* Release 0.1.
+    Added more exception to the mnemonic check
 
+ KPC/checks/convention/mnemonic.py |   23 ++++++++++++++++++-----
+ 1 files changed, 18 insertions(+), 5 deletions(-)
+
+commit a70b6e77accaef25bd3a5c986c33e758c3760a50
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 22 03:47:33 2008 +0000
+
+    Removed a word, "translator"
+
+ KPC/checks/terminology/gnomeguide.py |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 01f9c0d0e7616c097c66ba571a7352cef1cbf3e5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 22 02:46:53 2008 +0000
+
+    clean up
+
+ KPC/checks/convention/markup-docbook.py |    7 +++----
+ 1 files changed, 3 insertions(+), 4 deletions(-)
+
+commit 96ae9cd78b4e159f7a89fa3f05795660bd6a1f93
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 16:04:46 2008 +0000
+
+    for GNOME 2.26
+
+ misc/get-gnome-po.sh |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 2d0f6765192dd219ba34bcded30fce8c32991a66
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 12:35:31 2008 +0000
+
+    Clean up
+
+ ChangeLog                               |    3 +++
+ KPC/checks/convention/consistency.py    |    9 +++------
+ KPC/checks/convention/copyright.py      |    8 +++-----
+ KPC/checks/convention/gnome.py          |    8 +++-----
+ KPC/checks/convention/kde.py            |    8 +++-----
+ KPC/checks/convention/markup-docbook.py |    7 ++++++-
+ KPC/checks/convention/markup-pango.py   |    8 +++-----
+ KPC/checks/convention/mnemonic.py       |    8 +++-----
+ KPC/checks/language/chosaalternative.py |    9 +++------
+ KPC/checks/language/spell.py            |    8 +++-----
+ KPC/checks/language/typo2bul.py         |    8 +++-----
+ KPC/checks/language/typoincomplete.py   |    8 +++-----
+ KPC/checks/terminology/gnomeguide.py    |    8 +++-----
+ KPC/checks/terminology/gnomeui.py       |    8 +++-----
+ scripts/ko-po-check                     |    2 +-
+ 15 files changed, 46 insertions(+), 64 deletions(-)
+
+commit b3e863d3774a31fbe261aaebc10b6d693c0299ea
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 08:33:00 2008 +0000
+
+    typo
+
+ KPC/checks/convention/kde.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f2ef1db9ddba9fdfcb0464d00a86442bc009faeb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 06:42:25 2008 +0000
+
+    Used set instead of list
+
+ KPC/checks/convention/markup-docbook.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit cc0f89390659f268e27f69b287b453b457407dda
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 05:43:13 2008 +0000
+
+    Added distutils build dir
+
+ .cvsignore |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 2d2d217e30cbd773ddfe9b26839de123cf96f41c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 05:01:57 2008 +0000
+
+    New check for DocBook XML based (through gnome-doc-utils or poxml) PO files.
+
+ ChangeLog                               |    4 ++
+ KPC/checks/convention/markup-docbook.py |   60 +++++++++++++++++++++++++++++++
+ tests/test-00013.out                    |    2 +
+ tests/test-00013.po                     |   47 ++++++++++++++++++++++++
+ tests/test-00013.test                   |   17 +++++++++
+ 5 files changed, 130 insertions(+), 0 deletions(-)
+
+commit 4d89afc1460609cc0ce6bba746db9e67b2951756
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 01:41:22 2008 +0000
+
+    Added "modify" and "replace".
+
+ ChangeLog                            |    3 +++
+ KPC/checks/terminology/gnomeguide.py |    5 +++++
+ KPC/checks/terminology/gnomeui.py    |    2 ++
+ 3 files changed, 10 insertions(+), 0 deletions(-)
+
+commit c8378707fcb7b093d7ce84ddaeeeaeb39b281579
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Nov 21 01:39:07 2008 +0000
+
+    Do not warn on all capital words
+
+ ChangeLog                         |    5 +++++
+ KPC/checks/terminology/gnomeui.py |    5 +++--
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+commit 3375d677457a936de0e14f4bc517982ce1e4b12d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Nov 20 10:54:00 2008 +0000
+
+    Made "paste" term consistent with gnomeguide.py.
+
+ ChangeLog                         |    5 +++++
+ KPC/checks/terminology/gnomeui.py |    2 +-
+ 2 files changed, 6 insertions(+), 1 deletions(-)
+
+commit a32c0bdb86a3a54a827fbfa4d8731c70ac14951e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 09:53:47 2008 +0000
+
+    	* scripts/ko-po-check: Use os.sep instead of '/'.
+
+ ChangeLog           |    4 ++++
+ scripts/ko-po-check |    2 +-
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+commit 2c63eb400ec95d7aca036844d899b36100d2f698
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 03:02:49 2008 +0000
+
+    0.90.0
+
+ NEWS |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 7bbb8fdc6034a63c66110fa79dfc11013b9bd7ee
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 02:59:12 2008 +0000
+
+    clean up docs for release
+
+ NEWS   |    2 +-
+ README |   24 +++++++++++-------------
+ TODO   |   13 ++-----------
+ 3 files changed, 14 insertions(+), 25 deletions(-)
+
+commit a9da74b5b81b2c40e6478b2d6cb6531b447d3cb3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 02:53:33 2008 +0000
+
+    mnemonic -> 접근키
+
+ tests/test-00001.out |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 9dca8003aee4a71f55ee6b84ec950952ffa6ac65
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 02:01:35 2008 +0000
+
+    Added --list option which lists all the checks
+
+ ChangeLog                               |    1 +
+ KPC/checks/convention/consistency.py    |    3 ++-
+ KPC/checks/convention/copyright.py      |    1 +
+ KPC/checks/convention/gnome.py          |    1 +
+ KPC/checks/convention/kde.py            |    1 +
+ KPC/checks/convention/markup-pango.py   |    1 +
+ KPC/checks/convention/mnemonic.py       |    1 +
+ KPC/checks/language/chosaalternative.py |    1 +
+ KPC/checks/language/spell.py            |    1 +
+ KPC/checks/language/typo2bul.py         |    1 +
+ KPC/checks/language/typoincomplete.py   |    3 ++-
+ KPC/checks/terminology/gnomeguide.py    |    1 +
+ KPC/checks/terminology/gnomeui.py       |    1 +
+ NEWS                                    |    2 ++
+ scripts/ko-po-check                     |   16 ++++++++++++++--
+ 15 files changed, 31 insertions(+), 4 deletions(-)
+
+commit 966aa1e45dc50cf19948caf9228db9e888db46a7
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 01:09:55 2008 +0000
+
+    Applied mnemonic, terminology checks changes
+
+ tests/test-00001.out |    2 +-
+ tests/test-00005.out |    2 +-
+ tests/test-00005.po  |    2 +-
+ tests/test-00011.out |    2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+commit a3b282168c7fbd38d4517ba4b4e7f273552c19fd
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 01:07:47 2008 +0000
+
+    Removed autotools stuffs from the test scripts
+
+ tests/test-00001.test |    5 ++---
+ tests/test-00002.test |    5 ++---
+ tests/test-00003.test |    5 ++---
+ tests/test-00004.test |    5 ++---
+ tests/test-00005.test |    5 ++---
+ tests/test-00006.test |    5 ++---
+ tests/test-00007.test |    5 ++---
+ tests/test-00008.test |    5 ++---
+ tests/test-00009.test |    5 ++---
+ tests/test-00010.test |    5 ++---
+ tests/test-00011.test |    5 ++---
+ tests/test-00012.test |    5 ++---
+ 12 files changed, 24 insertions(+), 36 deletions(-)
+
+commit 7fc9c1a8231d71a0331cbf150ce99681482496a7
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 01:07:16 2008 +0000
+
+    mneonic -> 접근키
+
+ ChangeLog |    4 ++++
+ NEWS      |    2 ++
+ 2 files changed, 6 insertions(+), 0 deletions(-)
+
+commit 5817a12b81d07f320588362f5f21592a49182a6c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 01:06:06 2008 +0000
+
+    mnemonic -> 접근키
+
+ KPC/checks/convention/mnemonic.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 230f6df19714cf4b91f1e8475a0dd5cbb5affdc5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Nov 18 01:04:45 2008 +0000
+
+    mnemonic -> 접근키
+
+ KPC/checks/convention/mnemonic.py |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 8b69601b6b4492a50d0dd4f49d8b18d177cba6ec
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Nov 17 13:41:52 2008 +0000
+
+    added some additional source files
+
+ MANIFEST.in |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+commit 3584e59342141d6a976019674222781d92be0dad
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Nov 17 11:49:21 2008 +0000
+
+    Removed remaining non-distutils files
+
+ HACKING                          |    4 --
+ checks/terminology/gnomeguide.py |   93 ------------------------------------
+ checks/terminology/gnomeui.py    |   98 --------------------------------------
+ 3 files changed, 0 insertions(+), 195 deletions(-)
+
+commit 876bb4578224223ee8e19fd8bacb2c42f4e37e16
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Nov 17 09:05:37 2008 +0000
+
+    updated todo list
+
+ TODO |   39 ++++-----------------------------------
+ 1 files changed, 4 insertions(+), 35 deletions(-)
+
+commit 1fee86ab74576ae5d5963595e82fbc6f4b89f5bb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Nov 17 08:52:11 2008 +0000
+
+    Remove more autotools files
+
+ Makefile.am       |    8 --------
+ tests/.cvsignore  |    2 --
+ tests/Makefile.am |   22 ----------------------
+ 3 files changed, 0 insertions(+), 32 deletions(-)
+
+commit 7a08dd2a4c7518168858c978bfbd2a95181870ef
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 15 20:05:46 2008 +0000
+
+    log changes
+
+ ChangeLog |    9 +++++++++
+ NEWS      |    7 +++++++
+ 2 files changed, 16 insertions(+), 0 deletions(-)
+
+commit db12f753bfdce8c569878ae408585e0a493f6911
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 15 19:57:54 2008 +0000
+
+    added word "clear"
+
+ KPC/checks/terminology/gnomeguide.py |    2 ++
+ KPC/checks/terminology/gnomeui.py    |    1 +
+ 2 files changed, 3 insertions(+), 0 deletions(-)
+
+commit d932cac4a0f4d71678c384393789c33205237889
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 15 19:56:54 2008 +0000
+
+    merge from distutils-migration-branch
+
+ .cvsignore                              |   14 +-
+ KPC/.cvsignore                          |    3 -
+ KPC/Makefile.am                         |    5 -
+ KPC/checks/convention/consistency.py    |   42 +
+ KPC/checks/convention/copyright.py      |   32 +
+ KPC/checks/convention/gnome.py          |   27 +
+ KPC/checks/convention/kde.py            |   36 +
+ KPC/checks/convention/markup-pango.py   |   41 +
+ KPC/checks/convention/mnemonic.py       |   53 +
+ KPC/checks/language/chosaalternative.py |   57 +
+ KPC/checks/language/spell.py            |  118 ++
+ KPC/checks/language/typo2bul.py         |   45 +
+ KPC/checks/language/typoincomplete.py   |   39 +
+ KPC/checks/terminology/gnomeguide.py    |   91 +
+ KPC/checks/terminology/gnomeui.py       |   97 ++
+ Makefile.am                             |    2 +-
+ autogen.sh                              |  185 --
+ checks/.cvsignore                       |    2 -
+ checks/Makefile.am                      |    1 -
+ checks/convention/.cvsignore            |    2 -
+ checks/convention/Makefile.am           |    4 -
+ checks/convention/consistency.py        |   42 -
+ checks/convention/copyright.py          |   32 -
+ checks/convention/gnome.py              |   27 -
+ checks/convention/kde.py                |   36 -
+ checks/convention/markup-pango.py       |   41 -
+ checks/convention/mnemonic.py           |   53 -
+ checks/language/.cvsignore              |    2 -
+ checks/language/Makefile.am             |    4 -
+ checks/language/chosaalternative.py     |   57 -
+ checks/language/spell.py                |  118 --
+ checks/language/typo2bul.py             |   45 -
+ checks/language/typoincomplete.py       |   39 -
+ checks/terminology/.cvsignore           |    2 -
+ checks/terminology/Makefile.am          |    4 -
+ checks/terminology/gnomeguide.py        |    2 +
+ checks/terminology/gnomeui.py           |    1 +
+ configure.ac                            |   19 -
+ doc/.cvsignore                          |    4 -
+ doc/Makefile.am                         |   15 -
+ doc/ko-po-check.xml                     |   38 -
+ doc/spelling-rule.xml                   | 2858 -------------------------------
+ scripts/.cvsignore                      |    3 -
+ scripts/Makefile.am                     |    1 -
+ scripts/ko-po-check                     |   99 ++
+ scripts/ko-po-check.in                  |  110 --
+ setup.py                                |   17 +
+ 47 files changed, 800 insertions(+), 3765 deletions(-)
+
+commit 807788fe03beb210ce10f6b4a0714dc16801738a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Nov 3 09:07:20 2008 +0000
+
+    Added a missing contributor
+
+ THANKS |    7 ++++---
+ 1 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 56a41a81b94c9ad6633d72e5cceddeed45e05e44
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 28 15:59:59 2008 +0000
+
+    	* checks/terminology/gnomeui.py:
+    	* checks/terminology/gnomeguide.py: Changed terms.
+
+ ChangeLog                        |    5 +++++
+ checks/terminology/gnomeguide.py |    7 ++++---
+ checks/terminology/gnomeui.py    |    5 +++--
+ 3 files changed, 12 insertions(+), 5 deletions(-)
+
+commit c66e7c68cfd5d64764bb216f5da63e08b3fece46
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 28 14:18:39 2008 +0000
+
+    begin 0.11 features
+
+ NEWS |    9 +++++++++
+ 1 files changed, 9 insertions(+), 0 deletions(-)
+
+commit e354501b4f8494e946b7dcae8f474cccc5572666
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 28 14:18:09 2008 +0000
+
+    	* autogen.sh:
+    	* configure.ac: Renamed from configure.in
+
+ ChangeLog    |    5 +++++
+ autogen.sh   |   14 +++++++-------
+ configure.ac |   19 +++++++++++++++++++
+ configure.in |   19 -------------------
+ 4 files changed, 31 insertions(+), 26 deletions(-)
+
+commit 6ecd2fb627124fd387eb9b8c6908029bab0766b1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Mar 28 01:27:33 2008 +0000
+
+    	* README:
+    	* COPYING: Move to GPL version 3.
+
+ .cvsignore |    1 -
+ COPYING    |  676 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog  |    5 +
+ README     |    9 +-
+ 4 files changed, 684 insertions(+), 7 deletions(-)
+
+commit 37a170d8ec0faa7d5515cf970d38eb07f7968064
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Mar 27 15:48:33 2008 +0000
+
+    	* configure.in: 0.10 release.
+
+ ChangeLog    |    2 ++
+ NEWS         |   14 ++++++++++++++
+ configure.in |    2 +-
+ 3 files changed, 17 insertions(+), 1 deletions(-)
+
+commit 45bfdb756c622b7cc797e441dd356b727ba90433
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Mar 27 15:35:03 2008 +0000
+
+    	* tests/*: Corrected test cases.
+    	* checks/convention/copyright.py:
+    	* checks/convention/markup-pango.py:
+    	* checks/language/chosaalternative.py:
+    	* checks/language/typo2bul.py: Corrected check names.
+
+ ChangeLog                           |    8 ++++++++
+ checks/convention/copyright.py      |    2 +-
+ checks/convention/markup-pango.py   |    2 +-
+ checks/language/chosaalternative.py |    2 +-
+ checks/language/typo2bul.py         |    2 +-
+ tests/Makefile.am                   |   17 ++++++++++++++++-
+ tests/kpc-test                      |   26 --------------------------
+ tests/test-00001.test               |   18 ++++++++++++++++++
+ tests/test-00002.out                |    2 --
+ tests/test-00002.test               |   18 ++++++++++++++++++
+ tests/test-00003.out                |    2 +-
+ tests/test-00003.test               |   18 ++++++++++++++++++
+ tests/test-00004.test               |   18 ++++++++++++++++++
+ tests/test-00005.test               |   18 ++++++++++++++++++
+ tests/test-00006.test               |   18 ++++++++++++++++++
+ tests/test-00007.out                |    1 -
+ tests/test-00007.test               |   18 ++++++++++++++++++
+ tests/test-00008.test               |   18 ++++++++++++++++++
+ tests/test-00009.test               |   18 ++++++++++++++++++
+ tests/test-00010.test               |   18 ++++++++++++++++++
+ tests/test-00011.out                |    4 ----
+ tests/test-00011.test               |   18 ++++++++++++++++++
+ tests/test-00012.test               |   18 ++++++++++++++++++
+ 23 files changed, 245 insertions(+), 39 deletions(-)
+
+commit 0e8e0b66e4a91507ff44dc9cb6b49004d297a7ea
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Mar 25 13:19:57 2008 +0000
+
+    	* KPC/poparse.py (parse_entry): Corrected multiline msgctxt
+    	parsing.
+
+ ChangeLog      |    5 +++++
+ KPC/poparse.py |    4 +++-
+ 2 files changed, 8 insertions(+), 1 deletions(-)
+
+commit f3d0c8ca254f38c30938a671bd2e338ba91c9103
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 8 10:52:20 2008 +0000
+
+    	* checks/convention/markup-pango.py: Renamed markup.py to
+    	markup-pango.py.
+
+ ChangeLog                         |    3 ++
+ checks/convention/Makefile.am     |    2 +-
+ checks/convention/markup-pango.py |   41 +++++++++++++++++++++++++++++++++++++
+ checks/convention/markup.py       |   41 -------------------------------------
+ 4 files changed, 45 insertions(+), 42 deletions(-)
+
+commit b145c916955ee06e014de154803bc557d262bcb9
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Mar 8 10:50:16 2008 +0000
+
+    	* misc/get-gnome-po.sh (URLLIST): Fixed download URL.
+
+ ChangeLog            |    4 ++++
+ misc/get-gnome-po.sh |    2 +-
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+commit df6465d20ed2639cdbe4f43c272b8771c221c99a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jan 1 18:54:18 2008 +0000
+
+    	* scripts/ko-po-check.in: --filters= option for debug.
+
+ ChangeLog              |    4 ++++
+ scripts/ko-po-check.in |   19 +++++++++++++++----
+ 2 files changed, 19 insertions(+), 4 deletions(-)
+
+commit fc4dfef08ecc7ea24c0010c3442f5a9207f864aa
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Dec 31 18:11:57 2007 +0000
+
+    	* checks/terminology/gnomeguide.py: More words.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    3 +++
+ 2 files changed, 7 insertions(+), 0 deletions(-)
+
+commit 7130f60734bd811c973d305670f1b2bb1b7e1c24
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 13:18:53 2007 +0000
+
+    added doc
+
+ Makefile.am |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 37611b3dc3b86cb0ece313d8054cded57c9eac4a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 12:00:24 2007 +0000
+
+    administrative
+
+ TODO |    8 ++++++++
+ 1 files changed, 8 insertions(+), 0 deletions(-)
+
+commit 3fd95bde34c07dee215755242b2428290caf83ad
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 11:57:39 2007 +0000
+
+    	* tests/kpc-test: Corrected diff option in the test script.
+
+ ChangeLog      |    2 ++
+ tests/kpc-test |    2 +-
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 2ac63d228f8d6078628eba47c570247a3ff9ef56
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 11:51:56 2007 +0000
+
+    	* configure.in: 0.9 release.
+
+ ChangeLog    |    2 ++
+ configure.in |    2 +-
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 0b100108c0cb4b226fcd875a0e565b1517c15d53
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 11:50:53 2007 +0000
+
+    administrative files update
+
+ NEWS   |   10 ++++++++++
+ THANKS |    6 +++---
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+commit c5bfb229e1ddf5d207f50b07589bfdb90c5f4aeb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 11:44:38 2007 +0000
+
+    	* KPC/poparse.py (parse_entry):
+    	* KPC/po.py (entry.__init__): msgctxt parsing.
+
+ ChangeLog      |    3 +++
+ KPC/po.py      |    1 +
+ KPC/poparse.py |   10 ++++++++--
+ 3 files changed, 12 insertions(+), 2 deletions(-)
+
+commit c5b3ae6f5aa70934522e442a2724ca797d9c49e1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Dec 7 11:43:22 2007 +0000
+
+    	* checks/terminology/gnomeguide.py: Fixed a syntax err.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    4 ++--
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 62dd180a312fed57b9e8f7168391edaa027956fe
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Dec 3 10:44:10 2007 +0000
+
+    	* checks/terminology/gnomeguide.py: Added 'separator', 'update'.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    2 ++
+ 2 files changed, 6 insertions(+), 0 deletions(-)
+
+commit f09be3b620f2587e00423b4b46de17bfbbbd4713
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Oct 17 21:08:52 2007 +0000
+
+    	* checks/terminology/gnomeguide.py (data): Fixed wrong 'version'.
+    	Added more 'filter'. Added 'locale'.
+
+ ChangeLog                        |    5 +++++
+ checks/terminology/gnomeguide.py |    6 ++++--
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+commit 570399abc561b3ce5c11f66452e0dbfdbb229640
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Sep 30 18:47:38 2007 +0000
+
+    * checks/terminology/gnomeguide.py (data): Added 'version'.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    2 ++
+ 2 files changed, 6 insertions(+), 0 deletions(-)
+
+commit 495778d93eeb2f56d25092495f2ce12b5ca3856a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 12 09:46:06 2007 +0000
+
+    	* checks/terminology/gnomeguide.py (data): More GNOME terms
+    	update.
+
+ ChangeLog                        |    3 +++
+ checks/terminology/gnomeguide.py |    5 ++---
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+commit f7ef536cdb68642c0689ef02c203162b292cab28
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 12 09:45:05 2007 +0000
+
+    	* tests/kpc-test: No more -S option.
+
+ ChangeLog      |    1 +
+ tests/kpc-test |    2 +-
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 1bc1d2eefbcc57441e0d3dcd0bec9dc8eba37f48
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 12 09:43:10 2007 +0000
+
+    * scripts/ko-po-check.in: More standard way of overriding sys.setdefaultencoding().
+
+ ChangeLog              |    5 +++++
+ scripts/ko-po-check.in |   29 ++++++++++++++---------------
+ 2 files changed, 19 insertions(+), 15 deletions(-)
+
+commit 8dd7b12902de2553d2a611e79ba2536569f34bb8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 23:16:31 2007 +0000
+
+    * configure.in: 0.8 release
+
+ ChangeLog    |    2 ++
+ configure.in |    2 +-
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 710641fd45f69bae6482e7dc204675394eda025d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 23:15:42 2007 +0000
+
+    * ChangeLog, NEWS, README, THANKS, TODO: converted to UTF-8.
+
+ ChangeLog |    4 ++-
+ NEWS      |   88 ++++++++++++++++++++++++++++++++----------------------------
+ README    |   24 ++++++++--------
+ THANKS    |    6 ++--
+ TODO      |   48 ++++++++++++++++----------------
+ 5 files changed, 89 insertions(+), 81 deletions(-)
+
+commit 6933a45e5b30d68fc437c55217519a91a58dcb16
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 23:15:42 2007 +0000
+
+    * ChangeLog, NEWS, README, THANKS, TODO: converted to UTF-8.
+
+ TODO |    6 ++----
+ 1 files changed, 2 insertions(+), 4 deletions(-)
+
+commit 4bc6e1935dc706b28e78270392024ac05804a099
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 23:05:17 2007 +0000
+
+    * misc/get-gnome-po.sh: Updated for GNOME 2.20.
+
+ ChangeLog            |    2 ++
+ misc/get-gnome-po.sh |   13 +++++++------
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+commit 370f3bb40ea645da7bc7fff9506d6e61474492d8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 22:19:40 2007 +0000
+
+    * checks/terminology/gnomeguide.py (data): More GNOME terms update.
+    * tests/*: Updated for the GNOME terms.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |   17 ++++++++++++++---
+ tests/test-00001.po              |    2 +-
+ tests/test-00009.po              |    6 +++---
+ 4 files changed, 22 insertions(+), 7 deletions(-)
+
+commit b84821c7b713d06dd4777b1afb5dce7c7aacc594
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 22:04:21 2007 +0000
+
+    * checks/language/typoincomplete.py: gdm exception.
+
+ ChangeLog                         |    2 ++
+ checks/language/typoincomplete.py |    3 ++-
+ 2 files changed, 4 insertions(+), 1 deletions(-)
+
+commit f0086fb60bfbd9de0f63ca3028a79ac907549546
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 23 19:19:43 2007 +0000
+
+    * Makefile.am (SUBDIRS): Exclude doc subdir.
+
+ ChangeLog   |    4 ++++
+ Makefile.am |    2 +-
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+commit 773b6d751d556abfd987bcb1b30dc0115785d161
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Apr 19 22:51:05 2007 +0000
+
+    * scripts/ko-po-check.in: Use u'string' syntax.
+
+ ChangeLog              |    4 ++++
+ scripts/ko-po-check.in |   19 ++++++++-----------
+ 2 files changed, 12 insertions(+), 11 deletions(-)
+
+commit 79ee6e55f31c54c30eab835535e023dc6bcb4bfe
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Apr 16 17:20:35 2007 +0000
+
+    * checks/terminology/gnomeguide.py: New GNOME terms.
+    * checks/terminology/gnomeui.py: New GNOME terms.
+    * checks/*/*.py: Use u'string' syntax for unicode strings.
+    * tests/*: UTF-8 migration + New GNOME terms.
+
+ ChangeLog                           |    7 ++
+ checks/convention/consistency.py    |   10 +--
+ checks/convention/copyright.py      |    8 +--
+ checks/convention/gnome.py          |   13 ++--
+ checks/convention/kde.py            |   28 ++++----
+ checks/convention/markup.py         |   16 ++---
+ checks/convention/mnemonic.py       |   24 +++----
+ checks/language/chosaalternative.py |   30 ++++-----
+ checks/language/spell.py            |  126 +++++++++++++++++------------------
+ checks/language/typo2bul.py         |   24 +++----
+ checks/language/typoincomplete.py   |   14 ++--
+ checks/terminology/gnomeguide.py    |   72 +++++++++++---------
+ checks/terminology/gnomeui.py       |   74 ++++++++++-----------
+ tests/Makefile.am                   |    2 +-
+ tests/kpc-test                      |   12 ++-
+ tests/test-00001.out                |    6 +-
+ tests/test-00001.po                 |   44 ++++++------
+ tests/test-00002.out                |   22 +++---
+ tests/test-00002.po                 |   59 ++++++++--------
+ tests/test-00003.out                |   20 +++---
+ tests/test-00003.po                 |   34 +++++-----
+ tests/test-00004.out                |    6 +-
+ tests/test-00004.po                 |   18 +++---
+ tests/test-00005.out                |   23 +++---
+ tests/test-00005.po                 |   59 ++++++++--------
+ tests/test-00006.out                |   12 ++--
+ tests/test-00006.po                 |   30 ++++----
+ tests/test-00007.out                |    8 +-
+ tests/test-00007.po                 |   14 ++--
+ tests/test-00008.out                |    8 +-
+ tests/test-00008.po                 |   28 ++++----
+ tests/test-00009.out                |   10 ++--
+ tests/test-00009.po                 |   28 ++++----
+ tests/test-00010.out                |    8 +-
+ tests/test-00010.po                 |   10 ++--
+ tests/test-00011.out                |   10 ++--
+ tests/test-00011.po                 |   13 ++--
+ tests/test-00012.out                |    4 +-
+ tests/test-00012.po                 |    7 +-
+ 39 files changed, 468 insertions(+), 473 deletions(-)
+
+commit 95128755ac1571580285546bb36ed5440e9781ab
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 12 12:29:08 2006 +0000
+
+    added change logs
+
+ ChangeLog |    5 +++++
+ NEWS      |    8 ++++++++
+ 2 files changed, 13 insertions(+), 0 deletions(-)
+
+commit 7702b23faaec8b73da659d0451219e039e40e62d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 12 12:27:25 2006 +0000
+
+    missing line number parsing on plural msgstr
+
+ KPC/poparse.py |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit ae74f8fb5cdc35ef97d0059d5eae5543caa30f63
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 22 12:10:49 2006 +0000
+
+    bumped to 0.7
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8904a5705fdccaf617863e64ddb9be2512a89afc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 22 12:10:15 2006 +0000
+
+    removed useless file
+
+ checks/convention/capital_mnemonic.py |   39 ---------------------------------
+ 1 files changed, 0 insertions(+), 39 deletions(-)
+
+commit df07d5bd532b63ecbff67f048daead888c4a7db1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 22 11:55:14 2006 +0000
+
+    added news
+
+ NEWS |   20 ++++++++++++++++++++
+ 1 files changed, 20 insertions(+), 0 deletions(-)
+
+commit e9d48a9e39a30b42f1420df90a179fe11315ca35
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 19 12:41:56 2006 +0000
+
+    	* checks/terminology/gnomeguide.py (data): Added a terminology.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    1 +
+ 2 files changed, 5 insertions(+), 0 deletions(-)
+
+commit d9a057cab7a3bf306e8e8079c3f552026c4108bb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 8 16:11:55 2006 +0000
+
+    	* checks/terminology/gnomeguide.py (data): Added terminologies.
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    1 +
+ 2 files changed, 5 insertions(+), 0 deletions(-)
+
+commit cb6e1752073846650a78fbffceabcba028838ab6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 19 15:05:04 2004 +0000
+
+    	* configure.in: Release 0.6
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f92a4e15ffc8b3b020f74092396398282c5e26d4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 19 15:03:23 2004 +0000
+
+    	* tests/test-00001.out, tests/test-00011.out: Updated according to
+    	the new mnemonic checks.
+
+ ChangeLog            |    3 +++
+ tests/test-00001.out |    1 +
+ tests/test-00011.out |    1 +
+ 3 files changed, 5 insertions(+), 0 deletions(-)
+
+commit 9cd25123dcad9a19c8f871b842446d7c6df53c0a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 19 15:02:30 2004 +0000
+
+    	* checks/convention/mnemonic.py (re_mnemonic): Fix for KDE
+    	mnemonic.
+
+ ChangeLog                     |    7 +++++++
+ checks/convention/mnemonic.py |    2 +-
+ 2 files changed, 8 insertions(+), 1 deletions(-)
+
+commit c19c2888f62bb521f52a39d9cb3b6f3d1ea61d5f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Oct 19 14:46:25 2004 +0000
+
+    	* checks/language/typoincomplete.py: New module which checks
+    	incomplete Hangul syllables.
+    	* checks/language/Makefile.am (MODULES): Added typoincomplete.py
+
+ ChangeLog                         |    6 +++++
+ checks/language/Makefile.am       |    2 +-
+ checks/language/typoincomplete.py |   40 +++++++++++++++++++++++++++++++++++++
+ 3 files changed, 47 insertions(+), 1 deletions(-)
+
+commit 14658c924b6891e20f4768b3efcee1bdbae4f73c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Oct 6 03:09:17 2004 +0000
+
+    	* checks/convention/mnemonic.py: New module which does all the
+    	mnemonic related checks.
+    	* checks/convention/capital_mnemonic.py: Removed, merged into
+    	mnemonic.py.
+
+ ChangeLog                     |    7 ++++-
+ checks/convention/Makefile.am |    2 +-
+ checks/convention/mnemonic.py |   55 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 62 insertions(+), 2 deletions(-)
+
+commit 70f50ca4447b5e21661dd16e0e015147af4e992e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Oct 6 01:13:47 2004 +0000
+
+    	* tests/kpc-test (execfile): Run the tests in ko_KR.euckr locale.
+    
+    	* checks/convention/markup.py (check): New module to check markup
+    	consistency.
+
+ ChangeLog                     |    7 ++++++
+ checks/convention/Makefile.am |    2 +-
+ checks/convention/markup.py   |   43 +++++++++++++++++++++++++++++++++++++++++
+ tests/kpc-test                |    2 +-
+ tests/test-00012.out          |    2 +
+ tests/test-00012.po           |   22 +++++++++++++++++++++
+ 6 files changed, 76 insertions(+), 2 deletions(-)
+
+commit 0b555a837bf9263607dbcd725a3544e632741c47
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 15 02:03:28 2004 +0000
+
+    Added more words
+
+ ChangeLog                        |    4 ++++
+ checks/terminology/gnomeguide.py |    2 ++
+ 2 files changed, 6 insertions(+), 0 deletions(-)
+
+commit 07b3f6d8bb2f62ad3802884196fcc3a033f45d65
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Apr 6 12:15:46 2004 +0000
+
+    used @PYTHON@
+
+ scripts/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 01485d95e8396878867fd121da4346765aa0b6d1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:55:56 2004 +0000
+
+    	* configure.in: Release 0.5
+
+ ChangeLog    |    2 ++
+ configure.in |    2 +-
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 5bdc840838be67b00597abbe74959086c8b9cfac
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:55:23 2004 +0000
+
+    tests for the new version
+
+ tests/test-00004.po  |    2 +-
+ tests/test-00007.out |    2 +-
+ tests/test-00009.po  |    6 +++---
+ tests/test-00011.out |    1 +
+ 4 files changed, 6 insertions(+), 5 deletions(-)
+
+commit 3ebf29021ac38c6ed3a121a78d2ebec7abd51e29
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:54:56 2004 +0000
+
+    exclusive check...
+
+ checks/convention/consistency.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 0738b672ba99f74fe1096b8138627ecf7f428685
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:54:37 2004 +0000
+
+    	* checks/convention/kde.py (check): Sync with the new terminology
+    	check.
+
+ ChangeLog                |    3 +++
+ checks/convention/kde.py |    6 ++++--
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+commit d4c7d594bdc815e7340ddfd9a8ad5fc8508c9315
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:42:15 2004 +0000
+
+    updated news
+
+ NEWS |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit d23390d40e7349e2ecd639d2eb1ac57845df67ab
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jan 24 18:38:55 2004 +0000
+
+    	* checks/convention/consistency.py: New check.
+    	* checks/convention/Makefile.am (MODULES): Added consistency.py
+
+ ChangeLog                        |    5 ++++
+ checks/convention/Makefile.am    |    2 +-
+ checks/convention/consistency.py |   44 ++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 50 insertions(+), 1 deletions(-)
+
+commit ef0996c2432480b9b859dbfe63cf22d7efaf4fec
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jan 20 18:55:31 2004 +0000
+
+    more terminologies
+
+ checks/terminology/gnomeguide.py |    1 -
+ checks/terminology/gnomeui.py    |    2 ++
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 2f9b292288ccb7bdc1d6b0baecc0308e00120f63
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Nov 26 14:11:14 2003 +0000
+
+    added encoding: utf-8 comments (for python 2.3)
+
+ KPC/po.py                             |    1 +
+ KPC/poparse.py                        |    1 +
+ checks/convention/capital_mnemonic.py |    2 +-
+ checks/convention/copyright.py        |    1 +
+ checks/convention/gnome.py            |    1 +
+ checks/convention/kde.py              |    1 +
+ checks/language/chosaalternative.py   |    2 +-
+ checks/language/spell.py              |    2 +-
+ checks/language/typo2bul.py           |    2 +-
+ checks/terminology/gnomeguide.py      |    1 +
+ checks/terminology/gnomeui.py         |    1 +
+ scripts/ko-po-check.in                |    1 +
+ 12 files changed, 12 insertions(+), 4 deletions(-)
+
+commit d0d94f66b2356db358d2387094909b021c82333e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Sep 24 16:12:58 2003 +0000
+
+    added key, translator, password
+
+ checks/terminology/gnomeguide.py |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+commit b65c4def8094ea8a69c5fc2be98e79268f16a9c9
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Aug 25 17:19:32 2003 +0000
+
+    more words
+
+ NEWS                          |    7 +++++++
+ checks/terminology/gnomeui.py |    2 ++
+ 2 files changed, 9 insertions(+), 0 deletions(-)
+
+commit f3dd9b06486112a5b1459a3fbce2b0317d90c745
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Aug 5 15:54:03 2003 +0000
+
+    removed localeutil
+
+ ChangeLog              |    4 ++++
+ scripts/ko-po-check.in |    2 +-
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+commit d875f696f4e81e7df47b39974e2d997a571ce8c6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Aug 4 18:55:44 2003 +0000
+
+    Added more words
+
+ checks/terminology/gnomeui.py |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+
+commit 8ec3a98f0f559d9bb24c91cb14fa7d7d4c7ad74f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 3 11:59:48 2003 +0000
+
+    Added cvsignore's
+
+ checks/.cvsignore             |    2 ++
+ checks/convention/.cvsignore  |    2 ++
+ checks/language/.cvsignore    |    2 ++
+ checks/terminology/.cvsignore |    2 ++
+ 4 files changed, 8 insertions(+), 0 deletions(-)
+
+commit 6f7bc61cdf68f0ee802f5d5b32bf06ca8644bde2
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 3 11:56:02 2003 +0000
+
+    관용 번역 추가
+
+ checks/terminology/Makefile.am   |    2 +-
+ checks/terminology/gnomeguide.py |    2 +-
+ checks/terminology/gnomeui.py    |   82 ++++++++++++++++++++++++++++++++++++++
+ tests/kpc-test                   |    2 +-
+ tests/test-00001.po              |    2 +-
+ tests/test-00005.po              |   44 ++++++++++----------
+ tests/test-00007.out             |    2 +-
+ tests/test-00011.out             |    3 +
+ tests/test-00011.po              |   28 +++++++++++++
+ 9 files changed, 140 insertions(+), 27 deletions(-)
+
+commit 5d02199f7082b410ef70e629e9fb5687035f17e3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 20:51:25 2003 +0000
+
+    updated
+
+ NEWS |    9 +++++++++
+ 1 files changed, 9 insertions(+), 0 deletions(-)
+
+commit e8c4ed837a30e686a84c6991604a096d49a9bba0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 20:35:37 2003 +0000
+
+    2bul keyboard typo check
+
+ checks/language/Makefile.am |    2 +-
+ checks/language/typo2bul.py |   47 +++++++++++++++++++++++++++++++++++++++++++
+ tests/kpc-test              |    4 +-
+ tests/test-00010.out        |    4 +++
+ tests/test-00010.po         |   29 ++++++++++++++++++++++++++
+ 5 files changed, 83 insertions(+), 3 deletions(-)
+
+commit 5170ff73f12695a882d959bd0bd3591a88e0658c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 19:45:11 2003 +0000
+
+    	* Dumped the whole structures..
+
+ ChangeLog |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit f7468eb166d43d882ccb16c9b2044e340e693238
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 19:44:24 2003 +0000
+
+    fixed check
+
+ tests/kpc-test |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 5d0a39a608d4665fb705a23fac7e89b7a967a565
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 11:26:54 2003 +0000
+
+    changed the install path
+
+ KPC/Makefile.am        |    4 +++-
+ scripts/ko-po-check.in |    2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit b0525ca06ed0912b610297d6c1817173a2c30f26
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Aug 2 11:26:34 2003 +0000
+
+    fixed .po fetching scripts
+
+ misc/get-gnome-po.sh |    6 ++----
+ misc/get-kde-po.sh   |    6 ++----
+ 2 files changed, 4 insertions(+), 8 deletions(-)
+
+commit d7e3c6c979fd09545f6c3aa4d35f3e19e5455e94
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 1 19:35:44 2003 +0000
+
+    removed the last bits of src dir
+
+ src/.cvsignore         |    4 ----
+ src/filters/.cvsignore |    2 --
+ 2 files changed, 0 insertions(+), 6 deletions(-)
+
+commit 4a23bb0733129369f31d66f25eeb37206acfcc8b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 1 19:34:54 2003 +0000
+
+    dumped the whole structure
+
+ .cvsignore                            |    2 +-
+ KPC/.cvsignore                        |    3 +
+ KPC/Makefile.am                       |    3 +
+ KPC/po.py                             |   56 ++++++++++++
+ KPC/poparse.py                        |  157 +++++++++++++++++++++++++++++++++
+ Makefile.am                           |    2 +-
+ checks/Makefile.am                    |    1 +
+ checks/convention/Makefile.am         |    4 +
+ checks/convention/capital_mnemonic.py |   39 ++++++++
+ checks/convention/copyright.py        |   33 +++++++
+ checks/convention/gnome.py            |   27 ++++++
+ checks/convention/kde.py              |   35 +++++++
+ checks/language/Makefile.am           |    4 +
+ checks/language/chosaalternative.py   |   59 ++++++++++++
+ checks/language/spell.py              |  120 +++++++++++++++++++++++++
+ checks/terminology/Makefile.am        |    4 +
+ checks/terminology/gnomeguide.py      |   56 ++++++++++++
+ configure.in                          |   14 ++-
+ scripts/.cvsignore                    |    3 +
+ scripts/Makefile.am                   |    1 +
+ scripts/ko-po-check.in                |  102 +++++++++++++++++++++
+ src/Makefile.am                       |    7 --
+ src/filters/Makefile.am               |    8 --
+ src/filters/capital_mnemonic.py       |   36 --------
+ src/filters/chosa_alternative.py      |   55 ------------
+ src/filters/common_misspell.py        |  116 ------------------------
+ src/filters/copyright.py              |   30 ------
+ src/filters/gnome.py                  |   24 -----
+ src/filters/gnome_glossary.py         |   53 -----------
+ src/filters/kde.py                    |   31 -------
+ src/ko-po-check.in                    |  101 ---------------------
+ src/localeutil.py                     |   44 ---------
+ src/po.py                             |   56 ------------
+ src/poparse.py                        |  157 ---------------------------------
+ src/test.py                           |    7 --
+ tests/kpc-test                        |    8 +-
+ 36 files changed, 722 insertions(+), 736 deletions(-)
+
+commit 37b0ad7c03c057b70a7f0ffc2eb38adbfa6bf354
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jun 6 22:58:29 2003 +0000
+
+    disabled document build
+
+ doc/Makefile.am |   12 ++++++------
+ 1 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 4be57a8dfee78f330d19b1472fac4eb0a3ddad05
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 27 13:38:22 2002 +0000
+
+    	* src/ko-po-check.in: Returns nonzero on error
+    	* src/ko-po-check.in: Fixed encoding error on --help, --version
+
+ ChangeLog          |    5 +++++
+ src/ko-po-check.in |   45 ++++++++++++++++++++++++++-------------------
+ 2 files changed, 31 insertions(+), 19 deletions(-)
+
+commit e8d6cfa7eff8cdb1a6220fa0b2e170c8ae4e68b8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 12 17:54:43 2002 +0000
+
+    added todo
+
+ TODO |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 5f41bd961819dfac07f9afc5c32b580e62af0d60
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:38:40 2002 +0000
+
+    release 0.3
+
+ ChangeLog |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+
+commit 15a20780a1ed43a6b7a26eee5073ed929c43797d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:37:13 2002 +0000
+
+    version 0.3
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 22c1ff106d29928adff1e5704fb4a232fd19826a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:36:56 2002 +0000
+
+    fixed distclean
+
+ doc/Makefile.am |    9 ++++++---
+ 1 files changed, 6 insertions(+), 3 deletions(-)
+
+commit af3743958dabdd0b32db1ef04e07c817e0a18b94
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:26:00 2002 +0000
+
+    revised tests
+
+ tests/test-00002.out |    4 ++--
+ tests/test-00007.out |    1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit a9f27e43d8ca489515f6b9229890c33104d721af
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:11:31 2002 +0000
+
+    preparing 0.3 release
+
+ NEWS |   16 ++++++++++++++++
+ 1 files changed, 16 insertions(+), 0 deletions(-)
+
+commit 3ef1d60dddc9ddabd8a677bfc47bb2e9e851e9dd
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Sep 23 11:10:23 2002 +0000
+
+    added INSTALL
+
+ .cvsignore |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 399d6ecc55b71e8ece4ee6f73687089cc25e3090
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 18 03:53:50 2002 +0000
+
+    more words
+
+ ChangeLog                     |    4 ++++
+ src/filters/gnome_glossary.py |    7 +++++++
+ 2 files changed, 11 insertions(+), 0 deletions(-)
+
+commit d3aa8bfcdab252ea96bbcbd5a1bc4c881d130b5e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 16 21:46:43 2002 +0000
+
+    only space
+
+ src/filters/common_misspell.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 519342d759623950f7c48863faef419ce983137f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 8 03:42:41 2002 +0000
+
+    updated test
+
+ tests/test-00008.po |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+commit 7fecc8925d36a7bd89a3fb4f12de3ef825f39ba3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 8 03:27:44 2002 +0000
+
+    checks exactly one space
+
+ src/filters/common_misspell.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 1f267f792825d278e8d4ea97dce34bfb73a276fb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Aug 5 14:34:19 2002 +0000
+
+    fixed tests
+
+ tests/test-00008.out |    2 ++
+ tests/test-00008.po  |    6 ++++++
+ tests/test-00009.out |    4 ++--
+ 3 files changed, 10 insertions(+), 2 deletions(-)
+
+commit af64561bca95e5124d60b87bfa21cb52c0f5c4a6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Aug 5 14:33:46 2002 +0000
+
+    조사 띄어쓰기 규칙 수정
+
+ src/filters/common_misspell.py |   18 +++++++++---------
+ 1 files changed, 9 insertions(+), 9 deletions(-)
+
+commit e50447e3a83b6d756b5dac99b0208f9bc4c9214f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Aug 5 14:33:24 2002 +0000
+
+    fixed typo
+
+ src/filters/kde.py |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 3c92bf4f97ee866ab5de42417d2b7913b02a5bec
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 15:05:35 2002 +0000
+
+    beginning document
+
+ doc/.cvsignore        |    2 +
+ doc/Makefile.am       |   12 +
+ doc/ko-po-check.xml   |   38 +
+ doc/spelling-rule.xml | 2858 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 2910 insertions(+), 0 deletions(-)
+
+commit 4529902688ec91e2640de767fd9945c8d0afb57b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 10:59:36 2002 +0000
+
+    updated todos
+
+ TODO |    7 ++-----
+ 1 files changed, 2 insertions(+), 5 deletions(-)
+
+commit 357994823485c61a42f03bbcde2455dff9c2e181
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 10:58:01 2002 +0000
+
+    관용어 추가
+
+ src/filters/gnome_glossary.py |   10 +++++++++-
+ tests/test-00005.out          |    6 ++++++
+ tests/test-00005.po           |   30 ++++++++++++++++++++++++++++++
+ 3 files changed, 45 insertions(+), 1 deletions(-)
+
+commit 37f050987a7c1feebc30054e3cb1c6271ac8bbc8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 10:06:43 2002 +0000
+
+    ~슴 수정
+
+ src/filters/common_misspell.py |    4 +++-
+ tests/test-00003.out           |    4 ++++
+ tests/test-00003.po            |    5 +++++
+ 3 files changed, 12 insertions(+), 1 deletions(-)
+
+commit 5db56845b268abb4add5837c4602e65f897d55cc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 09:56:46 2002 +0000
+
+    	* src/filters/common_misspell.py: `~ㅆ음' 찾기.
+
+ ChangeLog                      |    2 ++
+ src/filters/common_misspell.py |   26 +++++++++++++++++++-------
+ 2 files changed, 21 insertions(+), 7 deletions(-)
+
+commit e438d4d091c30445fccfe097a0aba617a8a709eb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 09:35:55 2002 +0000
+
+    fixed unicode side effect
+
+ src/filters/gnome.py |    2 +-
+ tests/test-00007.out |    2 ++
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 466ce25de9f0cbe76899291c852a41b148b3b57c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 09:25:08 2002 +0000
+
+    Used TEST_ENVIRONMENT to set LC_CTYPE in this test
+
+ tests/Makefile.am |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit f1aeb1efb61ddfcbd8b04f0b8d09df3604b04278
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 09:20:03 2002 +0000
+
+    updated tests
+
+ tests/test-00007.out |    2 --
+ tests/test-00009.out |    9 +++++----
+ tests/test-00009.po  |    9 +++++++++
+ 3 files changed, 14 insertions(+), 6 deletions(-)
+
+commit 51395766214fc4754055c68cb0584c0de2b79920
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 09:19:28 2002 +0000
+
+    	* src/poparse.py, src/localeutil.py: Internal string is now python
+    	Unicode string.
+
+ ChangeLog         |    3 +++
+ src/localeutil.py |   10 +++++-----
+ src/poparse.py    |    4 ++--
+ 3 files changed, 10 insertions(+), 7 deletions(-)
+
+commit a3c01a34b0743aaed6b2f894b043f815c5b559a6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 07:38:00 2002 +0000
+
+    more todo lists
+
+ TODO |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit c529ecb57854d30049171fcd8e2785c9b8f9a6be
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 4 07:09:05 2002 +0000
+
+    	* src/filters/kde.py: Applied the KDE patch from KIM KyungHeon.
+
+ ChangeLog          |    4 ++++
+ src/filters/kde.py |    7 +++++--
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+commit 323b0cce6dec040df3259e397a880e0803eda0c9
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 2 18:32:24 2002 +0000
+
+    release 0.2
+
+ ChangeLog |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit c1c1dee68c01cb1d322f258727a574404be65a80
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 2 18:29:00 2002 +0000
+
+    preparing 0.2 release
+
+ NEWS         |   16 ++++++++++++++++
+ configure.in |    2 +-
+ 2 files changed, 17 insertions(+), 1 deletions(-)
+
+commit 8343fae7053f0f8b96d8bdf14f4299c854413f27
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Aug 2 18:28:13 2002 +0000
+
+    updated
+
+ THANKS |    5 ++---
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+commit d363c28e7f17b38b122f2d8f5745ee96cc08bf8e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 11:24:31 2002 +0000
+
+    Used AM_PATH_PYTHON.
+
+ ChangeLog    |    2 ++
+ configure.in |    2 ++
+ 2 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 0eabaa98d6076ba23a7d7c49050888f1b9e99064
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:58:05 2002 +0000
+
+    updated todos
+
+ TODO |   11 +----------
+ 1 files changed, 1 insertions(+), 10 deletions(-)
+
+commit 6db57ce41359382c63158f8a50c00a473af194fb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:57:40 2002 +0000
+
+    forgot this...
+
+ ChangeLog |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 0a20b68378b670eb180e72edb983414c40c28bf0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:57:31 2002 +0000
+
+    updated
+
+ tests/test-00002.out |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit c888b6384c9e04a9ed63969c01676ca721767d3e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:56:05 2002 +0000
+
+    KDE specific
+
+ src/filters/kde.py   |   28 ++++++++++++++++++++++++++++
+ tests/test-00009.out |    4 ++++
+ tests/test-00009.po  |   45 +++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 77 insertions(+), 0 deletions(-)
+
+commit 88039e2ce40a6f988fdce938ff2eb1bd6bb9d41e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:41:41 2002 +0000
+
+    조사 띄어 쓰기 추가
+    ~할 때 띄어 쓰기 추가
+    More tests
+
+ ChangeLog                      |    3 +++
+ src/filters/common_misspell.py |   17 +++++++++++++++++
+ tests/test-00006.out           |    2 ++
+ tests/test-00006.po            |   13 ++++++++++++-
+ tests/test-00007.out           |    3 +++
+ tests/test-00007.po            |   32 ++++++++++++++++++++++++++++++++
+ tests/test-00008.out           |    2 ++
+ tests/test-00008.po            |   33 +++++++++++++++++++++++++++++++++
+ 8 files changed, 104 insertions(+), 1 deletions(-)
+
+commit 43b8333d67e464fd347fc3cb512409c7cf661119
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:19:12 2002 +0000
+
+    added gnome.py
+
+ src/filters/Makefile.am |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 455145fe01bc452778be5e63f65110738aa2c3ca
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Aug 1 10:18:48 2002 +0000
+
+    	* src/filters/gnome.py: New file.  Checks "translator_credits"
+    	translation.
+
+ ChangeLog            |    3 +++
+ src/filters/gnome.py |   24 ++++++++++++++++++++++++
+ 2 files changed, 27 insertions(+), 0 deletions(-)
+
+commit 6b5dc85bce5c483433d25df07927d1ff48b9fb5a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 18:43:17 2002 +0000
+
+    	* src/poparse.py, src/ko-po-check.in: Display the exact line
+    	number on ParseError.
+
+ ChangeLog          |    3 +++
+ src/ko-po-check.in |    4 ++--
+ src/poparse.py     |   27 +++++++++++++++------------
+ 3 files changed, 20 insertions(+), 14 deletions(-)
+
+commit 6630f461ed3b91f0a39d7e3c476e8d0907bf2507
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 17:38:17 2002 +0000
+
+    chosa suggestion
+
+ TODO                             |    3 ---
+ src/filters/chosa_alternative.py |   27 ++++++++++++++++++++++-----
+ tests/test-00002.out             |   18 +++++++++---------
+ 3 files changed, 31 insertions(+), 17 deletions(-)
+
+commit d9206ee5b0d17efc82845152c2de936ea4c6d299
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 17:07:28 2002 +0000
+
+    updated entries
+
+ ChangeLog |   10 ++++++++++
+ 1 files changed, 10 insertions(+), 0 deletions(-)
+
+commit a5d30b8640dbb84e685b88e08c7bdeac630251ac
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 17:06:05 2002 +0000
+
+    Added a test
+
+ tests/test-00006.out |    1 +
+ tests/test-00006.po  |    6 ++++++
+ 2 files changed, 7 insertions(+), 0 deletions(-)
+
+commit b3db7576218fd7e5624f3a9ea6191e5bd47be803
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 17:04:14 2002 +0000
+
+    Inserted missing comma
+
+ src/filters/common_misspell.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c98cf63c03efcbf204e9b54cda5b36ae3ca7ce10
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 17:03:09 2002 +0000
+
+    fixed parsing bug
+    display parseerror line no.
+
+ src/ko-po-check.in |    3 ++-
+ src/poparse.py     |    8 ++++++--
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+commit 1bdc8b9c34a0fccd0bc43104fe4ca060af2244e8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 12:33:04 2002 +0000
+
+    updated distribution documents
+
+ README |   11 ++++++-----
+ THANKS |    3 +++
+ TODO   |   39 +++++++++++++++++++++++++++++++--------
+ 3 files changed, 40 insertions(+), 13 deletions(-)
+
+commit 94d02e2ffc40879b2b3398d16645ca51e0544217
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 31 03:49:48 2002 +0000
+
+    Addded LC_CTYPE dependent message out module
+
+ ChangeLog                        |    6 ++++
+ TODO                             |    5 ----
+ src/Makefile.am                  |    2 +-
+ src/filters/capital_mnemonic.py  |    6 ++--
+ src/filters/chosa_alternative.py |    8 +++---
+ src/filters/common_misspell.py   |   24 +++++++++---------
+ src/filters/copyright.py         |    6 ++--
+ src/filters/gnome_glossary.py    |   16 ++++++------
+ src/ko-po-check.in               |   50 ++++++++++++++++++++-----------------
+ src/localeutil.py                |   44 +++++++++++++++++++++++++++++++++
+ 10 files changed, 108 insertions(+), 59 deletions(-)
+
+commit 57222187ef412d65fb2205e40759aca0a0b40af0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 28 09:07:53 2002 +0000
+
+    added information about the korean codecs
+
+ README |   10 +++++++++-
+ 1 files changed, 9 insertions(+), 1 deletions(-)
+
+commit d65cd430203d86c22f5dd457005e91b600c3cf48
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 28 09:03:00 2002 +0000
+
+    	* src/filters/common_misspell.py (verbs_re): Added more verbs.
+
+ ChangeLog                      |    8 ++++++++
+ src/filters/common_misspell.py |   11 +++++++++++
+ 2 files changed, 19 insertions(+), 0 deletions(-)
+
+commit 8e54e689f0876924705e750211b787e0bc54030f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 27 16:11:53 2002 +0000
+
+    new file
+
+ THANKS |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 3724c04427cdf8ad5afe7f9b2cdd0670c215656c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 27 15:25:57 2002 +0000
+
+    get the most recent messages
+
+ misc/get-tp-po.sh |   16 +++++++++++++---
+ 1 files changed, 13 insertions(+), 3 deletions(-)
+
+commit d207a888197e5710a05eccbdc36389c80a95dcce
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 27 14:29:54 2002 +0000
+
+    preparing the release
+
+ NEWS   |    6 ++++++
+ README |   15 +++++++++++++++
+ 2 files changed, 21 insertions(+), 0 deletions(-)
+
+commit 823518a900187501e86c7aef80de81cc1a522d5e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 27 14:21:32 2002 +0000
+
+    updated todos
+
+ TODO |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit eeaeffc6f85c8042c371eade02aeb0effea6f8b4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 27 13:00:39 2002 +0000
+
+    more help message
+    supports multiple input files
+
+ src/ko-po-check.in |   70 ++++++++++++++++++++++-----------------------------
+ 1 files changed, 30 insertions(+), 40 deletions(-)
+
+commit 5afe0b8147bc0c151c000b6e618f31814c78230d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 20:09:45 2002 +0000
+
+    applied
+
+ tests/test-00003.out |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 03879b6543d35db7afaf7874c8e8072709207418
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 20:07:11 2002 +0000
+
+    Added more files in misc/ dir
+
+ Makefile.am |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+commit d433f2450b2b538c44ba98bcb3f59caa532bff6e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 20:06:54 2002 +0000
+
+    parse error exception 처리
+
+ src/ko-po-check.in |    6 +++++-
+ src/poparse.py     |    8 ++++++--
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+
+commit 414381b4e3805483ed1fa55b6f8b07dc6d142705
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 20:06:42 2002 +0000
+
+    로부터/으로부터 추가
+
+ src/filters/chosa_alternative.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit aef9fe4e9e978684b8b39be1386af2e0a8847195
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 18:42:25 2002 +0000
+
+    의존명사
+
+ TODO                           |    6 ------
+ src/filters/common_misspell.py |   34 +++++++++++++++++++++++++++++++---
+ tests/test-00006.out           |    3 +++
+ tests/test-00006.po            |   28 ++++++++++++++++++++++++++++
+ 4 files changed, 62 insertions(+), 9 deletions(-)
+
+commit 16e362f46bf7bae6ae0f1a84b15d9bf65ed3ae58
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 26 18:02:36 2002 +0000
+
+    Fixed wrong detection on chosa prefixed words
+
+ src/filters/chosa_alternative.py |    2 +-
+ tests/test-00002.out             |   38 +-------------------------------------
+ tests/test-00002.po              |    6 ++++++
+ 3 files changed, 8 insertions(+), 38 deletions(-)
+
+commit 73df5408e392fcf9992781f954925e9677f0c11c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:57:03 2002 +0000
+
+    applied the modified messages to the test results
+
+ tests/test-00003.out |    3 ++-
+ tests/test-00005.out |    7 ++++++-
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+commit a87135aad8009b0a17566d036c12d369c955ca17
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:55:13 2002 +0000
+
+    more strict check
+    testcases cleanup
+
+ src/filters/common_misspell.py |    6 ++--
+ tests/test-00003.out           |    4 +-
+ tests/test-00003.po            |    7 ++++-
+ tests/test-00005.out           |    2 +-
+ tests/test-00005.po            |   50 +++++++++++++++++++++++++++++++++----
+ tests/test-00006.out           |    1 -
+ tests/test-00006.po            |   16 ------------
+ tests/test-00007.out           |    2 -
+ tests/test-00007.po            |   16 ------------
+ tests/test-00008.out           |    1 -
+ tests/test-00008.po            |   16 ------------
+ tests/test-00009.out           |    6 ----
+ tests/test-00009.po            |   53 ----------------------------------------
+ 13 files changed, 56 insertions(+), 124 deletions(-)
+
+commit 4e56f4284bce2c094e6a10095f7e22c96404883a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:30:52 2002 +0000
+
+    checks only translated entries...
+
+ src/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit db07317ada2fa056843153e41e802724cf9a547a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:28:35 2002 +0000
+
+    do not checks untranslated messages
+
+ src/ko-po-check.in |    3 ++-
+ src/po.py          |    8 ++++++++
+ 2 files changed, 10 insertions(+), 1 deletions(-)
+
+commit dac269468ad3fd5425a6709753a23e7f9e1cade0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:26:57 2002 +0000
+
+    checks number of lines
+
+ src/filters/copyright.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 45745766c2ac166c6d9cc0351585c0db7dcb27f8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 19:05:00 2002 +0000
+
+    better copyright checks test
+
+ tests/test-00004.out |    5 +++--
+ tests/test-00004.po  |   31 ++++++++++++++++++++++++-------
+ 2 files changed, 27 insertions(+), 9 deletions(-)
+
+commit b04b1492c535d403453a15bce169cb0ae2fce985
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 18:55:18 2002 +0000
+
+    checks '(c)' without leading 'copyright'
+
+ src/filters/copyright.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f36b81a16ab7b1b5d7545cf74bb3280f36adf07b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 18:44:49 2002 +0000
+
+    better test
+
+ tests/test-00003.out |    4 +++-
+ tests/test-00003.po  |   34 ++++++++++++++++++++++++++++------
+ 2 files changed, 31 insertions(+), 7 deletions(-)
+
+commit 5419f179a777e8113286dfb2fa2be326be248266
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 18:25:15 2002 +0000
+
+    added "copyright", "gnome_glossary" filters
+
+ TODO                     |   10 ++--------
+ src/filters/Makefile.am  |    6 ++++--
+ src/filters/copyright.py |   30 ++++++++++++++++++++++++++++++
+ 3 files changed, 36 insertions(+), 10 deletions(-)
+
+commit a116a770083432d7337ab221bea82c6a4855f1f3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 25 17:13:24 2002 +0000
+
+    migration to unicode, phase 1
+
+ src/filters/capital_mnemonic.py  |    5 ++++-
+ src/filters/chosa_alternative.py |    7 +++++--
+ src/filters/common_misspell.py   |   13 ++++++++-----
+ src/filters/gnome_glossary.py    |   16 ++++++++++------
+ src/ko-po-check.in               |   36 ++++++++++++++++++------------------
+ src/poparse.py                   |   11 ++++++++++-
+ 6 files changed, 55 insertions(+), 33 deletions(-)
+
+commit 314f8f038bf00417062e977efe7cca46dd3a3286
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 24 14:47:22 2002 +0000
+
+    more better chosa checking test
+
+ tests/test-00002.out |   45 +++++++++++++++++++++++++++++++
+ tests/test-00002.po  |   71 +++++++++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 110 insertions(+), 6 deletions(-)
+
+commit 3438236bb6ff4d148e2173012b817eab4191c14c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 24 14:47:03 2002 +0000
+
+    updated date
+
+ tests/test-00001.po |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit e8d251485d7a17763662b6723cb028b051d11c07
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 24 09:04:55 2002 +0000
+
+    handles quotes around the format
+
+ src/filters/chosa_alternative.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 0d670c0d804ae42ca1c7b278bb544d8fa258e445
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 18:46:36 2002 +0000
+
+    updated todo list
+
+ TODO |   11 ++++++++++-
+ 1 files changed, 10 insertions(+), 1 deletions(-)
+
+commit 50d8fffebd8c6e5cffc933a5113926c61c21bb69
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 18:46:01 2002 +0000
+
+    fixed error on --help
+
+ src/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7b25395f1972e7c10d41b695e4928866b87b19c0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 18:17:51 2002 +0000
+
+    the translation project mass check scripts
+
+ misc/check-tp-po.sh |    7 +++++++
+ misc/get-tp-po.sh   |   18 ++++++++++++++++++
+ 2 files changed, 25 insertions(+), 0 deletions(-)
+
+commit cb2282783827cd11232cd4b64f5d529b892ecda4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 18:01:12 2002 +0000
+
+    better mnemonic checking test set
+
+ tests/test-00001.out |    3 ++-
+ tests/test-00001.po  |   47 ++++++++++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 48 insertions(+), 2 deletions(-)
+
+commit 8e909a11913b0f1c49218012069c2a9ac06175f1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 16:46:02 2002 +0000
+
+    updated todos
+
+ TODO |   22 +++++++++++++++++-----
+ 1 files changed, 17 insertions(+), 5 deletions(-)
+
+commit c2650821b1ce851d97dc2db581ee2ac6d822eacb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:33:14 2002 +0000
+
+    updated todo list
+
+ TODO |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 53ccf1bcac10b3f1a737e6b97eee76857d804d6f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:31:39 2002 +0000
+
+    fixed chosa regexp
+
+ src/filters/chosa_alternative.py |    5 ++---
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+commit e316ff3d7f652049d84310634ce104821143570f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:15:39 2002 +0000
+
+    corrected syntax err
+
+ src/filters/chosa_alternative.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7669eabae9e349da8a940a487db6bddd4e9d31fb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:13:01 2002 +0000
+
+    improved chosa format regexp
+
+ src/filters/chosa_alternative.py |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+commit d0bcf085e2dcb7f74478adb1b1b453b1dd03185c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:04:16 2002 +0000
+
+    reverted
+
+ src/test.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit b77c944dc656ab723c1ccc46d4f43f930c8d18ed
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 15:04:01 2002 +0000
+
+    impoved chosa regexp
+
+ src/filters/chosa_alternative.py |    5 ++++-
+ src/test.py                      |    2 +-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit eec282cb53e4f0ff282604c453fdd1c688d246f0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 13:44:32 2002 +0000
+
+    space after the string
+
+ TODO           |    2 --
+ src/poparse.py |   40 +++++++++++++++++-----------------------
+ 2 files changed, 17 insertions(+), 25 deletions(-)
+
+commit 686093f51efdc37c50dc4131e907048963160395
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 23 13:41:45 2002 +0000
+
+    oops...  removed test code
+
+ src/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 4764cf38b59f891563f349017983ec35a567c948
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 14:29:21 2002 +0000
+
+    ensures codec installation
+    --help and --version
+
+ TODO               |    2 --
+ src/ko-po-check.in |   30 ++++++++++++++++++++++++++----
+ 2 files changed, 26 insertions(+), 6 deletions(-)
+
+commit 9992624590ec3c24e5b12c311889ccba9cb1caaa
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 06:53:38 2002 +0000
+
+    updated todo's
+
+ TODO |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+commit b038efeef245eedbbbbc1fdbef2174229416b0fb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 06:53:21 2002 +0000
+
+    parse error on space after quote
+
+ src/poparse.py |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit e1608b410cc3696fb48f509bf407d1510f5a8db2
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 06:43:33 2002 +0000
+
+    라는/이라는 추가
+
+ src/filters/chosa_alternative.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit cd988947ce4c853821317905a2bc0db5d87afe3d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 06:16:02 2002 +0000
+
+    position specifier in format
+
+ src/filters/chosa_alternative.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit bc2399644a350623ab6be7f28ff2db6be19dcfb3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 22 05:53:53 2002 +0000
+
+    kde mass check scripts
+
+ misc/check-kde-po.sh |    7 +++++++
+ misc/get-kde-po.sh   |   32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 39 insertions(+), 0 deletions(-)
+
+commit dfb29d91372311d46e83d5e63c91caab2e6bbbc5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 17:39:42 2002 +0000
+
+    *.out files included into the dist
+
+ tests/Makefile.am |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+commit 447ca6a9d408cb334f15772364cb887229dca820
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 17:39:26 2002 +0000
+
+    fixed when builddir != srcdir
+
+ tests/kpc-test |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit f73bc8d79db329a4bb9dd7865dde8fab3abc775b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 17:29:10 2002 +0000
+
+    added HACKING and autogen.sh files
+
+ Makefile.am |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit a9eddde8750d88fc5c03e1eb8d470cf2489c37db
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 12:35:16 2002 +0000
+
+    unicode conversion error detecting
+
+ src/ko-po-check.in |   10 ++++++----
+ 1 files changed, 6 insertions(+), 4 deletions(-)
+
+commit c46ea74b8b42209e1e00e4bf34a5f9111fa513df
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 12:34:49 2002 +0000
+
+    added a common misspelled word
+
+ src/filters/common_misspell.py |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 30828e579578ee429a712bb79a98b61c21f47533
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 07:36:06 2002 +0000
+
+    mass check scripts
+
+ Makefile.am            |    2 ++
+ misc/check-gnome-po.sh |    7 +++++++
+ misc/get-gnome-po.sh   |   23 +++++++++++++++++++++++
+ 3 files changed, 32 insertions(+), 0 deletions(-)
+
+commit c97cc153d52499d7435e3118b86020199b5b598e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 07:02:35 2002 +0000
+
+    corrected err message
+
+ src/filters/chosa_alternative.py |    4 ++--
+ tests/test-00003.out             |    2 +-
+ tests/test-00004.out             |    2 +-
+ tests/test-00007.out             |    2 +-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 04f544161291186086d9d8d2a7ac3c16de5d5409
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 07:02:14 2002 +0000
+
+    multi-lined error
+
+ src/ko-po-check.in |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 571977b58681c5f7afccc894bb9b6fbacea971c1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 21 07:01:47 2002 +0000
+
+    correct invoking
+
+ src/test.py |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit a03e423813e0f58f2fe4ba9cf8f69c83f4d0faf0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 19:13:51 2002 +0000
+
+    gnome glossary(?) filter
+
+ src/filters/gnome_glossary.py |   34 ++++++++++++++++++++++++++
+ tests/test-00009.out          |    6 ++++
+ tests/test-00009.po           |   53 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 93 insertions(+), 0 deletions(-)
+
+commit ce31abd71f1ab77cb8c366ce9145055fa0498a86
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 18:20:58 2002 +0000
+
+    automated testing & comparing the result
+
+ tests/kpc-test       |   16 ++++++++++++----
+ tests/test-00001.out |    1 +
+ tests/test-00003.out |    1 +
+ tests/test-00004.out |    2 ++
+ tests/test-00005.out |    1 +
+ tests/test-00006.out |    1 +
+ tests/test-00007.out |    2 ++
+ tests/test-00008.out |    1 +
+ tests/test-00008.po  |   16 ++++++++++++++++
+ 9 files changed, 37 insertions(+), 4 deletions(-)
+
+commit efae94f0da708f5e432d648a9f5e68b02bfd6d78
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 18:20:42 2002 +0000
+
+    test convenience file
+
+ src/test.py |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+
+commit 1b98d009aac2874528e21598e81404c9e985553c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 17:38:38 2002 +0000
+
+    handles case when builddir != srcdir
+
+ tests/kpc-test |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f6e16ae325ac52eb5d7d2fdef314d2d7d323974f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 16:54:03 2002 +0000
+
+    fixed chosa rule
+
+ src/filters/chosa_alternative.py |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 48e5c7b116e5aba53a55ee001e3c444ff7348b57
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 16:37:29 2002 +0000
+
+    added "doc" dir
+
+ Makefile.am     |    2 +-
+ configure.in    |    1 +
+ doc/.cvsignore  |    2 ++
+ 3 files changed, 4 insertions(+), 1 deletions(-)
+
+commit c44e2020fc633ead61ab76541226d2b818464ad3
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 14:22:04 2002 +0000
+
+    uninstalled tests
+
+ tests/kpc-test |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit c0cfec9e7241d567bb61d6b4d1d83f9b9a107ef1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 14:21:09 2002 +0000
+
+    option with an argument
+
+ src/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c7a953f5a950b39fe3540a84c7c5cbc2259ed540
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 14:17:06 2002 +0000
+
+    added command line options
+
+ src/ko-po-check.in |   26 +++++++++++++++++++++++---
+ 1 files changed, 23 insertions(+), 3 deletions(-)
+
+commit 5b1ba81858a5fdcb827274c17c6958112d12c1cd
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 14:16:07 2002 +0000
+
+    more todos
+
+ TODO |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit fb8bf463e68d5b4611c874734d1d2850b1b4cf4e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Jul 20 13:22:56 2002 +0000
+
+    included test files
+
+ tests/Makefile.am |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 1110c3005d978a3777654353e291b5f9a94fd33c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 19 17:14:49 2002 +0000
+
+    UTF-8 encoded test
+
+ tests/test-00007.po |   16 ++++++++++++++++
+ 1 files changed, 16 insertions(+), 0 deletions(-)
+
+commit c0258c253c72e18fd397e96377fb26fabc1eb12e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 19 17:11:54 2002 +0000
+
+    FIXME - converting all msgstr in EUC-KR
+
+ src/ko-po-check.in |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+
+commit f07a1691a3530a26d6e98ff3e198f786d1a513ee
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 19 02:36:39 2002 +0000
+
+    made it work
+
+ src/ko-po-check.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 82a398fcebc3364c1372f9117d5b6c32b550a51b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Jul 19 02:15:03 2002 +0000
+
+    used automake's *_PYTHON facilities
+
+ .cvsignore              |    1 +
+ src/Makefile.am         |    6 ++----
+ src/filters/Makefile.am |    4 +---
+ src/ko-po-check.in      |    2 +-
+ 4 files changed, 5 insertions(+), 8 deletions(-)
+
+commit 88b5b3edf53dd3a019b6aa721bd3c00ca06cb993
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 18 12:01:25 2002 +0000
+
+    Hided copy&paste :)
+
+ src/filters/capital_mnemonic.py |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 126e514bbeedd5f3d1c0c841d032383f6f4278cb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Jul 18 11:59:51 2002 +0000
+
+    more cvsignore's
+
+ .cvsignore |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit eb5973e80e95b05525f7b061e8e72fea395e6c14
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 18:40:22 2002 +0000
+
+    removed debug msg
+
+ src/filters/common_misspell.py |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 6e92d101b7c713efa20e57f5fb8db4b319fc3255
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 18:15:36 2002 +0000
+
+    common wrong spelling checks
+
+ src/filters/Makefile.am        |    3 +-
+ src/filters/common_misspell.py |   42 ++++++++++++++++++++++++++++++++++++++++
+ tests/test-00004.po            |   16 +++++++++++++++
+ tests/test-00005.po            |   16 +++++++++++++++
+ tests/test-00006.po            |   16 +++++++++++++++
+ 5 files changed, 92 insertions(+), 1 deletions(-)
+
+commit 6f080477143689f1ab4687babd6b436a3742fbe9
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 17:48:37 2002 +0000
+
+    some administrative files
+
+ AUTHORS    |    1 +
+ autogen.sh |    2 +-
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+commit e7959b906f573f804f0d62839e2b6b857c8bb0ca
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 17:48:05 2002 +0000
+
+    todo list
+
+ TODO |   23 +++++++++++++++++++++++
+ 1 files changed, 23 insertions(+), 0 deletions(-)
+
+commit beb91529fe5b9bc6c56cb392f2316e6d49589325
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 17:08:40 2002 +0000
+
+    fixed name conflict
+
+ src/ko-po-check.in |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit eb04a3cae90758acb79ababa395d919813a15b11
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 17:07:55 2002 +0000
+
+    efficient filter loading
+    filter name
+
+ src/filters/capital_mnemonic.py  |    3 +++
+ src/filters/chosa_alternative.py |    2 ++
+ src/ko-po-check.in               |   16 ++++++++++------
+ 3 files changed, 15 insertions(+), 6 deletions(-)
+
+commit 4807f1796a770dd7cc6ee40b6036d5057e9dff11
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Jul 17 17:07:01 2002 +0000
+
+    track line no
+
+ src/poparse.py |   16 ++++++++++------
+ 1 files changed, 10 insertions(+), 6 deletions(-)
+
+commit 33792a0c94c46668ae95248ca15c9bce2b393358
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 15 04:42:10 2002 +0000
+
+    made it installable
+
+ src/ko-po-check.in |   18 ++++++++++--------
+ 1 files changed, 10 insertions(+), 8 deletions(-)
+
+commit b2e160f14a961617d79110c5a078225c4a781a2c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 14 17:49:08 2002 +0000
+
+    preliminary filter interface again
+
+ src/ko-po-check.in |   14 +++++++++-----
+ 1 files changed, 9 insertions(+), 5 deletions(-)
+
+commit 9d3c59b1ebbd8b1743079ef6d2a4c5a39e6e5df1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 14 15:03:29 2002 +0000
+
+    preliminary filter interface
+
+ configure.in                     |    1 +
+ src/Makefile.am                  |    3 +++
+ src/filters/.cvsignore           |    2 ++
+ src/filters/Makefile.am          |    6 ++++++
+ src/filters/capital_mnemonic.py  |   30 ++++++++++++++++++++++++++++++
+ src/filters/chosa_alternative.py |   30 ++++++++++++++++++++++++++++++
+ src/ko-po-check.in               |    5 +++++
+ tests/test-00003.po              |   16 ++++++++++++++++
+ 8 files changed, 93 insertions(+), 0 deletions(-)
+
+commit f99d4417931cf1ffde58e653069b5c0469fcf866
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Jul 14 13:19:13 2002 +0000
+
+    initial commit
+
+ .cvsignore          |    7 ++
+ HACKING             |    4 +
+ Makefile.am         |    1 +
+ autogen.sh          |  185 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ configure.in        |   11 +++
+ src/.cvsignore      |    4 +
+ src/Makefile.am     |    6 ++
+ src/ko-po-check.in  |   23 ++++++
+ src/po.py           |   48 +++++++++++++
+ src/poparse.py      |  137 +++++++++++++++++++++++++++++++++++++
+ tests/.cvsignore    |    2 +
+ tests/Makefile.am   |    1 +
+ tests/kpc-test      |   11 +++
+ tests/test-00001.po |   16 +++++
+ tests/test-00002.po |   16 +++++
+ 15 files changed, 472 insertions(+), 0 deletions(-)

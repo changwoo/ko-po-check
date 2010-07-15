@@ -1,5 +1,3 @@
-* KDE의 번역자 정보 및 FD.org desktop의 새로운 번역 방식 (msgctxt 이용하는) 지원
-
 * 테스트 부분 개선 - python unittest 사용
 
 * 각 애러별로 심각도 지정

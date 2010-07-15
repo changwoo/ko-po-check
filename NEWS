@@ -1,5 +1,22 @@
 -*-outline-*-
 
+버전 0.91.1
+-----------
+
+* 개선
+
+** 용어 업데이트
+** convention/gnome-team: 헤더의 Language-Team 필드에 없어진 KLDP.net의 메일링 리스트가 있으면 새 리스트 주소 안내
+
+* 새로운 검사 규칙:
+
+** convention/datetime: strftime() 시간/날짜 형식을 한국어 관습에 맞게 번역했는지 검사
+
+* 기타
+
+** 용어 변경: mnemonic -> access key
+** convention/gnome-team: GNOME Korea 이면서 메일이 틀린 경우 검사 
+
 버전 0.91.0
 -----------
 
