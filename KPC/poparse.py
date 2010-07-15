@@ -36,6 +36,7 @@ def parse_file(file):
         try:
             entry.translator_comment = unicode(entry.translator_comment,charset)
             entry.msgstr = unicode(entry.msgstr,charset)
+            entry.msgid = unicode(entry.msgid,charset)
         except:
             raise ParseError, lineno
         catalog.add_entry(entry)

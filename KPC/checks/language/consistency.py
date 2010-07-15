@@ -4,15 +4,15 @@ import re
 from KPC.classes import Error, BaseCheck
 
 data = [
-    { 're': re.compile('.*[^\.]\.$'),
-      'except': re.compile('.*(\)|etc|No|a\.m|p\.m)\.$'),
+    { 're': re.compile(u'.*[^\.]\.$'),
+      'except': re.compile(u'.*(\)|etc|No|a\.m|p\.m)\.$'),
       'error':  Error('번역문이 원문과 같이 .으로 끝나야 합니다') },
-    { 're': re.compile('.*:$'),
+    { 're': re.compile(u'.*:$'),
       'error':  Error('번역문이 원문과 같이 :으로 끝나야 합니다') },
-    { 're': re.compile('.*[^\s]\.\.\.$'),
-      'except': re.compile('.*(etc)\.\.\.$'),
+    { 're': re.compile(u'.*[^\s]\.\.\.$'),
+      'except': re.compile(u'.*(etc)\.\.\.$'),
       'error':  Error('번역문이 원문과 같이 ...으로 끝나야 합니다') },
-    { 're': re.compile('.*…$'),
+    { 're': re.compile(u'.*…$'),
       'error':  Error('번역문이 원문과 같이 …으로 끝나야 합니다') },
     ]
     
