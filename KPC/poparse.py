@@ -25,7 +25,12 @@ def parse_file(file):
         raise ParseError, lineno
     catalog.add_entry(entry)
     content_type = catalog.metadata['Content-Type']
-    charset = re.compile('charset=(.+)$').search(content_type).group(1)
+    try:
+        charset = re.compile('charset=(.+)$').search(content_type).group(1)
+        if charset == 'CHARSET':
+            charset = 'UTF-8'
+    except:
+        charset = 'UTF-8'
     while 1:
         try:
             (entry,lineno) = parse_entry(reader,lineno)
