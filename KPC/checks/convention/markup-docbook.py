@@ -33,7 +33,7 @@ def end_element(name):
 
 class MarkupDocbookCheck(BaseCheck):
     def check(self, entry):
-        if not entry.references or entry.references[0].find('.xml:') < 0:
+        if not entry.references or not '.xml:' in entry.references[0]:
             # not from an XML file
             return []
         msgid = entry.msgid

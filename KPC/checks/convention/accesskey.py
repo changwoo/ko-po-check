@@ -39,7 +39,7 @@ class AccessKeyCheck(BaseCheck):
             if len(msgid) > 60:
                 return []
             # GNOME schema file
-            if entry.references and entry.references[0].find('.schemas') >= 0:
+            if entry.references and '.schemas' in entry.references[0]:
                 return []
 
             if gnome_mo:

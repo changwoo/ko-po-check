@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import string
 from KPC.classes import Error, BaseCheck
 
 data = [('properties', u'속성', u'등록 정보'),
@@ -81,9 +80,7 @@ class GnomeGuideCheck(BaseCheck):
         errors = []
         msgid_l = msgid.replace('_','').replace('&','').lower()
         for (id, right, wrong) in data:
-            if ((string.find(msgstr, wrong) >= 0) and
-                (string.find(msgid_l, id) >= 0) and
-                (string.find(msgstr, right) < 0)):
+            if (wrong in msgstr) and (id in msgid_l) and (not right in msgstr):
                 errors.append(Error(self.errstr % (wrong, id, right)))
         return errors
 
