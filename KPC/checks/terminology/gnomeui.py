@@ -44,6 +44,8 @@ data = [('properties', u'속성'),
         ('modify', u'수정'),
         ('replace', u'바꾸기'),
         ('template', u'서식'),
+        ('reload', u'다시 읽기'),
+        ('refresh', u'새로 고침'),
         ]
 
 def normalize_msgid(msgid):

@@ -69,7 +69,13 @@ data = [('properties', u'속성', u'등록 정보'),
         ('license', u'라이선스', u'라이센스'),
         ('template', u'서식', u'템플릿'),
         ('template', u'서식', u'템플리트'),
+        ('template', u'서식', u'틀'),
         ('desktop', u'데스크톱', u'데스크탑'),
+        ('input method', u'입력기', u'입력 방법'),
+        ('input method', u'입력기', u'입력 방식'),
+        ('remember password', u'암호 저장', u'암호 기억'),
+        ('font family', u'글꼴 계열', u'가족'),
+        ('font family', u'글꼴 계열', u'패밀리'),
         ]
 
 class GnomeGuideCheck(BaseCheck):
