@@ -59,3 +59,14 @@ msgstr "(테스트_N)"
 #: test.c:1
 msgid "pre-ANSI style (K&R)"
 msgstr "ANSI 이전 스타일 (K&R)"
+
+# 접근키가 아님 (pango label)
+#: test.c:1
+msgid "_Chicken &amp; egg"
+msgstr "닭이냐 달걀이냐(_D)"
+
+# 접근키가 아님 (kde label)
+#: test.c:1
+msgid "(test_N)"
+msgstr "(테스트_N)"
+

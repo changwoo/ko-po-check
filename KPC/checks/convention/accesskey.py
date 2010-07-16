@@ -3,16 +3,17 @@
 import re, string
 from KPC.classes import Error, BaseCheck
 
-gnome_accesskey_re = re.compile('^[^_]*_([0-9A-Za-z])[^_]*$')
-kde_accesskey_re = re.compile('^[^_]*&([0-9A-Za-z])[^_]*$')
-
+re_accesskey_gnome = re.compile('^[^_]*_([0-9A-Za-z])[^_]*$')
+re_accesskey_kde = re.compile('^[^_]*&([0-9A-Za-z])[^_]*$')
 
 re_accesskey = re.compile('^[^_]*[_&]([0-9A-Za-z])[^_]*$')
 
 # 예외적인 경우:
 # - "abc_DEF" 등 중간에 밑줄 다음에 대문자가 나오는 경우
-# - &amp; intltool에서 XML에서 변환하면서 unescape되지 않은 몇몇 케이스
-re_accesskey_unlikely = re.compile('^[^_]*[a-zA-Z]_[A-Z][^_]*$')
+# - intltool에서 unescape되지 않은 XML character entity
+re_accesskey_gnome_unlikely = re.compile('.*[a-zA-Z]_[A-Z].*')
+
+re_accesskey_kde_unlikely = re.compile('.*(&quot;|&amp;|&apos;|&lt;|&gt;).*')
 
 errstr_no_accesskey = u'번역문에 접근키가 없거나 두 개 이상입니다'
 errstr_wrong = u'\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
@@ -24,19 +25,27 @@ class AccessKeyCheck(BaseCheck):
     def check(self, entry):
         msgid = entry.msgid
         msgstr = entry.msgstr
-        mo = re_accesskey.match(msgid)
-        if mo:
-            # doubts if the string really contains a access key
-            if re_accesskey_unlikely.match(msgid):
-                return []
+        gnome_mo = re_accesskey_gnome.match(msgid)
+        kde_mo = re_accesskey_kde.match(msgid)
+
+        # doubts if the string really contains a access key
+        if gnome_mo and re_accesskey_gnome_unlikely.match(msgid):
+            gnome_mo = None
+        if kde_mo and re_accesskey_kde_unlikely.match(msgid):
+            kde_mo = None
+
+        if gnome_mo or kde_mo:
             # too long string to be a label string
             if len(msgid) > 60:
                 return []
             # GNOME schema file
             if entry.references and entry.references[0].find('.schemas') >= 0:
                 return []
-            
-            letter = string.upper(mo.group(1))
+
+            if gnome_mo:
+                letter = string.upper(gnome_mo.group(1))
+            else:
+                letter = string.upper(kde_mo.group(1))
             # check 1: if it's translated with the access key
             mo = re_accesskey.match(msgstr)
             if not mo:
@@ -51,7 +60,7 @@ class AccessKeyCheck(BaseCheck):
             if mo:
                 return [Error(errstr_lowercase % mo.group(1))]
         return []
-        
+
 name = 'convention/accesskey'
 description = '접근키를 올바로 번역했는지 검사합니다'
 checker = AccessKeyCheck()
