@@ -1,0 +1,19 @@
+# -*- text -*-
+# terminology/common-labels
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 18\n"
+"POT-Creation-Date: 2010-07-18 07:02+0900\n"
+"PO-Revision-Date: 2010-07-18 07:02+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "View Preview"
+msgstr "미리보기 보이기"
+
+msgid "View Preview..."
+msgstr "미리보기 보기..."
