@@ -6,6 +6,7 @@ from KPC.classes import Error, BaseCheck
 chosa_data = [(u'가',u'이',u'이(가)'),
               (u'를',u'을',u'을(를)'),
               (u'는',u'은',u'은(는)'),
+              (u'와',u'과',u'과(와)'),
               (u'로',u'으로',u'(으)로'),
               (u'로서',u'으로서',u'(으)로서'),
               (u'로써',u'으로써',u'(으)로써'),
