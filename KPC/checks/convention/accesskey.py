@@ -38,8 +38,9 @@ class AccessKeyCheck(BaseCheck):
             # too long string to be a label string
             if len(msgid) > 60:
                 return []
-            # GNOME schema file
-            if entry.references and '.schemas' in entry.references[0]:
+            # GConf schema or GSettings schema file
+            if entry.references and ('.schemas' in entry.references[0] or
+                                     '.gschema' in entry.references[0]):
                 return []
 
             if gnome_mo:

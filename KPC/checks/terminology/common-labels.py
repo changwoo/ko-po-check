@@ -35,8 +35,9 @@ class CommonLabelsCheck(BaseCheck):
         # 여러 줄 레이블 아님
         if '\n' in entry.msgid:
             return False
-        # GNOME schema file
-        if entry.references and '.schemas' in entry.references[0]:
+        # GConf schema or GSettings schema file
+        if entry.references and ('.schemas' in entry.references[0] or
+                                 '.gschema' in entry.references[0]):
             return False
 
         words = filter(lambda x: len(x), entry.msgid.split(' '))
