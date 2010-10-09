@@ -1,5 +1,19 @@
 -*-outline-*-
 
+버전 0.92.0
+-----------
+
+* 개선
+
+** 용어 업데이트
+
+** convention/chosaalternative: 와/과 조사 추가
+
+** convention/accesskey, terminology/common-labels: GConf schema 파일을 고려한 부분을 GSettings schema 파일도 적용
+
+** convention/datetime: 시간/날짜 형식 추가
+
+
 버전 0.91.2
 -----------
 
