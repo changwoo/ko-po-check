@@ -76,6 +76,7 @@ data = [('properties', u'속성', u'등록 정보'),
         ('remember password', u'암호 저장', u'암호 기억'),
         ('font family', u'글꼴 계열', u'가족'),
         ('font family', u'글꼴 계열', u'패밀리'),
+        ('no', u'아니요', u'아니오'),
         ]
 
 class GnomeGuideCheck(BaseCheck):
