@@ -90,5 +90,5 @@ class GnomeUICheck(BaseCheck):
         return errors
 
 name = 'terminology/gnomeui'
-description = '지정한 그놈 데스크탑 용어로 번역했는지 검사합니다'
+description = '지정한 그놈 데스크톱 용어로 번역했는지 검사합니다'
 checker = GnomeUICheck()

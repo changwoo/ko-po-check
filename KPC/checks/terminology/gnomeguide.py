@@ -79,7 +79,7 @@ data = [('properties', u'속성', u'등록 정보'),
         ]
 
 class GnomeGuideCheck(BaseCheck):
-    errstr = '%s: 그놈 데스크탑에서 \"%s\"은(는) \"%s\"(이)라고 번역'
+    errstr = '%s: 그놈 데스크톱에서 \"%s\"은(는) \"%s\"(이)라고 번역'
     def check(self, entry):
         msgid = entry.msgid
         msgstr = entry.msgstr
@@ -91,5 +91,5 @@ class GnomeGuideCheck(BaseCheck):
         return errors
 
 name = 'terminology/gnomeguide'
-description = '잘못 번역된 그놈 데스크탑 용어를 검사합니다'
+description = '잘못 번역된 그놈 데스크톱 용어를 검사합니다'
 checker = GnomeGuideCheck()
