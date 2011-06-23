@@ -7,7 +7,7 @@ typo = '('+string.join([
     '밍나합니다',
     '거싱',
     '살마',
-    '[가-힝]빈다'
+    '[가-힣]빈다'
     ], '|')+')'
 
 typo_re = re.compile(typo.decode('utf-8'))

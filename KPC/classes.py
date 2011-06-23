@@ -28,8 +28,7 @@ class CheckList(BaseCheck):
     '''Container class to hold other check classes. check() returns
     all errors from the contained sub-checks.
     '''
-    def __init__(self, l):
-        super(CheckList, self).__init__()
+    def __init__(self, l=[]):
         self.checks = l
 
     def add(self, check):

@@ -42,3 +42,7 @@ msgstr "저는 창우입니다.  이 사람은 제 아내입니다."
 #: test.c:8
 msgid "  -h, --help                display this help and exit\n"
 msgstr "  -h, --help                이 도움말을 보여주고 끝납니다\n"
+
+#: test.c:2
+msgid "%s already exists."
+msgstr "%2은(는) 이 형식이 아닙니다."
