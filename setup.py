@@ -7,7 +7,7 @@ setup(name='ko-po-check',
       description='Korean PO checker',
       author='Changwoo Ryu',
       author_email='cwryu@debian.org',
-      url='http://kldp.net/projects/ko-po-check',
+      url='https://github.com/changwoo/ko-po-check',
 
       packages = ['KPC', 'KPC/checks',
                   'KPC/checks/language',
