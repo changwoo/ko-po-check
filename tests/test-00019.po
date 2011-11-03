@@ -1,0 +1,21 @@
+# -*-text-*-
+# XML
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 13\n"
+"POT-Creation-Date: 2008-11-21 12:16+0900\n"
+"PO-Revision-Date: 2011-11-04 05:30+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: KO-PO-CHECK <cwryu@debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. C/a.page:9(desc)
+msgid "Blahblah haha <app>Program</app>."
+msgstr "블라블라 하하 <appplication>프로그램</application>"
+
+#: C/b.page:25(title)
+msgid "Do in <guiseq><gui>File</gui><gui>Open</gui></guiseq>"
+msgstr "<guiseq><gui>파일</gui><gui>열기</guiseq>에서 하십시오"
