@@ -1,0 +1,15 @@
+# -*-text-*-
+# 헤더 코멘트 검사
+#
+# Changwoo Ryu <cwryu2@debian.org> 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 21\n"
+"POT-Creation-Date: 2012-05-20 07:01+0900\n"
+"PO-Revision-Date: 2012-05-20 07:01+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: KO-PO-CHECK <cwryu@debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
