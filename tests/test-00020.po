@@ -17,3 +17,6 @@ msgstr "맞춤법에서는 (이렇게) 띄어쓰지 않는다"
 
 msgid "Western style (parentheses) again"
 msgstr "이렇게(붙여 써야) 한다"
+
+msgid "In western context, it is ok (ok)"
+msgstr "In western context, it is ok (ok)"

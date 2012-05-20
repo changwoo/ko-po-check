@@ -5,7 +5,7 @@ from KPC.classes import Error, BaseCheck
 
 # 괄호 띄어쓰기
 check_list = [
-    [ re.compile(r'\w \(\w', re.UNICODE), '맞춤법 규정에 따라 괄호 앞에 띄어 쓰지 않습니다' ]
+    [ re.compile(u'[\uac00-\ud7a3] \(\w', re.UNICODE), '맞춤법 규정에 따라 괄호 앞에 띄어 쓰지 않습니다' ]
 ]
 
 class PunctuationCheck(BaseCheck):
