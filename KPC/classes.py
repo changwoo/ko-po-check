@@ -42,8 +42,8 @@ class CheckList(BaseCheck):
 
 
 class HeaderCheck(BaseCheck):
-    '''Base class to check header message fields. Subclasses should
-    implement check_fields() function.
+    '''Base class to check the header entries. Subclasses should
+    implement check_header() function.
     '''
     def check(self, entry):
         # header messages only
@@ -57,7 +57,4 @@ class HeaderCheck(BaseCheck):
                 fields[k] = v
             except ValueError:
                 pass
-        return self.check_fields(fields)
-        
-    def check_fields(self, fields):
-        return []
+        return self.check_header(entry, fields)

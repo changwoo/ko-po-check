@@ -5,7 +5,7 @@ import string
 from KPC.classes import Error, HeaderCheck
 
 class CommonHeaderCheck(HeaderCheck):
-    def check_fields(self, fields):
+    def check_header(self, entry, fields):
         result = []
         # Report-Msgid-Bugs-To: 내용이 없는 경우
         try:

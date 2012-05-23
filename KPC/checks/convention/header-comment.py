@@ -2,20 +2,12 @@
 # 헤더 코멘트 검사
 
 import string
-from KPC.classes import Error, BaseCheck
+from KPC.classes import Error, HeaderCheck
 
-class HeaderCommentCheck(BaseCheck):
-    def check(self, entry):
-        if entry.msgid != '':
-            return []
-        fields = {}
-        for line in entry.msgstr.split('\n'):
-            try:
-                k, v = line.split(': ', 1)
-                fields[k] = v
-            except ValueError:
-                pass
+class HeaderCommentCheck(HeaderCheck):
+    def check_header(self, entry, fields):
         errors = []
+        comment = entry.translator_comment
         # PO-Revision-Date의 연도에 맞게 코멘트의 연도가 업데이트되었는지 확인
         try:
             name = fields['Last-Translator'].split(' <')[0]
@@ -23,7 +15,7 @@ class HeaderCommentCheck(BaseCheck):
         except IndexError:
             # FIXME: PO-Revision-Date 또는 Last-Translator가 포맷에 맞지 않는 경우, 또 다른 에러 출력?
             pass
-        for line in entry.translator_comment.split('\n'):
+        for line in comment.split('\n'):
             if name in line and year in line:
                 break
         else:
