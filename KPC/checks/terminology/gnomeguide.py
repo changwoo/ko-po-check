@@ -76,6 +76,10 @@ data = [('properties', u'속성', u'등록 정보'),
         ('remember password', u'암호 저장', u'암호 기억'),
         ('font family', u'글꼴 계열', u'가족'),
         ('font family', u'글꼴 계열', u'패밀리'),
+        ('software',u'소프트웨어',u'무른모'),
+        ('install',u'설치',u'인스톨'),
+        ('install',u'설치',u'깔기'),
+        ('item',u'항목',u'아이템'),
         ]
 
 class GnomeGuideCheck(BaseCheck):
