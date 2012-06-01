@@ -29,5 +29,8 @@ msgstr "%d개의 항목을 찾았다라고 번역한다"
 msgid "Insert operating system installation media or select a source below"
 msgstr "운영체제 인스톨 미디어를 넣거나 아래 원본을 선택하라고 번역하지 않는다"
 
+msgid "Failed to install theme"
+msgstr "테마 깔기에 실패했다고 번역하지 않는다"
+
 msgid "This usually means that your installation is corrupted"
 msgstr "이는 보통 설치가 깨졌음을 의미한다 라고 번역한다"
