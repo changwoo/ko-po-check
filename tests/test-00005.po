@@ -81,3 +81,29 @@ msgstr "A 검색(_F)"
 #: test.c:5
 msgid "_Search A"
 msgstr "A 찾기(_S)"
+
+# E: 무른모
+#: test.c:5
+msgid "This id free open source software"
+msgstr "이것은 자유 오픈소스 무른모라고 번역하지 않는다"
+
+#: test.c:5
+msgid "Educational software"
+msgstr "교육용 소프트웨어라고 번역한다"
+
+# E: 아이템
+msgid "%d item(s)"
+msgstr "%d개의 아이템이라고 번역하지 않는다"
+
+msgid "We found %d item(s)"
+msgstr "%d개의 항목을 잦았다라고 번역한다"
+
+# E: 인스톨, 깔기
+msgid "Insert operating system installation media"
+msgstr "운영체제 인스톨 미디어를 넣으라고 번역하지 않는다"
+
+msgid "Failed to install theme"
+msgstr "테마 깔기에 실패했다고 번역하지 않는다"
+
+msgid "Thisusually means that your installation is corrupted"
+msgstr "이는 보통 설치가 깨졌음을 의미한다라고 번역한다"
