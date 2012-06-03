@@ -1,5 +1,22 @@
 -*-outline-*-
 
+버전 0.94.1
+-----------
+
+* 새로운 검사 규칙:
+
+** convention/header-comment:
+*** PO-Revision-Date에 기록된 년도를 헤더 코멘트에 안 쓴 경우에 대해 검사
+
+* 개선
+
+** language/punctuation: 괄호 앞에 공백은 한국어에서만 문제로 취급
+
+** language/gnomeguide: 용어 업데이트
+
+** 내부 테스트케이스 관련 버그 수정
+
+
 버전 0.94.0
 -----------
 
