@@ -1,3 +1,102 @@
+commit ed9ca2ef93f171426ccfdd2544d90bb2f25248a8
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jun 4 00:57:11 2012 +0900
+
+    0.94.1
+
+ KPC/config.py |    2 +-
+ NEWS          |   17 +++++++++++++++++
+ THANKS        |    1 +
+ 3 files changed, 19 insertions(+), 1 deletion(-)
+
+commit 929f31c818893c7cca4fb1f8371569897db8cfc1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jun 4 00:50:18 2012 +0900
+
+    README - false alarm에 대한 설명 추가
+
+ README |   24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit b440aa55649f1fd027a5698a83f4c28120448698
+Author: Seong-ho, Cho <darkcircle.0426@gmail.com>
+Date:   Fri Jun 1 04:01:30 2012 +0900
+
+    item(s), install(ation), software에 대한 오역, 교정 단어 추가
+
+ KPC/checks/terminology/gnomeguide.py |    4 ++++
+ tests/test-00005.out                 |    4 ++++
+ tests/test-00005.po                  |   26 ++++++++++++++++++++++++++
+ 3 files changed, 34 insertions(+)
+
+commit 809776dc0e05a09f64666661e84bda2ed1a54c23
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed May 23 11:56:44 2012 +0900
+
+    클래스 정리
+    
+    convention/header-comment 에서 HeaderCheck 공통 클래스 사용하도록.
+
+ KPC/checks/convention/common-header.py  |    2 +-
+ KPC/checks/convention/gnome-team.py     |    2 +-
+ KPC/checks/convention/header-comment.py |   18 +++++-------------
+ KPC/classes.py                          |    9 +++------
+ 4 files changed, 10 insertions(+), 21 deletions(-)
+
+commit 4e5529c5381f205bbcc09326d3642221ccd897eb
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun May 20 19:27:02 2012 +0900
+
+    괄호 앞 공백은 가능한한 한국어에서만 오류로 취급
+
+ KPC/checks/language/punctuation.py |    2 +-
+ tests/test-00020.po                |    3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+commit c691a1546d6d16754537fe26b0045347a7eee326
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun May 20 19:25:50 2012 +0900
+
+    빠진 테스트케이스 파일
+
+ tests/test-00021.out |    1 +
+ 1 file changed, 1 insertion(+)
+
+commit 64529aeaeeb0544c5caab5cde110f250daf517f4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun May 20 07:06:34 2012 +0900
+
+    PO-Revision-Date에 기록된 년도를 헤더 코멘트에 안 쓴 경우에 대해 검사
+
+ KPC/checks/convention/header-comment.py |   36 +++++++++++++++++++++++++++++++
+ tests/test-00021.po                     |   15 +++++++++++++
+ tests/test-00021.test                   |   17 +++++++++++++++
+ 3 files changed, 68 insertions(+)
+
+commit e04d755eca4af19623251f8934996866e401662b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun May 20 06:28:50 2012 +0900
+
+    language/spell 조사 관련 테스트케이스의 false alarm
+
+ tests/test-00008.out |    1 +
+ tests/test-00008.po  |    1 +
+ 2 files changed, 2 insertions(+)
+
+commit 13b14a16bd85f5767c17d77e29f60c6b45e713df
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun May 20 06:03:13 2012 +0900
+
+    0.94.0
+
+ ChangeLog           |  613 ++++++++++++++++++++++++++++-----------------------
+ KPC/config.py       |    2 +-
+ NEWS                |   15 ++
+ TODO                |    6 +
+ make-dist.sh        |    3 +
+ update-changelog.sh |    2 +
+ 6 files changed, 370 insertions(+), 271 deletions(-)
+
 commit 386c7771ec6d2ba559caa9b8f4c2b6a0127cf6e2
 Author: Changwoo Ryu <cwryu@debian.org>
 Date:   Sat May 19 22:23:50 2012 +0900
