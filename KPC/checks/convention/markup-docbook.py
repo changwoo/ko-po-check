@@ -8,7 +8,7 @@ from KPC.classes import Error, BaseCheck
 # 메시지에 대해 XML 파서를 돌려 well formed인지 검사하고, 태그가 알려진
 # DocBook 태그인지 검사한다.
 
-known_db_tags = set(['acronym', 'address', 'anchor', 'application', 'citerefentry', 'citetitle', 'city', 'classname', 'command', 'computeroutput', 'country', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'interfacename', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'postcode', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'state', 'street', 'subscript', 'superscript', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
+known_db_tags = set(['acronym', 'address', 'anchor', 'application', 'citerefentry', 'citetitle', 'city', 'classname', 'command', 'computeroutput', 'country', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'footnoteref', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'interfacename', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'postcode', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'state', 'street', 'subscript', 'superscript', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
 
 tag_error_string = u'XML 태그의 짝이 맞지 않습니다'
 notdb_error_string = u'<%s>: 알려진 DocBook 태그가 아닙니다'
@@ -23,6 +23,9 @@ def check_db_tags(name):
         # gnome-doc-utils magic
         pass
     elif not name in known_db_tags:
+        print "name: ..%s.." % name
+        print name in known_db_tags
+        print known_db_tags
         raise NotDocBook, name
 
 def start_element(name,attr):
