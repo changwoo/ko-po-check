@@ -78,10 +78,12 @@ data = [
         ('template', u'서식', u'템플리트'),
         ('template', u'서식', u'템플릿'),
         ('template', u'서식', u'틀'),
+        ('thread', u'스레드', u'쓰레드'),
         ('update', u'업데이트', u'갱신'),
         ('username', u'사용자 이름', u'사용자명'),
         ('version', u'버전', u'버젼'),
         ('version', u'버전', u'판번호'),
+        ('windows', u'윈도우', u'윈도우즈'),
         ]
 
 class GnomeGuideCheck(BaseCheck):
@@ -92,8 +94,8 @@ class GnomeGuideCheck(BaseCheck):
         errors = []
         msgid_l = msgid.replace('_','').replace('&','').lower()
         for (id, right, wrong) in data:
-            if (wrong in msgstr) and (id in msgid_l) and (not right in msgstr):
-                errors.append(Error(self.errstr % (wrong, id, right)))
+            if (wrong in msgstr) and (id in msgid_l) and ((right in wrong) or (not right in msgstr)):
+                errors.append(Error(self.errstr % (wrong, id, right.strip())))
         return errors
 
 name = 'terminology/gnomeguide'
