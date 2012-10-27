@@ -14,5 +14,17 @@ setup(name='ko-po-check',
                   'KPC/checks/convention',
                   'KPC/checks/terminology' ],
       scripts=['scripts/ko-po-check'],
+      classifiers=[
+        'Development Status :: 4 - Beta',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: ' +
+            'GNU General Public License v3 or later (GPLv3+)',
+        'Natural Language :: Korean',
+        'Operating System :: OS Independent',
+        'Programming Langauge :: Python :: 2.6',
+        'Programming Langauge :: Python :: 2.7',
+        'Topic :: Software Development :: Localization',
+        ],
       )
  
