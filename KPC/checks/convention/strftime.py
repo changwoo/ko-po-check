@@ -69,7 +69,7 @@ class StrftimeCheck(BaseCheck):
                 continue
             ngroups = origre.groups
             orig = m.group(0)
-            matched = [m.group(i + 1) for i in range(0, origre.groups)]
+            matched = [m.group(i + 1) or '' for i in range(0, origre.groups)]
             trans = transfmt.format(*matched)
 
             if not trans in entry.msgstr:
