@@ -1,3 +1,267 @@
+commit b50393e1089977c757ad33d941391d03ce65ea1c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 28 05:56:32 2012 +0900
+
+    0.94.2
+
+ KPC/config.py |    2 +-
+ NEWS          |   24 ++++++++++++++++++++++++
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+
+commit 472b4597a89150478fb789b88a18b6fa41bfc835
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 28 05:15:32 2012 +0900
+
+    Add trove package classifiers
+
+ setup.py |   12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit b7643a94139e0e3a3eb6d534ea458240f4349052
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 27 23:23:04 2012 +0900
+
+    convention/strftime: handle case when an optional re match group is None
+
+ KPC/checks/convention/strftime.py |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fab998ec1f45ce84a86c812299cf5027825c812c
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 27 23:22:38 2012 +0900
+
+    test case for convention/strftime filter
+
+ tests/test-convention_strftime.out  |   10 +++++
+ tests/test-convention_strftime.po   |   83 +++++++++++++++++++++++++++++++++++
+ tests/test-convention_strftime.test |   17 +++++++
+ 3 files changed, 110 insertions(+)
+
+commit 7660d4da35b23c9e71484187bc301d61ed174fb1
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 27 22:08:09 2012 +0900
+
+    test case 정리
+    
+    - 각 필터별로 파일 구분
+    - test-00016 제거하고 test-convention_accesskey 쪽에 합병
+
+ TODO                                       |    4 +-
+ tests/Makefile                             |   10 +++
+ tests/test-00001.out                       |    4 -
+ tests/test-00001.po                        |   72 ------------------
+ tests/test-00001.test                      |   17 -----
+ tests/test-00002.out                       |    9 ---
+ tests/test-00002.po                        |   82 ---------------------
+ tests/test-00002.test                      |   17 -----
+ tests/test-00003.out                       |   10 ---
+ tests/test-00003.po                        |   50 -------------
+ tests/test-00003.test                      |   17 -----
+ tests/test-00004.out                       |    3 -
+ tests/test-00004.po                        |   33 ---------
+ tests/test-00004.test                      |   17 -----
+ tests/test-00005.out                       |   15 ----
+ tests/test-00005.po                        |  109 ----------------------------
+ tests/test-00005.test                      |   17 -----
+ tests/test-00006.out                       |    6 --
+ tests/test-00006.po                        |   45 ------------
+ tests/test-00006.test                      |   17 -----
+ tests/test-00007.out                       |    3 -
+ tests/test-00007.po                        |   32 --------
+ tests/test-00007.test                      |   17 -----
+ tests/test-00008.out                       |    5 --
+ tests/test-00008.po                        |   49 -------------
+ tests/test-00008.test                      |   17 -----
+ tests/test-00009.out                       |    4 -
+ tests/test-00009.po                        |   38 ----------
+ tests/test-00009.test                      |   17 -----
+ tests/test-00010.out                       |    4 -
+ tests/test-00010.po                        |   29 --------
+ tests/test-00010.test                      |   17 -----
+ tests/test-00011.out                       |    1 -
+ tests/test-00011.po                        |   27 -------
+ tests/test-00011.test                      |   17 -----
+ tests/test-00012.out                       |    2 -
+ tests/test-00012.po                        |   21 ------
+ tests/test-00012.test                      |   17 -----
+ tests/test-00013.out                       |    2 -
+ tests/test-00013.po                        |   47 ------------
+ tests/test-00013.test                      |   17 -----
+ tests/test-00014.out                       |    1 -
+ tests/test-00014.po                        |   12 ---
+ tests/test-00014.test                      |   17 -----
+ tests/test-00015.out                       |    6 --
+ tests/test-00015.po                        |   37 ----------
+ tests/test-00015.test                      |   17 -----
+ tests/test-00016.out                       |    4 -
+ tests/test-00016.po                        |   28 -------
+ tests/test-00016.test                      |   17 -----
+ tests/test-00017.out                       |    2 -
+ tests/test-00017.po                        |   19 -----
+ tests/test-00017.test                      |   17 -----
+ tests/test-00018.out                       |    1 -
+ tests/test-00018.po                        |   19 -----
+ tests/test-00018.test                      |   17 -----
+ tests/test-00019.out                       |    1 -
+ tests/test-00019.po                        |   21 ------
+ tests/test-00019.test                      |   17 -----
+ tests/test-00020.out                       |    1 -
+ tests/test-00020.po                        |   22 ------
+ tests/test-00020.test                      |   17 -----
+ tests/test-00021.out                       |    1 -
+ tests/test-00021.po                        |   15 ----
+ tests/test-00021.test                      |   17 -----
+ tests/test-convention_accesskey.out        |    5 ++
+ tests/test-convention_accesskey.po         |   77 ++++++++++++++++++++
+ tests/test-convention_accesskey.test       |   17 +++++
+ tests/test-convention_common-header.out    |    6 ++
+ tests/test-convention_common-header.po     |   37 ++++++++++
+ tests/test-convention_common-header.test   |   17 +++++
+ tests/test-convention_copyright.out        |    3 +
+ tests/test-convention_copyright.po         |   33 +++++++++
+ tests/test-convention_copyright.test       |   17 +++++
+ tests/test-convention_gnome-team.out       |    1 +
+ tests/test-convention_gnome-team.po        |   12 +++
+ tests/test-convention_gnome-team.test      |   17 +++++
+ tests/test-convention_gnome.out            |    3 +
+ tests/test-convention_gnome.po             |   32 ++++++++
+ tests/test-convention_gnome.test           |   17 +++++
+ tests/test-convention_header-comment.out   |    1 +
+ tests/test-convention_header-comment.po    |   15 ++++
+ tests/test-convention_header-comment.test  |   17 +++++
+ tests/test-convention_kde.out              |    4 +
+ tests/test-convention_kde.po               |   38 ++++++++++
+ tests/test-convention_kde.test             |   17 +++++
+ tests/test-convention_markup-docbook.out   |    2 +
+ tests/test-convention_markup-docbook.po    |   47 ++++++++++++
+ tests/test-convention_markup-docbook.test  |   17 +++++
+ tests/test-convention_markup-mallard.out   |    1 +
+ tests/test-convention_markup-mallard.po    |   21 ++++++
+ tests/test-convention_markup-mallard.test  |   17 +++++
+ tests/test-convention_markup-pango.out     |    2 +
+ tests/test-convention_markup-pango.po      |   21 ++++++
+ tests/test-convention_markup-pango.test    |   17 +++++
+ tests/test-language_chosa-alternative.out  |    9 +++
+ tests/test-language_chosa-alternative.po   |   82 +++++++++++++++++++++
+ tests/test-language_chosa-alternative.test |   17 +++++
+ tests/test-language_consistency.out        |    5 ++
+ tests/test-language_consistency.po         |   33 +++++++++
+ tests/test-language_consistency.test       |   17 +++++
+ tests/test-language_punctuation.out        |    1 +
+ tests/test-language_punctuation.po         |   22 ++++++
+ tests/test-language_punctuation.test       |   17 +++++
+ tests/test-language_spell.out              |   10 +++
+ tests/test-language_spell.po               |   50 +++++++++++++
+ tests/test-language_spell.test             |   17 +++++
+ tests/test-language_spell_1.out            |    5 ++
+ tests/test-language_spell_1.po             |   49 +++++++++++++
+ tests/test-language_spell_1.test           |   17 +++++
+ tests/test-language_spell_2.out            |    6 ++
+ tests/test-language_spell_2.po             |   45 ++++++++++++
+ tests/test-language_spell_2.test           |   17 +++++
+ tests/test-language_typo2bul.out           |    4 +
+ tests/test-language_typo2bul.po            |   29 ++++++++
+ tests/test-language_typo2bul.test          |   17 +++++
+ tests/test-language_typoincomplete.out     |    2 +
+ tests/test-language_typoincomplete.po      |   19 +++++
+ tests/test-language_typoincomplete.test    |   17 +++++
+ tests/test-terminology_common-labels.out   |    1 +
+ tests/test-terminology_common-labels.po    |   19 +++++
+ tests/test-terminology_common-labels.test  |   17 +++++
+ tests/test-terminology_gnomeguide.out      |   15 ++++
+ tests/test-terminology_gnomeguide.po       |  109 ++++++++++++++++++++++++++++
+ tests/test-terminology_gnomeguide.test     |   17 +++++
+ 125 files changed, 1229 insertions(+), 1250 deletions(-)
+
+commit ff1341200b6430678d0e32a393883e2a5c112b13
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 27 21:11:39 2012 +0900
+
+    convention/header-comment: 헤더의 번역자 이름에 공백이 추가로 들어갔을 경우 무시
+
+ KPC/checks/convention/header-comment.py |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit aa0d6db3286b48957a735a8c599bb94567a43157
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Fri Oct 26 20:06:42 2012 +0900
+
+    convention/strftime: support optional format specifier flags
+
+ KPC/checks/convention/strftime.py |   86 ++++++++++++++++++++++++-------------
+ 1 file changed, 56 insertions(+), 30 deletions(-)
+
+commit 12c392dc511200133f9d8455c91abdc482cdf6f6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Sep 1 17:40:32 2012 +0900
+
+    필터 이름과 같게 파일 이름 변경
+
+ KPC/checks/convention/datetime.py |   55 -------------------------------------
+ KPC/checks/convention/strftime.py |   55 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 55 insertions(+), 55 deletions(-)
+
+commit 08cb0fc536f7da58e2f6773b27b0e50833ef07b0
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Sep 1 17:23:31 2012 +0900
+
+    terminology/gnomeguide: 단어 추가
+
+ KPC/checks/terminology/gnomeguide.py |    6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 09c8bedb5079a650004bbcb7113dfeaa450f6884
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Sep 1 17:01:12 2012 +0900
+
+    Clean up - sort the words
+
+ KPC/checks/terminology/gnomeguide.py |  126 +++++++++++++++++-----------------
+ 1 file changed, 64 insertions(+), 62 deletions(-)
+
+commit 581641820295a2bca697d3a9a8299b39390a803b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Sep 1 12:53:13 2012 +0900
+
+    language/spell 조사 띄어 쓰기 검사: 조사 목록 추가
+    
+    '(을)를', '(이)가' 형식으로 쓴 경우를 anjuta 번역에서 발견.
+
+ KPC/checks/language/spell.py |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 5c7314f1bb706e19de302735860242c43fdb467f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Aug 26 15:16:14 2012 +0900
+
+    Clean up
+
+ KPC/checks/convention/markup-docbook.py |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 2083dde31699641a9a80935832c5f222d98834a5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Aug 7 04:20:28 2012 +0900
+
+    Docbook tag <footnoteref> 추가
+    
+    - 데비안 설치 안내서에서 사용
+    
+    - DocBook XML의 태그는 수백 가지에 달하지만, 결벽증 마냥 모든 걸 나열할
+      필요는 없고 실제 발견될 때마다 추가하도록 한다.
+
+ KPC/checks/convention/markup-docbook.py |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 3a1b659c32905a3a2294da8547ccc229ae486eea
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jun 4 00:57:22 2012 +0900
+
+    Update ChangeLog
+
+ ChangeLog |   99 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 99 insertions(+)
+
 commit ed9ca2ef93f171426ccfdd2544d90bb2f25248a8
 Author: Changwoo Ryu <cwryu@debian.org>
 Date:   Mon Jun 4 00:57:11 2012 +0900
