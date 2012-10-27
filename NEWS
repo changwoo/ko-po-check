@@ -1,5 +1,29 @@
 -*-outline-*-
 
+버전 0.94.2
+-----------
+
+* 개선
+
+** convention/markup-docbook: 태그 추가
+
+** language/spell: 조사 목록 추가
+
+** terminology/gnomeguide: 단어 추가
+
+** convention/strftime: 각종 strftime() 플래그를 사용한 경우 지원
+
+** convention/header-comment: 헤더의 번역자 이름에 공백이 추가로 들어갔을 경우 무시
+
+* 기타
+
+** 테스트 케이스 추가 및 정리
+
+** 기타 정리
+
+** Trove 패키지 분류 추가
+
+
 버전 0.94.1
 -----------
 
