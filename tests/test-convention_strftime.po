@@ -1,0 +1,83 @@
+# -*-text-*-
+# strftime 포맷 검사
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 1\n"
+"POT-Creation-Date: 2002-07-24 22:09+0900\n"
+"PO-Revision-Date: 2002-07-24 22:09+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# %[de] 다음에는 '일'을 쓴다
+msgid "1.0 %b %d"
+msgstr "1.0 %b %d"
+
+msgid "1.1 %b %d"
+msgstr "1.1 %b %d일"
+
+# %e - glibc extension
+msgid "2.0 %b %e"
+msgstr "2.0 %b %e"
+
+msgid "2.1 %b %e"
+msgstr "2.1 %b %e일"
+
+# modifier 유지
+msgid "3.0 %b %-e"
+msgstr "3.0 %b %e일"
+
+msgid "3.1 %b %-e"
+msgstr "3.1 %b %-e일"
+
+# 원문이 일-월 순서인 경우
+msgid "4.0 %d %B"
+msgstr "4.0 %B %d"
+
+msgid "4.1 %d %B"
+msgstr "4.1 %B %d일"
+
+# 원 일 년
+msgid "5.0 %B %e %Y"
+msgstr "5.0 %B %e일 %Y"
+
+msgid "5.1 %B %e %Y"
+msgstr "5.1 %Y년 %B %e일"
+
+# 요일 - 뒤에 표시
+msgid "6.0 %A %e %B"
+msgstr "6.0 %A %B %e일"
+
+msgid "6.1 %A %e %B"
+msgstr "6.1 %B %e일 %A"
+
+# 작은 요일 - 괄호 안에 표시
+msgid "7.0 %a %b %e"
+msgstr "7.0 %b %e일 %a"
+
+msgid "7.1 %a %b %e"
+msgstr "7.1 %b %e일 (%a)"
+
+# 오전/오후 - 앞에 표시
+msgid "8.0 %I:%M %p"
+msgstr "8.0 %I:%M %p"
+
+msgid "8.1 %I:%M %p"
+msgstr "8.1 %p %I:%M"
+
+# 줄인 표시
+msgid "9.0 %m/%d/%Y"
+msgstr "9.0%m/%d/%Y"
+
+msgid "9.1 %m/%d/%Y"
+msgstr "9.1 %Y/%m/%d"
+
+# 줄인 표시에서 %b는 %m으로 대치
+msgid "10.0 %d-%b-%Y"
+msgstr "10.0 %Y-%b-%d"
+
+msgid "10.1 %d-%b-%Y"
+msgstr "10.1 %Y-%m-%d"
