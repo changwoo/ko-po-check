@@ -10,7 +10,7 @@ class HeaderCommentCheck(HeaderCheck):
         comment = entry.translator_comment
         # PO-Revision-Date의 연도에 맞게 코멘트의 연도가 업데이트되었는지 확인
         try:
-            name = fields['Last-Translator'].split(' <')[0]
+            name = string.strip(fields['Last-Translator'].split(' <')[0])
             year = fields['PO-Revision-Date'][:4]
         except IndexError:
             # FIXME: PO-Revision-Date 또는 Last-Translator가 포맷에 맞지 않는 경우, 또 다른 에러 출력?
