@@ -11,9 +11,9 @@ def R(re_msgid, re_msgstr, label_msgid, label_msgstr):
     return (re.compile(re_msgid), re.compile(re_msgstr),
             label_msgid, label_msgstr)
 
-data = [R(u'^View .*', u'^.* 보기', u'View ...', u'... 보기'),
-        R(u'^Show .*', u'^.* (보이기|표시)', u'Show ...', u'... 보이기(표시)'),
-        R(u'^Hide .*', u'^.* 숨기기', u'Hide ...', u'... 숨기기'),
+data = [R('^View .*', '^.* 보기', 'View ...', '... 보기'),
+        R('^Show .*', '^.* (보이기|표시)', 'Show ...', '... 보이기(표시)'),
+        R('^Hide .*', '^.* 숨기기', 'Hide ...', '... 숨기기'),
        ]
 
 def normalize_msg(msg):
@@ -24,7 +24,7 @@ def normalize_msg(msg):
             msg = msg[:-4]
     except:
         pass
-    msg = string.replace(msg, '_', '')
+    msg = msg.replace('_', '')
     return msg
 
 class CommonLabelsCheck(BaseCheck):
@@ -40,9 +40,9 @@ class CommonLabelsCheck(BaseCheck):
                                  '.gschema' in entry.references[0]):
             return False
 
-        words = filter(lambda x: len(x), entry.msgid.split(' '))
+        words = [x for x in entry.msgid.split(' ') if len(x)]
         # 모든 단어가 대문자로 시작하면 레이블
-        if string.join([x[0] for x in words], '').isupper():
+        if ''.join([x[0] for x in words]).isupper():
             return True
         # 단축키가 있으면 
         if '_' in entry.msgid:

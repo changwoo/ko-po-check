@@ -46,7 +46,7 @@ class catalog:
         self.language = 'ko'
     def add_entry(self,entry):
         if (entry.msgid == ''):         # header entry
-            a = string.split(entry.msgstr, '\n')
+            a = entry.msgstr.split('\n')
             for l in a:
                 if len(l) == 0:
                     continue

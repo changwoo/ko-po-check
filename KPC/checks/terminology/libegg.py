@@ -101,7 +101,7 @@ class LibeggCheck(BaseCheck):
     def check(self, entry):
         for d in data:
             ref = d['ref']
-            if filter(lambda x: (d['ref']+':') in x, entry.references):
+            if [x for x in entry.references if (d['ref']+':') in x]:
                 if entry.msgid == d['msgid'] and entry.msgstr != d['msgstr']:
                     return [Error(self.errstr % d['msgstr'])]
         return []

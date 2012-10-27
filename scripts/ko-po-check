@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import sys
-reload(sys)
+#reload(sys)
 import locale
-sys.setdefaultencoding(locale.getpreferredencoding())
+#sys.setdefaultencoding(locale.getpreferredencoding())
 
 import os,getopt,string
 
@@ -17,8 +17,8 @@ LONG_OPTIONS = ['help', 'version', 'filters=', 'list']
 
 try:
     options, args = getopt.getopt(sys.argv[1:], SHORT_OPTIONS, LONG_OPTIONS)
-except getopt.GetoptError, msg:
-    print "%s: %s" % (sys.argv[0], msg)
+except getopt.GetoptError as msg:
+    print("%s: %s" % (sys.argv[0], msg))
     sys.exit(1)
 
 option_help = 0
@@ -31,7 +31,7 @@ for (opt, val) in options:
     elif opt == '--version':
         option_version = 1
     elif opt == '--filters':
-        for m in string.split(val, ','):
+        for m in val.split(','):
             filterenable[m] = 1
     elif opt == '--list':
         option_list = 1
@@ -43,20 +43,20 @@ from KPC import po,poparse,checks
 
 if (option_help):
     helpmsg = [
-        u'Usage: ko-po-check [옵션]... [파일]...<',
-        u'      --help                이 도움말을 표시하고 끝납니다',
-        u'      --version             버전 정보를 표시하고 끝납니다',
-        u'      --filters=..          필터 직접 지정 (디버깅용)',
-        u'      --list                필터 목록을 표시합니다 (디버깅용)',
-        u'',
-        u' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
+        'Usage: ko-po-check [옵션]... [파일]...<',
+        '      --help                이 도움말을 표시하고 끝납니다',
+        '      --version             버전 정보를 표시하고 끝납니다',
+        '      --filters=..          필터 직접 지정 (디버깅용)',
+        '      --list                필터 목록을 표시합니다 (디버깅용)',
+        '',
+        ' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
     for l in helpmsg:
-        print l
+        print(l)
     sys.exit(1)
 
 if (option_version):
     from KPC.config import VERSION
-    print (u'ko-po-check %s' % VERSION)
+    print(('ko-po-check %s' % VERSION))
     sys.exit(0)
     
 import glob
@@ -66,9 +66,9 @@ filters = {}
 for filename in filenames:
     if not filename.split(os.sep)[-1].startswith('_'):
         f = {}
-        execfile(filename, f)
+        exec(compile(open(filename, 'rb').read(), filename, 'exec'), f)
         if filterenable:
-            if filterenable.has_key(f['name']):
+            if f['name'] in filterenable:
                 filters[f['name']] = f
         else:
             filters[f['name']] = f
@@ -76,9 +76,9 @@ for filename in filenames:
 if option_list:
     for name in sorted(filters.keys()):
         try:
-            print "%s: %s" % (name, filters[name]['description'])
+            print("%s: %s" % (name, filters[name]['description']))
         except:
-            print 'BUG: "%s"에 description 필드가 없습니다' % name
+            print('BUG: "%s"에 description 필드가 없습니다' % name)
     sys.exit(0)
 
 retval = 0
@@ -90,8 +90,8 @@ for fn in args:
 
     try:
         catalog = poparse.parse_file(fp)
-    except poparse.ParseError, lineno:
-        print (u'%s:%d: 파싱 오류'%(fn,lineno))
+    except poparse.ParseError as err:
+        print(('%s:%d: 파싱 오류' % (fn, err.lineno)))
         sys.exit(1)
     if fn != '-':
         fp.close()
@@ -106,8 +106,8 @@ for fn in args:
                 checker = filters[filtername]['checker']
                 errors = checker.check(entry)
                 for e in errors:
-                    print (u'%s:%d: %s'%(fn,entry.msgstr_lineno,e.message))
+                    print(('%s:%d: %s'%(fn,entry.msgstr_lineno,e.message)))
             except KeyError:
-                print 'BUG: "%s"에 checker 필드가 없습니다' % filtername
+                print('BUG: "%s"에 checker 필드가 없습니다' % filtername)
 
 sys.exit(retval)

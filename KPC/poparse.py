@@ -6,9 +6,15 @@
 __all__ = ['parse_file', 'parse_entry', 'ParseError',
            'FUZZY', 'OBSOLETE', 'C_FORMAT', 'NO_C_FORMAT', 'NO_WRAP']
 
-import po,re,string
+import KPC.po as po
+import re
+import string
 
-ParseError = 'ParseError'
+class ParseError(Exception):
+    def __init__(self, lineno=-1):
+        self.lineno = lineno
+    def __str__(self):
+        return 'lineno: %d' % self.lineno
 
 def c2rawstring(str):
     return eval('"'+str+'"')
@@ -22,7 +28,7 @@ def parse_file(file):
     try:
         (entry,lineno) = parse_entry(reader,lineno)
     except ParseError:
-        raise ParseError, lineno
+        raise ParseError(lineno)
     catalog.add_entry(entry)
     content_type = catalog.metadata['Content-Type']
     try:
@@ -34,16 +40,16 @@ def parse_file(file):
     while 1:
         try:
             (entry,lineno) = parse_entry(reader,lineno)
-        except ParseError, l:
-            raise ParseError, l
+        except ParseError as err:
+            raise err
         if not entry:
             return catalog
-        try:
-            entry.translator_comment = unicode(entry.translator_comment,charset)
-            entry.msgstr = unicode(entry.msgstr,charset)
-            entry.msgid = unicode(entry.msgid,charset)
-        except:
-            raise ParseError, lineno
+        #try:
+        #    entry.translator_comment = entry.translator_comment.decode(charset)
+        #    entry.msgstr = entry.msgstr.decode(charset)
+        #    entry.msgid = entry.msgid.decode(charset)
+        #except:
+        #    raise ParseError(lineno)
         catalog.add_entry(entry)
 
 STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGCTXT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5,6
@@ -73,14 +79,16 @@ def parse_entry(file,lineno):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 return (None,lineno)    # no more messages -- return nothing
             elif state != STATE_MSGSTR:
-                raise ParseError, lineno        # unexpected EOF
+                print('uhh: %s\n' % line)
+                raise ParseError(lineno)        # unexpected EOF
             else:
                 return (new_entry,lineno)
         if emptyline_re.match(line):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 continue
             elif state != STATE_MSGSTR:
-                raise ParseError, lineno
+                print('blah: %s\n' % line)
+                raise ParseError(lineno)
             else:
                 return (new_entry,lineno)
         if line[-1] == '\n':            # remove the trailing newline
@@ -98,10 +106,10 @@ def parse_entry(file,lineno):
                 new_entry.translator_comment += line[2:] + '\n'
             elif line[1] == ':':
                 state = STATE_ECOMMENT
-                new_entry.references += string.split(line[3:],' ')
+                new_entry.references += line[3:].split(' ')
             elif line[1] == ',':
                 state = STATE_ECOMMENT
-                for flag in string.split(line[3:], ', '):
+                for flag in line[3:].split(', '):
                     if flag == 'c-format':
                         new_entry.set_flag(C_FORMAT)
                     elif flag == 'no-c-format':
@@ -120,13 +128,13 @@ def parse_entry(file,lineno):
                 try:
                     new_entry.msgctxt += read_string(line[8:])
                 except ParseError:
-                    raise ParseError, lineno
+                    raise ParseError(lineno)
             elif line[:7] == 'msgid "':
                 state = STATE_MSGID
                 try:
                     new_entry.msgid += read_string(line[6:])
                 except ParseError:
-                    raise ParseError, lineno
+                    raise ParseError(lineno)
                 new_entry.msgid_lineno = lineno
             elif line[:14] == 'msgid_plural "':
                 state = STATE_MSGID
@@ -147,9 +155,9 @@ def parse_entry(file,lineno):
                 elif state == STATE_MSGCTXT:
                     new_entry.msgctxt += read_string(line)
                 else:
-                    raise ParseError, lineno
+                    raise ParseError(lineno)
             else:
-                raise ParseError, lineno
+                raise ParseError(lineno)
             
     #new_entry.msgid += line
     return (new_entry,lineno)
@@ -162,12 +170,12 @@ def test():
         if fn == '-':
             fp = sys.stdin
         else:
-            fp = open(fn)
+            fp = open(fn, 'rb')
     else:
-        import StringIO
-        fp = StringIO.StringIO(test_input)
+        import io
+        fp = io.StringIO(test_input)
     catalog = parse_file(fp)
-    print str(catalog)
+    print(str(catalog))
 
 if __name__ == '__main__':
     test()

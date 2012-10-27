@@ -6,12 +6,12 @@ import re, string
 from KPC.classes import Error, BaseCheck
 
 tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]
-tags_res = '(' + string.join(tags, '|') + ')'
+tags_res = '(' + '|'.join(tags) + ')'
 re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>')
 group_opentag = 1
 group_opentagname = 2
 
-error_string = u'<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
+error_string = '<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 
 class MarkupPangoCheck(BaseCheck):
     def check(self, entry):

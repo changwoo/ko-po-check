@@ -3,17 +3,17 @@
 import re,string
 from KPC.classes import Error, BaseCheck
 
-chosa_data = [(u'가',u'이',u'이(가)'),
-              (u'를',u'을',u'을(를)'),
-              (u'는',u'은',u'은(는)'),
-              (u'와',u'과',u'과(와)'),
-              (u'로',u'으로',u'(으)로'),
-              (u'로서',u'으로서',u'(으)로서'),
-              (u'로써',u'으로써',u'(으)로써'),
-              (u'로부터',u'으로부터',u'(으)로부터'),
-              (u'라는',u'이라는',u'(이)라는')]
+chosa_data = [('가','이','이(가)'),
+              ('를','을','을(를)'),
+              ('는','은','은(는)'),
+              ('와','과','과(와)'),
+              ('로','으로','(으)로'),
+              ('로서','으로서','(으)로서'),
+              ('로써','으로써','(으)로써'),
+              ('로부터','으로부터','(으)로부터'),
+              ('라는','이라는','(이)라는')]
 format = '%([1-9][0-9]*\$)?[-+ #\'0]*([1-9][0-9]*)?(\.[0-9]+)?((hh|h|j|l|L|ll|q|t|z|Z)?[dioufeEgGaAcCspnmhjlLqtxXzZ1-9]|hh|ll)'
-chosa = '(' + string.join(map(lambda p: p[0]+'|'+p[1], chosa_data),'|') + ')'
+chosa = '(' + '|'.join([p[0]+'|'+p[1] for p in chosa_data]) + ')'
 chosa_re = re.compile('(('+format+'[\'\"]?) ?'+chosa+')(\s|$)')
 
 def chosa_suggest(cho):

@@ -10,7 +10,7 @@ class GnomeCheck(BaseCheck):
         msgstr = entry.msgstr
         if ((msgid[:18] == 'translator_credits' or
              msgid[:18] == 'translator-credits') and
-            (msgstr[:18] == 'translator_credits' or msgstr[:2] == u'번역')):
+            (msgstr[:18] == 'translator_credits' or msgstr[:2] == '번역')):
             return [self.error]
         return []
 

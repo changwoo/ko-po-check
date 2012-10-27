@@ -3,15 +3,15 @@
 import string, re
 from KPC.classes import Error, BaseCheck
 
-typo = '('+string.join([
+typo = '('+'|'.join([
     '밍나합니다',
     '거싱',
     '살마',
     '[가-힣]빈다'
-    ], '|')+')'
+    ])+')'
 
-typo_re = re.compile(typo.decode('utf-8'))
-typo_error = u'\"%s\": 두벌식 오타로 보입니다'
+typo_re = re.compile(typo)
+typo_error = '\"%s\": 두벌식 오타로 보입니다'
 
 class Typo2BulCheck(BaseCheck):
     def check(self, entry):

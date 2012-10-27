@@ -4,15 +4,15 @@ import re
 from KPC.classes import Error, BaseCheck
 
 data = [
-    { 're': re.compile(u'.*[^\.]\.$'),
-      'except': re.compile(u'.*(\)|etc|No|a\.m|p\.m)\.$'),
+    { 're': re.compile('.*[^\.]\.$'),
+      'except': re.compile('.*(\)|etc|No|a\.m|p\.m)\.$'),
       'error':  Error('번역문이 원문과 같이 .으로 끝나야 합니다') },
-    { 're': re.compile(u'.*:$'),
+    { 're': re.compile('.*:$'),
       'error':  Error('번역문이 원문과 같이 :으로 끝나야 합니다') },
-    { 're': re.compile(u'.*[^\s]\.\.\.$'),
-      'except': re.compile(u'.*(etc)\.\.\.$'),
+    { 're': re.compile('.*[^\s]\.\.\.$'),
+      'except': re.compile('.*(etc)\.\.\.$'),
       'error':  Error('번역문이 원문과 같이 ...으로 끝나야 합니다') },
-    { 're': re.compile(u'.*…$'),
+    { 're': re.compile('.*…$'),
       'error':  Error('번역문이 원문과 같이 …으로 끝나야 합니다') },
     ]
     
@@ -25,7 +25,7 @@ class ConsistencyCheck(BaseCheck):
             re = d['re']
             error = d['error']
             if (re.match(msgid) and
-                (not d.has_key('except') or not d['except'].match(msgid)) and
+                ('except' not in d or not d['except'].match(msgid)) and
                 not re.match(msgstr)):
                 errors.append(error)
         return errors

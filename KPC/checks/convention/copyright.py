@@ -7,8 +7,8 @@ class CopyrightCheck(BaseCheck):
     copyright_re = re.compile(r"^([Cc]opyright )?\([Cc]\) ")
     error = Error('copyright notice는 번역하면 안 됩니다')
     def check(self, entry):
-        msgid_lines = string.split(entry.msgid,"\n")
-        msgstr_lines = string.split(entry.msgstr,"\n")
+        msgid_lines = entry.msgid.split('\n')
+        msgstr_lines = entry.msgstr.split('\n')
         for (msgid, msgstr) in zip(msgid_lines, msgstr_lines):
             if self.copyright_re.match(msgid) and msgid != msgstr:
                 return [self.error]

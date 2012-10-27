@@ -13,8 +13,8 @@ from KPC.classes import Error, BaseCheck
 
 known_db_tags = set(['acronym', 'address', 'anchor', 'application', 'citerefentry', 'citetitle', 'city', 'classname', 'command', 'computeroutput', 'country', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'footnoteref', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'interfacename', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'postcode', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'state', 'street', 'subscript', 'superscript', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
 
-tag_error_string = u'XML 태그의 짝이 맞지 않습니다'
-notdb_error_string = u'<%s>: 알려진 DocBook 태그가 아닙니다'
+tag_error_string = 'XML 태그의 짝이 맞지 않습니다'
+notdb_error_string = '<%s>: 알려진 DocBook 태그가 아닙니다'
 
 class NotDocBook(Exception):
     pass
@@ -26,7 +26,7 @@ def check_db_tags(name):
         # gnome-doc-utils magic
         pass
     elif not name in known_db_tags:
-        raise NotDocBook, name
+        raise NotDocBook(name)
 
 def start_element(name,attr):
     check_db_tags(name)
@@ -49,9 +49,9 @@ class MarkupDocbookCheck(BaseCheck):
         parser.UseForeignDTD(True)
         try:
             parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
-        except ExpatError, e:
+        except ExpatError as e:
             return [Error(tag_error_string)]
-        except NotDocBook, e:
+        except NotDocBook as e:
             return [Error(notdb_error_string % e)]
         return []
 

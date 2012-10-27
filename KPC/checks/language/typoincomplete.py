@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import string,re
 from KPC.classes import Error, BaseCheck
 
-typo_re = re.compile(u'([\u3131-\u318E]+)')
-typo_exception_re = re.compile(u'^[\u3131-\u318E]-[\u3131-\u318E]') # gdm
-typo_error = u'\"%s\": 음절이 불완전합니다.  오타로 보입니다'
+typo_re = re.compile('([\u3131-\u318E]+)')
+typo_exception_re = re.compile('^[\u3131-\u318E]-[\u3131-\u318E]') # gdm
+typo_error = '\"%s\": 음절이 불완전합니다.  오타로 보입니다'
 
 class TypoIncompleteCheck(BaseCheck):
     def check(self, entry):

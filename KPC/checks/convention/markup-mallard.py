@@ -71,8 +71,8 @@ known_tags = set([
         'var',
 ])
 
-tag_error_string = u'XML 태그의 짝이 맞지 않습니다'
-unknown_tag_error_string = u'<%s>: 알려진 Mallard 태그가 아닙니다'
+tag_error_string = 'XML 태그의 짝이 맞지 않습니다'
+unknown_tag_error_string = '<%s>: 알려진 Mallard 태그가 아닙니다'
 
 class UnknownTag(Exception):
     pass
@@ -84,7 +84,7 @@ def check_tags(name):
         # gnome-doc-utils magic
         pass
     elif not name in known_tags:
-        raise UnknownTag, name
+        raise UnknownTag(name)
 
 def start_element(name,attr):
     check_tags(name)
@@ -107,9 +107,9 @@ class MarkupMallardCheck(BaseCheck):
         parser.UseForeignDTD(True)
         try:
             parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
-        except ExpatError, e:
+        except ExpatError as e:
             return [Error(tag_error_string)]
-        except UnknownTag, e:
+        except UnknownTag as e:
             return [Error(unknown_tag_error_string % e)]
         return []
 

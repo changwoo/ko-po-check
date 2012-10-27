@@ -15,7 +15,7 @@ class CommonHeaderCheck(HeaderCheck):
         except KeyError:
             pass
         # Language-Team: 쓰지 않았거나 gettext 기본값을 바꾸지 않은 경우
-        if not fields.has_key('Language-Team'):
+        if 'Language-Team' not in fields:
             errmsg = 'Language-Team: 필드가 없습니다. 번역 팀이 따로 없으면 본인 주소를 쓰십시오'
             result.append(Error(errmsg))
         elif fields['Language-Team'] == '':

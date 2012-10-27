@@ -15,11 +15,11 @@ re_accesskey_gnome_unlikely = re.compile('.*[a-zA-Z]_[A-Z].*')
 
 re_accesskey_kde_unlikely = re.compile('.*(&quot;|&amp;|&apos;|&lt;|&gt;).*')
 
-errstr_no_accesskey = u'번역문에 접근키가 없거나 두 개 이상입니다'
-errstr_wrong = u'\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
+errstr_no_accesskey = '번역문에 접근키가 없거나 두 개 이상입니다'
+errstr_wrong = '\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
 
 re_lowercase_accesskey = re.compile('(\([_&][a-z]\))')
-errstr_lowercase = u'\"%s\": 접근키가 소문자입니다'
+errstr_lowercase = '\"%s\": 접근키가 소문자입니다'
 
 class AccessKeyCheck(BaseCheck):
     def check(self, entry):
@@ -44,16 +44,16 @@ class AccessKeyCheck(BaseCheck):
                 return []
 
             if gnome_mo:
-                letter = string.upper(gnome_mo.group(1))
+                letter = gnome_mo.group(1).upper()
             else:
-                letter = string.upper(kde_mo.group(1))
+                letter = kde_mo.group(1).upper()
             # check 1: if it's translated with the access key
             mo = re_accesskey.match(msgstr)
             if not mo:
                 return [Error(errstr_no_accesskey)]
 
             # check 2: check if it's same
-            if letter != string.upper(mo.group(1)):
+            if letter != mo.group(1).upper():
                 return [Error(errstr_wrong % (letter, mo.group(1)))]
 
             # check 3: check if it's uppercase in "(_X)" form
