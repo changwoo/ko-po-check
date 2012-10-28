@@ -5,7 +5,7 @@ ko-po-check - 한국어 PO 파일 검사툴
 
 이 프로그램은 파이썬 3.0 이상에서 동작합니다. 일반적인 파이썬 모듈과
 마찬가지 방법으로 (python setup.py install) 설치할 수 있습니다.
-(http://docs.python.org/inst/inst.html 참고.)
+(http://docs.python.org/3/install/index.html 참고.)
 
 이 프로그램은 GNU General Public License version 3 혹은 그 이후
 버전으로 배포합니다. 정확한 라이선스는 COPYING 파일에서 볼 수
