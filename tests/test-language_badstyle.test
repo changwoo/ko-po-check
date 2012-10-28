@@ -1,0 +1,17 @@
+#!/bin/sh
+
+FILTERS="language/badstyle"
+
+DIR="`dirname $0`"
+NAME="`basename $0 .test`"
+BUILDDIR=`pwd`
+POFILE=$NAME.po
+OUTFILE=$NAME.out
+
+TFM=`mktemp`
+export PYTHONPATH=..
+cat $POFILE | python3 $BUILDDIR/../scripts/ko-po-check --filters="${FILTERS}" - > $TFM
+diff -u $TFM $OUTFILE
+RESULT=$?
+rm -f $TFM
+exit $RESULT
