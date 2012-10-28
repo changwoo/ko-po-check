@@ -7,48 +7,49 @@
 import string
 from KPC.classes import Error, BaseCheck
 
-data = [('properties', '속성'),
-        ('preferences', '기본 설정'),
-        ('about', '정보'),
-        ('find', '찾기'),
-        ('search', '검색'),
-        ('create', '만들기'),
+data = [('about', '정보'),
         ('add', '추가'),
-        ('remove', '제거'),
-        ('edit', '편집'),
-        ('view', '보기'),
+        ('always on top', '항상 위'),
+        ('browse', '찾아보기'),
         ('change', '바꾸기'),
+        ('clear', '지우기'),
+        ('copy', '복사'),
+        ('create', '만들기'),
+        ('cut', '잘라내기'),
         ('delete', '삭제'),
-        ('exit', '끝내기'),
+        ('display', '표시'),
+        ('edit', '편집'),
+        ('exit', '나가기'),
+        ('find', '찾기'),
+        ('go', '이동'),
+        ('hide', '숨기기'),
+        ('location', '위치'),
         ('log in', '로그인'),
         ('log out', '로그아웃'),
-        ('run', '실행'),
-        ('open', '열기'),
-        ('save', '저장'),
-        ('save as', '다른 이름으로 저장'),
-        ('always on top', '항상 위'),
-        ('previous', '이전'),
+        ('modify', '수정'),
+        ('name', '이름'),
         ('next', '다음'),
-        ('copy', '복사'),
-        ('cut', '잘라내기'),
+        ('no', '아니요'),
+        ('open', '열기'),
         ('paste', '붙여넣기'),
-        ('location', '위치'),
+        ('preferences', '기본 설정'),
+        ('previous', '이전'),
+        ('properties', '속성'),
+        ('quit', '끝내기'),
+        ('refresh', '새로 고침'),
+        ('reload', '다시 읽기'),
+        ('remove', '제거'),
+        ('replace', '바꾸기'),
+        ('run', '실행'),
+        ('save as', '다른 이름으로 저장'),
+        ('save', '저장'),
+        ('search', '검색'),
+        ('show', '보이기'),
         ('statusbar', '상태 표시줄'),
+        ('template', '서식'),
+        ('view', '보기'),
         ('zoom in', '확대'),
         ('zoom out', '축소'),
-        ('browse', '찾아보기'),
-        ('go', '이동'),
-        ('name', '이름'),
-        ('display', '표시'),
-        ('clear', '지우기'),
-        ('modify', '수정'),
-        ('replace', '바꾸기'),
-        ('template', '서식'),
-        ('reload', '다시 읽기'),
-        ('refresh', '새로 고침'),
-        ('show', '보이기'),
-        ('hide', '숨기기'),
-        ('no', '아니요'),
         ]
 
 def normalize_msgid(msgid):
@@ -66,9 +67,9 @@ def make_msgstr(msgstr,mnemonic,dots):
 
 def find_mnemonic(msgid):
     try:
-        i = string.index(msgid,'_')
-        return string.upper(msgid[i+1])
-    except:
+        i = msgid.index('_')
+        return msgid[i+1].upper()
+    except ValueError:
         return None
     
 class GnomeUICheck(BaseCheck):
