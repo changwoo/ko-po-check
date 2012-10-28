@@ -104,10 +104,11 @@ for fn in args:
         for filtername in sorted(filters.keys()):
             try:
                 checker = filters[filtername]['checker']
-                errors = checker.check(entry)
-                for e in errors:
-                    print(('%s:%d: %s'%(fn,entry.msgstr_lineno,e.message)))
             except KeyError:
                 print('BUG: "%s"에 checker 필드가 없습니다' % filtername)
+
+            errors = checker.check(entry)
+            for e in errors:
+                print(('%s:%d: %s'%(fn,entry.msgstr_lineno,e.message)))
 
 sys.exit(retval)
