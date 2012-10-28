@@ -102,6 +102,6 @@ class SpellCheck(BaseCheck):
                     break;
         return errors
 
-name = "language/spell"
+name = 'language/spell'
 description = '흔히 하는 맞춤법 오류를 찾아냅니다'
 checker = SpellCheck()

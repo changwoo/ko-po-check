@@ -10,11 +10,11 @@ class KDECheck(BaseCheck):
         msgid = entry.msgid
         msgstr = entry.msgstr
         msgctxt = entry.msgctxt
-        if msgctxt == "NAME OF TRANSLATORS":
+        if msgctxt == 'NAME OF TRANSLATORS':
             # msgid "Your names"
             if '이름' in msgstr or '성함' in msgstr:
                 return [self.name_error]
-        elif msgctxt == "EMAIL OF TRANSLATORS":
+        elif msgctxt == 'EMAIL OF TRANSLATORS':
             # msgid "Your emails"
             if '메일' in msgstr or '편지' in msgstr:
                 return [self.email_error]

@@ -7,8 +7,8 @@ from KPC.classes import Error, BaseCheck
 
 data = [
     {'ref': 'eggdesktopfile.c',
-     'msgid': "File is not a valid .desktop file",
-     'msgstr': "올바른 .desktop 파일이 아닙니다"},
+     'msgid': 'File is not a valid .desktop file',
+     'msgstr': '올바른 .desktop 파일이 아닙니다'},
 
     {'ref': 'eggdesktopfile.c',
      'msgid': 'Unrecognized desktop file Version \'%s\'',
@@ -63,36 +63,36 @@ data = [
      'msgstr': '세션 관리 옵션을 표시합니다'},
 
     {'ref': 'egg-editable-toolbar.c',
-     'msgid': "Show “_%s”",
-     'msgstr': "“_%s” 보이기"},
+     'msgid': 'Show “_%s”',
+     'msgstr': '“_%s” 보이기'},
 
     {'ref': 'egg-editable-toolbar.c',
-     'msgid': "_Move on Toolbar",
-     'msgstr': "도구 모음에서 옮기기(_M)"},
+     'msgid': '_Move on Toolbar',
+     'msgstr': '도구 모음에서 옮기기(_M)'},
 
     {'ref': 'egg-editable-toolbar.c',
-     'msgid': "Move the selected item on the toolbar",
-     'msgstr': "도구 모음에서 선택한 항목을 옮깁니다"},
+     'msgid': 'Move the selected item on the toolbar',
+     'msgstr': '도구 모음에서 선택한 항목을 옮깁니다'},
 
      {'ref': 'egg-editable-toolbar.c',
-      'msgid': "_Remove from Toolbar",
-      'msgstr': "도구 모음에서 제거(_R)"},
+      'msgid': '_Remove from Toolbar',
+      'msgstr': '도구 모음에서 제거(_R)'},
 
      {'ref': 'egg-editable-toolbar.c',
-      'msgid': "Remove the selected item from the toolbar",
-      'msgstr': "도구 모음에서 선택한 항목을 제거합니다"},
+      'msgid': 'Remove the selected item from the toolbar',
+      'msgstr': '도구 모음에서 선택한 항목을 제거합니다'},
 
      {'ref': 'egg-editable-toolbar.c',
-      'msgid': "_Delete Toolbar",
-      'msgstr': "도구 모음 삭제(_D)"},
+      'msgid': '_Delete Toolbar',
+      'msgstr': '도구 모음 삭제(_D)'},
 
      {'ref': 'egg-editable-toolbar.c',
-      'msgid': "Remove the selected toolbar",
-      'msgstr': "선택한 도구 모음을 제거합니다"},
+      'msgid': 'Remove the selected toolbar',
+      'msgstr': '선택한 도구 모음을 제거합니다'},
 
      {'ref': 'egg-editable-toolbar.c',
-      'msgid': "Separator",
-      'msgstr': "구분선"},
+      'msgid': 'Separator',
+      'msgstr': '구분선'},
 
     ]
 

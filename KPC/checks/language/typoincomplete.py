@@ -23,6 +23,6 @@ class TypoIncompleteCheck(BaseCheck):
                 break;
         return errors
 
-name = "language/typoincomplete"
+name = 'language/typoincomplete'
 description = '오타로 보이는 불완전한 음절을 찾아냅니다'
 checker = TypoIncompleteCheck()
