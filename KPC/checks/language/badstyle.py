@@ -24,6 +24,26 @@ data = [
       'error': '%s: 불필요한 복수형 표현',
       'except': R(PLURAL_EXCEPT),
       },
+
+    # ...하기 위하여/위해 => ...하려면
+    { 're': R('[\uac00-\ud7a3]+기 위(하여|해)'),
+      'error': '%s: 어색한 표현. "-하려면"과 같이 쓰십시오.',
+    },
+
+    # ...와 함께
+    { 're': R('\S+와 함께'),
+      'error': '%s: 어색한 표현. 풀어서 써 보십시오.',
+    },
+
+    # ...에 의해
+    { 're': R('\S+에 의해'),
+      'error': '%s: 어색한 표현. 수동태 문장을 바꿔 보십시오.',
+    },
+
+    # 필요로 하다
+    { 're': R('필요로 하\S+'),
+      'error': '%s: 어색한 표현. "필요하다"와 같이 간결히 쓰십시오.',
+    },
 ]
 
 class BadStyleCheck(BaseCheck):
@@ -34,10 +54,10 @@ class BadStyleCheck(BaseCheck):
         for entry in data:
             r = entry['re']
             errmsg = entry['error']
-            e = entry['except']
-
             mo = r.search(msgstr)
-            if mo and not e.match(mo.group(0)):
+            if mo:
+                if ('except' in entry) and entry['except'].match(mo.group(0)):
+                    continue
                 errors.append(Error(errmsg % mo.group(0)))
         return errors
 

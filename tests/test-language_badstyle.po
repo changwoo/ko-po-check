@@ -27,3 +27,20 @@ msgstr "이것은 뭐시기거시기들을 뭐뭐한다"
 msgid "turn the handle"
 msgstr "핸들을 돌려"
 
+# ...하기 위해
+msgid "do something to do what"
+msgstr "뭐하기 위해 뭐합니다"
+
+# ...와 함께
+msgid "do it with something"
+msgstr "무언가와 함께 뭐하십시오"
+
+# ...에 의해
+msgid "done by something"
+msgstr "무언가에 의해 됐습니다"
+
+# 필요로 하다
+msgid "this needs something"
+msgstr "이것이 무언가를 필요로 합니다"
+
+
