@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# terminology/gnomeui
+# terminology/desktop-commons
 
 # UI 나타나는 전형적인 단어들의 전형적인 번역 확인.  지정한 번역이
 # 아니면 애러를 리턴한다.  번역 일관성 유지를 위한 검사.
@@ -72,7 +72,7 @@ def find_mnemonic(msgid):
     except ValueError:
         return None
     
-class GnomeUICheck(BaseCheck):
+class DesktopCommonsCheck(BaseCheck):
     errstr = '%s: 다음과 같이 번역해야 합니다: \"%s\"'
 
     def check(self, entry):
@@ -90,6 +90,6 @@ class GnomeUICheck(BaseCheck):
                     errors.append(Error(self.errstr % (msgstr, good_msgstr)))
         return errors
 
-name = 'terminology/gnomeui'
-description = '지정한 그놈 데스크톱 용어로 번역했는지 검사합니다'
-checker = GnomeUICheck()
+name = 'terminology/desktop-commons'
+description = '많이 사용되는 데스크톱 용어를 일관적으로 번역했는지 검사합니다'
+checker = DesktopCommonsCheck()

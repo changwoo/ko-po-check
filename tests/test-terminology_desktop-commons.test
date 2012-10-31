@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="terminology/gnomeui"
+FILTERS="terminology/desktop-commons"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"
