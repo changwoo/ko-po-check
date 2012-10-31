@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="terminology/gnomeguide"
+FILTERS="terminology/word-guide"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"

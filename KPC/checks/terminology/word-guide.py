@@ -86,8 +86,8 @@ data = [
         ('windows', '윈도우', '윈도우즈'),
         ]
 
-class GnomeGuideCheck(BaseCheck):
-    errstr = '%s: 그놈 데스크톱에서 \"%s\"은(는) \"%s\"(이)라고 번역'
+class WordGuideCheck(BaseCheck):
+    errstr = '%s: \"%s\"은(는) \"%s\"(이)라고 번역하길 제안합니다'
     def check(self, entry):
         msgid = entry.msgid
         msgstr = entry.msgstr
@@ -98,6 +98,6 @@ class GnomeGuideCheck(BaseCheck):
                 errors.append(Error(self.errstr % (wrong, id, right.strip())))
         return errors
 
-name = 'terminology/gnomeguide'
-description = '잘못 번역된 그놈 데스크톱 용어를 검사합니다'
-checker = GnomeGuideCheck()
+name = 'terminology/word-guide'
+description = '바람직하지 않은 번역 용어를 검사합니다'
+checker = WordGuideCheck()
