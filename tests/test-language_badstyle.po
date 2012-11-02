@@ -43,4 +43,12 @@ msgstr "무언가에 의해 됐습니다"
 msgid "this needs something"
 msgstr "이것이 무언가를 필요로 합니다"
 
+# ...할 것입니다
+msgid "this will do something"
+msgstr "무언가를 해버릴 것입니다"
+
+# ...하시기 바랍니다
+msgid "Please do blahblah"
+msgstr "블라블라 하시기 바랍니다"
+
 
