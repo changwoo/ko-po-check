@@ -81,3 +81,17 @@ msgstr "10.0 %Y-%b-%d"
 
 msgid "10.1 %d-%b-%Y"
 msgstr "10.1 %Y-%m-%d"
+
+# 요일 24시각
+msgid "11.0 %a %R"
+msgstr "11.0 %a %R"
+
+msgid "11.1 %a %R"
+msgstr "11.1 (%a) %R"
+
+# 요일 시각 오전/오후
+msgid "12.0 %a %l:%M %p"
+msgstr "12.0 %a %p %l:%M"
+
+msgid "12.1 %a %l:%M %p"
+msgstr "12.1 (%a) %p %l:%M"
