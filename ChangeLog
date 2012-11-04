@@ -1,3 +1,237 @@
+commit d8e2b58386fd923071c987b61f14df875d93605d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 3 01:48:58 2012 +0900
+
+    language/badstyle: 번역체 추가
+    
+    - ...할 것입니다 (will의 기계적 번역)
+    - ...하시기 바랍니다 (please의 기계적 번역)
+
+ KPC/checks/language/badstyle.py  |   13 +++++++++++++
+ tests/test-language_badstyle.out |    2 ++
+ tests/test-language_badstyle.po  |    8 ++++++++
+ 3 files changed, 23 insertions(+)
+
+commit b8787881fb0a6280a5191493cc2006dcbe8a62c4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Nov 3 00:50:20 2012 +0900
+
+    convention/strftime: 날짜/시각 형식 추가
+    
+    - 요일 시각 "%a %R"
+    - 요일 시각 오전/오후 "%a %I:%M %p"
+
+ KPC/checks/convention/strftime.py  |   16 +++++++++++++---
+ tests/test-convention_strftime.out |    2 ++
+ tests/test-convention_strftime.po  |   14 ++++++++++++++
+ 3 files changed, 29 insertions(+), 3 deletions(-)
+
+commit adabff4deb2f6264cbf8067536afafc1c7894511
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Thu Nov 1 00:50:47 2012 +0900
+
+    Use markdown
+
+ README    |   45 ---------------------------------------------
+ README.md |   45 +++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 45 insertions(+), 45 deletions(-)
+
+commit 08b5f884c05d10568f088e4c941f4ea6c7baf244
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Oct 31 23:43:11 2012 +0900
+
+    terminology/desktop-commons: gnomeui에서 이름 변경
+    
+    그놈 데스크톱에만 한정된 용도라는 오해 방지
+
+ KPC/checks/terminology/desktop-commons.py   |   95 +++++++++++++++++++++++++++
+ KPC/checks/terminology/gnomeui.py           |   95 ---------------------------
+ tests/test-terminology_desktop-commons.out  |    2 +
+ tests/test-terminology_desktop-commons.po   |   22 +++++++
+ tests/test-terminology_desktop-commons.test |   17 +++++
+ tests/test-terminology_gnomeui.out          |    2 -
+ tests/test-terminology_gnomeui.po           |   22 -------
+ tests/test-terminology_gnomeui.test         |   17 -----
+ 8 files changed, 136 insertions(+), 136 deletions(-)
+
+commit f8f1f1452b8d24bd62eaf7960209a41b65b53b19
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Oct 31 23:35:57 2012 +0900
+
+    terminology/word-guide: gnomeguide에서 이름 변경
+    
+    그놈 데스크톱에만 한정된 용도라는 오해 방지
+
+ KPC/checks/terminology/gnomeguide.py   |  103 ------------------------------
+ KPC/checks/terminology/word-guide.py   |  103 ++++++++++++++++++++++++++++++
+ tests/test-terminology_gnomeguide.out  |   15 -----
+ tests/test-terminology_gnomeguide.po   |  109 --------------------------------
+ tests/test-terminology_gnomeguide.test |   17 -----
+ tests/test-terminology_word-guide.out  |   15 +++++
+ tests/test-terminology_word-guide.po   |  109 ++++++++++++++++++++++++++++++++
+ tests/test-terminology_word-guide.test |   17 +++++
+ 8 files changed, 244 insertions(+), 244 deletions(-)
+
+commit 50c02a011247637a2a2b1f5163150f9d805e367d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 17:57:50 2012 +0900
+
+    language/badstyle: 번역체 표현 더 추가
+
+ KPC/checks/language/badstyle.py  |   26 +++++++++++++++++++++++---
+ tests/test-language_badstyle.out |    3 +++
+ tests/test-language_badstyle.po  |   17 +++++++++++++++++
+ 3 files changed, 43 insertions(+), 3 deletions(-)
+
+commit 9c6182b1f31e80d91b8819010731054e70964107
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 03:59:15 2012 +0900
+
+    Clean up
+    
+    - python3 command in README
+    - Use single quotes only for Python strings
+
+ KPC/checks/convention/copyright.py    |    2 +-
+ KPC/checks/convention/kde.py          |    4 ++--
+ KPC/checks/language/spell.py          |    2 +-
+ KPC/checks/language/typoincomplete.py |    2 +-
+ KPC/checks/terminology/libegg.py      |   36 ++++++++++++++++-----------------
+ README                                |    2 +-
+ 6 files changed, 24 insertions(+), 24 deletions(-)
+
+commit 8f4a75a185752384ddd153c3a28d40af39e5e755
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 03:18:17 2012 +0900
+
+    terminology/gnomeui: test case 바로잡음
+
+ tests/test-terminology_gnomeui.out |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d0eb54913a74fc3f1311f93f85db6089060edde5
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 02:31:44 2012 +0900
+
+    language/badstyle: 번역체 등 바람직하지 못한 스타일의 번역 검색
+    
+    - 불필요한 복수형 표현 추가
+
+ KPC/checks/language/badstyle.py   |   46 +++++++++++++++++++++++++++++++++++++
+ tests/test-language_badstyle.out  |    3 +++
+ tests/test-language_badstyle.po   |   29 +++++++++++++++++++++++
+ tests/test-language_badstyle.test |   17 ++++++++++++++
+ 4 files changed, 95 insertions(+)
+
+commit ab49fb7409ae4022c4ca241e8700828055b00fcc
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 02:29:16 2012 +0900
+
+    필요한 항목이 잘못된 필터와 필터의 check()에서 발생한 KeyError 예외 구분
+
+ scripts/ko-po-check |    7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit 1e9536aa6daf9f9a7c9d417d5b4aa9245378277e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 01:58:54 2012 +0900
+
+    terminology/gnomeui: test case 추가
+
+ tests/test-terminology_gnomeui.out  |    2 ++
+ tests/test-terminology_gnomeui.po   |   22 ++++++++++++++++++++++
+ tests/test-terminology_gnomeui.test |   17 +++++++++++++++++
+ 3 files changed, 41 insertions(+)
+
+commit d6b4ce07d26d6aef6143788d213fd9b88ebef774
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 01:44:59 2012 +0900
+
+    python3에 대한 문서 URL로 수정
+
+ README |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit df689a4fce778883be9aea705ed1dd2979cc537f
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Oct 29 01:44:01 2012 +0900
+
+    terminology/gnomeguide: "exit" terminology/gnomeui와 일관성
+
+ KPC/checks/terminology/gnomeguide.py |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6ff95ceb708034c7e9357c8416bc32213032345b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 28 22:19:04 2012 +0900
+
+    python3 fix - string.index() / string.upper()
+
+ KPC/checks/terminology/gnomeui.py |   71 +++++++++++++++++++------------------
+ 1 file changed, 36 insertions(+), 35 deletions(-)
+
+commit 3b0d68df3bde3a06f95b17e109c5bf0ec91d0783
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 28 07:18:38 2012 +0900
+
+    python3 migration
+
+ .gitignore                                 |    3 +-
+ KPC/checks/convention/accesskey.py         |   12 +--
+ KPC/checks/convention/common-header.py     |    2 +-
+ KPC/checks/convention/copyright.py         |    4 +-
+ KPC/checks/convention/gnome.py             |    2 +-
+ KPC/checks/convention/header-comment.py    |    2 +-
+ KPC/checks/convention/kde.py               |    4 +-
+ KPC/checks/convention/markup-docbook.py    |   10 +-
+ KPC/checks/convention/markup-mallard.py    |   10 +-
+ KPC/checks/convention/markup-pango.py      |    4 +-
+ KPC/checks/language/chosaalternative.py    |   20 ++--
+ KPC/checks/language/consistency.py         |   14 +--
+ KPC/checks/language/punctuation.py         |    2 +-
+ KPC/checks/language/spell.py               |  120 ++++++++++-----------
+ KPC/checks/language/typo2bul.py            |    8 +-
+ KPC/checks/language/typoincomplete.py      |    7 +-
+ KPC/checks/terminology/common-labels.py    |   12 +--
+ KPC/checks/terminology/gnomeguide.py       |  160 ++++++++++++++--------------
+ KPC/checks/terminology/gnomeui.py          |   86 +++++++--------
+ KPC/checks/terminology/libegg.py           |    2 +-
+ KPC/po.py                                  |    2 +-
+ KPC/poparse.py                             |   54 ++++++----
+ README                                     |    7 +-
+ scripts/ko-po-check                        |   46 ++++----
+ tests/test-convention_accesskey.test       |    2 +-
+ tests/test-convention_common-header.test   |    2 +-
+ tests/test-convention_copyright.test       |    2 +-
+ tests/test-convention_gnome-team.test      |    2 +-
+ tests/test-convention_gnome.test           |    2 +-
+ tests/test-convention_header-comment.test  |    2 +-
+ tests/test-convention_kde.test             |    2 +-
+ tests/test-convention_markup-docbook.test  |    2 +-
+ tests/test-convention_markup-mallard.test  |    2 +-
+ tests/test-convention_markup-pango.test    |    2 +-
+ tests/test-convention_strftime.test        |    2 +-
+ tests/test-language_chosa-alternative.test |    2 +-
+ tests/test-language_consistency.test       |    2 +-
+ tests/test-language_punctuation.test       |    2 +-
+ tests/test-language_spell.test             |    2 +-
+ tests/test-language_spell_1.test           |    2 +-
+ tests/test-language_spell_2.test           |    2 +-
+ tests/test-language_typo2bul.test          |    2 +-
+ tests/test-language_typoincomplete.test    |    2 +-
+ tests/test-terminology_common-labels.test  |    2 +-
+ tests/test-terminology_gnomeguide.test     |    2 +-
+ 45 files changed, 322 insertions(+), 313 deletions(-)
+
+commit 2c48afafac33d3d1b4e43b0c36ea1b2309f8b48d
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Oct 28 05:57:18 2012 +0900
+
+    Update ChangeLog
+
+ ChangeLog |  264 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 264 insertions(+)
+
 commit b50393e1089977c757ad33d941391d03ce65ea1c
 Author: Changwoo Ryu <cwryu@debian.org>
 Date:   Sun Oct 28 05:56:32 2012 +0900

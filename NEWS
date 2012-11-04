@@ -1,5 +1,29 @@
 -*-outline-*-
 
+버전 0.95.0
+-----------
+
+* 이제부터 Python 버전 3.x 사용
+
+* 새로운 검사 규칙
+
+** language/badstyle: 번역체 등 바람직하지 못한 스타일의 번역 검색
+
+* 개선
+
+** terminology/word-guide: gnomeguide에서 이름 변경. 그놈 전용이라는 오해 방지.
+
+** terminology/word-guide: 용어 업데이트
+
+** terminology/desktop-commons: gnomeui에서 이름 변경.  그놈 전용이라는 오해 방지.
+
+** convention/strftime: 날짜/시각 형식 추가
+
+* 기타
+
+** terminology/desktop-commons: test case 추가
+
+
 버전 0.94.2
 -----------
 
