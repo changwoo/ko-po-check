@@ -51,4 +51,6 @@ msgstr "무언가를 해버릴 것입니다"
 msgid "Please do blahblah"
 msgstr "블라블라 하시기 바랍니다"
 
-
+# 몇개의 아무개
+msgid "Copying %d files"
+msgstr "%d개의 파일을 복사 중"
