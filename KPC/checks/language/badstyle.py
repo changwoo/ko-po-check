@@ -14,6 +14,8 @@ PLURAL_EXCEPT = '(' + '핸들' + PLURAL_JOSA_RE + ')'
 
 SYLLABLE_WITH_T_RIEUL = '[%s]' % ''.join([chr(c) for c in
                                           range(0xAC00 + 8, 0xD7A4, 28)])
+SYLLABLE_WITH_T_SSANGSIOS = '[%s]' % ''.join([chr(c) for c in
+                                              range(0xAC00 + 0x14, 0xD7A4, 28)])
 
 data = [
     # 임의의 복수형 표현을 찾아내기는 매우 힘들다. 다음 휴리스틱으로만 검사.
@@ -48,9 +50,16 @@ data = [
       'error': '%s: 어색한 표현. "필요하다"와 같이 간결히 쓰십시오.',
     },
 
+    # 필요가 있다
+    { 're': R('필요가 있\S+'),
+      'error': '%s: 어색한 표현. "...해야 합니다"와 같이 간결히 쓰십시오.',
+    },
+
     # ...할 것입니다
     { 're': R('\S+' + SYLLABLE_WITH_T_RIEUL + ' 것입니다'),
       'error': '%s: 어색한 표현. "...합니다"와 같이 간결히 쓰십시오.',
+      # 과거형인 "-했을 것입니다"는 예외
+      'except': R('\S+' + SYLLABLE_WITH_T_SSANGSIOS + '을 것입니다'),
     },
 
     # ...하시기 바랍니다 것입니다

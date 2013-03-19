@@ -47,6 +47,10 @@ msgstr "이것이 무언가를 필요로 합니다"
 msgid "this will do something"
 msgstr "무언가를 해버릴 것입니다"
 
+# 예외: 과거형
+msgid "this will do something"
+msgstr "무언가가 잘못됐을 것입니다"
+
 # ...하시기 바랍니다
 msgid "Please do blahblah"
 msgstr "블라블라 하시기 바랍니다"
