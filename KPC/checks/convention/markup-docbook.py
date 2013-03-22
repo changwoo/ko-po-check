@@ -29,7 +29,6 @@ def check_db_tags(name):
         # newer gnome-doc-utils magic
         pass
     elif not name in known_db_tags:
-        print("name: %s\n" % name)
         raise NotDocBook(name)
 
 def start_element(name,attr):
