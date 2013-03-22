@@ -81,7 +81,10 @@ def check_tags(name):
     if name == 'KPC_DummyTag':
         pass
     elif name[:12] == 'placeholder-':
-        # gnome-doc-utils magic
+        # old gnome-doc-utils magic
+        pass
+    elif name[:7] == '_:item-' or name[:7] == '_:link-':
+        # newer gnome-doc-utils magic
         pass
     elif not name in known_tags:
         raise UnknownTag(name)
