@@ -58,3 +58,7 @@ msgstr "블라블라 하시기 바랍니다"
 # 몇개의 아무개
 msgid "Copying %d files"
 msgstr "%d개의 파일을 복사 중"
+
+# ...을 포함
+msgid "It has something containing another"
+msgstr "다른 무언가를 포함하는 무언가가 있습니다"
