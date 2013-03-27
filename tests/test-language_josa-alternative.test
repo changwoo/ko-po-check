@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="language/chosa-alternative"
+FILTERS="language/josa-alternative"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"
