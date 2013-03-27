@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import string
 
-FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,NO_WRAP = 1,2,4,8,16
+FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,PYTHON_FORMAT,NO_WRAP = 1,2,4,8,16,32
 
 class entry:
     def __init__(self):
@@ -33,6 +33,8 @@ class entry:
         return (self.flag & C_FORMAT)
     def is_no_c_format(self):
         return (self.flag & NO_C_FORMAT)
+    def is_python_format(self):
+        return (self.flag & PYTHON_FORMAT)
     def is_no_wrap(self):
         return (self.flag & NO_WRAP)
     def __repr__(self):

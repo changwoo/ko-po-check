@@ -12,9 +12,12 @@ josa_data = [('가','이','이(가)'),
               ('로써','으로써','(으)로써'),
               ('로부터','으로부터','(으)로부터'),
               ('라는','이라는','(이)라는')]
-format = '%([1-9][0-9]*\$)?[-+ #\'0]*([1-9][0-9]*)?(\.[0-9]+)?((hh|h|j|l|L|ll|q|t|z|Z)?[dioufeEgGaAcCspnmhjlLqtxXzZ1-9]|hh|ll)'
-josa = '(' + '|'.join([p[0]+'|'+p[1] for p in josa_data]) + ')'
-josa_re = re.compile('(('+format+'[\'\"]?) ?'+josa+')(\s|$)')
+c_format = '%(?:[1-9][0-9]*\$)?[-+ #\'0]*(?:[1-9][0-9]*)?(?:\.[0-9]+)?(?:(?:hh|h|j|l|L|ll|q|t|z|Z)?[dioufeEgGaAcCspnmhjlLqtxXzZ1-9]|hh|ll)'
+py_format = '%(?:\([A-Za-z]\w+\))?[#-0\ +]*(?:[0-9]+|\*)?(?:\.[0-9]+)?[hlL]?[diouxXeEfFgGcrs]'
+
+josa = '(?:' + '|'.join([p[0]+'|'+p[1] for p in josa_data]) + ')'
+josa_c_re = re.compile('('+c_format+'[\'\"]?) ?('+josa+')(?:\s|$)')
+josa_py_re = re.compile('('+py_format+'[\'\"]?) ?('+josa+')(?:\s|$)')
 
 def josa_suggest(cho):
     for (a,b,s) in josa_data:
@@ -25,13 +28,19 @@ def josa_suggest(cho):
 class JosaAlternativeCheck(BaseCheck):
     errstr = '\"%s\": 받침에 따른 조사 구별이 없습니다. \'%s\''
     def check(self, entry):
+        if entry.is_c_format():
+            josa_re = josa_c_re
+        elif entry.is_python_format():
+            josa_re = josa_py_re
+        else:
+            return []
         msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         while True:
             mo = josa_re.search(msgstr)
-            if mo and (mo.end() >= len(msgstr) or msgstr[mo.end()] != '('):
-                sug = mo.group(2) + josa_suggest(mo.group(8))
+            if mo:
+                sug = mo.group(1) + josa_suggest(mo.group(2))
                 errors.append(Error(self.errstr % (mo.group(1), sug)))
                 msgstr = msgstr[mo.end():]
             else:

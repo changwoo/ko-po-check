@@ -17,34 +17,40 @@ msgstr ""
 
 # E:조사 구별하지 않은 경우
 #: test.c:2
+#, c-format
 msgid "%s is ..."
 msgstr "%s는 ..."
 
 # E:조사 구별하지 않은 경우
 # - 따옴표와 같이 쓴 경우
 #: test.c:2
+#, c-format
 msgid "'%s' is ..."
 msgstr "'%s'는 ..."
 
 # E:조사 구별하지 않은 경우
 # - 띄어 쓴 경우
 #: test.c:2
+#, c-format
 msgid "Making %s..."
 msgstr "%s 을 만들고 있습니다..."
 
 # E:조사 구별하지 않은 경우
 # - 따옴표 + 띄어 쓴 경우
 #: test.c:2
+#, c-format
 msgid "Making '%s'..."
 msgstr "'%s' 를 만들고 있습니다..."
 
 # 올바른 조사 구별
 #: test.c:2
+#, c-format
 msgid "What is %s"
 msgstr "%s이(가) 무엇일까"
 
 # E: 각종 format type
 #: test.c:2
+#, c-format
 msgid ""
 "%d is, %i is, %o is, %u is, %f is, %e is, %E is, %g is, %G is, %a is,\n"
 "%A is, %c is, %C is, %s is, %p is, %n is, %m is, %h is, %j is, %l is,\n"
@@ -56,27 +62,50 @@ msgstr ""
 
 # E: parameter number
 #: test.c:2
+#, c-format
 msgid "%s is %s"
 msgstr "%2$s는 %1$s입니다"
 
 # E: integer modifier
 #: test.c:2
+#, c-format
 msgid "%04d is, %+8d is, %-8d is, %-08d is, %+08d is, %8.3d is, %-8.3d is, %#x is"
 msgstr "%04d는, %+8d는, %-8d는, %-08d는, %+08d는, %8.3d는, %-8.3d는, %#x는"
 
 # E: l,h, modifier
 #: test.c:2
+#, c-format
 msgid "%4ld is, %8ls is, %lc is, %hf is"
 msgstr "%4ld는, %8ls는, %lc는, %hf는"
 
 # 조사가 아니다
 #: test.c:2
+#, c-format
 msgid "%s silver medal"
 msgstr "%s 은메달"
 
 # 조사가 아니다
 #: test.c:2
+#, c-format
 msgid "it is not %s"
 msgstr ""
 "%s은\n"
 "아닙니다"
+
+# Python
+#: test.py:2
+#, python-format
+msgid "%(name)s is ..."
+msgstr "%(name)s는 ..."
+
+# Python
+#: test.py:2
+#, python-format
+msgid "'%(num)03d' is ..."
+msgstr "'%(num)03d'는 ..."
+
+# Python
+#: test.py:2
+#, python-format
+msgid "'%(num)03d' is what ..."
+msgstr "'%(num)03d'은(는) 무엇일까 ..."

@@ -4,7 +4,8 @@
 '''
 
 __all__ = ['parse_file', 'parse_entry', 'ParseError',
-           'FUZZY', 'OBSOLETE', 'C_FORMAT', 'NO_C_FORMAT', 'NO_WRAP']
+           'FUZZY', 'OBSOLETE', 'C_FORMAT', 'NO_C_FORMAT', 'PYTHON_FORMAT',
+           'NO_WRAP']
 
 import KPC.po as po
 import re
@@ -19,7 +20,7 @@ class ParseError(Exception):
 def c2rawstring(str):
     return eval('"'+str+'"')
 
-FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,NO_WRAP = 1,2,4,8,16
+FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,PYTHON_FORMAT,NO_WRAP = 1,2,4,8,16,32
 
 def parse_file(file):
     reader = file
@@ -114,6 +115,8 @@ def parse_entry(file,lineno):
                         new_entry.set_flag(C_FORMAT)
                     elif flag == 'no-c-format':
                         new_entry.set_flag(NO_C_FORMAT)
+                    elif flag == 'python-format':
+                        new_entry.set_flag(PYTHON_FORMAT)
                     elif flag == 'fuzzy':
                         new_entry.set_flag(FUZZY)
                     elif flag == 'no-wrap':
