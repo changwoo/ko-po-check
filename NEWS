@@ -1,5 +1,27 @@
 -*-outline-*-
 
+버전 0.95.1
+-----------
+
+* 개선
+
+** language/badstyle: 규칙 추가
+
+** language/josa-alternative: chosaalternative에서 이름 변경.
+
+** language/josa-alternative: 파이썬 포맷 스트링도 검사
+
+** terminology/word-guide: 용어 업데이트
+
+** convention/markup-docbook: 최근 gnome-doc-utils 고려
+
+** convention/markup-mallard: 최근 gnome-doc-utils 고려
+
+* 기타
+
+** 설치에서 Python 버전이 3.x인지 검사
+
+
 버전 0.95.0
 -----------
 
