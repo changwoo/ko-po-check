@@ -16,8 +16,8 @@ c_format = '%(?:[1-9][0-9]*\$)?[-+ #\'0]*(?:[1-9][0-9]*)?(?:\.[0-9]+)?(?:(?:hh|h
 py_format = '%(?:\([A-Za-z]\w+\))?[#-0\ +]*(?:[0-9]+|\*)?(?:\.[0-9]+)?[hlL]?[diouxXeEfFgGcrs]'
 
 josa = '(?:' + '|'.join([p[0]+'|'+p[1] for p in josa_data]) + ')'
-josa_c_re = re.compile('('+c_format+'[\'\"]?) ?('+josa+')(?:\s|$)')
-josa_py_re = re.compile('('+py_format+'[\'\"]?) ?('+josa+')(?:\s|$)')
+josa_c_re = re.compile('(?P<case>(?P<fmt>'+c_format+'[\'\"]?) ?(?P<josa>'+josa+'))(?:\s|$)')
+josa_py_re = re.compile('(?P<case>(?P<fmt>'+py_format+'[\'\"]?) ?(?P<josa>'+josa+'))(?:\s|$)')
 
 def josa_suggest(cho):
     for (a,b,s) in josa_data:
@@ -40,8 +40,8 @@ class JosaAlternativeCheck(BaseCheck):
         while True:
             mo = josa_re.search(msgstr)
             if mo:
-                sug = mo.group(1) + josa_suggest(mo.group(2))
-                errors.append(Error(self.errstr % (mo.group(1), sug)))
+                sug = mo.group('fmt') + josa_suggest(mo.group('josa'))
+                errors.append(Error(self.errstr % (mo.group('case'), sug)))
                 msgstr = msgstr[mo.end():]
             else:
                 break;
