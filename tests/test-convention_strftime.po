@@ -95,3 +95,10 @@ msgstr "12.0 %a %p %l:%M"
 
 msgid "12.1 %a %l:%M %p"
 msgstr "12.1 (%a) %p %l:%M"
+
+# U+2236 instead of colon
+msgid "12.2 %l∶%M %p"
+msgstr "12.2 %l∶%M %p"
+
+msgid "12.3 %l∶%M %p"
+msgstr "12.3 %p %l∶%M"
