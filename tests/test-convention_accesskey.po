@@ -75,3 +75,12 @@ msgstr "닭이냐 달걀이냐(_D)"
 msgid "(test_N)"
 msgstr "(테스트_N)"
 
+# 접근키가 아님 (GNOME reserved)
+#: test.c:1
+msgid "translator_credits"
+msgstr "홍길동"
+
+# 접근키가 아님 (KDE URL)
+#: test.c:1
+msgid "See http://xxx.xxx/xxx?page=1&lang=en"
+msgstr "보세요  http://xxx.xxx/xxx?page=1"

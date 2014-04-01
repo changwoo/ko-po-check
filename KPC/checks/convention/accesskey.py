@@ -3,17 +3,21 @@
 import re, string
 from KPC.classes import Error, BaseCheck
 
-re_accesskey_gnome = re.compile('^[^_]*_([0-9A-Za-z])[^_]*$')
-re_accesskey_kde = re.compile('^[^_]*&([0-9A-Za-z])[^_]*$')
+re_accesskey_gnome = re.compile(r'^[^_]*_([0-9A-Za-z])[^_]*$')
+re_accesskey_kde = re.compile(r'^[^&]*&([0-9A-Za-z])[^_]*$')
 
-re_accesskey = re.compile('^[^_]*[_&]([0-9A-Za-z])[^_]*$')
+re_accesskey = re.compile(r'^[^_]*[_&]([0-9A-Za-z])[^_]*$')
 
-# 예외적인 경우:
+# GNOME 예외적인 경우:
+# - 소문자로 시작하는 경우
 # - "abc_DEF" 등 중간에 밑줄 다음에 대문자가 나오는 경우
-# - intltool에서 unescape되지 않은 XML character entity
-re_accesskey_gnome_unlikely = re.compile('.*[a-zA-Z]_[A-Z].*')
+re_accesskey_gnome_unlikely = re.compile(r'([a-z].*|.*[a-zA-Z]_[A-Z].*)')
 
-re_accesskey_kde_unlikely = re.compile('.*(&quot;|&amp;|&apos;|&lt;|&gt;).*')
+# KDE 예외적인 경우:
+# - 소문자로 시작하는 경우
+# - intltool에서 unescape되지 않은 XML character entity
+# - URL처럼 보이는 경우
+re_accesskey_kde_unlikely = re.compile(r'([a-z].*|.*(&quot;|&amp;|&apos;|&lt;|&gt;).*|.*[a-z]://\S+/\S+&[0-9a-zA-Z].*=)')
 
 errstr_no_accesskey = '번역문에 접근키가 없거나 두 개 이상입니다'
 errstr_wrong = '\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
