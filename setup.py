@@ -28,7 +28,7 @@ setup(name='ko-po-check',
             'GNU General Public License v3 or later (GPLv3+)',
         'Natural Language :: Korean',
         'Operating System :: OS Independent',
-        'Programming Langauge :: Python :: 3',
+        'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Localization',
         ],
       )
