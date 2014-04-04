@@ -4,8 +4,14 @@ ko-po-check - 한국어 PO 파일 검사툴
 실수들을 찾아내는 프로그램입니다.
 
 이 프로그램은 파이썬 3.0 이상에서 동작합니다. 일반적인 파이썬 모듈과
-마찬가지 방법으로 (python3 setup.py install) 설치할 수 있습니다.
-(http://docs.python.org/3/install/index.html 참고.)
+마찬가지 방법으로 설치할 수 있습니다.
+
+    $ python3 setup.py install
+
+또는 pip나 easy_install을 이용해 PyPI에서 ko-po-check를 설치하셔도
+됩니다.
+
+    $ pip install ko-po-check
 
 이 프로그램은 GNU General Public License version 3 혹은 그 이후
 버전으로 배포합니다. 정확한 라이선스는 COPYING 파일에서 볼 수
@@ -19,6 +25,8 @@ ko-po-check - 한국어 PO 파일 검사툴
 
 문제점: https://github.com/changwoo/ko-po-check/issues
 
+Package Index (PyPI)
+   https://pypi.python.org/pypi/ko-po-check
 
 
 자주 묻는 질문 (1) 제대로 된 번역이 확실한데 왜 에러가 나오는가
