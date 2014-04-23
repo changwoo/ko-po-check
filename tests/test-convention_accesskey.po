@@ -84,3 +84,8 @@ msgstr "홍길동"
 #: test.c:1
 msgid "See http://xxx.xxx/xxx?page=1&lang=en"
 msgstr "보세요  http://xxx.xxx/xxx?page=1"
+
+# 접근키가 아님 (XML entity)
+#: test.xml:1
+msgid "Installing &debian-gnu; &release; For &architecture;"
+msgstr "&architecture;용 &debian-gnu; &release; 설치하기"
