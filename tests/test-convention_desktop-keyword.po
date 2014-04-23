@@ -1,0 +1,33 @@
+# -*-text-*-
+# freedesktop.org desktop Keyword 번역 검사
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: test 1\n"
+"POT-Creation-Date: 2000-01-01 00:00+0900\n"
+"PO-Revision-Date: 2000-01-01 00:00+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# 문제되는 경우.
+#: ../data/test.desktop.in.in.h:1
+msgid "Keyword;"
+msgstr "키워드;"
+
+# 올바른 키워드 번역.
+#: ../data/test.desktop.in.in.h:1
+msgid "Keyword;"
+msgstr "Keyword;키워드;"
+
+# 키워드 아님.
+#: ../data/test.desktop.in.in.h:1
+msgid "Keyword; it's a keyword"
+msgstr "키워드입니다"
+
+# 키워드 아님.
+#: ../data/test.c:1
+msgid "Hmm it's not a keyword;"
+msgstr "키워드 아님;;"
