@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="convention/accesskey"
+FILTERS="convention/access-key"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"

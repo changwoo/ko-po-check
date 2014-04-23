@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="language/typoincomplete"
+FILTERS="language/typo-incomplete"
 
 DIR="`dirname $0`"
 NAME="`basename $0 .test`"

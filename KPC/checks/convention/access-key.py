@@ -66,6 +66,6 @@ class AccessKeyCheck(BaseCheck):
                 return [Error(errstr_lowercase % mo.group(1))]
         return []
 
-name = 'convention/accesskey'
+name = 'convention/access-key'
 description = '접근키를 올바로 번역했는지 검사합니다'
 checker = AccessKeyCheck()
