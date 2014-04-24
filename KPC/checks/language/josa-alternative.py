@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re,string
+import re
 from KPC.classes import Error, BaseCheck
 
 josa_data = [('가','이','이(가)'),
@@ -34,7 +34,6 @@ class JosaAlternativeCheck(BaseCheck):
             josa_re = josa_py_re
         else:
             return []
-        msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         while True:

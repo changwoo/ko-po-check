@@ -100,7 +100,6 @@ class LibeggCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
     def check(self, entry):
         for d in data:
-            ref = d['ref']
             if [x for x in entry.references if (d['ref']+':') in x]:
                 if entry.msgid == d['msgid'] and entry.msgstr != d['msgstr']:
                     return [Error(self.errstr % d['msgstr'])]

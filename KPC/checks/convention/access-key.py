@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re, string
+import re
 from KPC.classes import Error, BaseCheck
 
 re_accesskey_gnome = re.compile(r'^[^_]*_([0-9A-Za-z])[^_]*$')

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import string
 
 FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,PYTHON_FORMAT,NO_WRAP = 1,2,4,8,16,32
 

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # GNOME L10N administravia
 
-import string
 from KPC.classes import Error, HeaderCheck
 
 class GnomeHeaderCheck(HeaderCheck):

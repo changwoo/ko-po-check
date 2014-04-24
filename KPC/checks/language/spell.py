@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import string,re
+import re
 from KPC.classes import Error, BaseCheck
 
 # 의존명사를 위한 -할 형태의 동사 모음
@@ -83,7 +83,6 @@ misspell_data = [
 
 class SpellCheck(BaseCheck):
     def check(self, entry):
-        msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         for data in misspell_data:
@@ -96,7 +95,6 @@ class SpellCheck(BaseCheck):
                     if ('func' in data and data['func'](mo.group(1))):
                         s = s[mo.end():]
                         continue
-                    ret = 0
                     errors.append(Error(misspell_error % mo.group(1)))
                     s = s[mo.end():]
                 else:

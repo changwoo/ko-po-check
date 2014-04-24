@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # 헤더 코멘트 검사
 
-import string
 from KPC.classes import Error, HeaderCheck
 
 class HeaderCommentCheck(HeaderCheck):

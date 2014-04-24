@@ -12,9 +12,6 @@ class Error:
         self.level = Error.ERROR
         self.message = message
 
-    def message(self):
-        return message
-
 
 class BaseCheck:
     '''Base class to check an entry from PO files. Subclasses should

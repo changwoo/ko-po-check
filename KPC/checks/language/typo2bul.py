@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import string, re
+import re
 from KPC.classes import Error, BaseCheck
 
 typo = '('+'|'.join([
@@ -15,7 +15,6 @@ typo_error = '\"%s\": 두벌식 오타로 보입니다'
 
 class Typo2BulCheck(BaseCheck):
     def check(self, entry):
-        msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         s = msgstr

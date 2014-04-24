@@ -9,7 +9,6 @@ __all__ = ['parse_file', 'parse_entry', 'ParseError',
 
 import KPC.po as po
 import re
-import string
 
 class ParseError(Exception):
     def __init__(self, lineno=-1):
@@ -67,8 +66,6 @@ def read_string(fmt):
     except:
         raise ParseError
     return c2rawstring(str)
-
-import codecs
 
 def parse_entry(file,lineno):
     state = STATE_FIRST
@@ -174,11 +171,8 @@ def test():
             fp = sys.stdin
         else:
             fp = open(fn, 'rb')
-    else:
-        import io
-        fp = io.StringIO(test_input)
-    catalog = parse_file(fp)
-    print(str(catalog))
+        catalog = parse_file(fp)
+        print(str(catalog))
 
 if __name__ == '__main__':
     test()

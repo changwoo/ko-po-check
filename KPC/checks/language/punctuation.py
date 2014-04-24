@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import string, re
+import re
 from KPC.classes import Error, BaseCheck
 
 # 괄호 띄어쓰기
@@ -10,7 +10,6 @@ check_list = [
 
 class PunctuationCheck(BaseCheck):
     def check(self, entry):
-        msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         for (r, emsg) in check_list:

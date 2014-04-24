@@ -2,7 +2,7 @@
 # markup translation
 # Ref: http://developer.gnome.org/doc/API/2.0/pango/PangoMarkupFormat.html
 
-import re, string
+import re
 from KPC.classes import Error, BaseCheck
 
 tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]

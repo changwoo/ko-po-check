@@ -4,7 +4,6 @@
 # UI 나타나는 전형적인 단어들의 전형적인 번역 확인.  지정한 번역이
 # 아니면 애러를 리턴한다.  번역 일관성 유지를 위한 검사.
 
-import string
 from KPC.classes import Error, BaseCheck
 
 data = [('about', '정보'),

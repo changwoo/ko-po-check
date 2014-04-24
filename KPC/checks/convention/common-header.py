@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # header checks
 
-import string
 from KPC.classes import Error, HeaderCheck
 
 class CommonHeaderCheck(HeaderCheck):

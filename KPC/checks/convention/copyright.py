@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import string, re
+import re
 from KPC.classes import Error, BaseCheck
 
 class CopyrightCheck(BaseCheck):

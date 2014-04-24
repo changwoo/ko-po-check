@@ -3,7 +3,7 @@
 
 # 전형적인 번역문을 일관적으로 유지
 
-import string, re
+import re
 from KPC.classes import Error, BaseCheck
 
 R = re.compile

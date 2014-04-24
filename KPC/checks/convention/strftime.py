@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re, string
+import re
 from KPC.classes import Error, BaseCheck
 
 R = re.compile
@@ -70,14 +70,11 @@ class StrftimeCheck(BaseCheck):
     def check(self, entry):
         if not self.identify(entry):
             return []
-        msgid = entry.msgid
-        msgstr = entry.msgstr
         errors = []
         for (origre, transfmt) in data:
             m = origre.search(entry.msgid)
             if not m:
                 continue
-            ngroups = origre.groups
             orig = m.group(0)
             matched = [m.group(i + 1) or '' for i in range(0, origre.groups)]
             trans = transfmt.format(*matched)

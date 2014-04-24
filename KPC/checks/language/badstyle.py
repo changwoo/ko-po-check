@@ -2,7 +2,7 @@
 
 # 바람직한 스타일이 아닌 번역 표현을 찾아낸다. 특히 각종 번역체.
 
-import string,re
+import re
 from KPC.classes import Error, BaseCheck
 
 R = re.compile
@@ -80,7 +80,6 @@ data = [
 
 class BadStyleCheck(BaseCheck):
     def check(self, entry):
-        msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
         for entry in data:
