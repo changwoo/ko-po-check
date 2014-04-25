@@ -1,5 +1,31 @@
 -*-outline-*-
 
+버전 0.95.3
+-----------
+
+* 새로운 검사 규칙
+
+** convention/desktop-keyword: freedesktop.org desktop 엔트리의 Keyword 번역 확인
+
+** language/gschema: gschema에서 많이 사용하는 설명문의 번역이 통일되었는지 검사
+
+* 개선
+
+** convention/access-key: accesskey에서 이름 변경
+
+** convention/access-key: 접근키 예외 추가 - XML entity 형태(&blah;)
+
+** convention/typo-incomplete: typoincomplete에서 이름 변경
+
+* 문제점 개선
+
+** PyPI를 위한 메타데이터 추가
+
+** flake8 발견한 코드 문제 수정
+
+** 기타 오류 수정
+
+
 버전 0.95.2
 -----------
 
