@@ -3,8 +3,9 @@
 import re
 from KPC.classes import Error, BaseCheck
 
-err_fmt = 'freedesktop desktop의 Keyword 번역은 \';\'으로 끝나야 합니다'
-err_org = '%s: freedesktop desktop의 Keyword 번역에는 원문 키워드를 포함해야 합니다'
+err_fmt = '검색어 번역은 \';\'으로 끝나야 합니다'
+err_org = '%s: 검색어 번역에는 원문 키워드를 포함해야 합니다'
+err_dup = '%s: 검색어가 중복되어 있습니다'
 
 re_keyword = re.compile(r'^(?:[\w ]+;)+$')
 
@@ -24,6 +25,11 @@ class DesktopKeywordCheck(BaseCheck):
         for k in msgid_keywords:
             if not k in msgstr_keywords:
                 return [Error(err_org % k)]
+        s = set()
+        for k in msgstr_keywords:
+            if k in s:
+                return [Error(err_dup % k)]
+            s.add(k)
         return []
         
 name = 'convention/desktop-keyword'

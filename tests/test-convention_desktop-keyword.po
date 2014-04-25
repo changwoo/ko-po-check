@@ -31,3 +31,13 @@ msgstr "키워드입니다"
 #: ../data/test.c:1
 msgid "Hmm it's not a keyword;"
 msgstr "키워드 아님;;"
+
+# 세미콜론 빠뜨린 경우
+#: ../data/test.desktop.in.in.h:1
+msgid "Keyword1;Keyword2;"
+msgstr "키워드1;키워드2"
+
+# 번역한답시고 약자라고 번역 안 하고 키워드 남겨둔 경우
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid "Keyword;XKB;"
+msgstr "Keyword;키워드;XKB;XKB;"
