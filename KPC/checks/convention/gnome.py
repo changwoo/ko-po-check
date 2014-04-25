@@ -3,14 +3,18 @@
 
 from KPC.classes import Error, BaseCheck
 
+
 class GnomeCheck(BaseCheck):
     error = Error('그놈 번역 규칙에 따라 번역자의 이름을 써야 합니다')
+
     def check(self, entry):
         msgid = entry.msgid
         msgstr = entry.msgstr
-        if ((msgid[:18] == 'translator_credits' or
-             msgid[:18] == 'translator-credits') and
-            (msgstr[:18] == 'translator_credits' or msgstr[:2] == '번역')):
+        if not msgid[:18] in ('translator-credits', 'translator_credits'):
+            return []
+        if msgstr[:18] in ('translator-credits', 'translator_credits'):
+            return [self.error]
+        if msgstr[:2] == '번역':
             return [self.error]
         return []
 

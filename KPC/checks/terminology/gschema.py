@@ -19,8 +19,10 @@ data = [
      'msgstr': '창 위치(가로 및 세로).'},
 ]
 
+
 class GschemaCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
+
     def check(self, entry):
         if not True in [('.gschema' in p) for p in entry.references]:
             return []

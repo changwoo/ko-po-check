@@ -74,30 +74,31 @@ data = [
      'msgid': 'Move the selected item on the toolbar',
      'msgstr': '도구 모음에서 선택한 항목을 옮깁니다'},
 
-     {'ref': 'egg-editable-toolbar.c',
-      'msgid': '_Remove from Toolbar',
-      'msgstr': '도구 모음에서 제거(_R)'},
+    {'ref': 'egg-editable-toolbar.c',
+     'msgid': '_Remove from Toolbar',
+     'msgstr': '도구 모음에서 제거(_R)'},
 
-     {'ref': 'egg-editable-toolbar.c',
-      'msgid': 'Remove the selected item from the toolbar',
-      'msgstr': '도구 모음에서 선택한 항목을 제거합니다'},
+    {'ref': 'egg-editable-toolbar.c',
+     'msgid': 'Remove the selected item from the toolbar',
+     'msgstr': '도구 모음에서 선택한 항목을 제거합니다'},
 
-     {'ref': 'egg-editable-toolbar.c',
-      'msgid': '_Delete Toolbar',
-      'msgstr': '도구 모음 삭제(_D)'},
+    {'ref': 'egg-editable-toolbar.c',
+     'msgid': '_Delete Toolbar',
+     'msgstr': '도구 모음 삭제(_D)'},
 
-     {'ref': 'egg-editable-toolbar.c',
-      'msgid': 'Remove the selected toolbar',
-      'msgstr': '선택한 도구 모음을 제거합니다'},
+    {'ref': 'egg-editable-toolbar.c',
+     'msgid': 'Remove the selected toolbar',
+     'msgstr': '선택한 도구 모음을 제거합니다'},
 
-     {'ref': 'egg-editable-toolbar.c',
-      'msgid': 'Separator',
-      'msgstr': '구분선'},
+    {'ref': 'egg-editable-toolbar.c',
+     'msgid': 'Separator',
+     'msgstr': '구분선'},
+]
 
-    ]
 
 class LibeggCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
+
     def check(self, entry):
         for d in data:
             if [x for x in entry.references if (d['ref']+':') in x]:

@@ -5,13 +5,14 @@
 import re
 from KPC.classes import Error, BaseCheck
 
-tags = [ 'span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u' ]
+tags = ['span', 'b', 'big', 'i', 's', 'sub', 'sup', 'small', 'tt', 'u']
 tags_res = '(' + '|'.join(tags) + ')'
 re_markup = re.compile('<(' + tags_res + '( [^>]*)?)>')
 group_opentag = 1
 group_opentagname = 2
 
 error_string = '<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
+
 
 class MarkupPangoCheck(BaseCheck):
     def check(self, entry):
@@ -21,7 +22,8 @@ class MarkupPangoCheck(BaseCheck):
         while mo:
             tagname = mo.group(group_opentagname)
             opentag = mo.group(group_opentag)
-            mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr, re.M | re.S)
+            mo = re.search('<' + opentag + '>.+</' + tagname + '>', msgstr,
+                           re.M | re.S)
             if not mo:
                 return [Error(error_string % opentag)]
             msgid = msgid[mo.start(0) + 1:]

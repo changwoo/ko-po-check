@@ -4,18 +4,27 @@ import re
 from KPC.classes import Error, BaseCheck
 
 data = [
-    { 're': re.compile('.*[^\.]\.$'),
-      'except': re.compile('.*(\)|etc|No|a\.m|p\.m)\.$'),
-      'error':  Error('번역문이 원문과 같이 .으로 끝나야 합니다') },
-    { 're': re.compile('.*:$'),
-      'error':  Error('번역문이 원문과 같이 :으로 끝나야 합니다') },
-    { 're': re.compile('.*[^\s]\.\.\.$'),
-      'except': re.compile('.*(etc)\.\.\.$'),
-      'error':  Error('번역문이 원문과 같이 ...으로 끝나야 합니다') },
-    { 're': re.compile('.*…$'),
-      'error':  Error('번역문이 원문과 같이 …으로 끝나야 합니다') },
-    ]
-    
+    {
+        're': re.compile('.*[^\.]\.$'),
+        'except': re.compile('.*(\)|etc|No|a\.m|p\.m)\.$'),
+        'error':  Error('번역문이 원문과 같이 .으로 끝나야 합니다')
+    },
+    {
+        're': re.compile('.*:$'),
+        'error':  Error('번역문이 원문과 같이 :으로 끝나야 합니다')
+    },
+    {
+        're': re.compile('.*[^\s]\.\.\.$'),
+        'except': re.compile('.*(etc)\.\.\.$'),
+        'error':  Error('번역문이 원문과 같이 ...으로 끝나야 합니다')
+    },
+    {
+        're': re.compile('.*…$'),
+        'error':  Error('번역문이 원문과 같이 …으로 끝나야 합니다')
+    },
+]
+
+
 class ConsistencyCheck(BaseCheck):
     def check(self, entry):
         msgid = entry.msgid
@@ -24,9 +33,11 @@ class ConsistencyCheck(BaseCheck):
         for d in data:
             re = d['re']
             error = d['error']
-            if (re.match(msgid) and
-                ('except' not in d or not d['except'].match(msgid)) and
-                not re.match(msgstr)):
+            if not re.match(msgid):
+                continue
+            if 'except' in d and d['except'].match(msgid):
+                continue
+            if not re.match(msgstr):
                 errors.append(error)
         return errors
 

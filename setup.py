@@ -13,27 +13,27 @@ setup(name='ko-po-check',
       author='Changwoo Ryu',
       author_email='cwryu@debian.org',
       url='https://github.com/changwoo/ko-po-check',
-      license = 'GPLv3 or later',
+      license='GPLv3 or later',
       description='Korean PO checker',
-      long_description = 'Korean message translation checker',
-      platforms = ['any'],
+      long_description='Korean message translation checker',
+      platforms=['any'],
       download_url='https://github.com/changwoo/ko-po-check/releases',
       classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Console',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: ' +
-            'GNU General Public License v3 or later (GPLv3+)',
-        'Natural Language :: Korean',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3',
-        'Topic :: Software Development :: Localization',
-        ],
+          'Development Status :: 5 - Production/Stable',
+          'Environment :: Console',
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: ' +
+          'GNU General Public License v3 or later (GPLv3+)',
+          'Natural Language :: Korean',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python :: 3',
+          'Topic :: Software Development :: Localization',
+      ],
 
-      packages = ['KPC', 'KPC/checks',
-                  'KPC/checks/language',
-                  'KPC/checks/convention',
-                  'KPC/checks/terminology' ],
-      scripts=['scripts/ko-po-check'],
-      )
- 
+      packages=[
+          'KPC', 'KPC/checks',
+          'KPC/checks/convention',
+          'KPC/checks/language',
+          'KPC/checks/terminology'
+      ],
+      scripts=['scripts/ko-po-check'])

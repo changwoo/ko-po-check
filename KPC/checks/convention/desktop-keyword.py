@@ -9,6 +9,7 @@ err_dup = '%s: 검색어가 중복되어 있습니다'
 
 re_keyword = re.compile(r'^(?:[\w ]+;)+$')
 
+
 class DesktopKeywordCheck(BaseCheck):
     def is_keyword(self, entry):
         if not True in [('.desktop' in p) for p in entry.references]:
@@ -31,7 +32,8 @@ class DesktopKeywordCheck(BaseCheck):
                 return [Error(err_dup % k)]
             s.add(k)
         return []
-        
+
+
 name = 'convention/desktop-keyword'
 description = 'freedesktop.org desktop 엔트리의 Keyword 번역을 확인합니다'
 checker = DesktopKeywordCheck()

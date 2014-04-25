@@ -11,13 +11,93 @@ from KPC.classes import Error, BaseCheck
 # DocBook XML의 태그는 수백 가지에 달하지만, 결벽증 마냥 모든 걸 나열할
 # 필요는 없고 실제 발견될 때마다 추가하도록 한다.
 
-known_db_tags = set(['acronym', 'address', 'anchor', 'application', 'citerefentry', 'citetitle', 'city', 'classname', 'command', 'computeroutput', 'country', 'email', 'emphasis', 'entry', 'envar', 'filename', 'firstterm', 'footnote', 'footnoteref', 'glossterm', 'guibutton', 'guiicon', 'guilabel', 'guimenu', 'guimenuitem', 'guisubmenu', 'indexterm', 'informalexample', 'informaltable', 'interface', 'interfacename', 'itemizedlist', 'keycap', 'keycombo', 'keysym', 'link', 'listitem', 'literal', 'manvolnum', 'menuchoice', 'option', 'orderedlist', 'para', 'phrase', 'postcode', 'primary', 'prompt', 'quote', 'refentrytitle', 'remark', 'replaceable', 'row', 'screen', 'screen', 'secondary', 'see', 'sgmltag', 'shortcut', 'state', 'street', 'subscript', 'superscript', 'systemitem', 'tbody', 'term', 'tertiary', 'tgroup', 'thead', 'title', 'trademark', 'ulink', 'uri', 'userinput', 'variablelist', 'varlistentry', 'varname', 'xref'])
+known_db_tags = set([
+    'acronym',
+    'address',
+    'anchor',
+    'application',
+    'citerefentry',
+    'citetitle',
+    'city',
+    'classname',
+    'command',
+    'computeroutput',
+    'country',
+    'email',
+    'emphasis',
+    'entry',
+    'envar',
+    'filename',
+    'firstterm',
+    'footnote',
+    'footnoteref',
+    'glossterm',
+    'guibutton',
+    'guiicon',
+    'guilabel',
+    'guimenu',
+    'guimenuitem',
+    'guisubmenu',
+    'indexterm',
+    'informalexample',
+    'informaltable',
+    'interface',
+    'interfacename',
+    'itemizedlist',
+    'keycap',
+    'keycombo',
+    'keysym',
+    'link',
+    'listitem',
+    'literal',
+    'manvolnum',
+    'menuchoice',
+    'option',
+    'orderedlist',
+    'para',
+    'phrase',
+    'postcode',
+    'primary',
+    'prompt',
+    'quote',
+    'refentrytitle',
+    'remark',
+    'replaceable',
+    'row',
+    'screen',
+    'screen',
+    'secondary',
+    'see',
+    'sgmltag',
+    'shortcut',
+    'state',
+    'street',
+    'subscript',
+    'superscript',
+    'systemitem',
+    'tbody',
+    'term',
+    'tertiary',
+    'tgroup',
+    'thead',
+    'title',
+    'trademark',
+    'ulink',
+    'uri',
+    'userinput',
+    'variablelist',
+    'varlistentry',
+    'varname',
+    'xref'
+])
 
 tag_error_string = 'XML 태그의 짝이 맞지 않습니다'
 notdb_error_string = '<%s>: 알려진 DocBook 태그가 아닙니다'
 
+
 class NotDocBook(Exception):
     pass
+
 
 def check_db_tags(name):
     if name == 'KPC_DummyTag':
@@ -31,11 +111,14 @@ def check_db_tags(name):
     elif not name in known_db_tags:
         raise NotDocBook(name)
 
-def start_element(name,attr):
+
+def start_element(name, attr):
     check_db_tags(name)
+
 
 def end_element(name):
     check_db_tags(name)
+
 
 class MarkupDocbookCheck(BaseCheck):
     def check(self, entry):
@@ -44,7 +127,7 @@ class MarkupDocbookCheck(BaseCheck):
             return []
         msgid = entry.msgid
         msgstr = entry.msgstr
-        if msgid == 'translator-credits': # gnome-doc-utils magic
+        if msgid == 'translator-credits':  # gnome-doc-utils magic
             return []
         parser = ParserCreate()
         parser.StartElementHandler = start_element

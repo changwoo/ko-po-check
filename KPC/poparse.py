@@ -10,23 +10,33 @@ __all__ = ['parse_file', 'parse_entry', 'ParseError',
 import KPC.po as po
 import re
 
+
 class ParseError(Exception):
     def __init__(self, lineno=-1):
         self.lineno = lineno
+
     def __str__(self):
         return 'lineno: %d' % self.lineno
+
 
 def c2rawstring(str):
     return eval('"'+str+'"')
 
-FUZZY,OBSOLETE,C_FORMAT,NO_C_FORMAT,PYTHON_FORMAT,NO_WRAP = 1,2,4,8,16,32
+
+FUZZY = 1
+OBSOLETE = 2
+C_FORMAT = 4
+NO_C_FORMAT = 8
+PYTHON_FORMAT = 16
+NO_WRAP = 32
+
 
 def parse_file(file):
     reader = file
     lineno = 0
     catalog = po.catalog()
     try:
-        (entry,lineno) = parse_entry(reader,lineno)
+        (entry, lineno) = parse_entry(reader, lineno)
     except ParseError:
         raise ParseError(lineno)
     catalog.add_entry(entry)
@@ -39,26 +49,27 @@ def parse_file(file):
         charset = 'UTF-8'
     while 1:
         try:
-            (entry,lineno) = parse_entry(reader,lineno)
+            (entry, lineno) = parse_entry(reader, lineno)
         except ParseError as err:
             raise err
         if not entry:
             return catalog
-        #try:
-        #    entry.translator_comment = entry.translator_comment.decode(charset)
-        #    entry.msgstr = entry.msgstr.decode(charset)
-        #    entry.msgid = entry.msgid.decode(charset)
-        #except:
-        #    raise ParseError(lineno)
         catalog.add_entry(entry)
 
-STATE_FIRST,STATE_COMMENT,STATE_ECOMMENT,STATE_MSGCTXT,STATE_MSGID,STATE_MSGSTR = 1,2,3,4,5,6
+
+STATE_FIRST = 1
+STATE_COMMENT = 2
+STATE_ECOMMENT = 3
+STATE_MSGCTXT = 4
+STATE_MSGID = 5
+STATE_MSGSTR = 6
 emptyline_re = re.compile(r'^\s*$')
 translator_comment_re = re.compile(r'^\#( (.*))?$')
 automatic_comment_re = re.compile(r'^\#. (.*)$')
 reference_re = re.compile(r'^\#: (.*)$')
 flag_re = re.compile(r'^\#, (.*)$')
 string_re = re.compile(r'^\"(.*)\"\w*')
+
 
 def read_string(fmt):
     try:
@@ -67,7 +78,8 @@ def read_string(fmt):
         raise ParseError
     return c2rawstring(str)
 
-def parse_entry(file,lineno):
+
+def parse_entry(file, lineno):
     state = STATE_FIRST
     new_entry = po.entry()
     while 1:
@@ -75,12 +87,12 @@ def parse_entry(file,lineno):
         line = file.readline()
         if not line:                    # EOF
             if state == STATE_FIRST or state == STATE_COMMENT:
-                return (None,lineno)    # no more messages -- return nothing
+                return (None, lineno)   # no more messages -- return nothing
             elif state != STATE_MSGSTR:
                 print('uhh: %s\n' % line)
                 raise ParseError(lineno)        # unexpected EOF
             else:
-                return (new_entry,lineno)
+                return (new_entry, lineno)
         if emptyline_re.match(line):
             if state == STATE_FIRST or state == STATE_COMMENT:
                 continue
@@ -88,7 +100,7 @@ def parse_entry(file,lineno):
                 print('blah: %s\n' % line)
                 raise ParseError(lineno)
             else:
-                return (new_entry,lineno)
+                return (new_entry, lineno)
         if line[-1] == '\n':            # remove the trailing newline
             line = line[:-1]
         if line[:3] == '#~ ':
@@ -158,11 +170,11 @@ def parse_entry(file,lineno):
                     raise ParseError(lineno)
             else:
                 raise ParseError(lineno)
-            
+
     #new_entry.msgid += line
-    return (new_entry,lineno)
-        
-        
+    return (new_entry, lineno)
+
+
 def test():
     import sys
     if sys.argv[1:]:

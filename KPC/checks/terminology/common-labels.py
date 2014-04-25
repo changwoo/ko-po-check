@@ -7,22 +7,29 @@ import re
 from KPC.classes import Error, BaseCheck
 
 data = [
-    { 're_msgid': re.compile('^View .*'),
-      're_msgstr': re.compile('^.* 보기'),
-      'label_msgid': 'View ...',
-      'label_msgstr': '... 보기',
-      're_exception': re.compile('^View only$') },
-    { 're_msgid': re.compile('^Show .*'),
-      're_msgstr': re.compile('^.* (보이기|표시)'),
-      'label_msgid': 'Show ...',
-      'label_msgstr': '... 보이기(표시)',
-      're_exception': None },
-    { 're_msgid': re.compile('^Hide .*'),
-      're_msgstr': re.compile('^.* 숨기기'),
-      'label_msgid': 'Hide ...',
-      'label_msgstr': '... 숨기기',
-      're_exception': None },
+    {
+        're_msgid': re.compile('^View .*'),
+        're_msgstr': re.compile('^.* 보기'),
+        'label_msgid': 'View ...',
+        'label_msgstr': '... 보기',
+        're_exception': re.compile('^View only$')
+    },
+    {
+        're_msgid': re.compile('^Show .*'),
+        're_msgstr': re.compile('^.* (보이기|표시)'),
+        'label_msgid': 'Show ...',
+        'label_msgstr': '... 보이기(표시)',
+        're_exception': None
+    },
+    {
+        're_msgid': re.compile('^Hide .*'),
+        're_msgstr': re.compile('^.* 숨기기'),
+        'label_msgid': 'Hide ...',
+        'label_msgstr': '... 숨기기',
+        're_exception': None
+    },
 ]
+
 
 def normalize_msg(msg):
     try:
@@ -34,6 +41,7 @@ def normalize_msg(msg):
         pass
     msg = msg.replace('_', '')
     return msg
+
 
 class CommonLabelsCheck(BaseCheck):
     errstr = '%s: \"%s\" 형태는 \"%s\" 형태와 같이 번역합니다'
@@ -52,7 +60,7 @@ class CommonLabelsCheck(BaseCheck):
         # 모든 단어가 대문자로 시작하면 레이블
         if ''.join([x[0] for x in words]).isupper():
             return True
-        # 단축키가 있으면 
+        # 단축키가 있으면
         if '_' in entry.msgid:
             return True
         try:

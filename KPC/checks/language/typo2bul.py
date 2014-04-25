@@ -13,6 +13,7 @@ typo = '('+'|'.join([
 typo_re = re.compile(typo)
 typo_error = '\"%s\": 두벌식 오타로 보입니다'
 
+
 class Typo2BulCheck(BaseCheck):
     def check(self, entry):
         msgstr = entry.msgstr
@@ -24,7 +25,7 @@ class Typo2BulCheck(BaseCheck):
                 errors.append(Error(typo_error % mo.group(1)))
                 s = s[mo.end():]
             else:
-                break;
+                break
         return errors
 
 name = 'language/typo2bul'

@@ -3,13 +3,15 @@
 
 from KPC.classes import Error, HeaderCheck
 
+
 class CommonHeaderCheck(HeaderCheck):
     def check_header(self, entry, fields):
         result = []
         # Report-Msgid-Bugs-To: 내용이 없는 경우
         try:
             if fields['Report-Msgid-Bugs-To'] == '':
-                errmsg = 'Report-Msgid-Bugs-To: 비어 있습니다. 버그 보고하는 메일 혹은 웹 주소를 쓰십시오'
+                errmsg = 'Report-Msgid-Bugs-To: 비어 있습니다. ' \
+                         '버그 보고하는 메일 혹은 웹 주소를 쓰십시오'
                 result.append(Error(errmsg))
         except KeyError:
             pass
@@ -24,8 +26,7 @@ class CommonHeaderCheck(HeaderCheck):
             errmsg = 'Language-Team: 기본값을 바꾸지 않았습니다. 해당 번역팀 메일 주소를 쓰십시오'
             result.append(Error(errmsg))
         # Content-Type: UTF-8 추천
-        if (not 'charset=UTF-8' in fields['Content-Type'] and
-            not 'charset=utf-8' in fields['Content-Type']):
+        if not 'charset=utf-8' in fields['Content-Type'].lower():
             errmsg = 'Content-Type: UTF-8 사용을 추천합니다 (charset=UTF-8)'
             result.append(Error(errmsg))
         # Plural-Forms: 한국어에 대한 복수형이 아닌 경우

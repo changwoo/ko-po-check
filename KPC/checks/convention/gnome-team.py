@@ -3,6 +3,7 @@
 
 from KPC.classes import Error, HeaderCheck
 
+
 class GnomeHeaderCheck(HeaderCheck):
     new_addr = '<gnome-kr@googlegroups.com>'
     old_addr = '<gnome-kr-hackers@lists.kldp.net>'

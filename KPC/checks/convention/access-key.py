@@ -17,13 +17,15 @@ re_accesskey_gnome_unlikely = re.compile(r'([a-z].*|.*[a-zA-Z]_[A-Z].*)')
 # - 소문자로 시작하는 경우
 # - XML entity처럼 보이는 경우
 # - URL처럼 보이는 경우
-re_accesskey_kde_unlikely = re.compile(r'([a-z]|.*&[a-zA-Z][a-zA-Z_-]*;|.*[a-z]://\S+/\S+&[0-9a-zA-Z].*=)')
+re_accesskey_kde_unlikely = re.compile(r'([a-z]|.*&[a-zA-Z][a-zA-Z_-]*;|'
+                                       '.*[a-z]://\S+/\S+&[0-9a-zA-Z].*=)')
 
 errstr_no_accesskey = '번역문에 접근키가 없거나 두 개 이상입니다'
 errstr_wrong = '\'%s\' vs \'%s\': 원문과 번역문의 접근키가 다릅니다'
 
 re_lowercase_accesskey = re.compile('(\([_&][a-z]\))')
 errstr_lowercase = '\"%s\": 접근키가 소문자입니다'
+
 
 class AccessKeyCheck(BaseCheck):
     def check(self, entry):
