@@ -6,19 +6,27 @@
 import re
 from KPC.classes import Error, BaseCheck
 
-R = re.compile
-def R(re_msgid, re_msgstr, label_msgid, label_msgstr):
-    return (re.compile(re_msgid), re.compile(re_msgstr),
-            label_msgid, label_msgstr)
-
-data = [R('^View .*', '^.* 보기', 'View ...', '... 보기'),
-        R('^Show .*', '^.* (보이기|표시)', 'Show ...', '... 보이기(표시)'),
-        R('^Hide .*', '^.* 숨기기', 'Hide ...', '... 숨기기'),
-       ]
+data = [
+    { 're_msgid': re.compile('^View .*'),
+      're_msgstr': re.compile('^.* 보기'),
+      'label_msgid': 'View ...',
+      'label_msgstr': '... 보기',
+      're_exception': re.compile('^View only$') },
+    { 're_msgid': re.compile('^Show .*'),
+      're_msgstr': re.compile('^.* (보이기|표시)'),
+      'label_msgid': 'Show ...',
+      'label_msgstr': '... 보이기(표시)',
+      're_exception': None },
+    { 're_msgid': re.compile('^Hide .*'),
+      're_msgstr': re.compile('^.* 숨기기'),
+      'label_msgid': 'Hide ...',
+      'label_msgstr': '... 숨기기',
+      're_exception': None },
+]
 
 def normalize_msg(msg):
     try:
-        if msg[-3:] == '...':
+        if msg.endswith('...'):
             msg = msg[:-3]
         if msg[-4:-2] == '(_' and msg[-1:] == ')':
             msg = msg[:-4]
@@ -59,13 +67,20 @@ class CommonLabelsCheck(BaseCheck):
             return []
         msgid = normalize_msg(entry.msgid)
         msgstr = normalize_msg(entry.msgstr)
-        for (re_msgid, re_msgstr, label_msgid, label_msgstr) in data:
+        for d in data:
+            re_msgid = d['re_msgid']
+            re_msgstr = d['re_msgstr']
+            label_msgid = d['label_msgid']
+            label_msgstr = d['label_msgstr']
+            re_except = d['re_exception']
+
             if re_msgid.match(msgid):
-                if not re_msgstr.match(msgstr):
-                    return [Error(self.errstr %
-                                  (entry.msgstr, label_msgid, label_msgstr))]
-                else:
+                if re_msgstr.match(msgstr):
                     break
+                if re_except and re_except.match(msgid):
+                    break
+                return [Error(self.errstr %
+                              (entry.msgstr, label_msgid, label_msgstr))]
         return []
 
 name = 'terminology/common-labels'

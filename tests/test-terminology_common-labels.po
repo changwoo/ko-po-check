@@ -17,3 +17,7 @@ msgstr "미리보기 보이기"
 
 msgid "View Preview..."
 msgstr "미리보기 보기..."
+
+# 예외
+msgid "_View only"
+msgstr "보기만 가능(_V)"
