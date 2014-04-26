@@ -27,7 +27,9 @@ class GschemaCheck(BaseCheck):
         if not True in [('.gschema' in p) for p in entry.references]:
             return []
         for d in data:
-            if entry.msgid == d['msgid'] and entry.msgstr != d['msgstr']:
+            if entry.msgid.lower() != d['msgid'].lower():
+                continue
+            if entry.msgstr != d['msgstr']:
                 return [Error(self.errstr % d['msgstr'])]
         return []
 
