@@ -15,7 +15,7 @@ error_string = '<%s>: 번역할 때 마크업을 똑같이 써야 합니다'
 
 
 class MarkupPangoCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         mo = re_markup.search(msgid)

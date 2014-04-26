@@ -1,12 +1,10 @@
 #!/usr/bin/python3
+# -*- Mode: python -*-
 # -*- coding: utf-8 -*-
 
 import sys
-#reload(sys)
-import locale
-#sys.setdefaultencoding(locale.getpreferredencoding())
-
-import os,getopt,string
+import os
+import getopt
 
 filterenable = {}
 
@@ -35,11 +33,11 @@ for (opt, val) in options:
             filterenable[m] = 1
     elif opt == '--list':
         option_list = 1
-    
+
 if not args:
     fn = '-'
 
-from KPC import po,poparse,checks
+from KPC import poparse, checks
 
 if (option_help):
     helpmsg = [
@@ -49,7 +47,8 @@ if (option_help):
         '      --filters=..          필터 직접 지정 (디버깅용)',
         '      --list                필터 목록을 표시합니다 (디버깅용)',
         '',
-        ' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.' ]
+        ' 파일이 `-\'이거나 파일이 주어지지 않은 경우 표준 입력에서 읽습니다.'
+    ]
     for l in helpmsg:
         print(l)
     sys.exit(1)
@@ -58,7 +57,7 @@ if (option_version):
     from KPC.config import VERSION
     print(('ko-po-check %s' % VERSION))
     sys.exit(0)
-    
+
 import glob
 
 filenames = glob.glob(os.sep.join(checks.__path__ + ['*', '*.py']))
@@ -96,7 +95,17 @@ for fn in args:
     if fn != '-':
         fp.close()
 
-    import re
+    active_keys = filters.keys()
+    filtercontext = {}
+
+    if len(catalog.entries) > 0 and catalog.entries[0].msgid == '':
+        entry = catalog.entries[0]
+        for filtername in filters.keys():
+            try:
+                checker = filters[filtername]['checker']
+                filtercontext[filtername] = checker._get_context(entry)
+            except KeyError:
+                print('BUG: "%s"에 checker 필드가 없습니다' % filtername)
 
     for entry in catalog.entries:
         if (not entry.is_translated()):
@@ -107,8 +116,8 @@ for fn in args:
             except KeyError:
                 print('BUG: "%s"에 checker 필드가 없습니다' % filtername)
 
-            errors = checker.check(entry)
+            errors = checker._check(entry, filtercontext[filtername])
             for e in errors:
-                print(('%s:%d: %s'%(fn,entry.msgstr_lineno,e.message)))
+                print(('%s:%d: %s' % (fn, entry.msgstr_lineno, e.message)))
 
 sys.exit(retval)

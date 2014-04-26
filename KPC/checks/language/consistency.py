@@ -26,7 +26,7 @@ data = [
 
 
 class ConsistencyCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []

@@ -28,7 +28,7 @@ errstr_lowercase = '\"%s\": 접근키가 소문자입니다'
 
 
 class AccessKeyCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         gnome_mo = re_accesskey_gnome.match(msgid)

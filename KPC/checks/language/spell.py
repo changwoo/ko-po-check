@@ -98,7 +98,7 @@ misspell_data = [
 
 
 class SpellCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgstr = entry.msgstr
         errors = []
         for data in misspell_data:

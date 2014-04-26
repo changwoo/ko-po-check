@@ -99,7 +99,7 @@ data = [
 class LibeggCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
 
-    def check(self, entry):
+    def check(self, entry, context):
         for d in data:
             if [x for x in entry.references if (d['ref']+':') in x]:
                 if entry.msgid == d['msgid'] and entry.msgstr != d['msgstr']:

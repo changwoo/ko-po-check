@@ -79,7 +79,7 @@ def find_mnemonic(msgid):
 class DesktopCommonsCheck(BaseCheck):
     errstr = '%s: 다음과 같이 번역해야 합니다: \"%s\"'
 
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []

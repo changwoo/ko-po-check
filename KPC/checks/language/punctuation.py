@@ -13,7 +13,7 @@ check_list = [
 
 
 class PunctuationCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgstr = entry.msgstr
         errors = []
         for (r, emsg) in check_list:

@@ -121,7 +121,7 @@ def end_element(name):
 
 
 class MarkupDocbookCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         if not entry.references or not '.xml:' in entry.references[0]:
             # not from an XML file
             return []

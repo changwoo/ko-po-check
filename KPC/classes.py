@@ -17,32 +17,28 @@ class BaseCheck:
     '''Base class to check an entry from PO files. Subclasses should
     implement check() function. check() returns list of errors if any.
     '''
-    def check(self, entry):
-        return []
+    def _get_context(self, entry):
+        if not hasattr(self, 'get_context'):
+            return {}
+        fields = {}
+        # parse msgstr
+        for line in entry.msgstr.split('\n'):
+            try:
+                k, v = line.split(': ', 1)
+                fields[k] = v
+            except ValueError:
+                pass
+        return self.get_context(entry, fields)
 
-
-class CheckList(BaseCheck):
-    '''Container class to hold other check classes. check() returns
-    all errors from the contained sub-checks.
-    '''
-    def __init__(self, l=[]):
-        self.checks = l
-
-    def add(self, check):
-        self.checks.append(check)
-
-    def check(self, entry):
-        ret = []
-        for c in self.checks:
-            ret += c.check(self, entry)
-        return ret
+    def _check(self, entry, context):
+        return self.check(entry, context)
 
 
 class HeaderCheck(BaseCheck):
     '''Base class to check the header entries. Subclasses should
     implement check_header() function.
     '''
-    def check(self, entry):
+    def check(self, entry, context):
         # header messages only
         if entry.msgid != '':
             return []

@@ -93,7 +93,7 @@ data = [
 class WordGuideCheck(BaseCheck):
     errstr = '%s: \"%s\"은(는) \"%s\"(이)라고 번역하길 제안합니다'
 
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []

@@ -70,7 +70,7 @@ class CommonLabelsCheck(BaseCheck):
             pass
         return False
 
-    def check(self, entry):
+    def check(self, entry, context):
         if not self.identify(entry):
             return []
         msgid = normalize_msg(entry.msgid)

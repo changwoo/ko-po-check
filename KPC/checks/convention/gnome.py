@@ -7,7 +7,7 @@ from KPC.classes import Error, BaseCheck
 class GnomeCheck(BaseCheck):
     error = Error('그놈 번역 규칙에 따라 번역자의 이름을 써야 합니다')
 
-    def check(self, entry):
+    def check(self, entry, context):
         msgid = entry.msgid
         msgstr = entry.msgstr
         if not msgid[:18] in ('translator-credits', 'translator_credits'):

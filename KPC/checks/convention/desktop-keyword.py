@@ -16,7 +16,7 @@ class DesktopKeywordCheck(BaseCheck):
             return False
         return re_keyword.match(entry.msgid)
 
-    def check(self, entry):
+    def check(self, entry, context):
         if not self.is_keyword(entry):
             return []
         msgid_keywords = entry.msgid[:-1].split(';')

@@ -10,7 +10,7 @@ typo_error = '\"%s\": 음절이 불완전합니다.  오타로 보입니다'
 
 
 class TypoIncompleteCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgstr = entry.msgstr
         errors = []
         s = msgstr

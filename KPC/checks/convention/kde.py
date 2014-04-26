@@ -8,7 +8,7 @@ class KDECheck(BaseCheck):
     name_error = Error('KDE 번역 규칙에 따라 번역자 이름을 써야 합니다')
     email_error = Error('KDE 번역 규칙에 따라 번역자 메일 주소를 써야 합니다')
 
-    def check(self, entry):
+    def check(self, entry, context):
         msgstr = entry.msgstr
         msgctxt = entry.msgctxt
         if msgctxt == 'NAME OF TRANSLATORS':

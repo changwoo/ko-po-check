@@ -23,7 +23,7 @@ data = [
 class GschemaCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
 
-    def check(self, entry):
+    def check(self, entry, context):
         if not True in [('.gschema' in p) for p in entry.references]:
             return []
         for d in data:

@@ -35,7 +35,7 @@ def josa_suggest(cho):
 class JosaAlternativeCheck(BaseCheck):
     errstr = '\"%s\": 받침에 따른 조사 구별이 없습니다. \'%s\''
 
-    def check(self, entry):
+    def check(self, entry, context):
         if entry.is_c_format():
             josa_re = josa_c_re
         elif entry.is_python_format():

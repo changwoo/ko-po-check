@@ -93,7 +93,7 @@ data = [
 
 
 class BadStyleCheck(BaseCheck):
-    def check(self, entry):
+    def check(self, entry, context):
         msgstr = entry.msgstr
         errors = []
         for entry in data:

@@ -72,7 +72,7 @@ class StrftimeCheck(BaseCheck):
             return False
         return True
 
-    def check(self, entry):
+    def check(self, entry, context):
         if not self.identify(entry):
             return []
         errors = []
