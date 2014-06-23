@@ -15,6 +15,13 @@ class CommonHeaderCheck(HeaderCheck):
                 result.append(Error(errmsg))
         except KeyError:
             pass
+        # 
+        if fields['Last-Translator'].startswith('FULL NAME'):
+            errmsg = 'Last-Translator: 기본값을 바꾸지 않았습니다. 번역자 이름을 쓰십시오'
+            result.append(Error(errmsg))
+        if 'EMAIL@ADDRESS' in fields['Last-Translator']:
+            errmsg = 'Last-Translator: 기본값을 바꾸지 않았습니다. 번역자 메일 주소를 쓰십시오'
+            result.append(Error(errmsg))
         # Language-Team: 쓰지 않았거나 gettext 기본값을 바꾸지 않은 경우
         if 'Language-Team' not in fields:
             errmsg = 'Language-Team: 필드가 없습니다. 번역 팀이 따로 없으면 본인 주소를 쓰십시오'
