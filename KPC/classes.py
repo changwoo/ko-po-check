@@ -51,3 +51,18 @@ class HeaderCheck(BaseCheck):
             except ValueError:
                 pass
         return self.check_header(entry, fields)
+
+
+class CheckList(BaseCheck):
+    '''Container class to perform all child checks
+    '''
+    def __init__(self, children=[]):
+        self.children = children.copy()
+
+    def check(self, entry, context):
+        r = []
+        for c in self.children:
+            k = c.check(entry, context)
+            if k:
+                r += k
+        return r
