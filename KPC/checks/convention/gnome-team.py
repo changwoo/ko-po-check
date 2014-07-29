@@ -19,21 +19,8 @@ class TeamMailCheck(HeaderCheck):
             pass
         return []
 
-class NoPoliticsCheck(HeaderCheck):
-    keywords = ['dokdo']
-    errmsg = '정치적 문구를 쓰는 곳이 아닙니다: %s'
-
-    def check_header(self, entry, fields):
-        for k in self.keywords:
-            try:
-                if k in fields['Last-Translator'].lower() or k in fields['Language-Team'].lower():
-                    return [Error(self.errmsg % k)]
-            except KeyError:
-                pass
-        return []
-
 
 name = 'convention/gnome-team'
 description = '그놈 한국어 번역팀 관련 사항을 검사합니다'
-checker = CheckList([TeamMailCheck(), NoPoliticsCheck()])
+checker = CheckList([TeamMailCheck()])
 
