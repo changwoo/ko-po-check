@@ -1,5 +1,26 @@
 -*-outline-*-
 
+버전 0.95.4
+-----------
+
+* 새로운 검사 규칙
+
+** convention/team-common: 헤더에 정치적 문구를 넣는 경우 검사
+
+   여러분들의 애국심을 존중하지만, 번역 정보는 정치적인 주장을 하는
+   곳이 아닙니다.
+
+** convention/extra-space: 불필요한 공백 문자를 뒤에 덧붙이는 경우 검사
+
+* 개선
+
+** terminology/word-guide: 용어 추가
+
+** terminology/gschema: 원문 대소문자만 다른 경우 처리
+
+** convention/common-header: 번역자 이름이나 메일을 초기 기본값에서 바꾸지 않은 경우 검사
+
+
 버전 0.95.3
 -----------
 

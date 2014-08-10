@@ -1,5 +1,3 @@
-* 테스트 부분 구조 개선
-
 * 각 애러별로 심각도 지정
 
 * desktop-commons, word-guide에서 용어를 별도 데이터로 분리

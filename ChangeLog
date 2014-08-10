@@ -1,3 +1,126 @@
+commit c4500e99a367886390aaa62877832f957990dea6
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 29 12:40:09 2014 +0900
+
+    convention/extra-space: 불필요한 공백 문자를 뒤에 덧붙이는 경우 검사
+
+ KPC/checks/convention/extra-space.py   | 17 +++++++++++++++++
+ tests/test-convention_extra-space.out  |  2 ++
+ tests/test-convention_extra-space.po   | 21 +++++++++++++++++++++
+ tests/test-convention_extra-space.test | 17 +++++++++++++++++
+ 4 files changed, 57 insertions(+)
+
+commit 22441a7e81851b0154dae3b5c9bf386c3c25ba86
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Tue Jul 29 12:16:49 2014 +0900
+
+    convention/team-common: 정치적 문구 검사 옮김
+    
+    convention/gnome-team에서, 그놈 번역에만 해당되는 사항이 아니므로
+
+ KPC/checks/convention/gnome-team.py    | 15 +----------
+ KPC/checks/convention/team-common.py   | 28 ++++++++++++++++++++
+ tests/test-convention_gnome-team.out   |  2 --
+ tests/test-convention_gnome-team.po    | 23 ----------------
+ tests/test-convention_team-common.out  |  3 +++
+ tests/test-convention_team-common.po   | 35 +++++++++++++++++++++++++
+ tests/test-convention_team-common.test | 17 ++++++++++++
+ 7 files changed, 84 insertions(+), 39 deletions(-)
+
+commit ffb504fd92beb46b47c96534fc3d032658ec3e36
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jul 28 15:53:34 2014 +0900
+
+    convention/gnome-team: 헤더에 정치적 문구를 넣는 경우 검사 추가
+    
+    여러분들의 애국심을 존중하지만, 전세계가 쓰는 프로젝트에 제출할 번역에
+    정치적인 문구를 넣는 건 바람직하지 않습니다.
+
+ KPC/checks/convention/gnome-team.py  | 22 ++++++++++++++++++----
+ KPC/classes.py                       | 15 +++++++++++++++
+ tests/test-convention_gnome-team.out |  2 ++
+ tests/test-convention_gnome-team.po  | 23 +++++++++++++++++++++++
+ 4 files changed, 58 insertions(+), 4 deletions(-)
+
+commit 1e253d66eee198069d3b2c407adfa3242a8e2941
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Mon Jun 23 14:34:03 2014 +0900
+
+    convention/common-header: 번역자 이름이나 메일을 초기 기본값에서 바꾸지 않은 경우 검사
+
+ KPC/checks/convention/common-header.py  | 7 +++++++
+ tests/test-convention_common-header.out | 2 ++
+ tests/test-convention_common-header.po  | 2 +-
+ 3 files changed, 10 insertions(+), 1 deletion(-)
+
+commit 8ef03c14508982a7375d9602ac38ae4dca94982b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Apr 27 06:07:28 2014 +0900
+
+    terminology/word-guide: 용어 추가
+
+ KPC/checks/terminology/word-guide.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 7f9a3358a5b44207e1108458bfed67c97bf7774a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sun Apr 27 04:13:04 2014 +0900
+
+    filter에 context 추가
+    
+    - get_context()로 헤더 메시지의 내용을 이용해 context dictionary 계산
+    - check()에 context 추가
+    
+    libreoffice의 경우 헤더의 X-Accelerator-Marker 값에 따라 access key를
+    지정하도록 되어 있는데 이 경우에 대한 처리가 가능하도록 한다.
+
+ KPC/checks/convention/access-key.py       |  2 +-
+ KPC/checks/convention/copyright.py        |  2 +-
+ KPC/checks/convention/desktop-keyword.py  |  2 +-
+ KPC/checks/convention/gnome.py            |  2 +-
+ KPC/checks/convention/kde.py              |  2 +-
+ KPC/checks/convention/markup-docbook.py   |  2 +-
+ KPC/checks/convention/markup-mallard.py   |  2 +-
+ KPC/checks/convention/markup-pango.py     |  2 +-
+ KPC/checks/convention/strftime.py         |  2 +-
+ KPC/checks/language/badstyle.py           |  2 +-
+ KPC/checks/language/consistency.py        |  2 +-
+ KPC/checks/language/josa-alternative.py   |  2 +-
+ KPC/checks/language/punctuation.py        |  2 +-
+ KPC/checks/language/spell.py              |  2 +-
+ KPC/checks/language/typo-incomplete.py    |  2 +-
+ KPC/checks/language/typo2bul.py           |  2 +-
+ KPC/checks/terminology/common-labels.py   |  2 +-
+ KPC/checks/terminology/desktop-commons.py |  2 +-
+ KPC/checks/terminology/gschema.py         |  2 +-
+ KPC/checks/terminology/libegg.py          |  2 +-
+ KPC/checks/terminology/word-guide.py      |  2 +-
+ KPC/classes.py                            | 34 ++++++++++------------
+ scripts/ko-po-check                       | 33 +++++++++++++--------
+ 23 files changed, 57 insertions(+), 52 deletions(-)
+
+commit 5774484cf5ea28eef02be52900cfdb543bcee400
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Apr 26 21:24:08 2014 +0900
+
+    terminology/gschema: 원문 대소문자만 다른 경우 처리
+
+ KPC/checks/terminology/gschema.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 2ce3292a4f9fa6528dadc49e8b7674c6a89af8ca
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Apr 26 02:35:28 2014 +0900
+
+    0.95.3
+
+ ChangeLog     | 436 +++++++++++++++++++++++++++++++++++--------------
+ KPC/config.py |   2 +-
+ NEWS          |  26 +++
+ THANKS        |   3 +-
+ make-dist.sh  |   3 -
+ 5 files changed, 343 insertions(+), 127 deletions(-)
+
 commit bf9af19b4762aedded003c8e95a8d9b0fdb398ff
 Author: Changwoo Ryu <cwryu@debian.org>
 Date:   Sat Apr 26 01:57:08 2014 +0900
@@ -12,25 +135,25 @@ Date:   Sat Apr 26 01:57:08 2014 +0900
  KPC/checks/convention/gnome.py            |  10 +-
  KPC/checks/convention/header-comment.py   |   9 +-
  KPC/checks/convention/kde.py              |   2 +
- KPC/checks/convention/markup-docbook.py   |  89 ++++++++++++++-
- KPC/checks/convention/markup-mallard.py   | 131 +++++++++++-----------
+ KPC/checks/convention/markup-docbook.py   |  89 +++++++++-
+ KPC/checks/convention/markup-mallard.py   | 131 +++++++--------
  KPC/checks/convention/markup-pango.py     |   6 +-
- KPC/checks/convention/strftime.py         | 116 ++++++++++----------
- KPC/checks/language/badstyle.py           |  74 +++++++------
- KPC/checks/language/consistency.py        |  41 ++++---
- KPC/checks/language/josa-alternative.py   |  38 ++++---
+ KPC/checks/convention/strftime.py         | 116 ++++++-------
+ KPC/checks/language/badstyle.py           |  74 +++++----
+ KPC/checks/language/consistency.py        |  41 +++--
+ KPC/checks/language/josa-alternative.py   |  38 +++--
  KPC/checks/language/punctuation.py        |   6 +-
- KPC/checks/language/spell.py              |  68 +++++++-----
+ KPC/checks/language/spell.py              |  68 +++++---
  KPC/checks/language/typo-incomplete.py    |   6 +-
  KPC/checks/language/typo2bul.py           |   3 +-
- KPC/checks/terminology/common-labels.py   |  40 ++++---
- KPC/checks/terminology/desktop-commons.py |  97 +++++++++--------
+ KPC/checks/terminology/common-labels.py   |  40 +++--
+ KPC/checks/terminology/desktop-commons.py |  97 +++++------
  KPC/checks/terminology/gschema.py         |   2 +
- KPC/checks/terminology/libegg.py          |  33 +++---
- KPC/checks/terminology/word-guide.py      | 179 ++++++++++++++++---------------
- KPC/po.py                                 |  27 ++++-
- KPC/poparse.py                            |  48 +++++----
- setup.py                                  |  40 +++----
+ KPC/checks/terminology/libegg.py          |  33 ++--
+ KPC/checks/terminology/word-guide.py      | 179 +++++++++++----------
+ KPC/po.py                                 |  27 +++-
+ KPC/poparse.py                            |  48 +++---
+ setup.py                                  |  40 ++---
  27 files changed, 652 insertions(+), 431 deletions(-)
 
 commit ede48b788db53903c29638fff29a51cc4a334bce
@@ -52,7 +175,7 @@ Date:   Sat Apr 26 01:15:42 2014 +0900
     
     - "View only": vinagre에서
 
- KPC/checks/terminology/common-labels.py | 45 ++++++++++++++++++++++------------
+ KPC/checks/terminology/common-labels.py | 45 ++++++++++++++++--------
  tests/test-terminology_common-labels.po |  4 +++
  2 files changed, 34 insertions(+), 15 deletions(-)
 
@@ -104,7 +227,7 @@ Date:   Thu Apr 24 07:02:29 2014 +0900
     
     gschema에서 자주 사용하는 메시지의 번역이 통일된 번역인지 검사합니다
 
- KPC/checks/terminology/gschema.py | 34 ++++++++++++++++++++++++++++++++++
+ KPC/checks/terminology/gschema.py | 34 ++++++++++++++++++++++++++++++
  1 file changed, 34 insertions(+)
 
 commit f2543fcda87af1f5957035c43b0c4f869f1833d1
@@ -115,10 +238,10 @@ Date:   Thu Apr 24 06:18:52 2014 +0900
     
     freedesktop.org desktop 엔트리의 Keyword 번역을 확인합니다
 
- KPC/checks/convention/desktop-keyword.py   | 31 +++++++++++++++++++++++++++++
+ KPC/checks/convention/desktop-keyword.py   | 31 +++++++++++++++++++
  tests/test-convention_desktop-keyword.out  |  1 +
- tests/test-convention_desktop-keyword.po   | 33 +++++++++++++++++++++++++++++++
- tests/test-convention_desktop-keyword.test | 17 ++++++++++++++++
+ tests/test-convention_desktop-keyword.po   | 33 +++++++++++++++++++++
+ tests/test-convention_desktop-keyword.test | 17 +++++++++++
  4 files changed, 82 insertions(+)
 
 commit a960421801dddbd4c6672c4436b9bee90a201668
@@ -131,22 +254,22 @@ Date:   Thu Apr 24 05:24:01 2014 +0900
     
     - convention/typo-incomplete: typoincomplete에서 이름 변경
 
- KPC/checks/convention/access-key.py      | 71 +++++++++++++++++++++++++
- KPC/checks/convention/accesskey.py       | 71 -------------------------
- KPC/checks/language/typo-incomplete.py   | 28 ++++++++++
- KPC/checks/language/typoincomplete.py    | 28 ----------
+ KPC/checks/convention/access-key.py      | 71 ++++++++++++++++++
+ KPC/checks/convention/accesskey.py       | 71 ------------------
+ KPC/checks/language/typo-incomplete.py   | 28 +++++++
+ KPC/checks/language/typoincomplete.py    | 28 -------
  tests/test-convention_access-key.out     |  5 ++
- tests/test-convention_access-key.po      | 91 +++++++++++++++++++++++++++++++++
- tests/test-convention_access-key.test    | 17 ++++++
+ tests/test-convention_access-key.po      | 91 +++++++++++++++++++++++
+ tests/test-convention_access-key.test    | 17 +++++
  tests/test-convention_accesskey.out      |  5 --
- tests/test-convention_accesskey.po       | 91 ---------------------------------
- tests/test-convention_accesskey.test     | 17 ------
+ tests/test-convention_accesskey.po       | 91 -----------------------
+ tests/test-convention_accesskey.test     | 17 -----
  tests/test-language_typo-incomplete.out  |  2 +
- tests/test-language_typo-incomplete.po   | 19 +++++++
- tests/test-language_typo-incomplete.test | 17 ++++++
+ tests/test-language_typo-incomplete.po   | 19 +++++
+ tests/test-language_typo-incomplete.test | 17 +++++
  tests/test-language_typoincomplete.out   |  2 -
- tests/test-language_typoincomplete.po    | 19 -------
- tests/test-language_typoincomplete.test  | 17 ------
+ tests/test-language_typoincomplete.po    | 19 -----
+ tests/test-language_typoincomplete.test  | 17 -----
  16 files changed, 250 insertions(+), 250 deletions(-)
 
 commit 1c4e94a5738eee252b40ac37a3f3d04baf2949be
@@ -185,7 +308,7 @@ Date:   Fri Apr 4 22:10:22 2014 +0900
 
     0.95.2
 
- ChangeLog     | 2233 ++++++++++++++++++++++++++++++----------------------------
+ ChangeLog     | 2233 +++++++++++++++++++++++++-----------------------
  KPC/config.py |    2 +-
  NEWS          |   20 +
  3 files changed, 1183 insertions(+), 1072 deletions(-)
@@ -266,10 +389,10 @@ Date:   Sat Mar 30 08:01:07 2013 +0900
 
     0.95.1
 
- ChangeLog     | 132 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog     | 132 +++++++++++++++++++++++++++++++++++++++++++++++++
  KPC/config.py |   2 +-
- NEWS          |  22 ++++++++++
- README.md     |  30 ++++++++++++++
+ NEWS          |  22 +++++++++
+ README.md     |  30 +++++++++++
  TODO          |   1 +
  5 files changed, 186 insertions(+), 1 deletion(-)
 
@@ -279,11 +402,11 @@ Date:   Thu Mar 28 04:27:44 2013 +0900
 
     language/josa-alternative: Python 포맷 스트링도 검사
 
- KPC/checks/language/josa-alternative.py  | 19 ++++++++++++++-----
+ KPC/checks/language/josa-alternative.py  | 19 +++++++++++----
  KPC/po.py                                |  4 +++-
- KPC/poparse.py                           |  7 +++++--
- tests/test-language_josa-alternative.out | 20 +++++++++++---------
- tests/test-language_josa-alternative.po  | 29 +++++++++++++++++++++++++++++
+ KPC/poparse.py                           |  7 ++++--
+ tests/test-language_josa-alternative.out | 20 +++++++++-------
+ tests/test-language_josa-alternative.po  | 29 +++++++++++++++++++++++
  5 files changed, 62 insertions(+), 17 deletions(-)
 
 commit e144e411d6874d6048bc288dbc57c66115746297
@@ -292,15 +415,15 @@ Date:   Thu Mar 28 03:45:25 2013 +0900
 
     chosa -> josa
 
- KPC/checks/language/chosaalternative.py    | 43 ----------------
- KPC/checks/language/josa-alternative.py    | 43 ++++++++++++++++
+ KPC/checks/language/chosaalternative.py    | 43 -----------
+ KPC/checks/language/josa-alternative.py    | 43 +++++++++++
  KPC/checks/language/spell.py               |  4 +-
- tests/test-language_chosa-alternative.out  |  9 ----
- tests/test-language_chosa-alternative.po   | 82 -------------------------------
- tests/test-language_chosa-alternative.test | 17 -------
- tests/test-language_josa-alternative.out   |  9 ++++
- tests/test-language_josa-alternative.po    | 82 +++++++++++++++++++++++++++++++
- tests/test-language_josa-alternative.test  | 17 +++++++
+ tests/test-language_chosa-alternative.out  |  9 ---
+ tests/test-language_chosa-alternative.po   | 82 ---------------------
+ tests/test-language_chosa-alternative.test | 17 -----
+ tests/test-language_josa-alternative.out   |  9 +++
+ tests/test-language_josa-alternative.po    | 82 +++++++++++++++++++++
+ tests/test-language_josa-alternative.test  | 17 +++++
  9 files changed, 153 insertions(+), 153 deletions(-)
 
 commit b23a4e27e614e75c3dd4ac8ba47ece8dd82cf56e
@@ -399,9 +522,9 @@ Date:   Sun Nov 4 16:37:27 2012 +0900
 
     0.95.0
 
- ChangeLog     | 234 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog     | 234 +++++++++++++++++++++++++++++++++++++++++++++++++
  KPC/config.py |   2 +-
- NEWS          |  24 ++++++
+ NEWS          |  24 +++++
  TODO          |   8 +-
  4 files changed, 261 insertions(+), 7 deletions(-)
 
@@ -451,14 +574,14 @@ Date:   Wed Oct 31 23:43:11 2012 +0900
     
     그놈 데스크톱에만 한정된 용도라는 오해 방지
 
- KPC/checks/terminology/desktop-commons.py   | 95 ++++++++++++++++++++++++++++++
- KPC/checks/terminology/gnomeui.py           | 95 ------------------------------
+ KPC/checks/terminology/desktop-commons.py   | 95 ++++++++++++++++++++
+ KPC/checks/terminology/gnomeui.py           | 95 --------------------
  tests/test-terminology_desktop-commons.out  |  2 +
- tests/test-terminology_desktop-commons.po   | 22 +++++++
- tests/test-terminology_desktop-commons.test | 17 ++++++
+ tests/test-terminology_desktop-commons.po   | 22 +++++
+ tests/test-terminology_desktop-commons.test | 17 ++++
  tests/test-terminology_gnomeui.out          |  2 -
- tests/test-terminology_gnomeui.po           | 22 -------
- tests/test-terminology_gnomeui.test         | 17 ------
+ tests/test-terminology_gnomeui.po           | 22 -----
+ tests/test-terminology_gnomeui.test         | 17 ----
  8 files changed, 136 insertions(+), 136 deletions(-)
 
 commit f8f1f1452b8d24bd62eaf7960209a41b65b53b19
@@ -469,14 +592,14 @@ Date:   Wed Oct 31 23:35:57 2012 +0900
     
     그놈 데스크톱에만 한정된 용도라는 오해 방지
 
- KPC/checks/terminology/gnomeguide.py   | 103 --------------------------------
- KPC/checks/terminology/word-guide.py   | 103 ++++++++++++++++++++++++++++++++
- tests/test-terminology_gnomeguide.out  |  15 -----
- tests/test-terminology_gnomeguide.po   | 109 ----------------------------------
- tests/test-terminology_gnomeguide.test |  17 ------
- tests/test-terminology_word-guide.out  |  15 +++++
- tests/test-terminology_word-guide.po   | 109 ++++++++++++++++++++++++++++++++++
- tests/test-terminology_word-guide.test |  17 ++++++
+ KPC/checks/terminology/gnomeguide.py   | 103 ----------------------
+ KPC/checks/terminology/word-guide.py   | 103 ++++++++++++++++++++++
+ tests/test-terminology_gnomeguide.out  |  15 ----
+ tests/test-terminology_gnomeguide.po   | 109 ------------------------
+ tests/test-terminology_gnomeguide.test |  17 ----
+ tests/test-terminology_word-guide.out  |  15 ++++
+ tests/test-terminology_word-guide.po   | 109 ++++++++++++++++++++++++
+ tests/test-terminology_word-guide.test |  17 ++++
  8 files changed, 244 insertions(+), 244 deletions(-)
 
 commit 50c02a011247637a2a2b1f5163150f9d805e367d
@@ -500,10 +623,10 @@ Date:   Mon Oct 29 03:59:15 2012 +0900
     - Use single quotes only for Python strings
 
  KPC/checks/convention/copyright.py    |  2 +-
- KPC/checks/convention/kde.py          |  4 ++--
+ KPC/checks/convention/kde.py          |  4 +--
  KPC/checks/language/spell.py          |  2 +-
  KPC/checks/language/typoincomplete.py |  2 +-
- KPC/checks/terminology/libegg.py      | 36 ++++++++++++++++++------------------
+ KPC/checks/terminology/libegg.py      | 36 +++++++++++++-------------
  README                                |  2 +-
  6 files changed, 24 insertions(+), 24 deletions(-)
 
@@ -524,10 +647,10 @@ Date:   Mon Oct 29 02:31:44 2012 +0900
     
     - 불필요한 복수형 표현 추가
 
- KPC/checks/language/badstyle.py   | 46 ++++++++++++++++++++++++++++++++++++++++
- tests/test-language_badstyle.out  |  3 +++
- tests/test-language_badstyle.po   | 29 +++++++++++++++++++++++++
- tests/test-language_badstyle.test | 17 +++++++++++++++
+ KPC/checks/language/badstyle.py   | 46 ++++++++++++++++++++++++++++++
+ tests/test-language_badstyle.out  |  3 ++
+ tests/test-language_badstyle.po   | 29 +++++++++++++++++++
+ tests/test-language_badstyle.test | 17 +++++++++++
  4 files changed, 95 insertions(+)
 
 commit ab49fb7409ae4022c4ca241e8700828055b00fcc
@@ -574,7 +697,7 @@ Date:   Sun Oct 28 22:19:04 2012 +0900
 
     python3 fix - string.index() / string.upper()
 
- KPC/checks/terminology/gnomeui.py | 71 ++++++++++++++++++++--------------------
+ KPC/checks/terminology/gnomeui.py | 71 +++++++++++++++---------------
  1 file changed, 36 insertions(+), 35 deletions(-)
 
 commit 3b0d68df3bde3a06f95b17e109c5bf0ec91d0783
@@ -584,7 +707,7 @@ Date:   Sun Oct 28 07:18:38 2012 +0900
     python3 migration
 
  .gitignore                                 |   3 +-
- KPC/checks/convention/accesskey.py         |  12 +--
+ KPC/checks/convention/accesskey.py         |  12 +-
  KPC/checks/convention/common-header.py     |   2 +-
  KPC/checks/convention/copyright.py         |   4 +-
  KPC/checks/convention/gnome.py             |   2 +-
@@ -593,20 +716,20 @@ Date:   Sun Oct 28 07:18:38 2012 +0900
  KPC/checks/convention/markup-docbook.py    |  10 +-
  KPC/checks/convention/markup-mallard.py    |  10 +-
  KPC/checks/convention/markup-pango.py      |   4 +-
- KPC/checks/language/chosaalternative.py    |  20 ++--
- KPC/checks/language/consistency.py         |  14 +--
+ KPC/checks/language/chosaalternative.py    |  20 +--
+ KPC/checks/language/consistency.py         |  14 +-
  KPC/checks/language/punctuation.py         |   2 +-
- KPC/checks/language/spell.py               | 120 +++++++++++-----------
+ KPC/checks/language/spell.py               | 120 +++++++--------
  KPC/checks/language/typo2bul.py            |   8 +-
  KPC/checks/language/typoincomplete.py      |   7 +-
- KPC/checks/terminology/common-labels.py    |  12 +--
- KPC/checks/terminology/gnomeguide.py       | 160 +++++++++++++++---------------
- KPC/checks/terminology/gnomeui.py          |  86 ++++++++--------
+ KPC/checks/terminology/common-labels.py    |  12 +-
+ KPC/checks/terminology/gnomeguide.py       | 160 ++++++++++----------
+ KPC/checks/terminology/gnomeui.py          |  86 +++++------
  KPC/checks/terminology/libegg.py           |   2 +-
  KPC/po.py                                  |   2 +-
- KPC/poparse.py                             |  54 +++++-----
+ KPC/poparse.py                             |  54 ++++---
  README                                     |   7 +-
- scripts/ko-po-check                        |  46 ++++-----
+ scripts/ko-po-check                        |  46 +++---
  tests/test-convention_accesskey.test       |   2 +-
  tests/test-convention_common-header.test   |   2 +-
  tests/test-convention_copyright.test       |   2 +-
@@ -636,7 +759,7 @@ Date:   Sun Oct 28 05:57:18 2012 +0900
 
     Update ChangeLog
 
- ChangeLog | 264 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog | 264 +++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 264 insertions(+)
 
 commit b50393e1089977c757ad33d941391d03ce65ea1c
@@ -673,9 +796,9 @@ Date:   Sat Oct 27 23:22:38 2012 +0900
 
     test case for convention/strftime filter
 
- tests/test-convention_strftime.out  | 10 +++++
- tests/test-convention_strftime.po   | 83 ++++++++++++++++++++++++++++++++++++++
- tests/test-convention_strftime.test | 17 ++++++++
+ tests/test-convention_strftime.out  | 10 ++++
+ tests/test-convention_strftime.po   | 83 ++++++++++++++++++++++++++++
+ tests/test-convention_strftime.test | 17 ++++++
  3 files changed, 110 insertions(+)
 
 commit 7660d4da35b23c9e71484187bc301d61ed174fb1
@@ -688,130 +811,130 @@ Date:   Sat Oct 27 22:08:09 2012 +0900
     - test-00016 제거하고 test-convention_accesskey 쪽에 합병
 
  TODO                                       |   4 +-
- tests/Makefile                             |  10 +++
- tests/test-00001.out                       |   4 --
- tests/test-00001.po                        |  72 --------------------
- tests/test-00001.test                      |  17 -----
- tests/test-00002.out                       |   9 ---
- tests/test-00002.po                        |  82 ----------------------
- tests/test-00002.test                      |  17 -----
- tests/test-00003.out                       |  10 ---
- tests/test-00003.po                        |  50 --------------
- tests/test-00003.test                      |  17 -----
+ tests/Makefile                             |  10 ++
+ tests/test-00001.out                       |   4 -
+ tests/test-00001.po                        |  72 -------------
+ tests/test-00001.test                      |  17 ---
+ tests/test-00002.out                       |   9 --
+ tests/test-00002.po                        |  82 ---------------
+ tests/test-00002.test                      |  17 ---
+ tests/test-00003.out                       |  10 --
+ tests/test-00003.po                        |  50 ---------
+ tests/test-00003.test                      |  17 ---
  tests/test-00004.out                       |   3 -
- tests/test-00004.po                        |  33 ---------
- tests/test-00004.test                      |  17 -----
- tests/test-00005.out                       |  15 ----
- tests/test-00005.po                        | 109 ------------------------------
- tests/test-00005.test                      |  17 -----
+ tests/test-00004.po                        |  33 ------
+ tests/test-00004.test                      |  17 ---
+ tests/test-00005.out                       |  15 ---
+ tests/test-00005.po                        | 109 --------------------
+ tests/test-00005.test                      |  17 ---
  tests/test-00006.out                       |   6 --
- tests/test-00006.po                        |  45 ------------
- tests/test-00006.test                      |  17 -----
+ tests/test-00006.po                        |  45 --------
+ tests/test-00006.test                      |  17 ---
  tests/test-00007.out                       |   3 -
- tests/test-00007.po                        |  32 ---------
- tests/test-00007.test                      |  17 -----
- tests/test-00008.out                       |   5 --
- tests/test-00008.po                        |  49 --------------
- tests/test-00008.test                      |  17 -----
- tests/test-00009.out                       |   4 --
- tests/test-00009.po                        |  38 -----------
- tests/test-00009.test                      |  17 -----
- tests/test-00010.out                       |   4 --
- tests/test-00010.po                        |  29 --------
- tests/test-00010.test                      |  17 -----
+ tests/test-00007.po                        |  32 ------
+ tests/test-00007.test                      |  17 ---
+ tests/test-00008.out                       |   5 -
+ tests/test-00008.po                        |  49 ---------
+ tests/test-00008.test                      |  17 ---
+ tests/test-00009.out                       |   4 -
+ tests/test-00009.po                        |  38 -------
+ tests/test-00009.test                      |  17 ---
+ tests/test-00010.out                       |   4 -
+ tests/test-00010.po                        |  29 ------
+ tests/test-00010.test                      |  17 ---
  tests/test-00011.out                       |   1 -
- tests/test-00011.po                        |  27 --------
- tests/test-00011.test                      |  17 -----
+ tests/test-00011.po                        |  27 -----
+ tests/test-00011.test                      |  17 ---
  tests/test-00012.out                       |   2 -
- tests/test-00012.po                        |  21 ------
- tests/test-00012.test                      |  17 -----
+ tests/test-00012.po                        |  21 ----
+ tests/test-00012.test                      |  17 ---
  tests/test-00013.out                       |   2 -
- tests/test-00013.po                        |  47 -------------
- tests/test-00013.test                      |  17 -----
+ tests/test-00013.po                        |  47 ---------
+ tests/test-00013.test                      |  17 ---
  tests/test-00014.out                       |   1 -
- tests/test-00014.po                        |  12 ----
- tests/test-00014.test                      |  17 -----
+ tests/test-00014.po                        |  12 ---
+ tests/test-00014.test                      |  17 ---
  tests/test-00015.out                       |   6 --
- tests/test-00015.po                        |  37 ----------
- tests/test-00015.test                      |  17 -----
- tests/test-00016.out                       |   4 --
- tests/test-00016.po                        |  28 --------
- tests/test-00016.test                      |  17 -----
+ tests/test-00015.po                        |  37 -------
+ tests/test-00015.test                      |  17 ---
+ tests/test-00016.out                       |   4 -
+ tests/test-00016.po                        |  28 -----
+ tests/test-00016.test                      |  17 ---
  tests/test-00017.out                       |   2 -
- tests/test-00017.po                        |  19 ------
- tests/test-00017.test                      |  17 -----
+ tests/test-00017.po                        |  19 ----
+ tests/test-00017.test                      |  17 ---
  tests/test-00018.out                       |   1 -
- tests/test-00018.po                        |  19 ------
- tests/test-00018.test                      |  17 -----
+ tests/test-00018.po                        |  19 ----
+ tests/test-00018.test                      |  17 ---
  tests/test-00019.out                       |   1 -
- tests/test-00019.po                        |  21 ------
- tests/test-00019.test                      |  17 -----
+ tests/test-00019.po                        |  21 ----
+ tests/test-00019.test                      |  17 ---
  tests/test-00020.out                       |   1 -
- tests/test-00020.po                        |  22 ------
- tests/test-00020.test                      |  17 -----
+ tests/test-00020.po                        |  22 ----
+ tests/test-00020.test                      |  17 ---
  tests/test-00021.out                       |   1 -
- tests/test-00021.po                        |  15 ----
- tests/test-00021.test                      |  17 -----
- tests/test-convention_accesskey.out        |   5 ++
- tests/test-convention_accesskey.po         |  77 +++++++++++++++++++++
- tests/test-convention_accesskey.test       |  17 +++++
+ tests/test-00021.po                        |  15 ---
+ tests/test-00021.test                      |  17 ---
+ tests/test-convention_accesskey.out        |   5 +
+ tests/test-convention_accesskey.po         |  77 ++++++++++++++
+ tests/test-convention_accesskey.test       |  17 +++
  tests/test-convention_common-header.out    |   6 ++
- tests/test-convention_common-header.po     |  37 ++++++++++
- tests/test-convention_common-header.test   |  17 +++++
+ tests/test-convention_common-header.po     |  37 +++++++
+ tests/test-convention_common-header.test   |  17 +++
  tests/test-convention_copyright.out        |   3 +
- tests/test-convention_copyright.po         |  33 +++++++++
- tests/test-convention_copyright.test       |  17 +++++
+ tests/test-convention_copyright.po         |  33 ++++++
+ tests/test-convention_copyright.test       |  17 +++
  tests/test-convention_gnome-team.out       |   1 +
- tests/test-convention_gnome-team.po        |  12 ++++
- tests/test-convention_gnome-team.test      |  17 +++++
+ tests/test-convention_gnome-team.po        |  12 +++
+ tests/test-convention_gnome-team.test      |  17 +++
  tests/test-convention_gnome.out            |   3 +
- tests/test-convention_gnome.po             |  32 +++++++++
- tests/test-convention_gnome.test           |  17 +++++
+ tests/test-convention_gnome.po             |  32 ++++++
+ tests/test-convention_gnome.test           |  17 +++
  tests/test-convention_header-comment.out   |   1 +
- tests/test-convention_header-comment.po    |  15 ++++
- tests/test-convention_header-comment.test  |  17 +++++
- tests/test-convention_kde.out              |   4 ++
- tests/test-convention_kde.po               |  38 +++++++++++
- tests/test-convention_kde.test             |  17 +++++
+ tests/test-convention_header-comment.po    |  15 +++
+ tests/test-convention_header-comment.test  |  17 +++
+ tests/test-convention_kde.out              |   4 +
+ tests/test-convention_kde.po               |  38 +++++++
+ tests/test-convention_kde.test             |  17 +++
  tests/test-convention_markup-docbook.out   |   2 +
- tests/test-convention_markup-docbook.po    |  47 +++++++++++++
- tests/test-convention_markup-docbook.test  |  17 +++++
+ tests/test-convention_markup-docbook.po    |  47 +++++++++
+ tests/test-convention_markup-docbook.test  |  17 +++
  tests/test-convention_markup-mallard.out   |   1 +
- tests/test-convention_markup-mallard.po    |  21 ++++++
- tests/test-convention_markup-mallard.test  |  17 +++++
+ tests/test-convention_markup-mallard.po    |  21 ++++
+ tests/test-convention_markup-mallard.test  |  17 +++
  tests/test-convention_markup-pango.out     |   2 +
- tests/test-convention_markup-pango.po      |  21 ++++++
- tests/test-convention_markup-pango.test    |  17 +++++
- tests/test-language_chosa-alternative.out  |   9 +++
- tests/test-language_chosa-alternative.po   |  82 ++++++++++++++++++++++
- tests/test-language_chosa-alternative.test |  17 +++++
- tests/test-language_consistency.out        |   5 ++
- tests/test-language_consistency.po         |  33 +++++++++
- tests/test-language_consistency.test       |  17 +++++
+ tests/test-convention_markup-pango.po      |  21 ++++
+ tests/test-convention_markup-pango.test    |  17 +++
+ tests/test-language_chosa-alternative.out  |   9 ++
+ tests/test-language_chosa-alternative.po   |  82 +++++++++++++++
+ tests/test-language_chosa-alternative.test |  17 +++
+ tests/test-language_consistency.out        |   5 +
+ tests/test-language_consistency.po         |  33 ++++++
+ tests/test-language_consistency.test       |  17 +++
  tests/test-language_punctuation.out        |   1 +
- tests/test-language_punctuation.po         |  22 ++++++
- tests/test-language_punctuation.test       |  17 +++++
- tests/test-language_spell.out              |  10 +++
- tests/test-language_spell.po               |  50 ++++++++++++++
- tests/test-language_spell.test             |  17 +++++
- tests/test-language_spell_1.out            |   5 ++
- tests/test-language_spell_1.po             |  49 ++++++++++++++
- tests/test-language_spell_1.test           |  17 +++++
+ tests/test-language_punctuation.po         |  22 ++++
+ tests/test-language_punctuation.test       |  17 +++
+ tests/test-language_spell.out              |  10 ++
+ tests/test-language_spell.po               |  50 +++++++++
+ tests/test-language_spell.test             |  17 +++
+ tests/test-language_spell_1.out            |   5 +
+ tests/test-language_spell_1.po             |  49 +++++++++
+ tests/test-language_spell_1.test           |  17 +++
  tests/test-language_spell_2.out            |   6 ++
- tests/test-language_spell_2.po             |  45 ++++++++++++
- tests/test-language_spell_2.test           |  17 +++++
- tests/test-language_typo2bul.out           |   4 ++
- tests/test-language_typo2bul.po            |  29 ++++++++
- tests/test-language_typo2bul.test          |  17 +++++
+ tests/test-language_spell_2.po             |  45 ++++++++
+ tests/test-language_spell_2.test           |  17 +++
+ tests/test-language_typo2bul.out           |   4 +
+ tests/test-language_typo2bul.po            |  29 ++++++
+ tests/test-language_typo2bul.test          |  17 +++
  tests/test-language_typoincomplete.out     |   2 +
- tests/test-language_typoincomplete.po      |  19 ++++++
- tests/test-language_typoincomplete.test    |  17 +++++
+ tests/test-language_typoincomplete.po      |  19 ++++
+ tests/test-language_typoincomplete.test    |  17 +++
  tests/test-terminology_common-labels.out   |   1 +
- tests/test-terminology_common-labels.po    |  19 ++++++
- tests/test-terminology_common-labels.test  |  17 +++++
- tests/test-terminology_gnomeguide.out      |  15 ++++
- tests/test-terminology_gnomeguide.po       | 109 ++++++++++++++++++++++++++++++
- tests/test-terminology_gnomeguide.test     |  17 +++++
+ tests/test-terminology_common-labels.po    |  19 ++++
+ tests/test-terminology_common-labels.test  |  17 +++
+ tests/test-terminology_gnomeguide.out      |  15 +++
+ tests/test-terminology_gnomeguide.po       | 109 ++++++++++++++++++++
+ tests/test-terminology_gnomeguide.test     |  17 +++
  125 files changed, 1229 insertions(+), 1250 deletions(-)
 
 commit ff1341200b6430678d0e32a393883e2a5c112b13
@@ -829,7 +952,7 @@ Date:   Fri Oct 26 20:06:42 2012 +0900
 
     convention/strftime: support optional format specifier flags
 
- KPC/checks/convention/strftime.py | 86 ++++++++++++++++++++++++++--------------
+ KPC/checks/convention/strftime.py | 86 +++++++++++++++++++-----------
  1 file changed, 56 insertions(+), 30 deletions(-)
 
 commit 12c392dc511200133f9d8455c91abdc482cdf6f6
@@ -838,8 +961,8 @@ Date:   Sat Sep 1 17:40:32 2012 +0900
 
     필터 이름과 같게 파일 이름 변경
 
- KPC/checks/convention/datetime.py | 55 ----------------------------------------
- KPC/checks/convention/strftime.py | 55 ++++++++++++++++++++++++++++++++++++++++
+ KPC/checks/convention/datetime.py | 55 ------------------------------
+ KPC/checks/convention/strftime.py | 55 ++++++++++++++++++++++++++++++
  2 files changed, 55 insertions(+), 55 deletions(-)
 
 commit 08cb0fc536f7da58e2f6773b27b0e50833ef07b0
@@ -857,7 +980,7 @@ Date:   Sat Sep 1 17:01:12 2012 +0900
 
     Clean up - sort the words
 
- KPC/checks/terminology/gnomeguide.py | 126 ++++++++++++++++++------------------
+ KPC/checks/terminology/gnomeguide.py | 126 +++++++++++++-------------
  1 file changed, 64 insertions(+), 62 deletions(-)
 
 commit 581641820295a2bca697d3a9a8299b39390a803b
@@ -900,7 +1023,7 @@ Date:   Mon Jun 4 00:57:22 2012 +0900
 
     Update ChangeLog
 
- ChangeLog | 99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog | 99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 99 insertions(+)
 
 commit ed9ca2ef93f171426ccfdd2544d90bb2f25248a8
@@ -973,9 +1096,9 @@ Date:   Sun May 20 07:06:34 2012 +0900
 
     PO-Revision-Date에 기록된 년도를 헤더 코멘트에 안 쓴 경우에 대해 검사
 
- KPC/checks/convention/header-comment.py | 36 ++++++++++++++++++++++++++++++++++
- tests/test-00021.po                     | 15 ++++++++++++++
- tests/test-00021.test                   | 17 ++++++++++++++++
+ KPC/checks/convention/header-comment.py | 36 ++++++++++++++++++++++++
+ tests/test-00021.po                     | 15 ++++++++++
+ tests/test-00021.test                   | 17 +++++++++++
  3 files changed, 68 insertions(+)
 
 commit e04d755eca4af19623251f8934996866e401662b
@@ -994,7 +1117,7 @@ Date:   Sun May 20 06:03:13 2012 +0900
 
     0.94.0
 
- ChangeLog           | 613 ++++++++++++++++++++++++++++++-----------------------
+ ChangeLog           | 613 ++++++++++++++++++++++++-------------------
  KPC/config.py       |   2 +-
  NEWS                |  15 ++
  TODO                |   6 +
@@ -1023,10 +1146,10 @@ Date:   Fri Nov 4 00:27:57 2011 +0900
 
     Mallard 태그 검사 기능
 
- KPC/checks/convention/markup-mallard.py | 118 +++++++++++++++++++++++++++++++++
+ KPC/checks/convention/markup-mallard.py | 118 +++++++++++++++++++++++
  tests/test-00019.out                    |   1 +
- tests/test-00019.po                     |  21 ++++++
- tests/test-00019.test                   |  17 +++++
+ tests/test-00019.po                     |  21 ++++
+ tests/test-00019.test                   |  17 ++++
  4 files changed, 157 insertions(+)
 
 commit d1a83ba434411fba833ffa6aec27c197f9081bc7
@@ -1072,7 +1195,7 @@ Date:   Fri Jun 24 04:21:35 2011 +0900
 
     re-generated ChangeLog
 
- ChangeLog | 892 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ChangeLog | 892 +++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 892 insertions(+)
 
 commit 73a4085c14da64ff80149e972a354e6a44c3a8ac
@@ -1173,9 +1296,9 @@ Date:   Sun Aug 8 21:54:34 2010 +0900
 
     0.91.2
 
- ChangeLog     | 825 ++++-------------------------------------------------------
+ ChangeLog     | 825 ++++---------------------------------------------
  KPC/config.py |   2 +-
- NEWS          |  16 ++
+ NEWS          |  16 +
  README        |  12 +-
  4 files changed, 80 insertions(+), 775 deletions(-)
 
@@ -1194,10 +1317,10 @@ Date:   Sun Aug 8 21:44:31 2010 +0900
 
     terminology/common-labels: 새 규칙, 전형적인 번역문을 일관적으로 유지
 
- KPC/checks/terminology/common-labels.py | 72 ++++++++++++++++++++++++++++++++++
+ KPC/checks/terminology/common-labels.py | 72 ++++++++++++++++++++++++
  tests/test-00018.out                    |  1 +
- tests/test-00018.po                     | 19 +++++++++
- tests/test-00018.test                   | 17 ++++++++
+ tests/test-00018.po                     | 19 +++++++
+ tests/test-00018.test                   | 17 ++++++
  4 files changed, 109 insertions(+)
 
 commit ae2792c0ae3ffa76b45c623afe1017dc6ccecf03
@@ -1228,9 +1351,9 @@ Date:   Sat Jul 17 03:33:12 2010 +0900
 
     XML character entity가 들어간 문자열은 단축키 검사 예외
 
- KPC/checks/convention/accesskey.py | 35 ++++++++++++++++++++++-------------
+ KPC/checks/convention/accesskey.py | 35 ++++++++++++++++++-----------
  tests/test-00001.out               |  1 +
- tests/test-00001.po                | 11 +++++++++++
+ tests/test-00001.po                | 11 +++++++++
  3 files changed, 34 insertions(+), 13 deletions(-)
 
 commit a338bec2295ccc7c7208d51713cf15cb1576b41d
@@ -1248,7 +1371,7 @@ Date:   Fri Jul 16 02:33:33 2010 +0900
 
     0.91.1
 
- ChangeLog     | 3047 ++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ ChangeLog     | 3047 +++++++++++++++++++++++++++++++++++++++++++++---
  KPC/config.py |    2 +-
  NEWS          |   17 +
  TODO          |    2 -
@@ -1260,7 +1383,7 @@ Date:   Fri Jul 16 02:30:00 2010 +0900
 
     strftime() 시간/날짜 형식을 한국어 관습에 맞게 번역했는지 검사
 
- KPC/checks/convention/datetime.py | 53 ++++++++++++++++++++++++++++++++++++++++
+ KPC/checks/convention/datetime.py | 53 ++++++++++++++++++++++++++++++
  1 file changed, 53 insertions(+)
 
 commit 708406daa71362a2a6aecf37d01bfba0e5a4db06
@@ -1279,7 +1402,7 @@ Date:   Mon Jul 12 11:28:50 2010 +0900
 
     mnemonic -> access key
 
- KPC/checks/convention/accesskey.py | 30 +++++++++++++++---------------
+ KPC/checks/convention/accesskey.py | 30 ++++++++++++++---------------
  1 file changed, 15 insertions(+), 15 deletions(-)
 
 commit 87ab79ab91fb6971e4781e0654af747f696ba047
@@ -1317,7 +1440,7 @@ Date:   Tue Mar 9 00:55:42 2010 +0900
 
     terminology/libegg: 새 규칙, libegg에서 가져온 코드에 대해 번역 통일
 
- KPC/checks/terminology/libegg.py | 111 ++++++++++++++++++++++++++++++++++++++++
+ KPC/checks/terminology/libegg.py | 111 ++++++++++++++++++++++++++++++
  1 file changed, 111 insertions(+)
 
 commit 4622a068e97567a5c229fec5dbb7e142e9cd18b1
@@ -1337,34 +1460,34 @@ Date:   Sat Mar 6 13:06:29 2010 +0900
 
     New checker interface with classes
 
- KPC/checks/convention/accesskey.py      | 57 +++++++++++++++++++++++++++++
- KPC/checks/convention/common-header.py  | 10 +-----
- KPC/checks/convention/copyright.py      | 44 ++++++++---------------
- KPC/checks/convention/gnome-team.py     | 19 +++++-----
- KPC/checks/convention/gnome.py          | 37 ++++++++-----------
- KPC/checks/convention/kde.py            | 38 ++++++++++----------
- KPC/checks/convention/markup-docbook.py | 58 +++++++++++++-----------------
- KPC/checks/convention/markup-pango.py   | 43 +++++++++-------------
- KPC/checks/convention/mnemonic.py       | 65 ----------------------------------
- KPC/checks/language/chosaalternative.py | 61 ++++++++++++-------------------
- KPC/checks/language/consistency.py      | 53 +++++++++++----------------
- KPC/checks/language/spell.py            | 62 +++++++++++++-------------------
- KPC/checks/language/typo2bul.py         | 51 ++++++++++----------------
- KPC/checks/language/typoincomplete.py   | 49 ++++++++++---------------
- KPC/checks/terminology/gnomeguide.py    | 49 ++++++++++---------------
- KPC/checks/terminology/gnomeui.py       | 56 +++++++++++------------------
- scripts/ko-po-check                     | 14 ++++----
- tests/test-00001.po                     | 24 ++++++-------
+ KPC/checks/convention/accesskey.py      | 57 +++++++++++++++++++++
+ KPC/checks/convention/common-header.py  | 10 +---
+ KPC/checks/convention/copyright.py      | 44 ++++++----------
+ KPC/checks/convention/gnome-team.py     | 19 +++----
+ KPC/checks/convention/gnome.py          | 37 +++++---------
+ KPC/checks/convention/kde.py            | 38 +++++++-------
+ KPC/checks/convention/markup-docbook.py | 58 +++++++++------------
+ KPC/checks/convention/markup-pango.py   | 43 +++++++---------
+ KPC/checks/convention/mnemonic.py       | 65 ------------------------
+ KPC/checks/language/chosaalternative.py | 61 +++++++++-------------
+ KPC/checks/language/consistency.py      | 53 ++++++++-----------
+ KPC/checks/language/spell.py            | 62 +++++++++-------------
+ KPC/checks/language/typo2bul.py         | 51 +++++++------------
+ KPC/checks/language/typoincomplete.py   | 49 +++++++-----------
+ KPC/checks/terminology/gnomeguide.py    | 49 +++++++-----------
+ KPC/checks/terminology/gnomeui.py       | 56 ++++++++------------
+ scripts/ko-po-check                     | 14 ++---
+ tests/test-00001.po                     | 24 ++++-----
  tests/test-00001.test                   |  2 +-
- tests/test-00009.out                    |  8 ++---
+ tests/test-00009.out                    |  8 +--
  tests/test-00011.po                     |  2 +-
  tests/test-00011.test                   |  2 +-
  tests/test-00016.out                    |  3 ++
- tests/test-00016.po                     | 36 +++++++++++++++++++
- tests/test-00016.test                   | 17 +++++++++
- tests/test-00017.out                    |  2 ++
- tests/test-00017.po                     | 19 ++++++++++
- tests/test-00017.test                   | 17 +++++++++
+ tests/test-00016.po                     | 36 +++++++++++++
+ tests/test-00016.test                   | 17 +++++++
+ tests/test-00017.out                    |  2 +
+ tests/test-00017.po                     | 19 +++++++
+ tests/test-00017.test                   | 17 +++++++
  28 files changed, 421 insertions(+), 477 deletions(-)
 
 commit db9b2257a1ee48ff8d3b500ba03b421faf6dc7ec
@@ -1373,10 +1496,10 @@ Date:   Sat Mar 6 09:40:46 2010 +0900
 
     convention/common-header: checks header fields
 
- KPC/checks/convention/common-header.py | 52 +++++++++++++++++++++++++++++++++++
- tests/test-00015.out                   |  6 ++++
- tests/test-00015.po                    | 37 +++++++++++++++++++++++++
- tests/test-00015.test                  | 17 ++++++++++++
+ KPC/checks/convention/common-header.py | 52 +++++++++++++++++++++++++
+ tests/test-00015.out                   |  6 +++
+ tests/test-00015.po                    | 37 ++++++++++++++++++
+ tests/test-00015.test                  | 17 ++++++++
  4 files changed, 112 insertions(+)
 
 commit 0ec11b21075bca83905a29be0c0709958cac3245
@@ -1385,8 +1508,8 @@ Date:   Sat Mar 6 09:10:17 2010 +0900
 
     Move convention/consistency to language/consistency
 
- KPC/checks/convention/consistency.py | 46 -------------------------------------
- KPC/checks/language/consistency.py   | 46 +++++++++++++++++++++++++++++++++++++
+ KPC/checks/convention/consistency.py | 46 ---------------------------
+ KPC/checks/language/consistency.py   | 46 +++++++++++++++++++++++++++
  2 files changed, 46 insertions(+), 46 deletions(-)
 
 commit bc326d0f61cc36cfd09e0ee06c963017c169c8f3
@@ -1425,7 +1548,7 @@ Date:   Wed Mar 3 02:42:08 2010 +0900
 
     Base classes for next-generation KPC
 
- KPC/classes.py | 64 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ KPC/classes.py | 64 +++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 64 insertions(+)
 
 commit 55631d7194be03330aac604038a9076215ba802e
@@ -1485,9 +1608,9 @@ Date:   Mon Apr 13 02:59:36 2009 +0900
     msgctxt "NAME OF TRANSLATORS" 혹은 msgctxt "EMAIL OF TRANSLATORS"
     식으로 msgctxt가 들어간 번역.
 
- KPC/checks/convention/kde.py | 41 ++++++++++++++---------------------------
- tests/test-00009.out         |  9 ++++-----
- tests/test-00009.po          | 44 ++++++++++++++------------------------------
+ KPC/checks/convention/kde.py | 41 +++++++++++---------------------
+ tests/test-00009.out         |  9 ++++---
+ tests/test-00009.po          | 44 +++++++++++------------------------
  3 files changed, 32 insertions(+), 62 deletions(-)
 
 commit ba479edc45c67a78c81bc41f3c77c0fbcda3d43a
@@ -1811,11 +1934,11 @@ Date:   Fri Nov 21 05:01:57 2008 +0000
 
     New check for DocBook XML based (through gnome-doc-utils or poxml) PO files.
 
- ChangeLog                               |  4 +++
- KPC/checks/convention/markup-docbook.py | 60 ++++++++++++++++++++++++++++++++++
- tests/test-00013.out                    |  2 ++
- tests/test-00013.po                     | 47 ++++++++++++++++++++++++++
- tests/test-00013.test                   | 17 ++++++++++
+ ChangeLog                               |  4 ++
+ KPC/checks/convention/markup-docbook.py | 60 ++++++++++++++++++++++++
+ tests/test-00013.out                    |  2 +
+ tests/test-00013.po                     | 47 +++++++++++++++++++
+ tests/test-00013.test                   | 17 +++++++
  5 files changed, 130 insertions(+)
 
 commit 4d89afc1460609cc0ce6bba746db9e67b2951756
@@ -1987,8 +2110,8 @@ Date:   Mon Nov 17 11:49:21 2008 +0000
     Removed remaining non-distutils files
 
  HACKING                          |  4 --
- checks/terminology/gnomeguide.py | 93 --------------------------------------
- checks/terminology/gnomeui.py    | 98 -----------------------------------------
+ checks/terminology/gnomeguide.py | 93 -----------------------------
+ checks/terminology/gnomeui.py    | 98 -------------------------------
  3 files changed, 195 deletions(-)
 
 commit 876bb4578224223ee8e19fd8bacb2c42f4e37e16
@@ -2049,13 +2172,13 @@ Date:   Sat Nov 15 19:56:54 2008 +0000
  KPC/checks/convention/markup-pango.py   |   41 +
  KPC/checks/convention/mnemonic.py       |   53 +
  KPC/checks/language/chosaalternative.py |   57 +
- KPC/checks/language/spell.py            |  118 ++
+ KPC/checks/language/spell.py            |  118 +
  KPC/checks/language/typo2bul.py         |   45 +
  KPC/checks/language/typoincomplete.py   |   39 +
  KPC/checks/terminology/gnomeguide.py    |   91 +
- KPC/checks/terminology/gnomeui.py       |   97 ++
+ KPC/checks/terminology/gnomeui.py       |   97 +
  Makefile.am                             |    2 +-
- autogen.sh                              |  185 ---
+ autogen.sh                              |  185 --
  checks/.cvsignore                       |    2 -
  checks/Makefile.am                      |    1 -
  checks/convention/.cvsignore            |    2 -
@@ -2069,7 +2192,7 @@ Date:   Sat Nov 15 19:56:54 2008 +0000
  checks/language/.cvsignore              |    2 -
  checks/language/Makefile.am             |    4 -
  checks/language/chosaalternative.py     |   57 -
- checks/language/spell.py                |  118 --
+ checks/language/spell.py                |  118 -
  checks/language/typo2bul.py             |   45 -
  checks/language/typoincomplete.py       |   39 -
  checks/terminology/.cvsignore           |    2 -
@@ -2080,11 +2203,11 @@ Date:   Sat Nov 15 19:56:54 2008 +0000
  doc/.cvsignore                          |    4 -
  doc/Makefile.am                         |   15 -
  doc/ko-po-check.xml                     |   38 -
- doc/spelling-rule.xml                   | 2858 --------------------------------
+ doc/spelling-rule.xml                   | 2858 ----------------------
  scripts/.cvsignore                      |    3 -
  scripts/Makefile.am                     |    1 -
- scripts/ko-po-check                     |   99 ++
- scripts/ko-po-check.in                  |  110 --
+ scripts/ko-po-check                     |   99 +
+ scripts/ko-po-check.in                  |  110 -
  setup.py                                |   17 +
  49 files changed, 800 insertions(+), 3765 deletions(-)
 
@@ -2139,7 +2262,7 @@ Date:   Fri Mar 28 01:27:33 2008 +0000
     	* COPYING: Move to GPL version 3.
 
  .cvsignore |   1 -
- COPYING    | 676 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ COPYING    | 676 ++++++++++++++++++++++++++++++++++++++++++++++++++++
  ChangeLog  |   5 +
  README     |   9 +-
  4 files changed, 684 insertions(+), 7 deletions(-)
@@ -2210,8 +2333,8 @@ Date:   Sat Mar 8 10:52:20 2008 +0000
 
  ChangeLog                         |  3 +++
  checks/convention/Makefile.am     |  2 +-
- checks/convention/markup-pango.py | 41 ++++++++++++++++++++++++++++++++++++++++
- checks/convention/markup.py       | 41 ----------------------------------------
+ checks/convention/markup-pango.py | 41 ++++++++++++++++++++++++++++++
+ checks/convention/markup.py       | 41 ------------------------------
  4 files changed, 45 insertions(+), 42 deletions(-)
 
 commit b145c916955ee06e014de154803bc557d262bcb9
@@ -2393,10 +2516,10 @@ Date:   Mon Apr 23 23:15:42 2007 +0000
     * ChangeLog, NEWS, README, THANKS, TODO: converted to UTF-8.
 
  ChangeLog |  4 ++-
- NEWS      | 88 ++++++++++++++++++++++++++++++++++------------------------------
- README    | 24 +++++++++---------
- THANKS    |  6 ++---
- TODO      | 48 +++++++++++++++++------------------
+ NEWS      | 88 +++++++++++++++++++++++++++++-------------------------
+ README    | 24 +++++++--------
+ THANKS    |  6 ++--
+ TODO      | 48 ++++++++++++++---------------
  5 files changed, 89 insertions(+), 81 deletions(-)
 
 commit 6933a45e5b30d68fc437c55217519a91a58dcb16
@@ -2470,45 +2593,45 @@ Date:   Mon Apr 16 17:20:35 2007 +0000
     * checks/*/*.py: Use u'string' syntax for unicode strings.
     * tests/*: UTF-8 migration + New GNOME terms.
 
- ChangeLog                           |   7 +++
- checks/convention/consistency.py    |  10 ++-
- checks/convention/copyright.py      |   8 +--
- checks/convention/gnome.py          |  13 ++--
- checks/convention/kde.py            |  28 ++++-----
- checks/convention/markup.py         |  16 +++--
- checks/convention/mnemonic.py       |  24 ++++---
- checks/language/chosaalternative.py |  30 +++++----
- checks/language/spell.py            | 126 ++++++++++++++++++-------------------
- checks/language/typo2bul.py         |  24 ++++---
- checks/language/typoincomplete.py   |  14 ++---
- checks/terminology/gnomeguide.py    |  72 +++++++++++----------
- checks/terminology/gnomeui.py       |  74 +++++++++++-----------
+ ChangeLog                           |   7 ++
+ checks/convention/consistency.py    |  10 +--
+ checks/convention/copyright.py      |   8 +-
+ checks/convention/gnome.py          |  13 ++-
+ checks/convention/kde.py            |  28 +++---
+ checks/convention/markup.py         |  16 ++--
+ checks/convention/mnemonic.py       |  24 +++--
+ checks/language/chosaalternative.py |  30 +++----
+ checks/language/spell.py            | 126 +++++++++++++--------------
+ checks/language/typo2bul.py         |  24 +++--
+ checks/language/typoincomplete.py   |  14 ++-
+ checks/terminology/gnomeguide.py    |  72 ++++++++-------
+ checks/terminology/gnomeui.py       |  74 ++++++++--------
  tests/Makefile.am                   |   2 +-
- tests/kpc-test                      |  12 ++--
+ tests/kpc-test                      |  12 ++-
  tests/test-00001.out                |   6 +-
- tests/test-00001.po                 |  44 ++++++-------
- tests/test-00002.out                |  22 +++----
- tests/test-00002.po                 |  59 ++++++++---------
- tests/test-00003.out                |  20 +++---
- tests/test-00003.po                 |  34 +++++-----
+ tests/test-00001.po                 |  44 +++++-----
+ tests/test-00002.out                |  22 ++---
+ tests/test-00002.po                 |  59 +++++++------
+ tests/test-00003.out                |  20 ++---
+ tests/test-00003.po                 |  34 ++++----
  tests/test-00004.out                |   6 +-
- tests/test-00004.po                 |  18 +++---
- tests/test-00005.out                |  23 ++++---
- tests/test-00005.po                 |  59 +++++++++--------
- tests/test-00006.out                |  12 ++--
- tests/test-00006.po                 |  30 ++++-----
- tests/test-00007.out                |   8 +--
- tests/test-00007.po                 |  14 ++---
- tests/test-00008.out                |   8 +--
- tests/test-00008.po                 |  28 ++++-----
+ tests/test-00004.po                 |  18 ++--
+ tests/test-00005.out                |  23 +++--
+ tests/test-00005.po                 |  59 ++++++-------
+ tests/test-00006.out                |  12 +--
+ tests/test-00006.po                 |  30 +++----
+ tests/test-00007.out                |   8 +-
+ tests/test-00007.po                 |  14 +--
+ tests/test-00008.out                |   8 +-
+ tests/test-00008.po                 |  28 +++---
  tests/test-00009.out                |  10 +--
- tests/test-00009.po                 |  28 ++++-----
- tests/test-00010.out                |   8 +--
+ tests/test-00009.po                 |  28 +++---
+ tests/test-00010.out                |   8 +-
  tests/test-00010.po                 |  10 +--
  tests/test-00011.out                |  10 +--
- tests/test-00011.po                 |  13 ++--
+ tests/test-00011.po                 |  13 ++-
  tests/test-00012.out                |   4 +-
- tests/test-00012.po                 |   7 +--
+ tests/test-00012.po                 |   7 +-
  39 files changed, 468 insertions(+), 473 deletions(-)
 
 commit 95128755ac1571580285546bb36ed5440e9781ab
@@ -2545,7 +2668,7 @@ Date:   Sat Jul 22 12:10:15 2006 +0000
 
     removed useless file
 
- checks/convention/capital_mnemonic.py | 39 ------------------------------------
+ checks/convention/capital_mnemonic.py | 39 --------------------------
  1 file changed, 39 deletions(-)
 
 commit df07d5bd532b63ecbff67f048daead888c4a7db1
@@ -2617,9 +2740,9 @@ Date:   Tue Oct 19 14:46:25 2004 +0000
     	incomplete Hangul syllables.
     	* checks/language/Makefile.am (MODULES): Added typoincomplete.py
 
- ChangeLog                         |  6 ++++++
+ ChangeLog                         |  6 +++++
  checks/language/Makefile.am       |  2 +-
- checks/language/typoincomplete.py | 40 ++++++++++++++++++++++++++++++++++++++++
+ checks/language/typoincomplete.py | 40 ++++++++++++++++++++++++++++++
  3 files changed, 47 insertions(+), 1 deletion(-)
 
 commit 14658c924b6891e20f4768b3efcee1bdbae4f73c
@@ -2631,9 +2754,9 @@ Date:   Wed Oct 6 03:09:17 2004 +0000
     	* checks/convention/capital_mnemonic.py: Removed, merged into
     	mnemonic.py.
 
- ChangeLog                     |  7 +++++-
+ ChangeLog                     |  7 ++++-
  checks/convention/Makefile.am |  2 +-
- checks/convention/mnemonic.py | 55 ++++++++++++++++++++++++++++++++++++++++++++
+ checks/convention/mnemonic.py | 55 ++++++++++++++++++++++++++++++++++
  3 files changed, 62 insertions(+), 2 deletions(-)
 
 commit 70f50ca4447b5e21661dd16e0e015147af4e992e
@@ -2645,12 +2768,12 @@ Date:   Wed Oct 6 01:13:47 2004 +0000
     	* checks/convention/markup.py (check): New module to check markup
     	consistency.
 
- ChangeLog                     |  7 +++++++
+ ChangeLog                     |  7 ++++++
  checks/convention/Makefile.am |  2 +-
- checks/convention/markup.py   | 43 +++++++++++++++++++++++++++++++++++++++++++
+ checks/convention/markup.py   | 43 ++++++++++++++++++++++++++++++++++
  tests/kpc-test                |  2 +-
  tests/test-00012.out          |  2 ++
- tests/test-00012.po           | 22 ++++++++++++++++++++++
+ tests/test-00012.po           | 22 +++++++++++++++++
  6 files changed, 76 insertions(+), 2 deletions(-)
 
 commit 0b555a837bf9263607dbcd725a3544e632741c47
@@ -2730,9 +2853,9 @@ Date:   Sat Jan 24 18:38:55 2004 +0000
     	* checks/convention/consistency.py: New check.
     	* checks/convention/Makefile.am (MODULES): Added consistency.py
 
- ChangeLog                        |  5 +++++
+ ChangeLog                        |  5 ++++
  checks/convention/Makefile.am    |  2 +-
- checks/convention/consistency.py | 44 +++++++++++++++++++++++++++++++++++++++++
+ checks/convention/consistency.py | 44 +++++++++++++++++++++++++++++++
  3 files changed, 50 insertions(+), 1 deletion(-)
 
 commit ef0996c2432480b9b859dbfe63cf22d7efaf4fec
@@ -2823,13 +2946,13 @@ Date:   Sun Aug 3 11:56:02 2003 +0000
 
  checks/terminology/Makefile.am   |  2 +-
  checks/terminology/gnomeguide.py |  2 +-
- checks/terminology/gnomeui.py    | 82 +++++++++++++++++++++++++++++++++++++++++
+ checks/terminology/gnomeui.py    | 82 +++++++++++++++++++++++++++++++
  tests/kpc-test                   |  2 +-
  tests/test-00001.po              |  2 +-
- tests/test-00005.po              | 44 +++++++++++-----------
+ tests/test-00005.po              | 44 ++++++++---------
  tests/test-00007.out             |  2 +-
  tests/test-00011.out             |  3 ++
- tests/test-00011.po              | 28 ++++++++++++++
+ tests/test-00011.po              | 28 +++++++++++
  9 files changed, 140 insertions(+), 27 deletions(-)
 
 commit 5d02199f7082b410ef70e629e9fb5687035f17e3
@@ -2848,10 +2971,10 @@ Date:   Sat Aug 2 20:35:37 2003 +0000
     2bul keyboard typo check
 
  checks/language/Makefile.am |  2 +-
- checks/language/typo2bul.py | 47 ++++++++++++++++++++++++++++++++++++++++++++++
- tests/kpc-test              |  4 ++--
- tests/test-00010.out        |  4 ++++
- tests/test-00010.po         | 29 ++++++++++++++++++++++++++++
+ checks/language/typo2bul.py | 47 ++++++++++++++++++++++++++++++++++++
+ tests/kpc-test              |  4 +--
+ tests/test-00010.out        |  4 +++
+ tests/test-00010.po         | 29 ++++++++++++++++++++++
  5 files changed, 83 insertions(+), 3 deletions(-)
 
 commit 5170ff73f12695a882d959bd0bd3591a88e0658c
@@ -2911,37 +3034,37 @@ Date:   Fri Aug 1 19:34:54 2003 +0000
  .cvsignore                            |   2 +-
  KPC/.cvsignore                        |   3 +
  KPC/Makefile.am                       |   3 +
- KPC/po.py                             |  56 +++++++++++++
- KPC/poparse.py                        | 157 +++++++++++++++++++++++++++++++++++
+ KPC/po.py                             |  56 +++++++++
+ KPC/poparse.py                        | 157 +++++++++++++++++++++++++
  Makefile.am                           |   2 +-
  checks/Makefile.am                    |   1 +
  checks/convention/Makefile.am         |   4 +
- checks/convention/capital_mnemonic.py |  39 +++++++++
- checks/convention/copyright.py        |  33 ++++++++
- checks/convention/gnome.py            |  27 ++++++
- checks/convention/kde.py              |  35 ++++++++
+ checks/convention/capital_mnemonic.py |  39 ++++++
+ checks/convention/copyright.py        |  33 ++++++
+ checks/convention/gnome.py            |  27 +++++
+ checks/convention/kde.py              |  35 ++++++
  checks/language/Makefile.am           |   4 +
- checks/language/chosaalternative.py   |  59 +++++++++++++
- checks/language/spell.py              | 120 ++++++++++++++++++++++++++
+ checks/language/chosaalternative.py   |  59 ++++++++++
+ checks/language/spell.py              | 120 +++++++++++++++++++
  checks/terminology/Makefile.am        |   4 +
- checks/terminology/gnomeguide.py      |  56 +++++++++++++
- configure.in                          |  14 ++--
+ checks/terminology/gnomeguide.py      |  56 +++++++++
+ configure.in                          |  14 ++-
  scripts/.cvsignore                    |   3 +
  scripts/Makefile.am                   |   1 +
- scripts/ko-po-check.in                | 102 +++++++++++++++++++++++
+ scripts/ko-po-check.in                | 102 ++++++++++++++++
  src/Makefile.am                       |   7 --
  src/filters/Makefile.am               |   8 --
- src/filters/capital_mnemonic.py       |  36 --------
- src/filters/chosa_alternative.py      |  55 ------------
- src/filters/common_misspell.py        | 116 --------------------------
- src/filters/copyright.py              |  30 -------
- src/filters/gnome.py                  |  24 ------
- src/filters/gnome_glossary.py         |  53 ------------
- src/filters/kde.py                    |  31 -------
- src/ko-po-check.in                    | 101 ----------------------
- src/localeutil.py                     |  44 ----------
- src/po.py                             |  56 -------------
- src/poparse.py                        | 157 -----------------------------------
+ src/filters/capital_mnemonic.py       |  36 ------
+ src/filters/chosa_alternative.py      |  55 ---------
+ src/filters/common_misspell.py        | 116 ------------------
+ src/filters/copyright.py              |  30 -----
+ src/filters/gnome.py                  |  24 ----
+ src/filters/gnome_glossary.py         |  53 ---------
+ src/filters/kde.py                    |  31 -----
+ src/ko-po-check.in                    | 101 ----------------
+ src/localeutil.py                     |  44 -------
+ src/po.py                             |  56 ---------
+ src/poparse.py                        | 157 -------------------------
  src/test.py                           |   7 --
  tests/kpc-test                        |   8 +-
  36 files changed, 722 insertions(+), 736 deletions(-)
@@ -3105,7 +3228,7 @@ Date:   Sun Aug 4 15:05:35 2002 +0000
  doc/.cvsignore        |    2 +
  doc/Makefile.am       |   12 +
  doc/ko-po-check.xml   |   38 +
- doc/spelling-rule.xml | 2858 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ doc/spelling-rule.xml | 2858 ++++++++++++++++++++++++++++++++++++++++
  4 files changed, 2910 insertions(+)
 
 commit 4529902688ec91e2640de767fd9945c8d0afb57b
@@ -3281,9 +3404,9 @@ Date:   Thu Aug 1 10:56:05 2002 +0000
 
     KDE specific
 
- src/filters/kde.py   | 28 ++++++++++++++++++++++++++++
+ src/filters/kde.py   | 28 +++++++++++++++++++++++++++
  tests/test-00009.out |  4 ++++
- tests/test-00009.po  | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ tests/test-00009.po  | 45 +++++++++++++++++++++++++++++++++++++++++++
  3 files changed, 77 insertions(+)
 
 commit 88039e2ce40a6f988fdce938ff2eb1bd6bb9d41e
@@ -3403,16 +3526,16 @@ Date:   Wed Jul 31 03:49:48 2002 +0000
 
     Addded LC_CTYPE dependent message out module
 
- ChangeLog                        |  6 +++++
- TODO                             |  5 -----
+ ChangeLog                        |  6 ++++
+ TODO                             |  5 ----
  src/Makefile.am                  |  2 +-
- src/filters/capital_mnemonic.py  |  6 ++---
- src/filters/chosa_alternative.py |  8 +++----
- src/filters/common_misspell.py   | 24 ++++++++++----------
- src/filters/copyright.py         |  6 ++---
- src/filters/gnome_glossary.py    | 16 ++++++-------
- src/ko-po-check.in               | 50 ++++++++++++++++++++++-------------------
- src/localeutil.py                | 44 ++++++++++++++++++++++++++++++++++++
+ src/filters/capital_mnemonic.py  |  6 ++--
+ src/filters/chosa_alternative.py |  8 ++---
+ src/filters/common_misspell.py   | 24 +++++++--------
+ src/filters/copyright.py         |  6 ++--
+ src/filters/gnome_glossary.py    | 16 +++++-----
+ src/ko-po-check.in               | 50 +++++++++++++++++--------------
+ src/localeutil.py                | 44 +++++++++++++++++++++++++++
  10 files changed, 108 insertions(+), 59 deletions(-)
 
 commit 57222187ef412d65fb2205e40759aca0a0b40af0
@@ -3478,7 +3601,7 @@ Date:   Sat Jul 27 13:00:39 2002 +0000
     more help message
     supports multiple input files
 
- src/ko-po-check.in | 70 ++++++++++++++++++++++++-------------------------------
+ src/ko-po-check.in | 70 +++++++++++++++++++--------------------------
  1 file changed, 30 insertions(+), 40 deletions(-)
 
 commit 5afe0b8147bc0c151c000b6e618f31814c78230d
@@ -3525,9 +3648,9 @@ Date:   Fri Jul 26 18:42:25 2002 +0000
     의존명사
 
  TODO                           |  6 ------
- src/filters/common_misspell.py | 34 +++++++++++++++++++++++++++++++---
+ src/filters/common_misspell.py | 34 ++++++++++++++++++++++++++++++---
  tests/test-00006.out           |  3 +++
- tests/test-00006.po            | 28 ++++++++++++++++++++++++++++
+ tests/test-00006.po            | 28 +++++++++++++++++++++++++++
  4 files changed, 62 insertions(+), 9 deletions(-)
 
 commit 16e362f46bf7bae6ae0f1a84b15d9bf65ed3ae58
@@ -3537,8 +3660,8 @@ Date:   Fri Jul 26 18:02:36 2002 +0000
     Fixed wrong detection on chosa prefixed words
 
  src/filters/chosa_alternative.py |  2 +-
- tests/test-00002.out             | 38 +-------------------------------------
- tests/test-00002.po              |  6 ++++++
+ tests/test-00002.out             | 38 +------------------------------
+ tests/test-00002.po              |  6 +++++
  3 files changed, 8 insertions(+), 38 deletions(-)
 
 commit 73df5408e392fcf9992781f954925e9677f0c11c
@@ -3558,19 +3681,19 @@ Date:   Thu Jul 25 19:55:13 2002 +0000
     more strict check
     testcases cleanup
 
- src/filters/common_misspell.py |  6 ++---
- tests/test-00003.out           |  4 ++--
- tests/test-00003.po            |  7 +++++-
+ src/filters/common_misspell.py |  6 ++--
+ tests/test-00003.out           |  4 +--
+ tests/test-00003.po            |  7 ++++-
  tests/test-00005.out           |  2 +-
- tests/test-00005.po            | 50 +++++++++++++++++++++++++++++++++++-----
+ tests/test-00005.po            | 50 +++++++++++++++++++++++++++----
  tests/test-00006.out           |  1 -
- tests/test-00006.po            | 16 -------------
+ tests/test-00006.po            | 16 ----------
  tests/test-00007.out           |  2 --
- tests/test-00007.po            | 16 -------------
+ tests/test-00007.po            | 16 ----------
  tests/test-00008.out           |  1 -
- tests/test-00008.po            | 16 -------------
- tests/test-00009.out           |  6 -----
- tests/test-00009.po            | 53 -------------------------------------------
+ tests/test-00008.po            | 16 ----------
+ tests/test-00009.out           |  6 ----
+ tests/test-00009.po            | 53 ---------------------------------
  13 files changed, 56 insertions(+), 124 deletions(-)
 
 commit 4e56f4284bce2c094e6a10095f7e22c96404883a
@@ -3648,11 +3771,11 @@ Date:   Thu Jul 25 17:13:24 2002 +0000
     migration to unicode, phase 1
 
  src/filters/capital_mnemonic.py  |  5 ++++-
- src/filters/chosa_alternative.py |  7 +++++--
- src/filters/common_misspell.py   | 13 ++++++++-----
- src/filters/gnome_glossary.py    | 16 ++++++++++------
- src/ko-po-check.in               | 36 ++++++++++++++++++------------------
- src/poparse.py                   | 11 ++++++++++-
+ src/filters/chosa_alternative.py |  7 ++++--
+ src/filters/common_misspell.py   | 13 ++++++-----
+ src/filters/gnome_glossary.py    | 16 ++++++++------
+ src/ko-po-check.in               | 36 +++++++++++++++----------------
+ src/poparse.py                   | 11 +++++++++-
  6 files changed, 55 insertions(+), 33 deletions(-)
 
 commit 314f8f038bf00417062e977efe7cca46dd3a3286
@@ -3661,8 +3784,8 @@ Date:   Wed Jul 24 14:47:22 2002 +0000
 
     more better chosa checking test
 
- tests/test-00002.out | 45 +++++++++++++++++++++++++++++++++
- tests/test-00002.po  | 71 ++++++++++++++++++++++++++++++++++++++++++++++++-----
+ tests/test-00002.out | 45 +++++++++++++++++++++++++++
+ tests/test-00002.po  | 71 +++++++++++++++++++++++++++++++++++++++----
  2 files changed, 110 insertions(+), 6 deletions(-)
 
 commit 3438236bb6ff4d148e2173012b817eab4191c14c
@@ -3718,7 +3841,7 @@ Date:   Tue Jul 23 18:01:12 2002 +0000
     better mnemonic checking test set
 
  tests/test-00001.out |  3 ++-
- tests/test-00001.po  | 47 ++++++++++++++++++++++++++++++++++++++++++++++-
+ tests/test-00001.po  | 47 ++++++++++++++++++++++++++++++++++++++++++-
  2 files changed, 48 insertions(+), 2 deletions(-)
 
 commit 8e909a11913b0f1c49218012069c2a9ac06175f1
@@ -3953,9 +4076,9 @@ Date:   Sat Jul 20 19:13:51 2002 +0000
 
     gnome glossary(?) filter
 
- src/filters/gnome_glossary.py | 34 ++++++++++++++++++++++++++++
- tests/test-00009.out          |  6 +++++
- tests/test-00009.po           | 53 ++++++++++++++++++++++++++++++++++++++++++++
+ src/filters/gnome_glossary.py | 34 ++++++++++++++++++++++
+ tests/test-00009.out          |  6 ++++
+ tests/test-00009.po           | 53 ++++++++++++++++++++++++++++++++++
  3 files changed, 93 insertions(+)
 
 commit ce31abd71f1ab77cb8c366ce9145055fa0498a86
@@ -4133,10 +4256,10 @@ Date:   Wed Jul 17 18:15:36 2002 +0000
     common wrong spelling checks
 
  src/filters/Makefile.am        |  3 ++-
- src/filters/common_misspell.py | 42 ++++++++++++++++++++++++++++++++++++++++++
- tests/test-00004.po            | 16 ++++++++++++++++
- tests/test-00005.po            | 16 ++++++++++++++++
- tests/test-00006.po            | 16 ++++++++++++++++
+ src/filters/common_misspell.py | 42 +++++++++++++++++++++++++++++++++
+ tests/test-00004.po            | 16 +++++++++++++
+ tests/test-00005.po            | 16 +++++++++++++
+ tests/test-00006.po            | 16 +++++++++++++
  5 files changed, 92 insertions(+), 1 deletion(-)
 
 commit 6f080477143689f1ab4687babd6b436a3742fbe9
@@ -4231,20 +4354,20 @@ Date:   Sun Jul 14 13:19:13 2002 +0000
  .cvsignore          |   7 ++
  AUTHORS             |   0
  ChangeLog           |   0
- HACKING             |   4 ++
+ HACKING             |   4 +
  Makefile.am         |   1 +
  NEWS                |   0
  README              |   0
- autogen.sh          | 185 +++++++++++++++++++++++++++++++++++++++++++++++++++++
- configure.in        |  11 ++++
- src/.cvsignore      |   4 ++
+ autogen.sh          | 185 +++++++++++++++++++++++++++++++++++++++++++
+ configure.in        |  11 +++
+ src/.cvsignore      |   4 +
  src/Makefile.am     |   6 ++
- src/ko-po-check.in  |  23 +++++++
- src/po.py           |  48 ++++++++++++++
- src/poparse.py      | 137 +++++++++++++++++++++++++++++++++++++++
+ src/ko-po-check.in  |  23 ++++++
+ src/po.py           |  48 +++++++++++
+ src/poparse.py      | 137 ++++++++++++++++++++++++++++++++
  tests/.cvsignore    |   2 +
  tests/Makefile.am   |   1 +
- tests/kpc-test      |  11 ++++
- tests/test-00001.po |  16 +++++
- tests/test-00002.po |  16 +++++
+ tests/kpc-test      |  11 +++
+ tests/test-00001.po |  16 ++++
+ tests/test-00002.po |  16 ++++
  19 files changed, 472 insertions(+)
