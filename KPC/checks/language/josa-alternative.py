@@ -19,9 +19,9 @@ py_format = '%(?:\([A-Za-z]\w+\))?[#-0\ +]*(?:[0-9]+|\*)?(?:\.[0-9]+)?' \
             '[hlL]?[diouxXeEfFgGcrs]'
 
 josa = '(?:' + '|'.join([p[0]+'|'+p[1] for p in josa_data]) + ')'
-josa_c_re = re.compile('(?P<case>(?P<fmt>'+c_format+'[\'\"]?) ?'
+josa_c_re = re.compile('(?P<case>(?P<fmt>'+c_format+'[\'\"\u2019\u201D]?) ?'
                        '(?P<josa>'+josa+'))(?:\s|$)')
-josa_py_re = re.compile('(?P<case>(?P<fmt>'+py_format+'[\'\"]?) ?'
+josa_py_re = re.compile('(?P<case>(?P<fmt>'+py_format+'[\'\"\u2019\u201D]?) ?'
                         '(?P<josa>'+josa+'))(?:\s|$)')
 
 
