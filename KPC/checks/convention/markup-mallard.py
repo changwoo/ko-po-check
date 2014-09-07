@@ -80,13 +80,11 @@ class UnknownTag(Exception):
 
 
 def check_tags(name):
-    if name == 'KPC_DummyTag':
-        pass
-    elif name[:12] == 'placeholder-':
-        # old gnome-doc-utils magic
-        pass
-    elif name[:7] == '_:item-' or name[:7] == '_:link-':
+    if name.startswith('_:'):
         # newer gnome-doc-utils magic
+        pass
+    elif name.startswith('placeholder-'):
+        # old gnome-doc-utils magic
         pass
     elif not name in known_tags:
         raise UnknownTag(name)
@@ -114,7 +112,7 @@ class MarkupMallardCheck(BaseCheck):
         parser.EndElementHandler = end_element
         parser.UseForeignDTD(True)
         try:
-            parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
+            parser.Parse('<_:ko-po-check>' + msgstr + '</_:ko-po-check>')
         except ExpatError as e:
             return [Error(tag_error_string)]
         except UnknownTag as e:
