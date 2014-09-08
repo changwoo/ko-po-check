@@ -52,3 +52,10 @@ msgstr "  -h, --help                이 도움말을 보여주고 끝납니다\n
 #: test.c:2
 msgid "%s already exists."
 msgstr "%2은(는) 이 형식이 아닙니다."
+
+# false alarm
+#: test.c:2
+#, javascript-format
+msgid "%f h"
+msgstr "%f 시간"
+

@@ -4,7 +4,7 @@ import re
 from KPC.classes import Error, BaseCheck
 
 # 의존명사를 위한 -할 형태의 동사 모음
-verbs_re = '('+'|'.join([
+verbs_re = '(?:'+'|'.join([
     '가져올',
     '갈',
     '걸',
@@ -39,7 +39,7 @@ verbs_re = '('+'|'.join([
 variations_re = '(있다|없다|있습니다|없습니다|있는|없는|있게|없게)'
 
 # 조사 모음
-josa_re = '('+'|'.join([
+josa_re = '(?:'+'|'.join([
     '가', '이', '이\(가\)', '가\(이\)', '\(이\)가', '\(가\)이',
     '를', '을', '을\(를\)', '를\(을\)', '\(을\)를', '\(를\)을',
     '는', '은', '은\(는\)', '는\(은\)', '\(은\)는', '\(는\)은',
@@ -62,6 +62,14 @@ def test_noun_suffix(str):
         return 0
     else:
         return 1
+
+c_format = '%(?:[1-9][0-9]*\$)?[-+ #\'0]*(?:[1-9][0-9]*)?(?:\.[0-9]+)?' \
+           '(?:(?:hh|h|j|l|L|ll|q|t|z|Z)?' \
+           '[dioufeEgGaAcCspnmhjlLqtxXzZ1-9]|hh|ll)'
+
+unit_re = '(?:'+'|'.join([
+    '분', '시간', '초'
+    ])+')'
 
 
 misspell_data = [
@@ -93,6 +101,10 @@ misspell_data = [
     {
         're':    re.compile('([0-9A-Za-z-+\`\'\"\u2019\u201D()%_]+ '+josa_re+')(?:$|\s)'),
         'error': '\"%s\": 조사는 체언에 붙여 써야 합니다'
+    },
+    {
+        're':    re.compile('((?:'+ c_format + '|[0-9]+) ' + unit_re + ')'),
+        'error': '\"%s\": 단위 명사는 숫자와 붙여 씁니다'
     },
 ]
 
