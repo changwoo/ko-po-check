@@ -8,7 +8,7 @@ class ExtraSpaceCheck(BaseCheck):
         msgid = entry.msgid
         msgstr = entry.msgstr
 
-        if msgstr.endswith(' ') and not msgid.endswith(' '):
+        if msgstr[-1].isspace() and msgid != '' and msgstr[-1] != msgid[-1]:
             return [Error('끝에 불필요하게 공백 문자가 있습니다')]
         return []
 
