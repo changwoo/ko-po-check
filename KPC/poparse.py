@@ -104,7 +104,7 @@ def parse_entry(file, lineno):
         if line[-1] == '\n':            # remove the trailing newline
             line = line[:-1]
         if line[:3] == '#~ ':
-            new_entry.set_flag(OBSOLETE)
+            new_entry.set_flag('obsolete')
             line = line[3:]
         # comments
         if line[0] == '#':
@@ -120,20 +120,9 @@ def parse_entry(file, lineno):
             elif line[1] == ',':
                 state = STATE_ECOMMENT
                 for flag in line[3:].split(', '):
-                    if flag == 'c-format':
-                        new_entry.set_flag(C_FORMAT)
-                    elif flag == 'no-c-format':
-                        new_entry.set_flag(NO_C_FORMAT)
-                    elif flag == 'python-format':
-                        new_entry.set_flag(PYTHON_FORMAT)
-                    elif flag == 'fuzzy':
-                        new_entry.set_flag(FUZZY)
-                    elif flag == 'no-wrap':
-                        new_entry.set_flag(NO_WRAP)
-                pass
+                    new_entry.set_flag(flag)
             elif line[1] == '~':
                 state = STATE_ECOMMENT
-                pass
         else:
             if line[:9] == 'msgctxt "':
                 state = STATE_MSGCTXT

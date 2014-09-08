@@ -68,7 +68,7 @@ class StrftimeCheck(BaseCheck):
     errstr = '%s: 날짜/시간, 다음과 같이 번역합니다: %s'
 
     def identify(self, entry):
-        if entry.is_c_format():
+        if entry.check_flag('c-format'):
             return False
         return True
 

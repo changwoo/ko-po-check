@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
 
-FUZZY = 1
-OBSOLETE = 2
-C_FORMAT = 4
-NO_C_FORMAT = 8
-PYTHON_FORMAT = 16
-NO_WRAP = 32
-
-
 class entry:
     def __init__(self):
         self.msgid = ''
@@ -17,20 +9,23 @@ class entry:
         self.translator_comment = ''
         self.automatic_comment = ''
         self.references = []
-        self.flag = 0
+        self.flags = set()
 
     # attributes handling
     def set_flag(self, flag):
-        self.flag = self.flag | flag
+        self.flags.add(flag)
 
     def unset_flag(self, flag):
-        self.flag = self.flag & ~flag
+        self.flags.remove(flag)
+
+    def check_flag(self, flag):
+        return flag in self.flags
 
     def is_fuzzy(self):
-        return (self.flag & FUZZY)
+        return self.check_flag('fuzzy')
 
     def is_obsolete(self):
-        return (self.flag & OBSOLETE)
+        return self.check_flag('obsolete')
 
     def is_untranslated(self):
         return (self.msgstr == '')
@@ -40,17 +35,8 @@ class entry:
                 not self.is_obsolete() and
                 not self.is_untranslated())
 
-    def is_c_format(self):
-        return (self.flag & C_FORMAT)
-
-    def is_no_c_format(self):
-        return (self.flag & NO_C_FORMAT)
-
-    def is_python_format(self):
-        return (self.flag & PYTHON_FORMAT)
-
     def is_no_wrap(self):
-        return (self.flag & NO_WRAP)
+        return self.check_flag('no-wrap')
 
     def __repr__(self):
         return repr(self.msgid) + ':::' + repr(self.msgstr)
