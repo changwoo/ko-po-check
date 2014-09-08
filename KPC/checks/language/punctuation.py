@@ -6,7 +6,7 @@ from KPC.classes import Error, BaseCheck
 # 괄호 띄어쓰기
 check_list = [
     [
-        re.compile('[\uac00-\ud7a3] \(\S', re.UNICODE),
+        re.compile('[\uac00-\ud7a3] \((?!%a)', re.UNICODE),
         '맞춤법 규정에 따라 괄호 앞에 띄어 쓰지 않습니다'
     ]
 ]

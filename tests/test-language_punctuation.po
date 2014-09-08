@@ -20,3 +20,7 @@ msgstr "이렇게(붙여 써야) 한다"
 
 msgid "In western context, it is ok (ok)"
 msgstr "In western context, it is ok (ok)"
+
+# 예외, strftime format
+msgid "%a, %d %B %Y"
+msgstr "%Y년 %B %d일 (%a)"
