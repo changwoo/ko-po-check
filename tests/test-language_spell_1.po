@@ -33,6 +33,11 @@ msgstr "__builtin_saveregs 은 이 타겟을 지원하지 않습니다"
 msgid "function `%s' is initialized like a variable"
 msgstr "함수 `%s' 이(가) 변수로 초기화됐습니다"
 
+# E: 조사는 띄어 쓴다
+#: test.c:8
+msgid "from %s"
+msgstr "%s 에서"
+
 # 조사가 아닌 경우
 #: test.c:8
 msgid "I am Changwoo.  This is my wife."
