@@ -67,6 +67,7 @@ data = [
     ('preferences', '기본 설정', '환경설정'),
     ('properties', '속성', '등록 정보'),
     ('remember password', '암호 저장', '암호 기억'),
+    ('remember this password', '이 암호 저장', '이 암호 기억'),
     ('remove', '제거', '삭제'),
     ('remove', '제거', '지우기'),
     ('replace', '바꾸기', '고치'),
