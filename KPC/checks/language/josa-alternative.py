@@ -36,7 +36,9 @@ class JosaAlternativeCheck(BaseCheck):
     errstr = '\"%s\": 받침에 따른 조사 구별이 없습니다. \'%s\''
 
     def check(self, entry, context):
-        if entry.check_flag('c-format') or entry.check_flag('javascript-format'):
+        if entry.check_flag('c-format'):
+            josa_re = josa_c_re
+        elif entry.check_flag('javascript-format'):
             josa_re = josa_c_re
         elif entry.check_flag('python-format'):
             josa_re = josa_py_re

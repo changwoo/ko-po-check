@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class entry:
     def __init__(self):
         self.msgid = ''

@@ -160,7 +160,6 @@ def parse_entry(file, lineno):
             else:
                 raise ParseError(lineno)
 
-    #new_entry.msgid += line
     return (new_entry, lineno)
 
 

@@ -2,6 +2,7 @@
 
 from KPC.classes import Error, HeaderCheck, CheckList
 
+
 class NoPoliticsCheck(HeaderCheck):
     keywords = ['dokdo']
     errmsg = '정치적 문구를 쓰는 곳이 아닙니다: %s'

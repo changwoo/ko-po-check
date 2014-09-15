@@ -3,6 +3,7 @@
 
 from KPC.classes import Error, BaseCheck
 
+
 class ExtraSpaceCheck(BaseCheck):
     def check(self, entry, context):
         msgid = entry.msgid

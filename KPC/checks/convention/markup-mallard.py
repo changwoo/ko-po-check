@@ -86,7 +86,7 @@ def check_tags(name):
     elif name.startswith('placeholder-'):
         # old gnome-doc-utils magic
         pass
-    elif not name in known_tags:
+    elif name not in known_tags:
         raise UnknownTag(name)
 
 
@@ -100,7 +100,7 @@ def end_element(name):
 
 class MarkupMallardCheck(BaseCheck):
     def check(self, entry, context):
-        if not entry.references or not '.page:' in entry.references[0]:
+        if not entry.references or '.page:' not in entry.references[0]:
             # not from an XML file
             return []
         msgid = entry.msgid

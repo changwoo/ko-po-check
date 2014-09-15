@@ -68,7 +68,11 @@ class StrftimeCheck(BaseCheck):
     errstr = '%s: 날짜/시간, 다음과 같이 번역합니다: %s'
 
     def identify(self, entry):
-        if entry.check_flag('c-format') or entry.check_flag('javascript-format') or entry.check_flag('python-format'):
+        if entry.check_flag('c-format'):
+            return False
+        elif entry.check_flag('javascript-format'):
+            return False
+        elif entry.check_flag('python-format'):
             return False
         return True
 
@@ -84,7 +88,7 @@ class StrftimeCheck(BaseCheck):
             matched = [m.group(i + 1) or '' for i in range(0, origre.groups)]
             trans = transfmt.format(*matched)
 
-            if not trans in entry.msgstr:
+            if trans not in entry.msgstr:
                 errors.append(Error(self.errstr % (orig, trans)))
         return errors
 

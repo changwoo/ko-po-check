@@ -108,7 +108,7 @@ def check_db_tags(name):
     elif name[:7] == '_:item-' or name[:7] == '_:link-':
         # newer gnome-doc-utils magic
         pass
-    elif not name in known_db_tags:
+    elif name not in known_db_tags:
         raise NotDocBook(name)
 
 
@@ -122,7 +122,7 @@ def end_element(name):
 
 class MarkupDocbookCheck(BaseCheck):
     def check(self, entry, context):
-        if not entry.references or not '.xml:' in entry.references[0]:
+        if not entry.references or '.xml:' not in entry.references[0]:
             # not from an XML file
             return []
         msgid = entry.msgid

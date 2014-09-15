@@ -104,9 +104,9 @@ class WordGuideCheck(BaseCheck):
         errors = []
         msgid_l = msgid.replace('_', '').replace('&', '').lower()
         for (id, right, wrong) in data:
-            if not (wrong in msgstr) or not (id in msgid_l):
+            if (wrong not in msgstr) or (id not in msgid_l):
                 continue
-            if not right in wrong and right in msgstr:
+            if (right not in wrong) and (right in msgstr):
                 continue
             errors.append(Error(self.errstr % (wrong, id, right.strip())))
         return errors

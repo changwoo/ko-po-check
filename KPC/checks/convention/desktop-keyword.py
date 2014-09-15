@@ -12,7 +12,7 @@ re_keyword = re.compile(r'^(?:[\w ]+;)+$')
 
 class DesktopKeywordCheck(BaseCheck):
     def is_keyword(self, entry):
-        if not True in [('.desktop' in p) for p in entry.references]:
+        if True not in [('.desktop' in p) for p in entry.references]:
             return False
         return re_keyword.match(entry.msgid)
 
@@ -24,7 +24,7 @@ class DesktopKeywordCheck(BaseCheck):
             return [Error(err_fmt)]
         msgstr_keywords = entry.msgstr[:-1].split(';')
         for k in msgid_keywords:
-            if not k in msgstr_keywords:
+            if k not in msgstr_keywords:
                 return [Error(err_org % k)]
         s = set()
         for k in msgstr_keywords:

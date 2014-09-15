@@ -15,7 +15,8 @@ class CommonHeaderCheck(HeaderCheck):
                 result.append(Error(errmsg))
         except KeyError:
             pass
-        # 
+
+        # 기본값 그대로 쓴 경우
         if fields['Last-Translator'].startswith('FULL NAME'):
             errmsg = 'Last-Translator: 기본값을 바꾸지 않았습니다. 번역자 이름을 쓰십시오'
             result.append(Error(errmsg))
@@ -33,7 +34,7 @@ class CommonHeaderCheck(HeaderCheck):
             errmsg = 'Language-Team: 기본값을 바꾸지 않았습니다. 해당 번역팀 메일 주소를 쓰십시오'
             result.append(Error(errmsg))
         # Content-Type: UTF-8 추천
-        if not 'charset=utf-8' in fields['Content-Type'].lower():
+        if 'charset=utf-8' not in fields['Content-Type'].lower():
             errmsg = 'Content-Type: UTF-8 사용을 추천합니다 (charset=UTF-8)'
             result.append(Error(errmsg))
         # Plural-Forms: 한국어에 대한 복수형이 아닌 경우

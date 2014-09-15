@@ -3,6 +3,7 @@
 
 from KPC.classes import Error, HeaderCheck, CheckList
 
+
 class TeamMailCheck(HeaderCheck):
     new_addr = '<gnome-kr@googlegroups.com>'
     old_addr = '<gnome-kr-hackers@lists.kldp.net>'
@@ -13,7 +14,7 @@ class TeamMailCheck(HeaderCheck):
             value = fields['Language-Team']
             if self.old_addr in value:
                 return [self.error]
-            if value.startswith('GNOME Korea') and not self.new_addr in value:
+            if value.startswith('GNOME Korea') and self.new_addr not in value:
                 return [self.error]
         except KeyError:
             pass
@@ -23,4 +24,3 @@ class TeamMailCheck(HeaderCheck):
 name = 'convention/gnome-team'
 description = '그놈 한국어 번역팀 관련 사항을 검사합니다'
 checker = CheckList([TeamMailCheck()])
-

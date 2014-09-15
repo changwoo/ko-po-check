@@ -99,11 +99,12 @@ misspell_data = [
         'error': '\"%s\": \'~할 때\'라고 띄어 써야 합니다'
     },
     {
-        're':    re.compile('([0-9A-Za-z-+\`\'\"\u2019\u201D()%_]+ '+josa_re+')(?:$|\s)'),
+        're':    re.compile('([0-9A-Za-z-+\`\'\"\u2019\u201D()%_]+ ' +
+                            josa_re + ')(?:$|\s)'),
         'error': '\"%s\": 조사는 체언에 붙여 써야 합니다'
     },
     {
-        're':    re.compile('((?:'+ c_format + '|[0-9]+) ' + unit_re + ')'),
+        're':    re.compile('((?:' + c_format + '|[0-9]+) ' + unit_re + ')'),
         'error': '\"%s\": 단위 명사는 숫자와 붙여 씁니다'
     },
 ]
