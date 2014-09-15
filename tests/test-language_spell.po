@@ -32,6 +32,11 @@ msgstr "해상도 초기값은 0이 되어서는 않됩니다."
 msgid "No such file or directory"
 msgstr "그런 파일이나 디렉토리가 없읍니다"
 
+# E: "습니다" 아닌 예외
+#: test.c:3
+msgid "Gather data"
+msgstr "데이터를 모읍니다"
+
 # E: "~음"이 맞음
 #: test.c:3
 msgid "There is no spoon"
