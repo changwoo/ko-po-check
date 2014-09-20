@@ -1,5 +1,36 @@
 -*-outline-*-
 
+버전 0.96.0
+-----------
+
+* 개선
+
+** 내부 구조 변경 - PO entry의 여러가지 flag를 더 유연하게 처리하도록 고정된 값에서 set으로 바꿈
+    
+** convention/markup-mallard: gnome-doc-utils에서 만드는 '_:'로 시작하는 placeholder 인식
+
+** language/josa-alternative: 따옴표로 U+2019 또는 U+201D를 사용했을 때 처리
+
+** language/punctuation: 괄호 앞에 띄어 쓴 strftime 포맷은 허용
+
+** language/spell: 띄어 쓴 조사 검사할 때 유니코드 따옴표 고려
+
+** language/spell: 띄어 쓴 조사가 메시지 끝인 경우 추가
+
+** language/spell: 단위 명사를 아라비아 숫자와 띄어 쓴 경우 추가, 띄어 쓰기를 허용하지만 보통 붙여 쓴다
+
+** language/spell: '읍니다' => '습니다' 예외 추가
+
+** terminology/gschema: 마침표 없는 경우 추가
+
+** terminology/word-guide: 용어 추가
+
+** convention/extra-space: 스페이스 외에 다른 공백 문자 검사
+
+** convention/markup-docbook: 태그 추가
+
+
+
 버전 0.95.5
 -----------
 
