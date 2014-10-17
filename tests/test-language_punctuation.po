@@ -24,3 +24,12 @@ msgstr "In western context, it is ok (ok)"
 # 예외, strftime format
 msgid "%a, %d %B %Y"
 msgstr "%Y년 %B %d일 (%a)"
+
+# 세미콜론
+msgid "Blahblah blahblah; Blahblah."
+msgstr "어쩌구 어쩌구입니다; 어쩌구입니다."
+
+# 세미콜론 예외, desktop keywords
+#: ../data/test.desktop.in.in.h:1
+msgid "Apple;Banana;"
+msgstr "사과;바나나;"
