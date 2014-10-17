@@ -9,7 +9,7 @@ check_list = [
       'msg': '맞춤법 규정에 따라 괄호 앞에 띄어 쓰지 않습니다',
     },
     { 'check': lambda e: True not in [('.desktop' in p) for p in e.references],
-      're': re.compile('([\uac00-\ud7a3]+;)', re.UNICODE),
+      're': re.compile('\s([A-Za-z\uac00-\ud7a3]*[\uac00-\ud7a3];)\s+', re.UNICODE | re.MULTILINE),
       'msg': '우리말 맞춤법에서는 세미콜론을 쓰지 않습니다',
     },
 ]

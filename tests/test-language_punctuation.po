@@ -29,7 +29,19 @@ msgstr "%Y년 %B %d일 (%a)"
 msgid "Blahblah blahblah; Blahblah."
 msgstr "어쩌구 어쩌구입니다; 어쩌구입니다."
 
+msgid "Blahblah blahblah; Blahblah."
+msgstr "어쩌구 blah어쩌구입니다; 어쩌구입니다."
+
+msgid "Blahblah blahblah;\n"
+"%s"
+msgstr "어쩌구 blah어쩌구입니다;\n"
+"%s"
+
 # 세미콜론 예외, desktop keywords
 #: ../data/test.desktop.in.in.h:1
 msgid "Apple;Banana;"
 msgstr "사과;바나나;"
+
+# 세미콜론 예외, from gettext-tools
+msgid "message catalog has plural form translations, but lacks a header entry with \"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\""
+msgstr "메시지 목록에 복수형 번역이 들어 있지만, 헤더 항목에 \"Plural-Forms: nplurals=정수; plural=표현식;\"이 없습니다"
