@@ -1,3 +1,86 @@
+commit 0c6685f22d6538a7956f3e442f1fadf16d0dc69a
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Wed Mar 4 20:03:03 2015 +0900
+
+    Release 0.96.1
+
+ KPC/config.py |  2 +-
+ NEWS          | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+commit 1c6a08107d4092b5f3420427b25ffc32a3f9ac81
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 18 06:02:46 2014 +0900
+
+    language/punctuation: 문장 기호 세미콜론이 아닌 경우 처리
+    
+    - 정규식을 문장 기호일 가능성에 최대한 맞춤
+
+ KPC/checks/language/punctuation.py  |  2 +-
+ tests/test-language_punctuation.out |  2 ++
+ tests/test-language_punctuation.po  | 12 ++++++++++++
+ 3 files changed, 15 insertions(+), 1 deletion(-)
+
+commit e79a94001c368603e3d06c70bb4ea8e8e29de81e
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 18 04:44:03 2014 +0900
+
+    language/punctuation: 번역문에 세미콜론 사용하는 경우 검사
+    
+    우리말은 세미콜론을 문장 부호로 쓰지 않음.
+
+ KPC/checks/language/punctuation.py  | 20 ++++++++++++--------
+ tests/test-language_punctuation.out |  1 +
+ tests/test-language_punctuation.po  |  9 +++++++++
+ 3 files changed, 22 insertions(+), 8 deletions(-)
+
+commit 006004c206b1ae5d5d6db4aaa05258f8e7cf04c4
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 11 23:57:19 2014 +0900
+
+    terminology/help-license: 새로운 검사
+    
+    도움말 문서의 법률 정보에 많이 사용하는 문구 번역 통일
+
+ KPC/checks/terminology/help-license.py   | 58 ++++++++++++++++++++++++++++++++
+ tests/test-terminology_help-license.out  |  2 ++
+ tests/test-terminology_help-license.po   | 21 ++++++++++++
+ tests/test-terminology_help-license.test | 17 ++++++++++
+ 4 files changed, 98 insertions(+)
+
+commit 5ba111ee47461a1fde4170c0bc4051acf838c686
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 11 23:09:45 2014 +0900
+
+    convention/markup-mallard: 정리
+    
+    tag 목록 정렬, 중복 제거.
+
+ KPC/checks/convention/markup-mallard.py | 86 +++++++++++++++------------------
+ 1 file changed, 39 insertions(+), 47 deletions(-)
+
+commit 879bca948df87c4f8a175ae25155f11a5e554246
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Oct 11 22:44:17 2014 +0900
+
+    language/badstyle: 추가
+    
+    - '존재하지 않다' -> '없다'
+
+ KPC/checks/language/badstyle.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 12a8c0b3f5f8fc57f8f52dbe05589f9327962c4b
+Author: Changwoo Ryu <cwryu@debian.org>
+Date:   Sat Sep 20 18:27:18 2014 +0900
+
+    Release 0.96.0
+
+ ChangeLog     | 1106 ++++++++++++++++++++++++++++++++++-----------------------
+ KPC/config.py |    2 +-
+ NEWS          |   31 ++
+ 3 files changed, 687 insertions(+), 452 deletions(-)
+
 commit 6a665baadd7bb850927ff4c3f42c0ba32d498123
 Author: Changwoo Ryu <cwryu@debian.org>
 Date:   Tue Sep 16 01:25:53 2014 +0900
