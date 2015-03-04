@@ -1,5 +1,19 @@
 -*-outline-*-
 
+버전 0.96.1
+-----------
+
+* 새로운 검사 규칙
+
+** terminology/help-license: 도움말 문서의 법률 정보에 많이 사용하는 문구 번역 통일
+
+* 개선
+
+** convention/markup-mallard: tag 목록 정리
+** language/badstyle: 어색한 표현 추가
+** language/punctuation: 번역문에 세미콜론 사용하는 경우 검사
+
+
 버전 0.96.0
 -----------
 
