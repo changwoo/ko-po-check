@@ -36,7 +36,7 @@ data = [
     {'msgid': '<em>Attribution</em>',
      'msgstr': '<em>저작자 표시</em>'},
     {'msgid': '<em>Share Alike</em>',
-     'msgstr': '"<em>동일 조건</em>'},
+     'msgstr': '<em>동일 조건</em>'},
 ]
 
 
