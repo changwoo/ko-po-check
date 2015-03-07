@@ -59,3 +59,14 @@ msgstr "%2은(는) 이 형식이 아닙니다."
 msgid "%f h"
 msgstr "%f 시간"
 
+#: test.c:2
+msgid "%d hours"
+msgstr "%d 시간"
+
+#: test.c:2
+msgid "It takes %d hours"
+msgstr "%d 시간이 걸립니다"
+
+#: test.c:2
+msgid "Calibrate %1"
+msgstr "%1 분석"

@@ -104,7 +104,8 @@ misspell_data = [
         'error': '\"%s\": 조사는 체언에 붙여 써야 합니다'
     },
     {
-        're':    re.compile('((?:' + c_format + '|[0-9]+) ' + unit_re + ')'),
+        're':    re.compile('((?:' + c_format + '|[0-9]+) ' + unit_re + ')' +
+                            '(?:' + josa_re + r')?\b'),
         'error': '\"%s\": 단위 명사는 숫자와 붙여 씁니다'
     },
 ]
