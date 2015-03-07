@@ -59,3 +59,12 @@ msgstr "%2은(는) 이 형식이 아닙니다."
 msgid "%f h"
 msgstr "%f 시간"
 
+# false alarm - 시간 단위가 아님
+#: ../src/GParted_Core.cc:3108
+msgid "calibrate %1"
+msgstr "%1 분석"
+
+# 시간 단위는 띄어쓰지 않음
+#: test.c:9
+msgid "%1 min"
+msgstr "%1 분"
