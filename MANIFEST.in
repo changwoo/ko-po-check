@@ -1,2 +1,2 @@
-include AUTHORS COPYING ChangeLog NEWS THANKS TODO
+include AUTHORS COPYING ChangeLog NEWS.md THANKS TODO
 include tests/test*
