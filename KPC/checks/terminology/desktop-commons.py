@@ -11,6 +11,7 @@ data = [
     ('add', '추가'),
     ('always on top', '항상 위'),
     ('browse', '찾아보기'),
+    ('case sensitive', '대소문자 구별'),
     ('change', '바꾸기'),
     ('clear', '지우기'),
     ('copy', '복사'),
