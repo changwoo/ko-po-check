@@ -61,19 +61,21 @@ def normalize_msgid(msgid):
     return msgid
 
 
-def make_msgstr(msgstr, mnemonic, dots):
-    if mnemonic:
+def make_msgstr(msgstr, accesskey, dots):
+    if accesskey:
         msgstr = msgstr + '(_' + mnemonic + ')'
     if dots:
         msgstr = msgstr + '...'
     return msgstr
 
 
-def find_mnemonic(msgid):
+def find_access_key(msgid):
     try:
         i = msgid.index('_')
         return msgid[i+1].upper()
     except ValueError:
+        return None
+    except IndexError:
         return None
 
 
@@ -85,12 +87,12 @@ class DesktopCommonsCheck(BaseCheck):
         msgstr = entry.msgstr
         errors = []
         msgid_n = normalize_msgid(msgid)
-        msgid_m = find_mnemonic(msgid)
+        msgid_ak = find_access_key(msgid)
         msgid_d = (msgid[-3:] == '...')
         for (orig, trans) in data:
             # 모두 대문자로 된 단어는 option argument 따위로 쓰이므로 넘어간다
             if msgid_n.lower() == orig and not msgid_n.isupper():
-                good_msgstr = make_msgstr(trans, msgid_m, msgid_d)
+                good_msgstr = make_msgstr(trans, msgid_ak, msgid_d)
                 if good_msgstr != msgstr:
                     errors.append(Error(self.errstr % (msgstr, good_msgstr)))
         return errors
