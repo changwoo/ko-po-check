@@ -72,6 +72,8 @@ def make_msgstr(msgstr, accesskey, dots):
 def find_access_key(msgid):
     try:
         i = msgid.index('_')
+        if i == (len(msgid) - 1):
+            return None
         return msgid[i+1].upper()
     except ValueError:
         return None

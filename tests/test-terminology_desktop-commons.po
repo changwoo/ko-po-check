@@ -20,3 +20,7 @@ msgstr "설정 사항(_F)"
 #: test.c:1
 msgid "_Open..."
 msgstr "열긔(_O)..."
+
+#: test.c:1
+msgid "_"
+msgstr "_"
