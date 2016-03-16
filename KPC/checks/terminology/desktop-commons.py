@@ -63,7 +63,7 @@ def normalize_msgid(msgid):
 
 def make_msgstr(msgstr, accesskey, dots):
     if accesskey:
-        msgstr = msgstr + '(_' + mnemonic + ')'
+        msgstr = msgstr + '(_' + accesskey + ')'
     if dots:
         msgstr = msgstr + '...'
     return msgstr
