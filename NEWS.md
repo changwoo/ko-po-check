@@ -5,8 +5,15 @@
 
     * language/spell: 잘못된 알림 최소화
 
+    * terminology/desktop-common: 용어 추가
+
     * terminology/help-license: 오타 수정
 
+    * terminology/word-guide: 용어 추가
+
+  * 문제점 개선
+
+    * terminology/desktop-common: 마지막 글자가 밑줄일  마지막일 경우 access key  오류 바로잡음
 
 버전 0.96.2
 ===========
@@ -30,7 +37,7 @@
   * 개선
 
     * 내부 구조 변경 - PO entry의 여러가지 flag를 더 유연하게 처리하도록 고정된 값에서 set으로 바꿈
-      
+
     * convention/markup-mallard: gnome-doc-utils에서 만드는 '_:'로 시작하는 placeholder 인식
 
     * language/josa-alternative: 따옴표로 U+2019 또는 U+201D를 사용했을 때 처리
@@ -288,7 +295,7 @@
 
     * 용어 변경: mnemonic -> access key
 
-    * convention/gnome-team: GNOME Korea 이면서 메일이 틀린 경우 검사 
+    * convention/gnome-team: GNOME Korea 이면서 메일이 틀린 경우 검사
 
 
 버전 0.91.0
@@ -304,7 +311,7 @@
 
     * convention/common-header: 헤더에 쓰는 여러가지 사항이 올바른지 검사
 
-    * terminology/libegg: (그놈 프로젝트 다수에서 사용하는) libegg에서 가져온 코드에 대해 통일된 번역인지 검사 
+    * terminology/libegg: (그놈 프로젝트 다수에서 사용하는) libegg에서 가져온 코드에 대해 통일된 번역인지 검사
 
   * 기타
 
@@ -345,6 +352,7 @@
   * 버그 수정
 
     * Pango 마크업이 여러 줄에 걸쳐 있는 경우 맞지 않는다고 검사하는 문제 바로잡음
+
     * 버전 표시 잘못 나오는 현상 바로잡음
 
   * 개선
@@ -496,6 +504,7 @@
   * 개선:
 
     * KDE에서 "_:"로 시작하는 메세지가 "_:"로 시작하도록 번역된 경우 검사
+
     * 어색한 한자어 번역 찾아내기
 
   * 문서화 시작
