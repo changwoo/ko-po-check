@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 import sys
+from distutils.core import setup
+from KPC.config import VERSION
+
 if sys.version_info.major < 3:
     print('This program is only for Python 3.x. Run with python3.')
     sys.exit(1)
-
-from distutils.core import setup
-from KPC.config import VERSION
 
 setup(name='ko-po-check',
       version=VERSION,

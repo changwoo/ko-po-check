@@ -3,12 +3,12 @@
 
 '''
 
+import KPC.po as po
+import re
+
 __all__ = ['parse_file', 'parse_entry', 'ParseError',
            'FUZZY', 'OBSOLETE', 'C_FORMAT', 'NO_C_FORMAT', 'PYTHON_FORMAT',
            'NO_WRAP']
-
-import KPC.po as po
-import re
 
 
 class ParseError(Exception):

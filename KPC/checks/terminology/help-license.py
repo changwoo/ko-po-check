@@ -23,8 +23,8 @@ data = [
      'msgstr': '크리에이티브 커먼즈 동일조건변경허락 3.0'},
     {'msgid': 'Creative ?Commons Share ?Alike 3\.0 United States License',
      'msgstr': '크리에이티브 커먼즈 동일조건변경허락 3.0 미합중국 라이선스'},
-    {'msgid': 'Creative ?Commons Attribution-Share ?Alike 3\.0 United States ' +
-              'License',
+    {'msgid': 'Creative ?Commons Attribution-Share ?Alike 3\.0 United ' +
+              'States License',
      'msgstr': '크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 미합중국 라이선스'},
     {'msgid': 'Creative ?Commons Attribution-Share ?Alike 3\.0 Unported ' +
               'License',
@@ -44,8 +44,11 @@ class HelpLicenseCheck(BaseCheck):
     errstr = '일관성을 위해 다음과 같이 번역합니다: %s'
 
     def check(self, entry, context):
-        if True not in [('.page' in p or '.xml' in p) for p in entry.references]:
-            return []
+        for p in entry.references:
+            if '.page' in p or '.xml' in p:
+                break
+        else:
+             return []
         for d in data:
             if not re.match(d['msgid'], entry.msgid, re.IGNORECASE):
                 continue
