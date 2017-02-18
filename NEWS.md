@@ -3,6 +3,10 @@
 
   * 개선
 
+    * language/punctuation: 괄호 앞 띄어쓰기 검사 삭제 - 맞춤법 상에서는 붙여
+      써야 맞지만, 실제로 단어가 아니라 문장에 부가 설명으로 붙은 괄호가 많아
+      붙여 쓰기가 부적합할 수도 있다.
+
     * language/spell: 잘못된 알림 최소화
 
     * terminology/desktop-common: 용어 추가
@@ -13,7 +17,7 @@
 
   * 문제점 개선
 
-    * terminology/desktop-common: 마지막 글자가 밑줄일  마지막일 경우 access key  오류 바로잡음
+    * terminology/desktop-common: 마지막 글자가 밑줄일 경우 access key 오류 바로잡음
 
 버전 0.96.2
 ===========
