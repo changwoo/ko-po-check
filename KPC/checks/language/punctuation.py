@@ -3,10 +3,7 @@
 import re
 from KPC.classes import Error, BaseCheck
 
-# 괄호 띄어쓰기
 check_list = [
-    {'re': re.compile('[\uac00-\ud7a3] \((?!%a)', re.UNICODE),
-     'msg': '맞춤법 규정에 따라 괄호 앞에 띄어 쓰지 않습니다'},
     {'check': lambda e: True not in [('.desktop' in p) for p in e.references],
      're': re.compile('\s([A-Za-z\uac00-\ud7a3]*[\uac00-\ud7a3];)\s+',
                       re.UNICODE | re.MULTILINE),
