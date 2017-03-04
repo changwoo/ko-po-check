@@ -442,10 +442,11 @@ class NotDocBook(Exception):
 def check_db_tags(name):
     if name == 'KPC_DummyTag':
         pass
-    elif name[:12] == 'placeholder-':
+    elif name.startswith('placeholder-'):
         # old gnome-doc-utils magic
         pass
-    elif name[:7] == '_:item-' or name[:7] == '_:link-':
+    elif (name.startswith('_:item-') or name.startswith('_:link-') or
+          name.startswith('_:ulink-')):
         # newer gnome-doc-utils magic
         pass
     elif name not in known_db_tags:
