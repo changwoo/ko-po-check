@@ -55,17 +55,22 @@ data = [
 
 
 def normalize_msgid(msgid):
+    dots = ''
     msgid = msgid.replace('_', '')
-    if msgid[-3:] == '...':
+    if msgid.endswith('...'):
         msgid = msgid[:-3]
-    return msgid
+        dots = '...'
+    elif msgid.endswith('\u2026'):
+        msgid = msgid[:-1]
+        dots = '\u2026'
+    return msgid, dots
 
 
 def make_msgstr(msgstr, accesskey, dots):
     if accesskey:
         msgstr = msgstr + '(_' + accesskey + ')'
     if dots:
-        msgstr = msgstr + '...'
+        msgstr = msgstr + dots
     return msgstr
 
 
@@ -86,9 +91,8 @@ class DesktopCommonsCheck(BaseCheck):
         msgid = entry.msgid
         msgstr = entry.msgstr
         errors = []
-        msgid_n = normalize_msgid(msgid)
+        msgid_n, msgid_d = normalize_msgid(msgid)
         msgid_ak = find_access_key(msgid)
-        msgid_d = (msgid[-3:] == '...')
         for (orig, trans) in data:
             # 모두 대문자로 된 단어는 option argument 따위로 쓰이므로 넘어간다
             if msgid_n.lower() == orig and not msgid_n.isupper():

@@ -35,6 +35,8 @@ def normalize_msg(msg):
     try:
         if msg.endswith('...'):
             msg = msg[:-3]
+        elif msg.endswith('\u2026'):
+            msg = msg[:-1]
         if msg[-4:-2] == '(_' and msg[-1:] == ')':
             msg = msg[:-4]
     except:
@@ -63,11 +65,10 @@ class CommonLabelsCheck(BaseCheck):
         # 단축키가 있으면
         if '_' in entry.msgid:
             return True
-        try:
-            if entry.msgid[-3:] == '...':
-                return True
-        except:
-            pass
+        if entry.msgid.endswith('...'):
+            return True
+        elif entry.msgid.endswith('\u2026'):
+            return True
         return False
 
     def check(self, entry, context):
