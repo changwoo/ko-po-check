@@ -12,7 +12,7 @@ PLURAL_JOSA_RE = '(도|로|만|에|은|을|이|의)'
 PLURAL_NOUN_RE = '(값|개발자|것|기능|기술|그림|글자|답변|디렉터리|메시지|' \
                  '문서|문자|분|사람|사진|설정|언어|점|질문|파일|팀|패키지|' \
                  '폴더|프로그램|플러그인|항목|활동)'
-PLURAL_EXCEPT = '(' + '핸들' + PLURAL_JOSA_RE + ')'
+PLURAL_EXCEPT = '(핸들|번들)' + PLURAL_JOSA_RE
 
 SYLLABLE_WITH_T_RIEUL = '[%s]' % ''.join([chr(c) for c in
                                           range(0xAC00 + 8, 0xD7A4, 28)])
