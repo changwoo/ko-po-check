@@ -8,7 +8,7 @@ class entry:
         self.msgstr = ''
         self.msgctxt = ''
         self.translator_comment = ''
-        self.automatic_comment = ''
+        self.extracted_comment = ''
         self.references = []
         self.flags = set()
 

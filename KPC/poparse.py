@@ -65,7 +65,7 @@ STATE_MSGID = 5
 STATE_MSGSTR = 6
 emptyline_re = re.compile(r'^\s*$')
 translator_comment_re = re.compile(r'^\#( (.*))?$')
-automatic_comment_re = re.compile(r'^\#. (.*)$')
+extracted_comment_re = re.compile(r'^\#. (.*)$')
 reference_re = re.compile(r'^\#: (.*)$')
 flag_re = re.compile(r'^\#, (.*)$')
 string_re = re.compile(r'^\"(.*)\"\w*')
@@ -112,8 +112,12 @@ def parse_entry(file, lineno):
                 state = STATE_COMMENT
             if len(line) == 1:
                 new_entry.translator_comment += '\n'
-            elif line[1] == ' ':          # automatic comment
+            elif line[1] == ' ':
                 new_entry.translator_comment += line[2:] + '\n'
+            elif line[1] == '.':
+                if new_entry.extracted_comment:
+                    new_entry.extracted_comment += '\n'
+                new_entry.extracted_comment += line[3:]
             elif line[1] == ':':
                 state = STATE_ECOMMENT
                 new_entry.references += line[3:].split(' ')
