@@ -475,7 +475,8 @@ class MarkupDocbookCheck(BaseCheck):
         parser.EndElementHandler = end_element
         parser.UseForeignDTD(True)
         try:
-            parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
+            if '<' in msgstr and '>' in msgstr:
+                parser.Parse('<KPC_DummyTag>' + msgstr + '</KPC_DummyTag>')
         except ExpatError as e:
             return [Error(tag_error_string)]
         except NotDocBook as e:
