@@ -1,3 +1,26 @@
+버전 0.98.0
+==========
+
+  * 새로운 검사 규칙
+
+    * convention/do-not-translate: 번역하지 말라는 안내가 쓰여진 경우 검사
+
+  * 개선
+
+    * convention/markup-docbook: 최근 gnome-doc-utils의 placeholder tag 반영
+
+    * convention/markup-docbook: CDATA에 bracket 들어 있는 경우에 대한 처리
+
+    * convention/strftime: C99 strftime() modifiers 추가
+
+    * langauge/consistency: 원문과 같이 유니코드 따옴표 사용하기 추가
+
+    * terminology/{common-labels,desktop-common}: '...'대신 U+2026 사용할 경우 대응
+
+	* terminology/word-guide: "헤더 표시줄" -> "헤더 모음"으로 용어 안내
+
+	* language/badstyle: 복수형 패턴 예외로 '번들'+조사 추가
+
 버전 0.97.0
 ===========
 
