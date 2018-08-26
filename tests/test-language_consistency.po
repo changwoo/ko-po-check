@@ -33,3 +33,6 @@ msgstr "다른 이름으로 저장..."
 
 msgid "quote is written like “this” and “this”"
 msgstr "따옴표는 “이렇게” 그리고 \"이렇게\""
+
+msgid "hyphen sometimes being as — and —"
+msgstr "하이픈이 가끔은 — 이렇게랑 - 이렇게가 있죠"
