@@ -5,6 +5,7 @@
 import sys
 import os
 import getopt
+import codecs
 
 filterenable = {}
 
@@ -65,7 +66,8 @@ filters = {}
 for filename in filenames:
     if not filename.split(os.sep)[-1].startswith('_'):
         f = {}
-        exec(compile(open(filename, 'rb').read(), filename, 'exec'), f)
+        exec(compile(codecs.open(filename, 'rb', 'utf-8').read(),
+                     filename, 'exec'), f)
         if filterenable:
             if f['name'] in filterenable:
                 filters[f['name']] = f
@@ -85,7 +87,7 @@ for fn in args:
     if fn == '-':
         fp = sys.stdin
     else:
-        fp = open(fn)
+        fp = codecs.open(fn, 'rb', 'utf-8')
 
     try:
         catalog = poparse.parse_file(fp)
