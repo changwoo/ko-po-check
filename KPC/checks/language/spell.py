@@ -37,7 +37,7 @@ verbs_re = '(?:'+'|'.join([
     ])+')'
 
 # '~할 지'라고 잘못 띄어 쓸 때를 위해. 위 경우보다 더 넓은 범위에서 ㄹ 종성 모두를 잡는다.
-eul_verbs_re = '(?:'+'|'.join(chr(c + ord('갈') - ord('가')) for c in range(ord('가'), ord('힣')+1, ord('개')-ord('가'))) + ')'
+eul_verbs_re = '\w*(?:'+'|'.join(chr(c + ord('갈') - ord('가')) for c in range(ord('가'), ord('힣')+1, ord('개')-ord('가'))) + ')'
 
 variations_re = '(있다|없다|있습니다|없습니다|있는|없는|있게|없게)'
 
