@@ -43,3 +43,18 @@ msgstr "알수 없는 머신 모드 `%s'"
 #: test.c:6
 msgid "abort if a function returns"
 msgstr "return할때 abort"
+
+# E: "할지"로 붙여씀
+#: test.c:3
+msgid "Whether to do something"
+msgstr "무언가를 할 지"
+
+# E: "할지"로 붙여씀
+#: test.c:3
+msgid "Whether to do something."
+msgstr "무언가를 할 지."
+
+# E: "할지"로 붙여씀
+#: test.c:3
+msgid "Whether to do some-thing"
+msgstr "무언가를 할 지 여부"
